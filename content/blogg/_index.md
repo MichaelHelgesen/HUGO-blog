@@ -1,6 +1,7 @@
 ---
-title: "blogg"
+title: blogg
+draft: true
 ---
 
-Bloggpage
+# Bloggpage
 
