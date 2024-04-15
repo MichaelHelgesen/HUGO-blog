@@ -1,6 +1,9 @@
 ---
 title: 2024-04-15
-tags: [hugo]
+tags:
+- hugo
+category:
+- læringslogg
 ---
 # 2024-04-15
 
