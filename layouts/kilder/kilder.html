@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ $p := slice .Plain }}
+{{ .Content }}    
+    <ul>
+        {{ range .Pages}}
+        <li>{{ .Title }}</li>
+        <li>
+            <ul>
+                {{ $o := .Title }}
+                    {{ range .Site.RegularPages}}
+                    {{ $l := .RawContent}}
+                    {{ if  in $l (print "< ref \"" $o "\" >") }}
+                    <li>
+                    <a href="{{ .Page.Permalink }}">{{.Title}}</a>
+                    </li>
+                    {{end}}
+                    {{ end }}
+            </ul>
+        </li>
+        {{ end }}
+    </ul>
+
+{{ end }}
+
+
