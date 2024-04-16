@@ -13,8 +13,8 @@
                         {{ if  in $l (print "< ref \"" $o "\" >") }}
                             <li>
                                 <a href="{{ .Page.Permalink }}">{{.Title}}</a>
+                                <small>{{ .Type }}</small>
                             </li>
-                            {{ .Page.Section }}
                         {{end}}
                     {{ end }}
                 </ul>

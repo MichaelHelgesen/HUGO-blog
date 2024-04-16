@@ -2,8 +2,7 @@
 title: 2024-04-15
 tags:
 - hugo
-category:
-- læringslogg
+type: læringslogg
 ---
 # 2024-04-15
 

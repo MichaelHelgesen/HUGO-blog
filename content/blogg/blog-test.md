@@ -1,5 +1,6 @@
 ---
 title: first-post
+tags: [hugo, test]
 ---
 
 # Hello, first post
