@@ -2,7 +2,7 @@
 {{ .Content }}    
     <ul>
         {{ range .Pages}}
-        <small>{{ .Type }}</small>
+        {{ if .Param "tags" }}<small>{{ .Type }}</small>{{ end }}
         <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
         {{ partial "tags.html" .}}
         {{ end }}
