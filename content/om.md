@@ -6,4 +6,6 @@ draft: true
 
 # Dette er en om-side!
 
+About
+
 Kult!
