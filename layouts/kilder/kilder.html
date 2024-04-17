@@ -2,18 +2,19 @@
 {{ .Content }}    
     <ul>
         {{ range .Pages}}
+            {{ $sourceTitle:= .Title }}
             <li>
                 <h2 id={{.Title}}>{{ .Title }}</h2>
             </li>
             <li>
                 <ul>
-                    {{ $o := .Title }}
                     {{ range site.RegularPages}}
-                        {{ $l := .RawContent}}
-                        {{ if  in $l (print "< ref \"" $o "\" >") }}
+                        {{ $content := .RawContent}}
+                        {{ if  in $content (print "< ref \"" $sourceTitle "\" >") }}
                             <li>
                                 <a href="{{ .Page.Permalink }}">{{.Title}}</a>
                                 <small>{{ .Type }}</small>
+                             {{ partial "tags.html" .}}
                             </li>
                         {{end}}
                     {{ end }}
