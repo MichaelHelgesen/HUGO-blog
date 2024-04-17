@@ -1,6 +1,6 @@
 ---
 title: Min tredje seksjon i zettelkasten
-tags: [zettelkasten]
+tags: [zettelkasten, skriving, læring]
 ---
 
 # Min tredje seksjon i zettelkasten

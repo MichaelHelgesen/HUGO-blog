@@ -1,5 +1,6 @@
 ---
 title: "Evig amatør"
+tags: [læring, inspirasjon]
 date: 2024-04-17T12:09:52+02:00
 draft: true
 ---
