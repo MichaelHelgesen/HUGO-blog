@@ -1,27 +1,27 @@
 {{ define "main" }}
 {{ .Content }}    
-    <ul>
-        {{ range .Pages}}
-            {{ $sourceTitle:= .Title }}
-            <li>
-                <h2 id={{.Title}}>{{ .Title }}</h2>
-            </li>
-            <li>
-                <ul>
-                    {{ range site.RegularPages}}
-                        {{ $content := .RawContent}}
-                        {{ if  in $content (print "< ref \"" $sourceTitle "\" >") }}
-                            <li>
-                                <a href="{{ .Page.Permalink }}">{{.Title}}</a>
-                                <small>{{ .Type }}</small>
-                             {{ partial "tags.html" .}}
-                            </li>
-                        {{end}}
-                    {{ end }}
-                </ul>
-            </li>
-        {{ end }}
-    </ul>
+<ul>
+    {{ range .Pages}}
+    {{ $fileName := .File.BaseFileName}}
+    <li>
+        <a href="{{ .Page.Permalink }}"><h2 id={{.Title}}>{{ .Params.data.title }}</h2></a>
+        {{ range .Params.data.creators }}
+            {{ .firstName }} {{ .lastName }} 
+        {{ end}}
+    </li>
+    <li>
+        <ul>
+            {{ range site.RegularPages}}
+                {{ if in .RawContent $fileName }}
+                    <li>
+                        <a href="{{ .Page.Permalink }}">{{.Title}}</a>
+                        <small>{{ .Type }}</small>
+                        {{ partial "tags.html" .}}
+                    </li>
+                {{ end }}
+            {{ end }}
+        </ul>
+    </li>
+    {{ end }}
+</ul>
 {{ end }}
-
-

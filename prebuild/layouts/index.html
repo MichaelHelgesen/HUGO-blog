@@ -1,0 +1,15 @@
+{{ with resources.GetRemote "https://api.zotero.org/groups/5454933/collections/U68Q8VUJ/items/top?format=json"}}
+    {{ with .Content }} 
+        {{ with transform.Unmarshal . }}
+            {{ range . }}
+                {{ $string := jsonify . }} 
+                {{ $filename := printf "sources/%s.md" (urlize .data.title) }} 
+                    {{ if not (fileExists (print "public/sources/" (urlize .data.title) ".md")) }}
+                        {{ $resource := resources.FromString $filename $string }} 
+                        {{ $file := $resource.RelPermalink }} 
+                    {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
