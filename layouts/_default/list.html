@@ -2,9 +2,11 @@
 {{ .Content }}    
     <ul>
         {{ range .Pages}}
-        {{ if .Param "tags" }}<small>{{ .Type }}</small>{{ end }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-        {{ partial "tags.html" .}}
+            {{ if .Param "tags" }}
+                <small>{{ .Type }}</small>
+            {{ end }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ partial "tags.html" .}}
         {{ end }}
     </ul>
 

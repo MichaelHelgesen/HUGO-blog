@@ -11,7 +11,7 @@ draft: true
 
 "Bestem deg for hva du vil lære, og forplikt deg til å lære foran andre", skriver [Austin Kleon](https://austinkleon.com/) i sin bok ["Show your work"](https://www.adlibris.com/no/bok/show-your-work-9780761178972).
 
-Nå[^1] er ikke jeg en kunstner slik som han eller en ekspert på noe som helst, men jeg er en nysgjerrig type med mange interesser. Og i følge Kleon handler det ikke om hvor flink eller intelligent man er, men at man bidrar med noe.
+Nå er ikke jeg en kunstner slik som han eller en ekspert på noe som helst, men jeg er en nysgjerrig type med mange interesser. Og i følge Kleon handler det ikke om hvor flink eller intelligent man er, men at man bidrar med noe.
 
 Det er en lang avstand fra middelmådig til god i et kreativt spektrum, men med små steg kan man bevege seg fra den ene siden til den andre.
 
@@ -41,4 +41,3 @@ Hvis du også brenner inne med noe så start i dag, og del reisen med oss andre.
 > *- Austin Kleon*
 
 
-[^1]: Det har jeg lest i [How to read a book]({{< ref "how-to-read-a-book" >}})
