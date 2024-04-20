@@ -1,4 +1,9 @@
 {{ define "main" }}
-    
-    Innold -- 
+    {{ range where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage"}}
+<div> 
+        {{ .Title }}
+        {{ .Kind }}
+        {{ . }}
+</div>
+    {{ end }}
 {{ end }}
