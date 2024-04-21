@@ -5,7 +5,13 @@
       "headers" (dict "Authorization" "Bearer 45c7d941-a7c6-4217-87c8-46a81c9b65a3")
     }}
     {{ $resource := resources.GetRemote $url $opts }}
-    {{ with $resource}}
-    {{.Content}}
+    {{ with $resource }}
+        {{ $bookmarks := unmarshal .Content }}
+        {{ range $bookmarks.items }}
+            <h2>{{ .title }}</h2>
+            <blockquote><p>{{ .excerpt }}</p></blockquote>
+            <div>{{ .note }}
+            <div><a href="{{ .link }}">{{ .domain }}</a></div>
+        {{ end }}
     {{ end }}
 {{ end }}
