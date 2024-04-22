@@ -1,0 +1,13 @@
+<ul class="flex flex-col gap-9">
+        {{ range .myTest}}
+            <li>
+            {{ if .Param "tags" }}
+                <div>{{ .Type }}</div>
+            {{ end }}
+                <h2 class="text-2xl font-bold">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </h2>
+            {{ partial "tags.html" .}}
+            </li>
+        {{ end }}
+</ul>

@@ -1,13 +1,7 @@
 {{ define "main" }}
 {{ .Content }}    
-    <ul>
-        {{ range .Pages}}
-            {{ if .Param "tags" }}
-                <small>{{ .Type }}</small>
-            {{ end }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-            {{ partial "tags.html" .}}
-        {{ end }}
-    </ul>
+{{ $myTest := .Pages }}
+
+{{ partial "list" (dict "myTest" $myTest "content" .)}}
 
 {{ end }}

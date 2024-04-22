@@ -1,9 +1,4 @@
 {{ define "main" }}
-    {{ range where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage"}}
-<div> 
-        {{ .Title }}
-        {{ .Kind }}
-        {{ . }}
-</div>
-    {{ end }}
+{{ $test := where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage"}}
+{{ partial "list" (dict "myTest" $test "content" .)}}
 {{ end }}
