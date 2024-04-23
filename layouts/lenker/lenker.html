@@ -7,11 +7,6 @@
     {{ $resource := resources.GetRemote $url $opts }}
     {{ with $resource }}
         {{ $bookmarks := unmarshal .Content }}
-        {{ range $bookmarks.items }}
-            <h2>{{ .title }}</h2>
-            <blockquote><p>{{ .excerpt }}</p></blockquote>
-            <div>{{ .note }}
-            <div><a href="{{ .link }}">{{ .domain }}</a></div>
-        {{ end }}
+        {{ partial "list" (dict "range" $bookmarks.items "content" .) }}
     {{ end }}
 {{ end }}
