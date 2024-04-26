@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ .Content }}    
-{{ $myTest := .Pages }}
+{{ $range := .Pages }}
 
-{{ partial "list" (dict "myTest" $myTest "content" .)}}
+{{ partial "list" (dict "range" $range "content" .)}}
 
 {{ end }}

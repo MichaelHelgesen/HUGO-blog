@@ -1,28 +1,11 @@
 {{ define "main" }}
 {{ .Content }}    
-<ul>
-    {{ range .Pages}}
-    {{ $fileName := .File.BaseFileName}}
-    <li>
-        <a href="{{ .Page.Permalink }}"><h2 id={{.Title}}>{{ .Params.data.title }}</h2></a>
-        {{ range .Params.data.creators }}
-            {{ .firstName }} {{ .lastName }} 
-        {{ end}}
-    </li>
-    <li>
-        <ul>
-            {{ range site.RegularPages}}
-                {{ if in .RawContent $fileName }}
-                    <li>
-                        <a href="{{ .Page.Permalink }}">{{.Title}}</a>
-                        <small>{{ .Type }}</small>
-                        {{ partial "tags.html" .}}
-                    </li>
-                {{ end }}
-            {{ end }}
-        </ul>
-    </li>
-    {{ end }}
-</ul>
-teeeest
+
+{{ with resources.GetRemote "https://api.zotero.org/groups/5454933/collections/U68Q8VUJ/items/top?format=json&v=3"}}
+    {{ $kilder := unmarshal .Content }}
+    {{ partial "list" (dict "range" $kilder "content" . "type" "kilde")}}
 {{ end }}
+
+
+{{ end }}
+

@@ -1,0 +1,5 @@
+{{ define "main" }}
+{{ $title := .Title }}
+{{ $range := where .Site.RegularPages "Params.tags" "intersect" (slice $title) }}
+{{ partial "list" (dict "range" $range "content" . )}}
+{{ end }}

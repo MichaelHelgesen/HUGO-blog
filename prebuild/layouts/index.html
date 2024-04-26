@@ -3,6 +3,7 @@
         {{ range $kilder }}
             {{ $string := jsonify . }} 
             {{ $filename := printf "/kilder/%s.md" (urlize .data.title) }} 
+            {{ .data }}
             {{ if not (fileExists (print "public/sources/" (urlize .data.title) ".md")) }}
                 {{ $resource := resources.FromString $filename $string }} 
                 {{ $file := $resource.RelPermalink }} 

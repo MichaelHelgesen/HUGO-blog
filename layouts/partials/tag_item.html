@@ -1,0 +1,13 @@
+<li>
+    <h2 class="text-2xl font-bold">
+        <a href={{ .link }}>
+        {{ if eq (substr .name 0 1) "_"}} 
+            {{ substr .name 1}}
+        {{ else }}
+            {{ .name }}
+        {{ end }}
+        </a>
+        <sup>{{.count}}</sup>
+    </h2>
+</li>
+

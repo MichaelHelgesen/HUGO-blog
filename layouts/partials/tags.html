@@ -3,7 +3,15 @@
   {{ range $index, $tag := . }} {{ with $.Site.GetPage (printf "/%s/%s"
   $taxonomy $tag) -}}
   <li>
-      <a href="{{ .Permalink }}"><small>#{{ $tag }}</small></a>
+      <a href="{{ .Permalink }}">
+          <small>
+              {{ if eq (substr $tag 0 1) "_"}}
+                #{{ substr $tag 1 }}
+              {{ else }}
+                #{{ $tag }}
+              {{ end }}
+          </small>
+      </a>
   </li>
   {{- end -}} {{- end -}}
 </ul>

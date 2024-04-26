@@ -2,13 +2,4 @@ baseURL = 'http://example.org/'
 languageCode = 'no-NO'
 title = 'My New Hugo Site'
 
-[[module.mounts]]
-source = "content"
-target = "content"
 
-[[module.mounts]]
-source = "prebuild/public/kilder"
-target = "content/kilder"
-
-[permalinks]
-"laeringslogg" = "/laeringslogg/:year/:month/:day/"

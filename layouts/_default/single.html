@@ -1,6 +1,10 @@
 {{ define "main" }}
-    
-{{ .Title }}
-{{ .Type }}
-{{ .Content }}
+{{ with .Params.data }}
+    <small>{{.itemtype }}</small>
+    {{ .extra }}
+    <h2>{{ .title }}</h2>
+    {{ .abstractNote }}
+{{ end }}
+{{- .Title -}}
+{{- .Content -}}
 {{ end }}
