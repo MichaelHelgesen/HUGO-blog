@@ -1,6 +1,7 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: "{{ .Date }}"
 date: {{ .Date }}
+type: læringslogg
 tags: []
 draft: true
 ---
