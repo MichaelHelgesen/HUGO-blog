@@ -2,4 +2,5 @@ baseURL = 'http://example.org/'
 languageCode = 'nb-NO'
 title = 'My New Hugo Site'
 
-
+[frontmatter]
+    lastmod = ["lastmod", ":fileModTime", ":default"]

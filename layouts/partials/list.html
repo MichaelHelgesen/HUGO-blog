@@ -45,6 +45,7 @@
             
             {{ if and .Type (ne .Type "læringslogg") }}
                 {{ .Date | time.Format ":date_medium" }}
+                {{ .Lastmod | time.Format ":date_medium" }}
             {{ end }}
             
             {{ if eq .Type "læringslogg" }}

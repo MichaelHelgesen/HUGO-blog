@@ -151,3 +151,5 @@ hugo -s prebuild && hugo
 `-s` er en forkortelse for `--source` og angir hva som skal bygges først.
 
 Det er det hele. Nå kan du lage Hugo-sider med masse spennende innhold fra eksterne API-er.
+
+Test
