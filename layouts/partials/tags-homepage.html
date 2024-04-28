@@ -1,0 +1,6 @@
+    
+    {{range $name, $taxonomy := .range }}
+    {{ with ne (substr $name 0 1) "_" }}
+        {{ $name }}
+    {{ end }}
+    {{ end }}
