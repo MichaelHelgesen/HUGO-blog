@@ -1,6 +1,7 @@
----
+--- 
 type: "staticpage"
 title: "lenker"
 ---
-# Lenker
-Dette er en test
+{{< introtekst >}}
+Dette er en side om lenker 
+{{< /introtekst >}}

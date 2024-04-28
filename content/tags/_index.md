@@ -1,7 +1,6 @@
 ---
-title: kilder
+title: "tags"
 ---
-
 {{< introtekst >}}
-Dette er en side om kilder
+Dette er en tag-side.
 {{< /introtekst >}}

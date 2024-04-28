@@ -1,6 +1,8 @@
 ---
-title: læring
-url: laering
+title: "læring"
+url: "laering"
 ---
 
-Dette er saker om læring
+{{< introtekst >}}
+Dette er en tekst om læring
+{{< /introtekst >}}

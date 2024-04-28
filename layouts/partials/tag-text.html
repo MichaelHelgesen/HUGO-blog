@@ -1,0 +1,9 @@
+<div>
+    {{ if eq .tag "api" }}
+        Dette er en tekst om api
+    {{ else if eq .tag "effektivitet" }}
+        Dette er en tekst om effektivitet
+    {{ else }}
+        Dette er en samling av saker om {{ .tag }}
+    {{ end }}
+</div>

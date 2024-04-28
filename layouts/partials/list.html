@@ -24,28 +24,28 @@
         
         <li>
             {{ if or (eq $page "home") (eq $page "term")}}
-                <div>{{ .Type }}</div>
+                <small>{{ .Type }}</small>
             {{ end }}
 
             {{ if $source }}
                 <small>{{ $sourceType }}</small>
             {{ end }}
 
-            <h2 class="text-2xl font-bold">
+            <h3 class="text-2xl font-bold">
                 {{ if and .Type (ne .Type "læringslogg")}}
                     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                 {{else if eq .Type "læringslogg" }}    
-                    <a href="{{ .RelPermalink }}">{{ .Title | dateFormat ":date_full" }}</a>
+                    <a href="{{ .RelPermalink }}">{{ .Title | dateFormat ":date_medium" }}</a>
                 {{ else if $source }}
                     <a href="{{.data.url}}" id={{ $sourceTag }}>{{.data.title}}</a> 
                 {{ else }}
                     <a href="{{.link}}">{{.title}}</a> 
                 {{ end }}
-            </h2>
+            </h3>
             
             {{ if and .Type (ne .Type "læringslogg") }}
-                {{ .Date | time.Format ":date_medium" }}
-                {{ .Lastmod | time.Format ":date_medium" }}
+                <small>Publisert: {{ .Date | time.Format ":date_medium" }}</small><br />
+                <small>Oppdatert: {{ .Lastmod | time.Format ":date_medium" }}</small>
             {{ end }}
             
             {{ if eq .Type "læringslogg" }}

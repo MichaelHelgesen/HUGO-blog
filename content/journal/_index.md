@@ -3,6 +3,6 @@ title: journal
 draft: true
 ---
 
-# journalpage med innhold fra /content/journal/_index.md
-
-
+{{< introtekst >}}
+Dette er journal over ting jeg holder på med litt sånn utenom. Litt "behind the scenes"-aktig.
+{{< /introtekst >}}

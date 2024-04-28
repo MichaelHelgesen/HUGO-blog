@@ -1,4 +1,8 @@
 {{ define "main" }}
+
+{{ partial "tag-text"  (dict "tag" .Title )}}
+<div class="text-2xl">Dette er en samling av innhold om {{ .Title }}</div>
+
 {{ $title := .Title }}
 {{ $range := where .Site.RegularPages "Params.tags" "intersect" (slice $title) }}
 {{ partial "list" (dict "range" $range "content" . "page" .Kind)}}
