@@ -35,7 +35,7 @@
                 {{ if and .Type (ne .Type "læringslogg")}}
                     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                 {{else if eq .Type "læringslogg" }}    
-                    <a href="{{ .RelPermalink }}">{{ .Title | time.Format ":date_medium" }}</a>
+                    <a href="{{ .RelPermalink }}">{{ .Title | dateFormat ":date_full" }}</a>
                 {{ else if $source }}
                     <a href="{{.data.url}}" id={{ $sourceTag }}>{{.data.title}}</a> 
                 {{ else }}

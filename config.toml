@@ -1,5 +1,5 @@
 baseURL = 'http://example.org/'
-languageCode = 'nb-NO'
+defaultContentLanguage = "nb"
 title = 'My New Hugo Site'
 
 [frontmatter]
