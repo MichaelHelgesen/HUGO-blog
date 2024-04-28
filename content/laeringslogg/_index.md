@@ -2,4 +2,4 @@
 title: læringslogg
 url: /laeringslogg
 ---
-# Læringslogg
+# Læringslogg med innhold fra /content/laeringslogg/_index.md

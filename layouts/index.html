@@ -1,4 +1,5 @@
 {{ define "main" }}
+    {{ .Content }}
     <h2>Siste  fem blogg- og journalinnlegg</h2>
     {{ $range := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "!=" "læringslogg" | first 5 }}
     {{ partial "list" (dict "range" $range "content" . "page" .Kind)}}

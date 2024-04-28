@@ -6,7 +6,6 @@
     {{ $page := .page }}
 
     {{ range .range}}
-
         {{ if $source }}
             {{ if eq .data.itemType "book" }}
                 {{ $sourceType = "bok" }}
@@ -24,7 +23,7 @@
         {{ end }}
         
         <li>
-            {{if and (eq $page "home") (ne .Type "læringslogg") }}
+            {{ if or (eq $page "home") (eq $page "term")}}
                 <div>{{ .Type }}</div>
             {{ end }}
 

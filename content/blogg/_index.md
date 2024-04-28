@@ -3,5 +3,7 @@ title: blogg
 draft: true
 ---
 
-# Bloggpage
-
+# Bloggside med onnhold fra /content/blogg/_index.md
+{{< introtekst >}}
+introtekst via shortcodes/introtekst
+{{< /introtekst >}}

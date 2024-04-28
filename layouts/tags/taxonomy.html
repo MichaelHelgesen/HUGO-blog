@@ -1,5 +1,6 @@
 {{ define "main" }}
-<h2>Emneknaggger for poster</h2>
+{{ .Content }}
+<h2>Emneknaggger for poster med innhold fra /layouts/tags/taxonomy.html</h2>
 <ul class="flex flex-col gap-9">
     {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
         {{ with $.Site.GetPage (printf "/tags/%s" $name) }}

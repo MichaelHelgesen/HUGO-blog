@@ -3,6 +3,6 @@ title: journal
 draft: true
 ---
 
-# journalpage
+# journalpage med innhold fra /content/journal/_index.md
 
 
