@@ -1,14 +1,19 @@
 {{ define "main" }}
-    {{ .Content }}
-    <ul class="flex gap-3 flex-wrap">
-        {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
-        {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-            {{ partial "tags-homepage" (dict "page" . "name" $name "taxonomy" $taxonomy "count" $cnt )}}
+    <div class="flex flex-col gap-10">
+        <div class="flex flex-col gap-4">
+        {{ .Content }}
+        </div>
+        <ul class="flex gap-3 flex-wrap">
+            {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+            {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+                {{ partial "tags-homepage" (dict "page" . "name" $name "taxonomy" $taxonomy "count" $cnt )}}
+            {{ end }}
         {{ end }}
-    {{ end }}
-    </ul>
-    <h2>Siste tre læringslogger</h2>
-
-    {{ $rangeLaering := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "=" "læringslogg" | first 3 }}
-    {{ partial "list" (dict "range" $rangeLaering "content" . "page" .Kind)}}
+        </ul>
+        <div>
+            <h3>Siste tre læringslogger</h3>
+            {{ $rangeLaering := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "=" "læringslogg" | first 3 }}
+            {{ partial "list" (dict "range" $rangeLaering "content" . "page" .Kind)}}
+        </div>
+    </div>
 {{ end }}
