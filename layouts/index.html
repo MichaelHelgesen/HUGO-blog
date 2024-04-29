@@ -1,9 +1,12 @@
 {{ define "main" }}
     {{ .Content }}
-
-    {{$range := .Site.Taxonomies.tags}}
-    {{ partial "tags-homepage" (dict "range" $range) }}
-
+    <ul class="flex gap-3 flex-wrap">
+        {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+        {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+            {{ partial "tags-homepage" (dict "page" . "name" $name "taxonomy" $taxonomy "count" $cnt )}}
+        {{ end }}
+    {{ end }}
+    </ul>
     <h2>Siste tre læringslogger</h2>
 
     {{ $rangeLaering := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "=" "læringslogg" | first 3 }}

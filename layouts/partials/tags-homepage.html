@@ -1,6 +1,9 @@
-    
-    {{range $name, $taxonomy := .range }}
-    {{ with ne (substr $name 0 1) "_" }}
-        {{ $name }}
+    {{ if ne (substr .name 0 1) "_" }}
+        <li class ="border border-white rounded-full px-3 py-1">
+            <a href="{{ .page.RelPermalink }}">
+                {{.name}} {{ .count }}
+            </a>
+        </li>
     {{ end }}
-    {{ end }}
+
+   
