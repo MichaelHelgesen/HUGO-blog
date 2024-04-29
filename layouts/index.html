@@ -1,9 +1,28 @@
 {{ define "main" }}
-    {{ .Content }}
-    <h2>Siste  fem blogg- og journalinnlegg</h2>
-    {{ $range := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "!=" "læringslogg" | first 5 }}
-    {{ partial "list" (dict "range" $range "content" . "page" .Kind)}}
-    <h2>Siste tre læringslogger</h2>
-    {{ $rangeLaering := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "=" "læringslogg" | first 3 }}
-    {{ partial "list" (dict "range" $rangeLaering "content" . "page" .Kind)}}
+    <div class="flex flex-col gap-10">
+        <div class="flex flex-col gap-4">
+        {{ .Content }}
+        </div>
+        <ul class="flex gap-3 flex-wrap">
+            {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+            {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+                {{ partial "tags-homepage" (dict "page" . "name" $name "taxonomy" $taxonomy "count" $cnt )}}
+            {{ end }}
+        {{ end }}
+        </ul>
+        <div class="flex flex-col gap-4">
+            <h3 class="text-xl">Læringslogg</h3>
+            <p>
+            Jeg forsøker også så godt jeg kan å loggføre all ny kunnskap i en notatbok, som jeg deretter overfører til en digital punktliste som <a href="/laeringslogg">publiseres her</a>.
+            </p>
+            <p> 
+            En slik logg et sterkt visuelt bilde på hvor mye man faktisk har lært, og en god metode for å befeste kunnskapen. Dessuten opplever jeg det som en veldig god inspirasjonskilde for nye skriverier. 
+            </p>
+            <p>
+            Jeg anbefaler deg absolutt å prøve, men hold det enkelt! Under vises de tre siste oppføringene i læringsloggen min.
+            </p>
+            {{ $rangeLaering := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "=" "læringslogg" | first 3 }}
+            {{ partial "list" (dict "range" $rangeLaering "content" . "page" .Kind)}}
+        </div>
+    </div>
 {{ end }}
