@@ -10,8 +10,17 @@
             {{ end }}
         {{ end }}
         </ul>
-        <div>
-            <h3>Siste tre læringslogger</h3>
+        <div class="flex flex-col gap-4">
+            <h3 class="text-xl">Læringslogg</h3>
+            <p>
+            Jeg forsøker også så godt jeg kan å loggføre all ny kunnskap i en notatbok, som jeg deretter overfører til en digital punktliste som <a href="/laeringslogg">publiseres her</a>.
+            </p>
+            <p> 
+            En slik logg et sterkt visuelt bilde på hvor mye man faktisk har lært, og en god metode for å befeste kunnskapen. Dessuten opplever jeg det som en veldig god inspirasjonskilde for nye skriverier. 
+            </p>
+            <p>
+            Jeg anbefaler deg absolutt å prøve, men hold det enkelt! Under vises de tre siste oppføringene i læringsloggen min.
+            </p>
             {{ $rangeLaering := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "=" "læringslogg" | first 3 }}
             {{ partial "list" (dict "range" $rangeLaering "content" . "page" .Kind)}}
         </div>

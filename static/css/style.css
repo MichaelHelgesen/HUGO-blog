@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+   p a {
+    /* background-color: #314158; */
+    color: hotpink;
+    font-weight: 600;
+    /* padding: 0 0.1rem; */
+  }
+  /*
+  header nav ul li {
+    color: hotpink;
+  }
+  */
+}
+
