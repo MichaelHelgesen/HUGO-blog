@@ -459,6 +459,36 @@ p a {
   }
   */
 
+.relative {
+  position: relative;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-auto {
+  height: auto;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade {
+  animation: fadeIn 750ms ease-in-out;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -567,6 +597,10 @@ p a {
   --tw-contain-style:  ;
 }
 
+.relative {
+  position: relative;
+}
+
 .mb-14 {
   margin-bottom: 3.5rem;
 }
@@ -581,6 +615,18 @@ p a {
 
 .flex {
   display: flex;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.resize {
+  resize: both;
 }
 
 .flex-row {
@@ -631,6 +677,10 @@ p a {
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .p-5 {
@@ -701,6 +751,10 @@ p a {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .hover\:bg-white:hover {

@@ -14,5 +14,28 @@
     color: hotpink;
   }
   */
+.relative {
+	position: relative;
+}
+.bg-center {
+	background-position: center;
+}
+.w-full {
+	width: 100%;
+}
+.h-auto {
+	height: auto;
+}
+@keyframes fadeIn {
+ 0% {
+	 opacity: 0;
+ }
+ to {
+	 opacity: 1;
+ }
+}
+.animate-fade {
+	animation: fadeIn 750ms ease-in-out;
+}
 }
 
