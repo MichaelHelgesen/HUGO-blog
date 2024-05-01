@@ -489,6 +489,31 @@ p a {
   animation: fadeIn 750ms ease-in-out;
 }
 
+.laeringslogg-homepage li {
+  border-bottom: 1px solid hotpink;
+  padding: 1rem 0;
+}
+
+.cal {
+  border-radius: 3px;
+  display: flex;
+  flex-wrap:wrap;
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  border-color: white;
+}
+
+.cal > a {
+  flex-basis: 33.33%;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 20px;
+}
+
+.cal > a:hover {
+  background: hotpink;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -605,6 +630,14 @@ p a {
   margin-bottom: 3.5rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .block {
   display: block;
 }
@@ -617,16 +650,32 @@ p a {
   display: flex;
 }
 
+.h-4 {
+  height: 1rem;
+}
+
+.h-7 {
+  height: 1.75rem;
+}
+
 .h-auto {
   height: auto;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
+.w-7 {
+  width: 1.75rem;
 }
 
 .w-full {
   width: 100%;
 }
 
-.resize {
-  resize: both;
+.flex-1 {
+  flex: 1 1 0%;
 }
 
 .flex-row {
@@ -639,6 +688,14 @@ p a {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-1 {
+  gap: 0.25rem;
 }
 
 .gap-10 {
@@ -679,8 +736,21 @@ p a {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
+.bg-gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
 .bg-center {
   background-position: center;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-2\.5 {
+  padding: 0.625rem;
 }
 
 .p-5 {
@@ -724,6 +794,11 @@ p a {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-xl {

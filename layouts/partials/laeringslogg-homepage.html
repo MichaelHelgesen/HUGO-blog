@@ -1,0 +1,28 @@
+    {{ range .range}}
+    {{.Params.Date.Weekday}}
+    {{ $dayNum := .Params.Date.Weekday | printf "%d" | int }} 
+        {{ if eq $dayNum 1 }}
+            <div class="lesson mon">
+        {{ else if eq $dayNum 2 }}
+            <div class="lesson tue">
+        {{ else if eq $dayNum 3 }}
+            <div class="lesson wed">
+        {{ else if eq $dayNum 4 }}
+            <div class="lesson thu">
+        {{ else if eq $dayNum 5 }}
+            <div class="lesson fri">
+        {{ else if eq $dayNum 6 }}
+            <div class="lesson sat">
+        {{ else }}
+            <div class="lesson sun">
+        {{ end }}
+        <div class="bg-gray-500 p-2.5 text-sm">
+        {{/*    
+        <h4 class="text-1xl font-bold">
+            <a href="{{ .RelPermalink }}">{{ .Title | dateFormat ":date_medium" }}</a>
+        </h4>
+        */}}
+        {{ partial "tags-laeringslogg.html" . }}
+        </div>
+    </div>
+    {{ end }}

@@ -1,0 +1,23 @@
+{{ $taxonomy := "tags" }} {{ with .Param $taxonomy }}
+{{ $range := .}}
+  {{ range $index, $tag := . }} 
+      {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
+      <div class="flex gap-1 items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+      </svg>{{ substr $tag 1 }}
+      </div>
+        {{/* 
+        <a href="{{ .RelPermalink }}"> 
+        {{ if eq (len $range) 1 }} 
+            {{ (substr $tag 1) }}
+        {{ else if and (eq (len $range) (add $index 1)) (ne $index 0) }}
+            og {{ (substr $tag 1) }}
+        {{ else }}
+        {{ (substr $tag 1) }},
+        {{ end }}
+      </a>
+      */}}
+      {{- end -}}
+{{ end }}
+{{ end }}

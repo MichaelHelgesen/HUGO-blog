@@ -49,7 +49,7 @@
             {{ end }}
             
             {{ if eq .Type "læringslogg" }}
-                {{.Content}}
+                Lærte noe nytt om 
             {{ end }}
 
             {{/* API-sider */}}
@@ -92,7 +92,11 @@
             
             {{/* Show tags if any */}}
             {{ if .Type }}
-                {{ partial "tags.html" .}}
+                {{ if eq .Type "læringslogg" }}
+                    {{ partial "tags-laeringslogg.html" . }}
+                {{ else }} 
+                    {{ partial "tags.html" .}}
+                {{ end }}
             {{ end }}
         </li>
     {{ end }}

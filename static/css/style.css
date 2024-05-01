@@ -37,5 +37,26 @@
 .animate-fade {
 	animation: fadeIn 750ms ease-in-out;
 }
+.laeringslogg-homepage li {
+    border-bottom: 1px solid hotpink;
+    padding: 1rem 0;
+}
+.cal {
+    border-radius: 3px;
+    display: flex;
+    flex-wrap:wrap;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-color: white;
+}
+.cal > a {
+    flex-basis: 33.33%;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 20px;
+}
+.cal > a:hover {
+    background: hotpink;
+}
 }
 
