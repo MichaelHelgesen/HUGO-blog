@@ -1,11 +1,9 @@
 ---
 title: Min tredje seksjon i zettelkasten
+date: 2024-04-17T14:03:58+02:00
+draft: false
 tags: [zettelkasten, skriving, læring]
 ---
-
-# Min tredje seksjon i zettelkasten
-06. september 2023
-
 
 Jeg startet min zettelkasten med notater om læring og skriving. I dag utvidet jeg notat-systemet med en ny seksjon om kreativitet.
 

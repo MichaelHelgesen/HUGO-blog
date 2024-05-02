@@ -1,8 +1,8 @@
 ---
-title: blogg
-draft: true
+title: "blogg"
+draft: false
 ---
 
 {{< introtekst >}}
-introtekst via shortcodes/introtekst
+Blogg
 {{< /introtekst >}}

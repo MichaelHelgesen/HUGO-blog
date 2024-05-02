@@ -1,10 +1,10 @@
 ---
 title: Opprette sider i Hugo via API
 date: 2024-04-19
+draft: false
 tags: [hugo, api, zotero]
+ingress: "Det er i utgangspunktet ikke mulig å opprette sider i Hugo via et API, men det finnes en løsning."
 ---
-# Opprette sider i Hugo via API
-
 Under opprettelsen av denne bloggen hadde jeg et ønske om å koble til [Zotero](https://zotero.org), slik at alle kilder jeg har benyttet og henviser til i tekster automatisk konverteres til sider i Hugo.
 
 Etter litt søking forsto jeg at det å opprette sider basert på en ekstern kilde under byggingen av et Hugo-nettsted lenge har blitt sett på som et av Hugos største begrensninger. Operasjonen har alltid krevd en to-stegs prosess.

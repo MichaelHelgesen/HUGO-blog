@@ -1,6 +1,6 @@
 ---
 title: "læring"
-url: "laering"
+url: "tags/laering"
 ---
 
 {{< introtekst >}}

@@ -1,12 +1,9 @@
 ---
 title: "Hvordan kan jeg handtere kunnskap på en smart og effektiv måte"
 date: 2024-04-17T13:48:55+02:00
-draft: true
+draft: false
 tags: [læring]
 ---
-# Hvordan kan jeg håndtere kunnskap på en smart og effektiv måte?
-13. september 2023
-
 Hjemmekontoret mitt flyter over av bøker, notater, apper, hårete mål og gode intensjoner, men ingenting av verdi å vise til. Hvorfor er det slik? Og enda viktigere: hvordan kan jeg endre det? Finnes det en prosess for kunnskapsutvikling som fungerer?
 
 I mange år har jeg lest og lært om emner som interesserer meg. Formålet har alltid vært å utvikle meg som person, øke min forståelse samt videreformidle kunnskap til andre.
@@ -81,4 +78,3 @@ Da er det bare for meg å gå i gang med å søke etter svar på følgende:
 
 * Hvordan vet jeg hvilke kilder jeg skal velge, og hvordan kan jeg på best mulig måte hente ut relevant informasjon?
 * Finnes det effektive prosesser for utvikling og håndtering av kunnskap?
-Profile picture

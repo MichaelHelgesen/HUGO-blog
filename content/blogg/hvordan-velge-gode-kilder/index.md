@@ -1,13 +1,9 @@
 ---
-title: "Hvordan Velge Gode Kilder"
+title: "Hvordan velge gode kilder"
 date: 2024-04-17T14:03:58+02:00
 tags: [læring, skriving]
-draft: true
+draft: false
 ---
-# Hvordan velge gode kilder?
-19. september 2023
-
-
 At nivået og kvaliteten på egen kunnskap beror på kildene er kanskje opplagt, men hvordan finner og velger man de beste ressursene?
 
 I følge [Kildekompasset.no](https://kildekompasset.no/) finnes det to typer kilder å velge mellom: primærkilder og sekundærkilder.

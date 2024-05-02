@@ -1,12 +1,9 @@
 ---
-title: "Les Med Intensjon for Bedre Effektivitet"
+title: "Les med intensjon for bedre effektivitet"
 date: 2024-04-17T14:09:45+02:00
 tags: [effektivitet, lesing]
 draft: true
 ---
-# Les med intensjon for bedre effektivitet
-20. september 2023
-
 Å sette seg et mål før man leser en tekst har for meg vært en svært viktig lærdom.
 
 Det høres kanskje absurd ut, at noe så enkelt kan være av betydning, men å lese med intensjon har økt min effektivitet betraktelig.

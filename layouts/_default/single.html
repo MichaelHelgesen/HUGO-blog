@@ -5,6 +5,14 @@
     <h2>{{ .title }}</h2>
     {{ .abstractNote }}
 {{ end }}
-{{- .Title -}}
+<div class="mb-14 flex flex-col gap-4">
+<h1 class="text-3xl font-bold">{{- .Title -}}</h1>
+    <p>{{ .Date | time.Format ":date_medium" }}</p>
+    {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
+    <p> Oppdatert: {{ .Lastmod | time.Format ":date_medium" }}</p>
+    {{ end }}
+</div>
+<article class="flex flex-col gap-4">
 {{- .Content -}}
+</article>
 {{ end }}

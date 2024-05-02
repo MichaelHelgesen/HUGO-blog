@@ -1,13 +1,10 @@
 ---
 title: Nullstilling av bokhyllen
+date: 2024-04-17T14:03:58+02:00
 tags: [lesing, læring]
 ---
-# Nullstilling av bokhyllen
-02. oktober 2023
-
 I dag startet jeg jobben med å tømme bokhyllene for bøker.
 
-test
 I alt for lang tid har jeg latt meg påvirke av sosiale medier og influensere til å kjøpe anbefalte bøker om selvhjelp, effektivitet, produktivitet og andre temaer.
 
 De færreste av bøkene er lest, mens de de andre har resultert i en masse usystematiske notater og markeringer, men ikke noe nytt, konkret eller nyttig.

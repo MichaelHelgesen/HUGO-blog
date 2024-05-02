@@ -58,5 +58,61 @@
 .cal > a:hover {
     background: hotpink;
 }
+article ul, article ol {
+    margin: 5px 0 5px 20px;
+}
+article ul li {
+    list-style-position: inside;
+    list-style-type: circle;
+}
+article ol li {
+    list-style-position: inside;
+    list-style-type: number;
+}
+article blockquote {
+    border-left: 4px solid gray;
+    margin-left: 20px;
+    padding-left: 20px;
+    font-size: 1.15em;
+    font-style: italic;
+    margin: 5px 0;
+}
+article code {
+padding: .125rem .35rem;
+background: #272822;
+font-size: .9rem;
+}
+article code > span {
+    display: unset!important;
+}
+article pre {
+overflow: auto;
+    overflow-x: scroll;
+    overflow-wrap: normal;
+    padding: 3%;
+    margin: 5px 0;
+}
+article pre code {
+    padding: unset;
+}
+article h2 {
+    font-weight: bold;
+    font-size: 1.5rem;
+line-height: 2rem;
+margin-top: 2rem;
+}
+article h3 {
+    font-weight: bold;
+font-size: 1.25rem;
+line-height: 1.75rem;
+margin-top: 1.25rem;
+}
+
+article h4 {
+    font-weight: bold;
+font-size: 1.10rem;
+line-height: 1.5rem;
+margin-top: 1rem;
+}
 }
 

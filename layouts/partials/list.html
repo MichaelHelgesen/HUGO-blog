@@ -1,4 +1,4 @@
-<ul class="flex flex-col gap-9">
+<ul class="flex flex-col gap-16">
     
     {{ $source := .type }}
     {{ $sourceType := "" }}
@@ -22,7 +22,7 @@
             {{ end }}
         {{ end }}
         
-        <li>
+        <li class="flex flex-col gap-4">
             {{ if or (eq $page "home") (eq $page "term")}}
                 <small>{{ .Type }}</small>
             {{ end }}
@@ -31,9 +31,9 @@
                 <small>{{ $sourceType }}</small>
             {{ end }}
 
-            <h3 class="text-2xl font-bold">
+            <h3 class="text-2xl font-bold text-pink-400">
                 {{ if and .Type (ne .Type "læringslogg")}}
-                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <a href="{{ .RelPermalink }}" class="hover:underline">{{ .Title }}</a>
                 {{else if eq .Type "læringslogg" }}    
                     <a href="{{ .RelPermalink }}">{{ .Title | dateFormat ":date_medium" }}</a>
                 {{ else if $source }}
@@ -44,8 +44,15 @@
             </h3>
             
             {{ if and .Type (ne .Type "læringslogg") }}
-                <small>Publisert: {{ .Date | time.Format ":date_medium" }}</small><br />
-                <small>Oppdatert: {{ .Lastmod | time.Format ":date_medium" }}</small>
+            <div>
+                <span class="text-sm">{{ .Date | time.Format ":date_medium" }}</span>
+                {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
+                <span class="text-sm"> // Oppdatert: {{ .Lastmod | time.Format ":date_medium" }}</span>
+                {{ end }}
+            </div>
+            <p>
+                {{ .Params.ingress }}
+            </p>
             {{ end }}
             
             {{ if eq .Type "læringslogg" }}
