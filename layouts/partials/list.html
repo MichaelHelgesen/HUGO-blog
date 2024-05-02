@@ -1,4 +1,4 @@
-<ul class="flex flex-col gap-16">
+<ul class="flex flex-col">
     
     {{ $source := .type }}
     {{ $sourceType := "" }}
@@ -22,7 +22,25 @@
             {{ end }}
         {{ end }}
         
-        <li class="flex flex-col gap-4">
+        <li class="flex">
+        {{ if .Type }}
+        <div class="flex gap-5">
+            <div class="blog-line">
+                <div class="flex flex-col items-center bg-gray-800 py-1">
+                <span class="text-sm"><b>{{ .Date | time.Format "2. Jan" }}</b></span>
+                <span class="text-sm">{{ .Date | time.Format "2006" }}</span>
+                </div>
+                <!--
+                <div class="flex flex-col items-center bg-gray-800 py-1">
+                {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
+                <span class="text-sm">{{ .Lastmod | time.Format "2. Jan" }}</span>
+                <span class="text-sm">{{ .Lastmod | time.Format "2006" }}</span>
+                {{ end }}
+                </div>
+                -->
+            </div>
+        {{ end }}
+        <div class="flex flex-col gap-4 flex-1 pb-20">
             {{ if or (eq $page "home") (eq $page "term")}}
                 <small>{{ .Type }}</small>
             {{ end }}
@@ -44,19 +62,15 @@
             </h3>
             
             {{ if and .Type (ne .Type "læringslogg") }}
-            <div>
-                <span class="text-sm">{{ .Date | time.Format ":date_medium" }}</span>
-                {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
-                <span class="text-sm"> // Oppdatert: {{ .Lastmod | time.Format ":date_medium" }}</span>
-                {{ end }}
-            </div>
             <p>
-                {{ .Params.ingress }}
+                {{ .Content }}
             </p>
             {{ end }}
             
             {{ if eq .Type "læringslogg" }}
-                Lærte noe nytt om 
+            <article>
+            {{ .Content }}
+            </article>
             {{ end }}
 
             {{/* API-sider */}}
@@ -105,6 +119,7 @@
                     {{ partial "tags.html" .}}
                 {{ end }}
             {{ end }}
+        </div>
         </li>
     {{ end }}
 </ul>

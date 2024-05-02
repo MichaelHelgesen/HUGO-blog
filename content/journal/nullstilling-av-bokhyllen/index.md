@@ -22,3 +22,4 @@ Førstnevnte er en kilde til notat- og kunnskapssystemet Zettelkasten og skal fo
 Sistnevnte er en enkel bok som inspirerer deg til å komme i gang med dine kreative prosjekter, og som oppfordrer til å dele prosessen online. Den er som et effektivt spark bak.
 
 Dette blir spennende!
+

@@ -580,6 +580,24 @@ article h4 {
   margin-top: 1rem;
 }
 
+.blog-line {
+  background: linear-gradient(#fff, #fff);
+  background-size: 1px 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.footnotes p {
+  display: inline;
+}
+
+.footnotes ol {
+  padding-top: 10px;
+  font-size: .9rem;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -716,6 +734,10 @@ article h4 {
   display: inline-block;
 }
 
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
 }
@@ -772,10 +794,6 @@ article h4 {
   gap: 2.5rem;
 }
 
-.gap-16 {
-  gap: 4rem;
-}
-
 .gap-2 {
   gap: 0.5rem;
 }
@@ -786,6 +804,10 @@ article h4 {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .gap-9 {
@@ -813,6 +835,11 @@ article h4 {
 .bg-gray-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
 .bg-center {
@@ -854,6 +881,10 @@ article h4 {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.pb-20 {
+  padding-bottom: 5rem;
 }
 
 .pr-10 {
@@ -915,6 +946,11 @@ article h4 {
   line-height: 1;
 }
 
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
 .text-pink-400 {
   --tw-text-opacity: 1;
   color: rgb(244 114 182 / var(--tw-text-opacity));
@@ -965,4 +1001,3 @@ article h4 {
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
-

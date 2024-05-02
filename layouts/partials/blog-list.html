@@ -1,0 +1,45 @@
+<ul class="flex flex-col">
+    
+    {{ $page := .page }}
+
+    {{ range .range}}
+        
+        
+        <li class="flex">
+        <div class="flex gap-5">
+            <div class="blog-line flex flex-col gap-2">
+                {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
+                <div class="flex flex-col items-center bg-gray-800 py-1">
+                    <span class="text-sm"><b>Red: {{ .Lastmod | time.Format "2. Jan" }}</b></span>
+                <span class="text-sm">{{ .Lastmod | time.Format "2006" }}</span>
+                </div>
+                {{ end }}
+                <div class="flex flex-col text-gray-500 items-center bg-gray-800 py-1">
+                    <span class="text-sm">Pub: {{ .Date | time.Format "2. Jan" }}</span>
+                <span class="text-sm">{{ .Date | time.Format "2006" }}</span>
+                </div>
+                
+                
+            </div>
+        <div class="flex flex-col gap-4 flex-1 pb-20">
+            <h3 class="text-2xl font-bold text-pink-400">
+                    <a href="{{ .RelPermalink }}" class="hover:underline">{{ .Title }}</a>
+            </h3>
+            
+            <p>
+                {{ .Params.ingress }}
+            </p>
+            
+            
+            {{/* Show tags if any */}}
+            {{ if .Type }}
+                {{ if eq .Type "læringslogg" }}
+                    {{ partial "tags-laeringslogg.html" . }}
+                {{ else }} 
+                    {{ partial "tags.html" .}}
+                {{ end }}
+            {{ end }}
+        </div>
+        </li>
+    {{ end }}
+</ul>

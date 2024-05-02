@@ -1,0 +1,7 @@
+{{ define "main" }}
+{{ .Content }}    
+{{ $range := .Pages }}
+
+{{ partial "blog-list" (dict "range" $range "content" .)}}
+
+{{ end }}

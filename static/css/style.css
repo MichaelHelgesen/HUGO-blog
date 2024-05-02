@@ -114,5 +114,20 @@ font-size: 1.10rem;
 line-height: 1.5rem;
 margin-top: 1rem;
 }
+.blog-line {
+    background: linear-gradient(#fff, #fff);
+background-size: 1px 100%;
+background-repeat: no-repeat;
+background-position: center;
+width: max-content;
 }
-
+.blog-line {
+}
+.footnotes p {
+    display: inline;
+}
+.footnotes ol {
+   padding-top: 10px; 
+   font-size: .9rem;
+}
+}
