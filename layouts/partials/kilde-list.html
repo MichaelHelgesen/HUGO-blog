@@ -1,59 +1,69 @@
 <ul class="flex flex-col">
-    
-    {{ $source := .type }}
-    {{ $sourceType := "" }}
-    {{ $sourceTag := "" }}
-    {{ $page := .page }}
-    {{ $data := . }}
+
     {{ range .range}}
 
-        {{ if $source }}
-            {{ if eq .data.itemType "book" }}
-                {{ $sourceType = "bok" }}
-            {{ else if eq .data.itemType "blogPost"}}
-                {{ $sourceType = "blogg" }}
-            {{ else if eq .data.itemType "videoRecording"}}
-                {{ $sourceType = "video" }}
-            {{ end }}
-        {{ end }}
-        
-            {{ range .data.tags }}
-                {{ $sourceTag = .tag }}
-            {{ end }}
-        
-        <li class="flex">
-        <div class="flex flex-col gap-3 flex-1 pb-20">
+    {{ $sourceType := "" }}
+    {{ $sourceTag := "" }}
+    {{ $data := . }}
+    {{ $incomingLinks := slice }}
 
-                <p class="font-bold capitalize">{{ $sourceType }}</p>
+    {{ if eq .data.itemType "book" }}
+    {{ $sourceType = "bok" }}
+    {{ else if eq .data.itemType "blogPost"}}
+    {{ $sourceType = "blogg" }}
+    {{ else if eq .data.itemType "videoRecording"}}
+    {{ $sourceType = "video" }}
+    {{ end }}
 
-            <h3 class="text-2xl font-bold text-pink-400">
-                   <a href="{{.data.url}}" id={{ $sourceTag }}>{{.data.title}}</a> 
-            </h3>
-            
-                
+    {{ range .data.tags }}
+    {{ $sourceTag = .tag }}
+    {{ end }}
+    {{ if $sourceTag }}
+    <li class="flex">
+        <div class="flex gap-5">
+            <div class="blog-line flex flex-col gap-2">
+                <div class="flex flex-col items-center bg-gray-800 py-1">
+                    <span class="text-sm capitalize">{{ $sourceType }}</span>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 flex-1 pb-20">
+
+                <h3 class="text-2xl font-bold text-pink-400">
+                    <a href="{{.data.url}}" id={{ $sourceTag }}>{{.data.title}}</a> 
+                </h3>
+
+
 
                 {{ with .data }}
-                    <ul>
-                        {{ range .creators }}
-                            <li>{{ .firstName }} {{ .lastName }}</li>
-                        {{ end }}
-                    </ul>
-                {{ end }}
-                
-            
                 <ul>
-                    {{- range site.RegularPages -}}
-                        {{ if in .RawContent $sourceTag }}
-                            <li>
-                                <a href="{{ .Page.Permalink }}">{{.Title}}</a>
-                                <small>{{ .Type }}</small>
-                                {{ partial "tags.html" .}}
-                            </li>
-                        {{ end }}
-                    {{- end -}}
+                    {{ range .creators }}
+                    <li class="text-xl">{{ .firstName }} {{ .lastName }}</li>
+                    {{ end }}
                 </ul>
-            
+                {{ end }}
+                <hr class="w-5">
+                {{- range site.RegularPages -}}
+                {{ if and (in .RawContent $sourceTag) (len $sourceTag) }}
+                {{ $incomingLinks = $incomingLinks | append .}}
+                {{ end }}
+                {{- end -}}
+
+                {{ if len $incomingLinks}}
+                <p class="mt-4 text-lg">Tekster som linker til denne kilden:</p>
+                <ul>
+                    {{range $incomingLinks }}
+                    <li class="gap-4 list-disc list-inside">
+                        <div class="inline-flex gap-4 items-center">
+                            <h3>{{.Type}}: <a class="text-pink-400 font-bold" href="{{ .Page.Permalink }}">{{.Title}}</a></h3>
+                        <div class="-mt-1">{{ partial "tags.html" .}}</div>
+                        </div>
+                    </li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </div>
         </div>
-        </li>
+    </li>
+    {{ end }}
     {{ end }}
 </ul>
