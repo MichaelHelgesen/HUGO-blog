@@ -1,0 +1,14 @@
+<ul class="flex flex-col">
+    
+    {{ $page := .page }}
+    {{ $data := . }}
+    {{ range .range}}
+    <div>
+    <h2 class="font-bold text-2xl capitalize mb-4">{{.Key}}</h2>
+    {{ $rangeLaering := .Pages.ByDate}}
+    <div class="cal mb-10">
+    {{ partial "laeringslogg-homepage2" (dict "range" $rangeLaering "content" .)}}
+    </div>
+    </div>
+    {{ end }}
+</ul>

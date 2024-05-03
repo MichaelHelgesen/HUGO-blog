@@ -3,7 +3,7 @@
 
 {{ with resources.GetRemote "https://api.zotero.org/groups/5454933/collections/U68Q8VUJ/items/top?format=json&v=3"}}
     {{ $kilder := unmarshal .Content }}
-    {{ partial "list" (dict "range" $kilder "content" . "type" "kilde")}}
+    {{ partial "kilde-list" (dict "range" $kilder "content" . "type" "kilde")}}
 {{ end }}
 
 

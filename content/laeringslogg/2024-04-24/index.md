@@ -2,8 +2,8 @@
 title: "2024-04-24T08:43:09+02:00"
 date: 2024-04-24T08:43:09+02:00
 type: læringslogg
-tags: [_javascript]
-draft: true
+logs: [javascript]
+draft: false
 ---
 
 ## Javascript

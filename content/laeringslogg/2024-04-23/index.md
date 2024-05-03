@@ -2,7 +2,7 @@
 title: 2024-04-23
 date: 2024-04-23
 type: læringslogg
-tags: [_hugo, _git]
+logs: [hugo, git]
 ---
 ## Git
 * Hvis man ønsker å angre `git commit` kan man skrive `git reset`.

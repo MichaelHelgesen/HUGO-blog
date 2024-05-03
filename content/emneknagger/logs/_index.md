@@ -1,6 +1,6 @@
 ---
-title: "tags"
+title: "logs"
 ---
 {{< introtekst >}}
-Dette er en tag-side.
+Emneknagger
 {{< /introtekst >}}

@@ -4,7 +4,7 @@
     {{ $sourceType := "" }}
     {{ $sourceTag := "" }}
     {{ $page := .page }}
-
+    {{ $data := . }}
     {{ range .range}}
         {{ if $source }}
             {{ if eq .data.itemType "book" }}
@@ -62,11 +62,21 @@
             </h3>
             
             {{ if and .Type (ne .Type "læringslogg") }}
+            {{ if eq $page "term" }}
+            {{ if eq (substr $data.tag 0 1) "_"}}
+                
             <p>
                 {{ .Content }}
             </p>
+                {{else}}
+                <p>
+                
+                </p>
+                {{end}}
+
+            {{end}}
             {{ end }}
-            
+
             {{ if eq .Type "læringslogg" }}
             <article>
             {{ .Content }}

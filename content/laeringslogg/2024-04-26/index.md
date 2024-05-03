@@ -2,8 +2,8 @@
 title: "2024-04-26T09:16:06+02:00"
 date: 2024-04-26T09:16:06+02:00
 type: læringslogg
-tags: [_hugo, _design, _nvim]
-draft: true
+logs: [hugo, design, nvim]
+draft: false
 ---
 ## Hugo
 

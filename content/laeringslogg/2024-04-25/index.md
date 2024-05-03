@@ -2,8 +2,8 @@
 title: "2024-04-25T09:15:58+02:00"
 date: 2024-04-25T09:15:58+02:00
 type: "læringslogg"
-tags: ["_hugo"]
-draft: true
+logs: ["hugo"]
+draft: false
 ---
 ## Hugo
 

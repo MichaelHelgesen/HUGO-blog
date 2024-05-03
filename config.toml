@@ -4,3 +4,11 @@ title = 'My New Hugo Site'
 
 [frontmatter]
     lastmod = ["lastmod", ":fileModTime", ":default"]
+
+[taxonomies]
+  tag = "tags"
+  log = "logs"
+
+[permalinks]
+tags = "/emneknagger/tags/:slug"
+logs = "/emneknagger/logs/:slug"

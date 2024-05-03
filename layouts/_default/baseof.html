@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="nb" class="bg-gray-50 dark:bg-gray-800 dark:text-white">
+<html lang="nb" class="bg-gray-50 dark:bg-gray-800 h-full dark:text-white">
     {{ partial "head.html" .}}
-<body>
-    <div class="p-5">
+<body class="flex flex-col min-h-full p-5">
     <!-- header -->
     {{ partial "header.html" .}} 
    <!-- /header -->
 
    <!-- main -->
-   <main>
+   <main class="flex-1">
        {{ block "main" .}}
        {{ end }}
    </main>
@@ -17,7 +16,5 @@
     <!-- footer -->
         {{ partial "footer.html" .}}
    <!-- /footer -->
-    </div>
-    <script src="/js/script.js"></script>
 </body>
 </html>

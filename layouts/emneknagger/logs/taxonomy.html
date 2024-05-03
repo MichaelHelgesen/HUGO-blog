@@ -1,0 +1,11 @@
+{{ define "main" }}
+{{ .Content }}
+<h2>Emneknaggger for poster med innhold fra /layouts/logs/taxonomy.html</h2>
+<ul class="flex flex-col gap-9">
+    {{range $name, $taxonomy := .Site.Taxonomies.logs}} {{ $cnt := .Count }}
+        {{ with $.Site.GetPage (printf "/logs/%s" $name) }}
+                {{ partial "tag_item" (dict "name" $name "count" $cnt "link" .RelPermalink) }}
+        {{end}}
+    {{end}}
+</ul>
+{{ end }}

@@ -1,6 +1,6 @@
 ---
 title: 2024-04-17
-tags: [_vim, _linux, _hugo]
+logs: [vim, linux, hugo]
 date: 2024-04-17
 type: læringslogg
 ---

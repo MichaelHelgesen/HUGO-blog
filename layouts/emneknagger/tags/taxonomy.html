@@ -12,11 +12,9 @@
 </ul>
 <h2>Emneknagger for læringslogg</h2>
 <ul class="flex flex-col gap-9">
-    {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
-        {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-            {{ if eq (substr $name 0 1) "_"}} 
+    {{range $name, $taxonomy := .Site.Taxonomies.logs}} {{ $cnt := .Count }}
+        {{ with $.Site.GetPage (printf "/logs/%s" $name) }}
                 {{ partial "tag_item" (dict "name" $name "count" $cnt "link" .RelPermalink) }}
-            {{ end }}
         {{end}}
     {{end}}
 </ul>

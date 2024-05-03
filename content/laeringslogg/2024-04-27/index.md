@@ -2,8 +2,8 @@
 title: "2024-04-27T07:57:36+02:00"
 date: 2024-04-27T07:57:36+02:00
 type: læringslogg
-tags: [_terminal, _hugo]
-draft: true
+logs: [terminal, hugo]
+draft: false
 ---
 
 ### Terminal

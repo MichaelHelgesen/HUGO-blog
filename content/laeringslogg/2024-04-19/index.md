@@ -2,7 +2,7 @@
 title: 2024-04-19
 date: 2024-04-19
 type: læringslogg
-tags: [_hugo, _nvim]
+logs: [hugo, nvim]
 ---
 ## Hugo
 
