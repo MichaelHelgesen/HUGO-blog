@@ -1,6 +1,6 @@
 baseURL = 'http://example.org/'
 defaultContentLanguage = "nb"
-title = 'My New Hugo Site'
+title = 'Mikkes blogg'
 
 [frontmatter]
     lastmod = ["lastmod", ":fileModTime", ":default"]

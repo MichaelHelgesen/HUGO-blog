@@ -3,8 +3,10 @@ title: "Mikke Helgesen"
 draft: false
 ---
 {{< introtekst >}}
-<b>Hei! Mikke her.</b><br /> 
+<h1>Hei! Mikke her.</h1> 
+<p>
 Jeg deler tanker og innsikt i håp om å være til inspirasjon og hjelp, samt for å lære mer og bedre.
+</p>
 {{< /introtekst >}}
 
 Velkommen til min lille plass på nettet. Jeg er Mikke, en mann i midten av livet med en fin familie og en spennende jobb i et reklamebyrå, hvor jeg koser jeg meg med frontend-programmering.

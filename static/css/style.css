@@ -1,50 +1,94 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "normalize.css";
+/* RESET */
+:root {
+  line-height: 1.6;
+}
 
-@layer base {
-   p a {
-    /* background-color: #314158; */
-    color: hotpink;
-    font-weight: 600;
-    /* padding: 0 0.1rem; */
-  }
-  /*
-  header nav ul li {
-    color: hotpink;
-  }
-  */
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+
+ol, ul {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+/* END RESET */
+
+
 .relative {
 	position: relative;
 }
+
 .bg-center {
 	background-position: center;
 }
+
 .w-full {
 	width: 100%;
 }
+
 .h-auto {
 	height: auto;
 }
+
 @keyframes fadeIn {
  0% {
 	 opacity: 0;
- }
+}
+ 
  to {
 	 opacity: 1;
  }
 }
+
+:root {
+    --base-color: hsl(35, 100%, 98%);
+    --primary-color: hsl(0, 0%, 8%);
+    --accent-color: hsl(239, 78%, 26%);
+
+    --mini: 0.25rem;
+    --small: 0.5rem;
+    --medium_1: 1rem;
+    --medium_2: 1.5rem;
+    --medium_3: 2rem;
+    --large_1: 2.5rem;
+    --large_2: 3rem;
+    --large_3: 3.5rem;
+    --max: 4rem;
+
+    --section-margin: 10rem;
+
+    color: var(--primary-color); 
+}
+
+a {
+    color: var(--accent-color);
+}
+
 .animate-fade {
 	animation: fadeIn 750ms ease-in-out;
 }
+
 .laeringslogg-homepage li {
     border-bottom: 1px solid hotpink;
     padding: 1rem 0;
 }
+
 .cal {
     display: flex;
     flex-wrap:wrap;
 }
+
 .cal > a {
     flex-basis: calc(33.33% - 1px);
     padding: 20px;
@@ -52,79 +96,110 @@
     margin-top: 1px;
     margin-left: 1px;
 }
+
 .cal > a:hover {
     background: hotpink;
 }
-article ul, article ol {
-    margin: 5px 0 5px 20px;
-}
-article ul li {
-    list-style-position: inside;
-    list-style-type: circle;
-}
-article ol li {
-    list-style-position: inside;
-    list-style-type: number;
-}
-article blockquote {
-    border-left: 4px solid gray;
-    margin-left: 20px;
-    padding-left: 20px;
-    font-size: 1.15em;
-    font-style: italic;
-    margin: 5px 0;
-}
+
 article code {
-padding: .125rem .35rem;
-background: #272822;
-font-size: .9rem;
+    padding: .125rem .35rem;
+    background: #272822;
+    font-size: .9rem;
 }
+
 article code > span {
     display: unset!important;
 }
+
 article pre {
-overflow: auto;
+    overflow: auto;
     overflow-x: scroll;
     overflow-wrap: normal;
     padding: 3%;
     margin: 5px 0;
 }
+
 article pre code {
     padding: unset;
 }
-article h2 {
-    font-weight: bold;
-    font-size: 1.5rem;
-line-height: 2rem;
-margin-top: 2rem;
-}
-article h3 {
-    font-weight: bold;
-font-size: 1.25rem;
-line-height: 1.75rem;
-margin-top: 1.25rem;
+
+h1 {
+    font-size: 2.986rem;
+    font-weight: 700;
+    line-height: 150%;
 }
 
-article h4 {
-    font-weight: bold;
-font-size: 1.10rem;
-line-height: 1.5rem;
-margin-top: 1rem;
+h2 {
+    font-size: 2.488rem;
+    font-weight: 600;
 }
-.blog-line {
-    background: linear-gradient(#fff, #fff);
-background-size: 1px 100%;
-background-repeat: no-repeat;
-background-position: center;
-width: max-content;
+
+h3 {
+    font-size: 2.074rem;
+    font-weight: 600;
 }
-.blog-line {
+
+h4 {
+    font-size:1.728rem;
+    font-weight: 600;
 }
-.footnotes p {
-    display: inline;
+
+h5 {
+    font-size: 1.44rem;
+    font-weight: 600;
 }
-.footnotes ol {
-   padding-top: 10px; 
-   font-size: .9rem;
+
+h6 {
+    font-size: 1.2rem
+    font-weight: 600;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--section-margin);
+}
+
+header nav {
+    margin-right: -.5rem;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li::after {
+        content:"|"
+}
+
+header nav ul li:last-child::after {
+    content:"";
+}
+
+header nav ul li a {
+    padding: 0 var(--small);
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+html {
+    background: var(--base-color);
+    padding: var(--large_2)
+}
+
+.intro {
+    margin-bottom: 3rem;
+}
+
+.intro ~ p {
+    margin-top: var(--medium_2);
+}
+
+.intro p {
+    font-size: var(--medium_3);
+    font-weight: 600;
+    line-height: 150%;
 }

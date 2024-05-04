@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="nb" class="bg-gray-50 dark:bg-gray-800 h-full dark:text-white">
+<html lang="nb">
     {{ partial "head.html" .}}
-<body class="flex flex-col min-h-full p-5">
+    <body>
     <!-- header -->
     {{ partial "header.html" .}} 
    <!-- /header -->
 
    <!-- main -->
-   <main class="flex-1 max-w-prose  m-auto">
+   <main>
        {{ block "main" .}}
        {{ end }}
    </main>
