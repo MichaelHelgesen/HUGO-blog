@@ -180,9 +180,14 @@ header nav ul li:last-child::after {
 }
 
 header nav ul li a {
+    font-weight: 500;
     padding: 0 var(--small);
     text-decoration: none;
     color: var(--primary-color);
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
 }
 
 html {
@@ -202,4 +207,45 @@ html {
     font-size: var(--medium_3);
     font-weight: 600;
     line-height: 150%;
+}
+
+.last-posts-list ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.last-posts-list ul li {
+    border-radius: .5rem;
+    padding: var(--medium_2) 0;
+}
+
+.last-posts-list__meta {
+   font-size: .875rem; 
+}
+
+.last-posts-list__ingress {
+    font-size: 1.25rem;
+    margin-top: var(--medium_1);
+}
+
+.section {
+    margin-top: 6rem;
+}
+
+.taglist-index  {
+    display: flex;
+    flex-wrap:wrap;
+    gap: var(--medium_1);
+    margin-top: var(--medium_2);
+}
+
+.taglist-index li {
+    background: var(--accent-color);
+    border-radius: 9999px;
+    padding: var(--small) var(--medium_2);
+}
+
+.taglist-index li a {
+    color: var(--base-color);
+    text-decoration: none;
 }

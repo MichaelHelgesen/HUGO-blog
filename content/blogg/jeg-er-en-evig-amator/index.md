@@ -3,6 +3,7 @@ title: "Jeg er en evig amatør"
 tags: [læring, inspirasjon]
 date: 2024-04-17
 draft: true
+type: "blogg"
 ---
 Å være entusiasten som åpenlyst forfølger sine interesser er både spennende, lærerikt, skremmende, og forhåpentligvis inspirerende.
 "Bestem deg for hva du vil lære, og forplikt deg til å lære foran andre", skriver [Austin Kleon](https://austinkleon.com/) i sin bok ["Show your work"](https://www.adlibris.com/no/bok/show-your-work-9780761178972).

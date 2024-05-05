@@ -1,20 +1,19 @@
-{{ $taxonomy := "tags" }} {{ with .Param $taxonomy }}
-<ul class="flex flex-row gap-2 mt-1">
-  {{ range $index, $tag := . }} {{ with $.Site.GetPage (printf "/%s/%s"
+{{ $taxonomy := "tags" }} 
+    {{ with .Param $taxonomy }}
+    {{ $range := .}}
+        {{ range $index, $tag := . }} {{ with $.Site.GetPage (printf "/%s/%s"
   $taxonomy $tag) -}}
-  <li>
-              {{ if eq (substr $tag 0 1) "_"}}
 
-      <a href="./tags/{{ .Permalink }}" class="text-xs border rounded-full border-pink-400 inlinme-block py-1 px-4 hover:bg-gray-50 hover:text-black">
-                {{ substr $tag 1 }}
-
+        <a href="{{ .RelPermalink }}"> 
+        {{ if eq (len $range) 1 }} 
+            #{{ $tag }}
       </a>
-              {{ else }}
-      <a href="{{ .Permalink }}" class="text-xs border rounded-full border-pink-400 inlinme-block py-1 px-4 hover:bg-gray-50 hover:text-black">
-                {{ $tag }}
+         {{ else if and (eq (len $range) (add $index 1)) (ne $index 0) }}
+            #{{ $tag }}
       </a>
-              {{ end }}
-  </li>
+        {{ else }}
+        #{{ $tag }} 
+      </a>, 
+        {{ end }}
   {{- end -}} {{- end -}}
-</ul>
 {{ end }}
