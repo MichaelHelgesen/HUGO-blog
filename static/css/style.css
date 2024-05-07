@@ -87,7 +87,7 @@ a {
 .cal {
     display: flex;
     flex-wrap:wrap;
-    margin-top: var(--large_1);
+    margin-top: var(--medium_2);
 }
 
 .cal > a {
@@ -157,26 +157,31 @@ h1 {
 h2 {
     font-size: 2.488rem;
     font-weight: 600;
+    line-height: 150%;
 }
 
 h3 {
     font-size: 2.074rem;
     font-weight: 600;
+    line-height: 150%;
 }
 
 h4 {
     font-size:1.728rem;
     font-weight: 600;
+    line-height: 150%;
 }
 
 h5 {
     font-size: 1.44rem;
     font-weight: 600;
+    line-height: 150%;
 }
 
 h6 {
     font-size: 1.2rem
     font-weight: 600;
+    line-height: 150%;
 }
 
 header {
@@ -234,8 +239,12 @@ html {
 
 .intro p {
     font-size: var(--medium_3);
-    font-weight: 600;
+    font-weight: 500;
     line-height: 150%;
+}
+
+.laeringslogg-list > div + div {
+    margin-top: var(--large_1);
 }
 
 .laeringslogg p + p {
@@ -263,7 +272,7 @@ html {
 }
 
 .last-posts-list__ingress {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-top: var(--medium_1);
 }
 

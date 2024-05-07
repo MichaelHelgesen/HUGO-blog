@@ -3,5 +3,6 @@ title: læringslogg
 url: /laeringslogg
 ---
 {{< introtekst >}}
-Læringslogg
+<h1>Læringslogg</h1>
+<p>Punktlister over nye ting jeg lærer fra dag til dag.</p>
 {{< /introtekst >}}

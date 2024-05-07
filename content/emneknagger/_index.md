@@ -2,6 +2,7 @@
 title: Emneknagger
 ---
 {{< introtekst >}}
-<h1>Dette er en side om kilder</h1>
+<h1>Emneknagger</h1>
+<p>Et overblikk over hva jeg finner interessant.</p>
 {{< /introtekst >}}
 
