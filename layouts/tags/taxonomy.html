@@ -1,21 +1,43 @@
 {{ define "main" }}
-{{ .Content }}
-<h2>Emneknaggger for poster med innhold fra /layouts/tags/taxonomy.html</h2>
-<ul class="flex flex-col gap-9">
-    {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
-        {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-            {{ if ne (substr $name 0 1) "_"}} 
-                {{ partial "tag_item" (dict "name" $name "count" $cnt "link" .RelPermalink) }}
-            {{ end }}
-        {{end}}
-    {{end}}
+
+                {{ $p := where site.Pages "Params.tags" "intersect" (slice .Params.Title) }}
+<div class="intro">
+                <h1>
+                    #{{.Params.Title}} <sup>{{len $p }}</sup>
+                </h1>
+                <p>Saker som omhandler {{.Params.Title}}</p>
+</div>
+<div class="last-posts-list">
+<ul>
+    <li class="flex">
+
+
+
+                {{ if len $p}}
+                <ul>
+                    {{range $p }}
+                    <li>
+                        <h4>{{.Title}}</h4>
+                        <div>
+                            <p class="last-posts-list__meta">
+                                {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
+                                <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
+                                {{ end }}
+                                <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }} | </span>    
+                                {{ partial "tags.html" .}}
+                            </p>
+                        </div>
+                        {{ if .Params.ingress }}
+                        <p class="last-posts-list__ingress">{{.Params.ingress}}</p>
+                        {{ end }}
+                    </li>
+                    <li><hr></li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </div>
+        </div>
+    </li>
 </ul>
-<h2>Emneknagger for læringslogg</h2>
-<ul class="emne-tag-list">
-    {{range $name, $taxonomy := .Site.Taxonomies.logs}} {{ $cnt := .Count }}
-        {{ with $.Site.GetPage (printf "/logs/%s" $name) }}
-                {{ partial "tag_item" (dict "name" $name "count" $cnt "link" .RelPermalink) }}
-        {{end}}
-    {{end}}
-</ul>
+</div>
 {{ end }}

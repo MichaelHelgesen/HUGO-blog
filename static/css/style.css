@@ -300,7 +300,7 @@ html {
     text-decoration: none;
 }
 
-.taglist h2 {
+.taglist h3 {
     margin-bottom: var(--medium_1);
 }
 

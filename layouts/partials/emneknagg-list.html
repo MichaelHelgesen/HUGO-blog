@@ -1,11 +1,11 @@
 
     <li class="flex">
 
-                <h2>
+                <h3>
             <a href="{{ .page.RelPermalink }}">
                 #{{.name}} <sup>{{.count}}</sup>
             </a>
-                </h2>
+                </h3>
 
                 {{ $p := where site.Pages "Params.tags" "intersect" (slice .name) }}
 
