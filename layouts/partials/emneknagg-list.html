@@ -1,31 +1,30 @@
 
     <li class="flex">
-        <div class="flex gap-5">
-            <div class="blog-line flex flex-col gap-2">
-                <div class="flex flex-col items-center bg-gray-800 py-1">
-                    <span class="text-sm capitalize">{{ .count }}</span>
-                </div>
-            </div>
-            <div class="flex flex-col gap-4 flex-1 pb-20">
 
-                <h3 class="text-2xl font-bold text-pink-400">
+                <h2>
             <a href="{{ .page.RelPermalink }}">
-                {{.name}} 
+                #{{.name}} <sup>{{.count}}</sup>
             </a>
-                </h3>
+                </h2>
 
                 {{ $p := where site.Pages "Params.tags" "intersect" (slice .name) }}
 
-                <hr class="w-5">
                 {{ if len $p}}
-                <p class="mt-4 text-lg">Tekster som linker til denne kilden:</p>
                 <ul>
                     {{range $p }}
-                    <li class="gap-4 list-disc list-inside">
-                        <div class="inline-flex gap-4 items-center">
-                            <h3>{{.Type}}: <a class="text-pink-400 font-bold" href="{{ .Permalink }}">{{.Title}}</a></h3>
+                    <li>
+                        <h6>{{.Title}}</h6>
+                        <div>
+                            <p class="last-posts-list__meta">
+                                {{strings.FirstUpper .Type }} | 
+                                {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
+                                <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
+                                {{ end }}
+                                <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }}</span>    
+                            </p>
                         </div>
                     </li>
+                    <li><hr></li>
                     {{ end }}
                 </ul>
                 {{ end }}

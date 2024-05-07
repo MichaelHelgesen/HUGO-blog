@@ -148,6 +148,10 @@ article pre code {
     padding: unset;
 }
 
+.emneknagger ul + h5 {
+    margin-top: var(--large_1)
+}
+
 h1 {
     font-size: 2.986rem;
     font-weight: 700;
@@ -179,9 +183,10 @@ h5 {
 }
 
 h6 {
-    font-size: 1.2rem
+    font-size: 1.2rem;
     font-weight: 600;
     line-height: 150%;
+    margin: 0;
 }
 
 header {
@@ -282,6 +287,31 @@ html {
 
 .section h2 {
     margin-bottom: var(--medium_2);
+}
+
+.taglist ul {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.taglist a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.taglist h2 {
+    margin-bottom: var(--medium_1);
+}
+
+.taglist hr {
+    margin-left: 0;
+    text-align: left;
+    width: 50px;
+}
+
+.taglist > li + li {
+    margin-top: var(--large_2);
 }
 
 .taglist-index  {
