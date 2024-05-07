@@ -3,19 +3,16 @@
   {{ range $index, $tag := . }} 
       {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
       <div class="flex gap-1 items-center">
-      {{ $tag }}
-      </div>
-        {{/* 
-        <a href="{{ .RelPermalink }}"> 
+         
         {{ if eq (len $range) 1 }} 
-            {{ $tag }}
+           kun {{ $tag }} i dag
         {{ else if and (eq (len $range) (add $index 1)) (ne $index 0) }}
             og {{ $tag }}
         {{ else }}
         {{ $tag }},
         {{ end }}
-      </a>
-      */}}
+      
+      </div>
       {{- end -}}
 {{ end }}
 {{ end }}

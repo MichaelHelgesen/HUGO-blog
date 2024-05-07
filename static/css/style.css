@@ -87,18 +87,43 @@ a {
 .cal {
     display: flex;
     flex-wrap:wrap;
+    margin-top: var(--large_1);
 }
 
 .cal > a {
+    color: var(--primary-color);
     flex-basis: calc(33.33% - 1px);
-    padding: 20px;
-    outline: 1px solid white;
+    padding: var(--medium_2);
+    text-decoration: none;
+    outline: 1px solid var(--primary-color);
     margin-top: 1px;
     margin-left: 1px;
 }
 
 .cal > a:hover {
-    background: hotpink;
+    background: var(--primary-color);
+    color: var(--base-color);
+}
+
+.cal a > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.cal .cal__date {
+    text-align: right;
+}
+
+.cal .cal__date h5 {
+    font-size: var (--small);
+    font-weight: 800;
+    line-height: 1.5rem;
+}
+
+.cal .cal__date h5 span {
+    font-size: var(--medium_1);
+    font-weight: 500;
+    display: block;
 }
 
 article code {
@@ -195,6 +220,10 @@ html {
     padding: var(--large_2)
 }
 
+.index-top p + h5 {
+    margin-top: var(--large_1)
+}
+
 .intro {
     margin-bottom: 3rem;
 }
@@ -209,14 +238,24 @@ html {
     line-height: 150%;
 }
 
+.laeringslogg p + p {
+    margin-top: var(--medium_2);
+}
+
 .last-posts-list ul {
     display: flex;
     flex-direction: column;
+    gap: var(--medium_3);
 }
 
 .last-posts-list ul li {
     border-radius: .5rem;
-    padding: var(--medium_2) 0;
+}
+
+.last-posts-list ul li hr {
+    float: left;
+    max-width: 50px;
+    width: 100%;
 }
 
 .last-posts-list__meta {
@@ -232,6 +271,10 @@ html {
     margin-top: 6rem;
 }
 
+.section h2 {
+    margin-bottom: var(--medium_2);
+}
+
 .taglist-index  {
     display: flex;
     flex-wrap:wrap;
@@ -239,13 +282,11 @@ html {
     margin-top: var(--medium_2);
 }
 
-.taglist-index li {
-    background: var(--accent-color);
-    border-radius: 9999px;
-    padding: var(--small) var(--medium_2);
-}
-
 .taglist-index li a {
-    color: var(--base-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 9999px;
+    color: var(--primary-color);
+    display: inline-block;
+    padding: var(--small) var(--medium_2);
     text-decoration: none;
 }

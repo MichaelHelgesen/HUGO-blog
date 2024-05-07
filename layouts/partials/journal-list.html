@@ -1,0 +1,24 @@
+<div class="last-posts-list">
+<ul class="flex flex-col">
+    
+    {{ range .range}}
+        
+                    <li>
+                        <h4>{{.Title}}</h4>
+                        <div>
+                            <p class="last-posts-list__meta">
+                                {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
+                                <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}}  |  </span>
+                                {{ end }}
+                                <span> Pub: {{ .Params.Date | time.Format "2. Jan 2006" }}  |  </span>     
+                                {{ partial "tags.html" .}}
+                            </p>
+                        </div>
+                        <div>
+                            {{.Content}}
+                        </div>
+                    </li>
+                    <li style="padding: 0;"><hr style="width:100%;max-width:50px;float:left;"></li>
+    {{ end }}
+</ul>
+</div>

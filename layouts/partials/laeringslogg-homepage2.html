@@ -2,10 +2,14 @@
     {{ $dayNum := .Params.Date.Weekday | printf "%d" | int }} 
     <a href="{{ .RelPermalink }}">
         <div>
-
-        <h4 class="text-1xl font-bold mb-2 mt-4">
-            {{ .Title | dateFormat "Monday 2. January" }} lærte jeg noe nytt om:
-        </h4>
+        <div class="cal__date">
+        <h5 class="text-1xl font-bold mb-2 mt-4">
+            {{ .Title | dateFormat "2." }}
+        <span>
+            {{ .Title | dateFormat "January" }}
+        </span>
+        </h5>
+        </div>
         {{ partial "tags-laeringslogg.html" . }}
         </div>
     </a>
