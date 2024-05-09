@@ -136,6 +136,25 @@ article code > span {
     display: unset!important;
 }
 
+article h2 {
+    margin-bottom: var(--medium_2);
+    margin-top: var(--large_2);
+}
+
+article ol {
+    list-style-type: numbers;
+    list-style-position: inside;
+    margin: var(--medium_2);
+}
+
+article ol li {
+    margin-bottom: 10px;
+}
+
+article p + p {
+    margin-top: var(--medium_2);
+}
+
 article pre {
     overflow: auto;
     overflow-x: scroll;
@@ -148,13 +167,38 @@ article pre code {
     padding: unset;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+blockquote {
+    border-left: 3px solid var(--primary-color);
+    font-size: calc(var(--medium_1) * 1.25);
+    margin: 2rem 1rem;
+    padding-left: 2rem;
+}
+
 .emneknagger ul + h5 {
     margin-top: var(--large_1)
 }
 
+footer {
+    background: var(--primary-color);
+    color: var(--base-color);
+    margin: var(--section-margin) calc(var(--large_2) * -1) calc(var(--large_2) * -1) calc(var(--large_2) * -1);
+    padding: var(--medium_1);
+    text-align: center;
+}
+
+footer a {
+    color: var(--base-color);
+}
+
 h1 {
-    font-size: 2.986rem;
-    font-weight: 700;
+    font-size: 2.986rem; 
+    font-weight: 800;
     line-height: 150%;
 }
 
@@ -190,6 +234,7 @@ h6 {
 }
 
 header {
+    align-items: center;
     display: flex;
     justify-content: space-between;
     margin-bottom: var(--section-margin);
@@ -227,6 +272,8 @@ header nav ul li a:hover {
 
 html {
     background: var(--base-color);
+    display: flex;
+    min-height: 100%;
     padding: var(--large_2)
 }
 
@@ -235,17 +282,31 @@ html {
 }
 
 .intro {
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
 }
 
-.intro ~ p {
-    margin-top: var(--medium_2);
+.intro.blogg {
+    margin-bottom: 0;
+}
+
+.intro.blogg h1 {
+    margin-bottom: 4rem;
 }
 
 .intro p {
     font-size: var(--medium_3);
     font-weight: 500;
     line-height: 150%;
+}
+
+.intro.blogg p {
+    font-size: var(--medium_1);
+    font-weight: 600;
+    margin-bottom: 4rem;
+}
+
+.intro ~ p {
+    margin-top: var(--medium_2);
 }
 
 .laeringslogg-list > div + div {
@@ -266,6 +327,16 @@ html {
     border-radius: .5rem;
 }
 
+.last-posts-list ul li h4 a {
+    color: var(--primary-color);
+    display: block;
+    text-decoration: none;
+}
+
+.last-posts-list ul li h4 a:hover {
+    text-decoration: underline;
+}
+
 .last-posts-list ul li hr {
     float: left;
     max-width: 50px;
@@ -279,6 +350,22 @@ html {
 .last-posts-list__ingress {
     font-size: 1rem;
     margin-top: var(--medium_1);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.6rem;
+    line-height: 1;
+}
+
+.logo a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
 }
 
 .section {
@@ -297,11 +384,25 @@ html {
 
 .taglist a {
     color: var(--primary-color);
+    display: block;
     text-decoration: none;
+}
+
+.taglist a:hover h6, .taglist a:hover h3 {
+    text-decoration: underline;
 }
 
 .taglist h3 {
     margin-bottom: var(--medium_1);
+}
+
+.taglist h4 {
+    margin-bottom: var(--medium_1);
+}
+
+.taglist h4 span {
+   font-weight: 400;
+   margin-bottom: var(--medium_1);
 }
 
 .taglist hr {
@@ -311,7 +412,11 @@ html {
 }
 
 .taglist > li + li {
-    margin-top: var(--large_2);
+    margin-top: 5rem;
+}
+
+.taglist__source {
+    text-transform: uppercase;
 }
 
 .taglist-index  {
@@ -328,4 +433,9 @@ html {
     display: inline-block;
     padding: var(--small) var(--medium_2);
     text-decoration: none;
+}
+
+.taglist-index li a:hover {
+    background: var(--primary-color);
+    color: var(--base-color);
 }

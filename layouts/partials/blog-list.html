@@ -7,7 +7,7 @@
         
         
                     <li>
-                        <h4>{{.Title}}</h4>
+                        <h4><a href="{{.Permalink}}">{{.Title}}</a></h4>
                         <div>
                             <p class="last-posts-list__meta">
                                 {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}

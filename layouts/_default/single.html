@@ -1,19 +1,17 @@
 {{ define "main" }}
-{{ with .Params.data }}
-    <small>{{.itemtype }}</small>
-    {{ .extra }}
-    <h2>{{ .title }}</h2>
-    {{ .abstractNote }}
-{{ end }}
-<div class="mb-14 flex flex-col gap-4">
-<h1 class="text-3xl font-bold">{{- .Title -}}</h1>
-    <p>{{ .Date | time.Format ":date_medium" }}</p>
+<div class="intro blogg">
+    <h1>{{ .Title }}</h1>
+    {{ if eq .Type "blogg" }}
+    <p class="last-posts-list__meta">
     {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
-    <p> Oppdatert: {{ .Lastmod | time.Format ":date_medium" }}</p>
+    <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
     {{ end }}
-{{ partial "tags.html" .}}
+    <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }} | </span>    
+    {{ partial "tags.html" .}}
+    </p>
+    {{ end }}
 </div>
-<article class="flex flex-col gap-4">
+<article>
 {{- .Content -}}
 </article>
 {{ end }}

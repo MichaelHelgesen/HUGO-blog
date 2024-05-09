@@ -3,5 +3,6 @@ title: kilder
 ---
 
 {{< introtekst >}}
-Dette er en side om kilder
+<h1>Mine kilder</h1>
+<p>En oversikt over kilder med lenker til saker som henviser til dem.</p>
 {{< /introtekst >}}

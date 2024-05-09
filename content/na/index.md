@@ -5,7 +5,10 @@ draft: false
 type: "staticpage"
 ---
 
-# Akkurat nå!
+{{< introtekst >}}
+<h1>Akkurat nå</h1>
+<p>Hva jeg holder på med i skrivende stund.</p>
+{{< /introtekst >}}
 
 Nå
 

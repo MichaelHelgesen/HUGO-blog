@@ -4,7 +4,7 @@
     {{ $data := . }}
     {{ range .range}}
     <div>
-    <h2>{{ strings.FirstUpper .Key}}</h2>
+    <h3>{{ strings.FirstUpper .Key}}</h3>
     {{ $rangeLaering := .Pages.ByDate}}
     <div class="cal">
     {{ partial "laeringslogg-homepage2" (dict "range" $rangeLaering "content" .)}}

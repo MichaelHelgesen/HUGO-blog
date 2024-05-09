@@ -5,7 +5,7 @@
       <div class="flex gap-1 items-center">
          
         {{ if eq (len $range) 1 }} 
-           kun {{ $tag }} i dag
+           kun {{ $tag }} 
         {{ else if and (eq (len $range) (add $index 1)) (ne $index 0) }}
             og {{ $tag }}
         {{ else }}

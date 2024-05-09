@@ -20,9 +20,9 @@ I følge musikeren og produsenten Brian Eno er denne forestillingen om det ensom
 ## En kreativ scene
 "Scenius" er en sammensetning av de engelske ordene "scene" (scene) og "genius" (geni).
 
-På norsk kan "scene" i denne sammenhengen defineres som en kreativ arena, en kreativ scene eller en subkultur. "Genius" betyr geni, som i følge Store Norske leksikon er betegnelsen på et svært kreativt, nyskapende og intelligent individ.
+På norsk kan "scene" i denne sammenhengen defineres som en kreativ arena, en kreativ scene eller en subkultur. "Genius" betyr geni, som i følge Store Norske leksikon er betegnelsen på et svært kreativt, nyskapende og intelligent individ. 
 
-**"Scenius" kan på bakgrunn av dette sees på som den kollektive genialiteten til en gruppe, og kan oversettes til norsk som scenialitet**
+**"Scenius" kan på bakgrunn av dette sees på som den kollektive genialiteten til en gruppe, og kan oversettes til norsk som scenialitet.**
 
 > Scenius stands for the intelligence and the intuition of a whole cultural scene. It is the communal form of the consept of genius.  
 > – Brian Eno

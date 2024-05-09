@@ -8,8 +8,6 @@
                 <p>Saker som omhandler {{.Params.Title}}</p>
 </div>
 <div class="last-posts-list">
-<ul>
-    <li class="flex">
 
 
 
@@ -17,7 +15,12 @@
                 <ul>
                     {{range $p }}
                     <li>
-                        <h4>{{.Title}}</h4>
+                        <h4>
+                        <a href="{{.Permalink}}">
+                            {{.Title}}
+
+                        </a>
+                        </h4>
                         <div>
                             <p class="last-posts-list__meta">
                                 {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
@@ -37,7 +40,5 @@
                 {{ end }}
             </div>
         </div>
-    </li>
-</ul>
 </div>
 {{ end }}

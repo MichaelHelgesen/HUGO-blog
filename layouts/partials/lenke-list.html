@@ -1,0 +1,16 @@
+<div class="last-posts-list">
+<ul class="last-posts">
+    {{ $page := .page }}
+    {{ $data := . }}
+    {{ range .range}}
+                    <li>
+                        <h4>{{.title}}</h4>
+                        {{ if .excerpt }}
+                        <p class="last-posts-list__ingress">{{.excerpt}}</p>
+                        <p>{{.domain}}</p>
+                        {{ end }}
+                    </li>
+                    <li><hr></li>
+    {{ end }}
+</ul>
+</div>

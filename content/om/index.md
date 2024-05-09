@@ -5,8 +5,11 @@ draft: false
 type: "staticpage"
 ---
 
-# Dette er en om-side!
 
+{{< introtekst >}}
+<h1>Om</h1>
+<p>Om meg, Mikke.</p>
+{{< /introtekst >}}
 About
 
 Kult!

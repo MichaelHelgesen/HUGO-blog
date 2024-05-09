@@ -1,19 +1,19 @@
+{{ $tagtype := printf "%s%s" "Params." .tagtype}}
+    <li>
 
-    <li class="flex">
-
-                <h3>
-            <a href="{{ .page.RelPermalink }}">
+           <a href="{{ .page.RelPermalink }}">
+               <h3>
+            
                 #{{.name}} <sup>{{.count}}</sup>
-            </a>
                 </h3>
-
-                {{ $p := where site.Pages "Params.tags" "intersect" (slice .name) }}
+            </a>
+                {{ $p := where site.Pages $tagtype "intersect" (slice .name) }}
 
                 {{ if len $p}}
                 <ul>
                     {{range $p }}
-                    <li>
-                        <h6>{{.Title}}</h6>
+                    <li><a href="{{.Permalink}}">
+                            <h6>{{.Title}}</h6>
                         <div>
                             <p class="last-posts-list__meta">
                                 {{strings.FirstUpper .Type }} | 
@@ -22,7 +22,7 @@
                                 {{ end }}
                                 <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }}</span>    
                             </p>
-                        </div>
+                        </div></a>
                     </li>
                     <li><hr></li>
                     {{ end }}

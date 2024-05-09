@@ -1,4 +1,4 @@
-<ul class="flex flex-col">
+<ul class="taglist">
 
     {{ range .range}}
 
@@ -19,51 +19,66 @@
     {{ $sourceTag = .tag }}
     {{ end }}
     {{ if $sourceTag }}
-    <li class="flex">
-        <div class="flex gap-5">
-            <div class="blog-line flex flex-col gap-2">
-                <div class="flex flex-col items-center bg-gray-800 py-1">
-                    <span class="text-sm capitalize">{{ $sourceType }}</span>
-                </div>
-            </div>
-            <div class="flex flex-col gap-4 flex-1 pb-20">
 
-                <h3 class="text-2xl font-bold text-pink-400">
-                    <a href="{{.data.url}}" id={{ $sourceTag }}>{{.data.title}}</a> 
-                </h3>
-
-
-
-                {{ with .data }}
-                <ul>
-                    {{ range .creators }}
-                    <li class="text-xl">{{ .firstName }} {{ .lastName }}</li>
-                    {{ end }}
-                </ul>
-                {{ end }}
-                <hr class="w-5">
-                {{- range site.RegularPages -}}
-                {{ if and (in .RawContent $sourceTag) (len $sourceTag) }}
-                {{ $incomingLinks = $incomingLinks | append .}}
-                {{ end }}
-                {{- end -}}
-
-                {{ if len $incomingLinks}}
-                <p class="mt-4 text-lg">Tekster som linker til denne kilden:</p>
-                <ul>
-                    {{range $incomingLinks }}
-                    <li class="gap-4 list-disc list-inside">
-                        <div class="inline-flex gap-4 items-center">
-                            <h3>{{.Type}}: <a class="text-pink-400 font-bold" href="{{ .Page.Permalink }}">{{.Title}}</a></h3>
-                        <div class="-mt-1">{{ partial "tags.html" .}}</div>
-                        </div>
-                    </li>
-                    {{ end }}
-                </ul>
-                {{ end }}
-            </div>
+    <li>
+        <span class="taglist__source">{{$sourceType}}</span>
+        <h4>
+            {{ with .data }}
+            {{$creators := .creators}}
+            {{$firstName := ""}}
+            {{$lastName := ""}}
+            {{ range $index, $name := .creators }}
+            {{ if not .firstName }}
+            {{ with .lastName }}
+            {{$firstName = index (split . " ") 0 }}
+            {{$lastName = index (split . " ") 1 }}
+            {{ end }}
+            {{ else }}
+            {{$firstName = .firstName}}
+            {{$lastName = .lastName}}
+            {{end }}
+            
+            {{ if eq (len $creators) 1 }} 
+            {{ $lastName }}, {{ $firstName }}: 
+            {{ else if and (eq (len $creators) (add $index 1) (ne $index 0))}}
+            {{ .lastName}}, {{ .firstName }}:
+            {{ else }}
+            {{ .lastName }}, {{ .firstName }} og 
+            {{ end }}
+            {{ end }}<br/>
+            <span>{{.title}}</span>
+            {{ end }}
+        </h4>
+        <div>
         </div>
-    </li>
+    {{- range site.RegularPages -}}
+    {{ if and (in .RawContent $sourceTag) (len $sourceTag) }}
+    {{ $incomingLinks = $incomingLinks | append .}}
     {{ end }}
+    {{- end -}}
+
+    {{ if len $incomingLinks}}
+    <ul>
+        {{range $incomingLinks }}
+        <li>
+            <a href="{{.Permalink}}">
+            <h6>{{.Title}}</h6>
+            <div>
+                <p class="last-posts-list__meta">
+                {{strings.FirstUpper .Type }} | 
+                {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
+                <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
+                {{ end }}
+                <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }}</span>    
+                </p>
+            </div>
+            </a>
+        </li>
+        <li><hr></li>
+        {{ end }}
+    </ul>
+    {{end}}
+    </li>
+    {{end}}
     {{ end }}
 </ul>

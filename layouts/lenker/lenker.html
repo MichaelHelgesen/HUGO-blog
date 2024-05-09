@@ -7,6 +7,6 @@
     {{ $resource := resources.GetRemote $url $opts }}
     {{ with $resource }}
         {{ $bookmarks := unmarshal .Content }}
-        {{ partial "list" (dict "range" $bookmarks.items "content" .) }}
+        {{ partial "lenke-list" (dict "range" $bookmarks.items "content" .) }}
     {{ end }}
 {{ end }}
