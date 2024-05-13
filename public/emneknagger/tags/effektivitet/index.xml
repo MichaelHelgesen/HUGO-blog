@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>effektivitet on Mikkes blogg</title>
+    <link>http://example.org/emneknagger/tags/effektivitet/</link>
+    <description>Recent content in effektivitet on Mikkes blogg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 17 Apr 2024 14:09:45 +0200</lastBuildDate><atom:link href="http://example.org/emneknagger/tags/effektivitet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Les med intensjon for bedre effektivitet</title>
+      <link>http://example.org/blogg/les-med-intensjon-for-bedre-effektivitet/</link>
+      <pubDate>Wed, 17 Apr 2024 14:09:45 +0200</pubDate>
+      
+      <guid>http://example.org/blogg/les-med-intensjon-for-bedre-effektivitet/</guid>
+      <description>Å sette seg et mål før man leser en tekst har for meg vært en svært viktig lærdom.
+Det høres kanskje absurd ut, at noe så enkelt kan være av betydning, men å lese med intensjon har økt min effektivitet betraktelig.
+Overflod av informasjon Tidligere satt jeg min ære i å lese alle bøker jeg startet på fra perm til perm. Det krevde selvsagt både tid og energi. I tillegg skrev jeg mange notater og markerte en rekke setninger.</description>
+    </item>
+    
+  </channel>
+</rss>

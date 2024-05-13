@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="nb">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+
+    <title>Mikke Helgesen</title>
+</head>
+
+    <body>
+    
+    <header>
+    <div class="logo">
+        <a href="/">
+            MH
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/">Hjem</a></li>
+            <li><a href="/blogg">Blogg</a></li>
+            <li><a href="/journal">Journal</a></li>
+            <li><a href="/laeringslogg">Læringslogg</a></li>
+            <li><a href="/emneknagger">Emneknagger</a></li>
+            <li><a href="/kilder">Kilder</a></li>
+            <li><a href="/lenker">Lenker</a></li>
+            <li><a href="/om">Om</a></li>
+            <li><a href="/na">Nå</a></li>
+        </ul>
+    </nav>
+</header>
+ 
+   
+
+   
+   <main>
+       
+<div class="intro blogg">
+    
+    <h1>Opprette sider i Hugo via API</h1>
+    
+    <p class="last-posts-list__meta">
+    
+    <span>Red: 9. mai 2024 | </span>
+    
+    <span>Pub: 19. apr. 2024 | </span>    
+     
+ 
+
+    
+    
+         <a href="/emneknagger/tags/hugo/"> 
+        
+        #hugo</a>, 
+         <a href="/emneknagger/tags/api/"> 
+        
+        #api</a>, 
+         <a href="/emneknagger/tags/zotero/"> 
+        
+            #zotero</a>
+        
+
+
+    </p>
+</div>
+<article><p>Under opprettelsen av denne bloggen hadde jeg et ønske om å koble til <a href="https://zotero.org">Zotero</a>, slik at alle kilder jeg har benyttet og henviser til i tekster automatisk konverteres til sider i Hugo.</p>
+<p>Etter litt søking forsto jeg at det å opprette sider basert på en ekstern kilde under byggingen av et Hugo-nettsted lenge har blitt sett på som et av Hugos største begrensninger. Operasjonen har alltid krevd en to-stegs prosess.</p>
+<p>Årsaken til dette er at Hugo baserer seg på &ldquo;markdown&rdquo;-filer, og disse filene må være tilgjengelig i det man kjører <code>hugo</code>-kommandoen. Dermed har man delt denne prosessen i to, ved at man først henter ekstern data og lager &ldquo;markdown&rdquo;-filer via et skript. Deretter har man kjørt bygge-kommandoen med filene generert i steg en.</p>
+<p>Det fungerer fint, men basert på en <a href="https://www.thenewdynamic.com/article/toward-using-a-headless-cms-with-hugo-part-2-building-from-remote-api/">artikkel</a> jeg fant er det mulig å gjøre alt dette i Hugo, i en og samme operasjon, selv om det fortsatt i praksis er to steg.</p>
+<h2 id="hugo-i-hugo">Hugo i Hugo</h2>
+<p>Denne fremgangsmåten benytter to Hugo-instanser. Vi har hovedprosjektet, som benyttes til å generere nettsiden, samt en versjon som kun benyttes til å hente ekstern data og generere &ldquo;markdown&rdquo;-filer.</p>
+<p>For ordens skyld oppretter vi sistnevnte som en mappe i hovedprosjektet vårt <code>/prebuild</code>.
+I denne mappen oppretter vi</p>
+<ul>
+<li><code>config.yaml</code>: for innstillinger, og muligheten for å kjøre <code>hugo</code>-kommandoen</li>
+<li><code>/layouts/index.html</code> for API-tilkoblingen og &ldquo;markdown&rdquo;-generering</li>
+</ul>
+<h3 id="hente-ekstern-data">Hente ekstern data</h3>
+<p>I <code>layouts/index.html</code> starter vi med å koble til det eksterne API-et:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#a6e22e">with</span> <span style="color:#a6e22e">resources</span>.<span style="color:#a6e22e">GetRemote</span> <span style="color:#e6db74">&#34;https://api.zotero.org/groups/5454933/collections/U68Q8VUJ/items/top?format=json&#34;</span>}}
+</span></span><span style="display:flex;"><span>{{ <span style="color:#a6e22e">end</span> }}
+</span></span></code></pre></div><p>Her benyttes <code>resources.GetRemote</code> som er <a href="https://gohugo.io/functions/resources/getremote/">Hugos funksjon for å hente data</a>. Vi legger <code>with</code> foran, som binder konteksten til API-kallet. Det vil si at koden i blokken kjøres så fremt API-kallet mottar data.</p>
+<blockquote>
+<p>(with) Binds context (the dot) to the expression and executes the block if expression is truthy.<br>
+<em><a href="https://gohugo.io/functions/go-template/with/">Hugo</a></em></p>
+</blockquote>
+<p>Hvis kallet er vellykket, må vi utføre en del handlinger med dataene vi mottar.</p>
+<h3 id="opprette-markdown-filer">Opprette &ldquo;markdown&rdquo;-filer</h3>
+<p>Hugo har en rekke funksjoner som kan hjelpe oss i prosessen med å opprette filer. Den komplette koden er som følger:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#a6e22e">with</span> <span style="color:#a6e22e">resources</span>.<span style="color:#a6e22e">GetRemote</span> <span style="color:#e6db74">&#34;https://api.zotero.org/groups/5454933/collections/U68Q8VUJ/items/top?format=json&#34;</span>}}
+</span></span><span style="display:flex;"><span>    {{ <span style="color:#a6e22e">with</span> .<span style="color:#a6e22e">Content</span> }} 
+</span></span><span style="display:flex;"><span>        {{ <span style="color:#a6e22e">with</span> <span style="color:#a6e22e">transform</span>.<span style="color:#a6e22e">Unmarshal</span> . }}
+</span></span><span style="display:flex;"><span>            {{ <span style="color:#66d9ef">range</span> . }}
+</span></span><span style="display:flex;"><span>                {{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">string</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">jsonify</span> . }} 
+</span></span><span style="display:flex;"><span>                {{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">filename</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">printf</span> <span style="color:#e6db74">&#34;sources/%s.md&#34;</span> (<span style="color:#a6e22e">urlize</span> .<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">title</span>) }} 
+</span></span><span style="display:flex;"><span>                {{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">resource</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">resources</span>.<span style="color:#a6e22e">FromString</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">filename</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">string</span> }} 
+</span></span><span style="display:flex;"><span>                {{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">file</span> <span style="color:#f92672">:=</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">resource</span>.<span style="color:#a6e22e">RelPermalink</span> }} 
+</span></span><span style="display:flex;"><span>            {{ <span style="color:#a6e22e">end</span> }}
+</span></span><span style="display:flex;"><span>        {{ <span style="color:#a6e22e">end</span> }}
+</span></span><span style="display:flex;"><span>    {{ <span style="color:#a6e22e">end</span> }}
+</span></span><span style="display:flex;"><span>{{ <span style="color:#a6e22e">end</span> }}
+</span></span></code></pre></div><ol>
+<li><code>{{ with .Content }}</code>: Vi angir innholdet i API-kallet som kontekst.</li>
+<li><code>{{ with transform.Unmarshal . }}</code>: En funksjon som endrer JSON-strengen fra API-kallet til et objekt som Hugo forstår, og som lar oss benytte andre Hugo funksjoner og metoder på dataene. Vi angir også dette objektet som kontekst med <code>with</code>.</li>
+<li><code>{{ range . }}</code>: En loop som, i dette tilfellet, lar oss utføre handlinger på alle kilder i listen vi har hentet via API-kallet.</li>
+<li><code>{{ $string := jsonify .}}</code>: Generere JSON-streng av kilden.</li>
+<li><code>{{ $filename := printf &quot;kilder/%s.md&quot; (urlize .data.title) }}</code>: Vi oppretter et filnavn til den kommende &ldquo;markdown&rdquo;-filen.</li>
+<li><code>{{ $resource := resources.FromString $filename $string }}</code>: Denne funksjonen genererer &ldquo;markdown&rdquo;-ressursen basert på variablene vi opprettet over.</li>
+<li><code>{{ $file := $resource.RelPermalink }}</code>: Funksjonen som faktisk publiserer ressursen vi oppretter over.</li>
+</ol>
+<p>Koden kan også kortes ned på følgende måte:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#a6e22e">with</span> <span style="color:#a6e22e">resources</span>.<span style="color:#a6e22e">GetRemote</span> <span style="color:#e6db74">&#34;https://api.zotero.org/groups/5454933/collections/U68Q8VUJ/items/top?format=json&#34;</span>}}
+</span></span><span style="display:flex;"><span>    {{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">sources</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">unmarshal</span> .<span style="color:#a6e22e">Content</span> }}
+</span></span><span style="display:flex;"><span>        {{ <span style="color:#66d9ef">range</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">sources</span> }}
+</span></span><span style="display:flex;"><span>            {{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">string</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">jsonify</span> . }} 
+</span></span><span style="display:flex;"><span>            {{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">filename</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">printf</span> <span style="color:#e6db74">&#34;sources/%s.md&#34;</span> (<span style="color:#a6e22e">urlize</span> .<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">title</span>) }} 
+</span></span><span style="display:flex;"><span>            {{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">resource</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">resources</span>.<span style="color:#a6e22e">FromString</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">filename</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#66d9ef">string</span> }} 
+</span></span><span style="display:flex;"><span>            {{ <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">file</span> <span style="color:#f92672">:=</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">resource</span>.<span style="color:#a6e22e">RelPermalink</span> }} 
+</span></span><span style="display:flex;"><span>        {{ <span style="color:#a6e22e">end</span> }}
+</span></span><span style="display:flex;"><span>    {{ <span style="color:#a6e22e">end</span> }}
+</span></span><span style="display:flex;"><span>{{ <span style="color:#a6e22e">end</span> }}
+</span></span></code></pre></div><h4 id="json-som-frontmatter">JSON som &ldquo;frontmatter&rdquo;</h4>
+<p>En ting som er viktig å forstå i prosessen over, er at &ldquo;markdown&rdquo;-filene vi oppretter inneholder en JSON-streng med data fra API-et (steg 4 og 6).</p>
+<p>Denne JSON-strengen blir tolket som &ldquo;frontmatter&rdquo; av Hugo. Det vurderes altså som metadata, og vil ikke vises via <code>{{ .Content }}</code>-metoden.</p>
+<p>Og i dette tilfellet er JSON-strengen stor og vanskelig å lese, men det er ikke så farlig så lenge det kun er Hugo, og ikke mennesker som skal tyde den, men det er mulig å lage den mer oversiktlig ved behov.</p>
+<p>Slik ser JSON-frontmatter ut i dette tilfellet:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{<span style="color:#f92672">&#34;data&#34;</span>:{<span style="color:#f92672">&#34;ISBN&#34;</span>:<span style="color:#e6db74">&#34;9780671212094 9781476790152&#34;</span>,<span style="color:#f92672">&#34;abstractNote&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;accessDate&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;archive&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;archiveLocation&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;callNumber&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;collections&#34;</span>:[<span style="color:#e6db74">&#34;U68Q8VUJ&#34;</span>],<span style="color:#f92672">&#34;creators&#34;</span>:[{<span style="color:#f92672">&#34;creatorType&#34;</span>:<span style="color:#e6db74">&#34;author&#34;</span>,<span style="color:#f92672">&#34;firstName&#34;</span>:<span style="color:#e6db74">&#34;Mortimer Jerome&#34;</span>,<span style="color:#f92672">&#34;lastName&#34;</span>:<span style="color:#e6db74">&#34;Adler&#34;</span>},{<span style="color:#f92672">&#34;creatorType&#34;</span>:<span style="color:#e6db74">&#34;author&#34;</span>,<span style="color:#f92672">&#34;firstName&#34;</span>:<span style="color:#e6db74">&#34;Charles Lincoln&#34;</span>,<span style="color:#f92672">&#34;lastName&#34;</span>:<span style="color:#e6db74">&#34;Van Doren&#34;</span>}],<span style="color:#f92672">&#34;date&#34;</span>:<span style="color:#e6db74">&#34;2014&#34;</span>,<span style="color:#f92672">&#34;dateAdded&#34;</span>:<span style="color:#e6db74">&#34;2024-03-19T17:12:51Z&#34;</span>,<span style="color:#f92672">&#34;dateModified&#34;</span>:<span style="color:#e6db74">&#34;2024-03-19T17:12:51Z&#34;</span>,<span style="color:#f92672">&#34;edition&#34;</span>:<span style="color:#e6db74">&#34;Touchstone edition&#34;</span>,<span style="color:#f92672">&#34;extra&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;itemType&#34;</span>:<span style="color:#e6db74">&#34;book&#34;</span>,<span style="color:#f92672">&#34;key&#34;</span>:<span style="color:#e6db74">&#34;KDJ8DIH4&#34;</span>,<span style="color:#f92672">&#34;language&#34;</span>:<span style="color:#e6db74">&#34;eng&#34;</span>,<span style="color:#f92672">&#34;libraryCatalog&#34;</span>:<span style="color:#e6db74">&#34;K10plus ISBN&#34;</span>,<span style="color:#f92672">&#34;numPages&#34;</span>:<span style="color:#e6db74">&#34;424&#34;</span>,<span style="color:#f92672">&#34;numberOfVolumes&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;place&#34;</span>:<span style="color:#e6db74">&#34;New York&#34;</span>,<span style="color:#f92672">&#34;publisher&#34;</span>:<span style="color:#e6db74">&#34;Touchstone&#34;</span>,<span style="color:#f92672">&#34;relations&#34;</span>:{},<span style="color:#f92672">&#34;rights&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;series&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;seriesNumber&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;shortTitle&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;tags&#34;</span>:[],<span style="color:#f92672">&#34;title&#34;</span>:<span style="color:#e6db74">&#34;How to read a book&#34;</span>,<span style="color:#f92672">&#34;url&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;version&#34;</span>:<span style="color:#ae81ff">11</span>,<span style="color:#f92672">&#34;volume&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>},<span style="color:#f92672">&#34;key&#34;</span>:<span style="color:#e6db74">&#34;KDJ8DIH4&#34;</span>,<span style="color:#f92672">&#34;library&#34;</span>:{<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#ae81ff">5454933</span>,<span style="color:#f92672">&#34;links&#34;</span>:{<span style="color:#f92672">&#34;alternate&#34;</span>:{<span style="color:#f92672">&#34;href&#34;</span>:<span style="color:#e6db74">&#34;https://www.zotero.org/groups/mikkesblogg&#34;</span>,<span style="color:#f92672">&#34;type&#34;</span>:<span style="color:#e6db74">&#34;text/html&#34;</span>}},<span style="color:#f92672">&#34;name&#34;</span>:<span style="color:#e6db74">&#34;mikkesblogg&#34;</span>,<span style="color:#f92672">&#34;type&#34;</span>:<span style="color:#e6db74">&#34;group&#34;</span>},<span style="color:#f92672">&#34;links&#34;</span>:{<span style="color:#f92672">&#34;alternate&#34;</span>:{<span style="color:#f92672">&#34;href&#34;</span>:<span style="color:#e6db74">&#34;https://www.zotero.org/groups/mikkesblogg/items/KDJ8DIH4&#34;</span>,<span style="color:#f92672">&#34;type&#34;</span>:<span style="color:#e6db74">&#34;text/html&#34;</span>},<span style="color:#f92672">&#34;self&#34;</span>:{<span style="color:#f92672">&#34;href&#34;</span>:<span style="color:#e6db74">&#34;https://api.zotero.org/groups/5454933/items/KDJ8DIH4&#34;</span>,<span style="color:#f92672">&#34;type&#34;</span>:<span style="color:#e6db74">&#34;application/json&#34;</span>}},<span style="color:#f92672">&#34;meta&#34;</span>:{<span style="color:#f92672">&#34;createdByUser&#34;</span>:{<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#ae81ff">9890568</span>,<span style="color:#f92672">&#34;links&#34;</span>:{<span style="color:#f92672">&#34;alternate&#34;</span>:{<span style="color:#f92672">&#34;href&#34;</span>:<span style="color:#e6db74">&#34;https://www.zotero.org/mikke02&#34;</span>,<span style="color:#f92672">&#34;type&#34;</span>:<span style="color:#e6db74">&#34;text/html&#34;</span>}},<span style="color:#f92672">&#34;name&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;username&#34;</span>:<span style="color:#e6db74">&#34;Mikke02&#34;</span>},<span style="color:#f92672">&#34;creatorSummary&#34;</span>:<span style="color:#e6db74">&#34;Adler and Van Doren&#34;</span>,<span style="color:#f92672">&#34;numChildren&#34;</span>:<span style="color:#ae81ff">1</span>,<span style="color:#f92672">&#34;parsedDate&#34;</span>:<span style="color:#e6db74">&#34;2014&#34;</span>},<span style="color:#f92672">&#34;version&#34;</span>:<span style="color:#ae81ff">11</span>}
+</span></span></code></pre></div><h3 id="forenkle-bygge-kommandoen">Forenkle bygge-kommandoen</h3>
+<p>Før vi kjører <code>hugo</code>-kommandoen og oppretter filene er det en fordel å forenkle oppsettet, lik at vi skaper en så minimalistisk og kjapp byggeprosess som mulig. Denne Hugo-instansen skal jo kun benyttes til å skape &ldquo;markdown&rdquo;-filer.</p>
+<p>I <code>prebuild/config.yaml</code> anbefales det å angi følgende:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">disableKinds</span>:
+</span></span><span style="display:flex;"><span>- <span style="color:#ae81ff">sitemap</span>
+</span></span><span style="display:flex;"><span>- <span style="color:#ae81ff">taxonomy</span>
+</span></span><span style="display:flex;"><span>- <span style="color:#ae81ff">term</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">outputs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">home</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">html</span>
+</span></span></code></pre></div><p>Da er alt klart, og vi kan kjøre <code>hugo</code>-kommandoen fra <code>/prebuild</code>-mappen.</p>
+<p>I mappen <code>prebuild/public/kilder</code> ligger så alle bøkene hentet fra Zotero via API-et.</p>
+<h2 id="inkludere-nyopprettede-filer-i-hovedprosjektet">Inkludere nyopprettede filer i hovedprosjektet</h2>
+<p>Hovedinstallasjonen av Hugo skjønner ikke at det ligger &ldquo;markdown&rdquo;-filer i <code>/prebuild/public/kilder</code>, så vi må angi dette i <code>config.yaml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">module</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">mounts</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">source</span>: <span style="color:#ae81ff">content</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">target</span>: <span style="color:#ae81ff">content</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">source</span>: <span style="color:#ae81ff">prebuild/public/kilder</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">target</span>: <span style="color:#ae81ff">content/kilder</span>
+</span></span></code></pre></div><h3 id="oppdatere-maler">Oppdatere maler</h3>
+<p>Som nevnt i avsnittet JSON som &ldquo;frontmatter&rdquo; ligger all data fra API-kallet som metadata i de nyopprettede &ldquo;markdown&rdquo;-filene.</p>
+<p>Det vil si at vi må bruke <code>Params</code> som nøkkel i malene, som her i <code>/layouts/kilder/index.html</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#a6e22e">define</span> <span style="color:#e6db74">&#34;main&#34;</span> }}
+</span></span><span style="display:flex;"><span>{{ .<span style="color:#a6e22e">Content</span> }}    
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#a6e22e">ul</span>&gt;
+</span></span><span style="display:flex;"><span>    {{ <span style="color:#66d9ef">range</span> .<span style="color:#a6e22e">Pages</span>}}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#a6e22e">li</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#a6e22e">a</span> <span style="color:#a6e22e">href</span>=<span style="color:#e6db74">&#34;{{ .Page.Permalink }}&#34;</span>&gt;&lt;<span style="color:#a6e22e">h2</span> <span style="color:#a6e22e">id</span>={{.<span style="color:#a6e22e">Title</span>}}&gt;{{ .<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">title</span> }}&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">h2</span>&gt;&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">a</span>&gt;
+</span></span><span style="display:flex;"><span>        {{ <span style="color:#66d9ef">range</span> .<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">creators</span> }}
+</span></span><span style="display:flex;"><span>            {{ .<span style="color:#a6e22e">firstName</span> }} {{ .<span style="color:#a6e22e">lastName</span> }} 
+</span></span><span style="display:flex;"><span>        {{ <span style="color:#a6e22e">end</span>}}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">li</span>&gt;
+</span></span><span style="display:flex;"><span>    {{ <span style="color:#a6e22e">end</span> }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">ul</span>&gt;
+</span></span><span style="display:flex;"><span>{{ <span style="color:#a6e22e">end</span> }}
+</span></span></code></pre></div><h3 id="slå-sammen-prosessen-til-en-kommando">Slå sammen prosessen til en kommando</h3>
+<p>For at dette skal virke må vi først kjøre <code>hugo</code>-kommandoen fra <code>/prebuild</code>-mappen, og deretter fra hovedprosjektet. Dette kan vi slå sammen på følgende måte:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>hugo -s prebuild &amp;&amp; hugo
+</span></span></code></pre></div><p><code>-s</code> er en forkortelse for <code>--source</code> og angir hva som skal bygges først.</p>
+<p>Det er det hele. Nå kan du lage Hugo-sider med masse spennende innhold fra eksterne API-er.</p>
+</article>
+
+   </main>
+   
+
+    
+        <footer class="mt-16 border-t border-white text-center pt-8 pb-4"> 
+    Laget selv med <a href="https://www.gohugo.io">Hugo</a>
+</footer>
+
+
+   
+</body>
+</html>

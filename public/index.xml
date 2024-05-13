@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mikke Helgesen on Mikkes blogg</title>
+    <link>http://example.org/</link>
+    <description>Recent content in Mikke Helgesen on Mikkes blogg</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024-04-28T07:57:36&#43;02:00</title>
+      <link>http://example.org/laeringslogg/2024-04-28/</link>
+      <pubDate>Sun, 28 Apr 2024 07:57:36 +0200</pubDate>
+      
+      <guid>http://example.org/laeringslogg/2024-04-28/</guid>
+      <description>Hugo Vi kan angi ulike parametre for å vise når et dokument sist ble oppdatert. I config-toml definerte jeg følgende: [frontmatter] lastmod = [&amp;#34;lastmod&amp;#34;, &amp;#34;:fileModTime&amp;#34;, &amp;#34;:default&amp;#34;] lastmod betyr at Hugo ser etter variabelen i &amp;ldquo;frontmatter&amp;rdquo;. Er den ikke definert, velges heller :fileModTime som viser filens siste oppdatering, eller :default. Jeg fant også ut hvordan man definerer språk i config.toml for å vise datoer på norsk: defaultContentLanguage = &amp;quot;nb&amp;quot; </description>
+    </item>
+    
+    <item>
+      <title>2024-04-27T07:57:36&#43;02:00</title>
+      <link>http://example.org/laeringslogg/2024-04-27/</link>
+      <pubDate>Sat, 27 Apr 2024 07:57:36 +0200</pubDate>
+      
+      <guid>http://example.org/laeringslogg/2024-04-27/</guid>
+      <description>Terminal Man kan bruke variabler/funksjoner i terminalen sammen med andre funksjoner. Når jeg skal opprette filer med dato som filnavn kan jeg skrive følgende i terminalen: `hugo new blogg/$(date).md. Hugo Shortcodes er kommandoer vi kan angi i &amp;ldquo;markdown&amp;rdquo;-filer, for å injisere kode i sidene som renderes. De kan kalles på ulike måter: {{ /* Metode 1 */ }} {{ &amp;lt; myShortcode data=&amp;#34;This is data&amp;#34; &amp;gt; }} {{ /* Metode 2 */ }} {{ &amp;lt; myShortcode &amp;gt; }} This is data {{ &amp;lt; /myShortcode &amp;gt;}} myShortcode over henviser til myShortcode.</description>
+    </item>
+    
+    <item>
+      <title>2024-04-26T09:16:06&#43;02:00</title>
+      <link>http://example.org/laeringslogg/2024-04-26/</link>
+      <pubDate>Fri, 26 Apr 2024 09:16:06 +0200</pubDate>
+      
+      <guid>http://example.org/laeringslogg/2024-04-26/</guid>
+      <description>Hugo Det finnes ikke noe tilsvarende javascripts switch i Hugo. Man må bruke if else&#39; eller with`. with endrer konteksten av &amp;ldquo;dott&amp;rdquo; til et uttrykk (&amp;ldquo;expression&amp;rdquo;) og utfører kodeblokken dersom uttrykket er sant. Man kan begrese antall poster i range med tall: Med where kan man &amp;ldquo;pipe&amp;rdquo; eller hekte på nummeret til slutt: {{ where EXPR | 5 }}. Med range bruker man first-nøkkelordet: {{ range first 5 . }} if and i hugo defineres på følgende måte: {{ if and (eq EXPR) (eq EXPR) }} .</description>
+    </item>
+    
+    <item>
+      <title>2024-04-25T09:15:58&#43;02:00</title>
+      <link>http://example.org/laeringslogg/2024-04-25/</link>
+      <pubDate>Thu, 25 Apr 2024 09:15:58 +0200</pubDate>
+      
+      <guid>http://example.org/laeringslogg/2024-04-25/</guid>
+      <description>Hugo I Hugo oppretter man en dict på følgende måte: {{ $myDict := dict }}. dict kan sammenlignes med Javascripts objekt. For å slå opp i dict med variabel må vi benytte index: {{ index $myDict $myVar }}. For å legge til i dict må vi bruke merge: {{ $myDict = merge $myDict $newDict }}. For addere i Hugo brukes add: {{ add 1 1 }}`. For å kutte strenger brukes substr: {{ substr $myString # # }} .</description>
+    </item>
+    
+    <item>
+      <title>2024-04-24T08:43:09&#43;02:00</title>
+      <link>http://example.org/laeringslogg/2024-04-24/</link>
+      <pubDate>Wed, 24 Apr 2024 08:43:09 +0200</pubDate>
+      
+      <guid>http://example.org/laeringslogg/2024-04-24/</guid>
+      <description>Javascript Lært om this i ulike kontekster: I &amp;ldquo;function invocation&amp;rdquo;, altså når man kaller eller kjører en funksjon (inkludert IIFE (immediately invoked function) / umiddelbart selvkallende funksjon) er this det globale objektet. Bruker man strict er det undefined. I et metodekall er this objektet som &amp;ldquo;eier&amp;rdquo; metoden, eller objektet hvor metoden er definert. Det er gjerne på venstre side av &amp;ldquo;dotten&amp;rdquo; når man kaller en metode, som her: person.fullName(). I dette tilfellet er this person-objektet.</description>
+    </item>
+    
+    <item>
+      <title>2024-04-23</title>
+      <link>http://example.org/laeringslogg/2024-04-23/</link>
+      <pubDate>Tue, 23 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/laeringslogg/2024-04-23/</guid>
+      <description>Git Hvis man ønsker å angre git commit kan man skrive git reset. Hugo isset: Sjekker om nøkkel eksisterer. For eksempel {{ if isset .Type }} if: Sjekker om uttrykk er sant. if eq: Sammenligner to argumenter. if not: Returnerer bool av argument. dict &amp;quot;key&amp;quot; &amp;quot;value&amp;quot;: Kalles å lage en &amp;ldquo;map&amp;rdquo; fra en liste av nøkler og verdier. Er tilsvarende et objekt i JavaScript. Vi kan sende variabler i &amp;ldquo;partial templates&amp;rdquo;: {{ partial &amp;quot;list.</description>
+    </item>
+    
+    <item>
+      <title>2024-04-21</title>
+      <link>http://example.org/laeringslogg/2024-04-21/</link>
+      <pubDate>Sun, 21 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/laeringslogg/2024-04-21/</guid>
+      <description>Javascript hasOwnProperty(property): En metode for å sjekke om angit egenskap er definert i gjeldende objekt eller prototype. Object.setPrototypeOf(currentObject, targetObject): Angi et objekt (targetObject) som gjeldende objekt (currentTarget) skal arve fra. Man kan arve metoder og egenskaper fra mange ulike objekter. call(): En metode for å kopiere egenskaper fra en construktor til et annet objekt. Men skal de linkes må det gjøres med Object.setPropertyOf. Det oppstår ikke en automatisk link ved å bruke call.</description>
+    </item>
+    
+    <item>
+      <title>2024-04-20</title>
+      <link>http://example.org/laeringslogg/2024-04-20/</link>
+      <pubDate>Sat, 20 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/laeringslogg/2024-04-20/</guid>
+      <description>Curl Curl er et kommandolinje-program for overføring av data med URLer. Det ble utviklet av en svenske i 1998, som fortsatt utvikler det. Det er open source. Skriver man curl URL så er GET satt som standard. Ønsker man å sende &amp;ldquo;bearer&amp;rdquo;-nøkkel kan det gjøres på følgende måte: curl URL - H &amp;#34;Accept: application/JSON&amp;#34; - H &amp;#34;Authorization: Bearer {token}&amp;#34; -H står for &amp;ldquo;headers&amp;rdquo; jq For en mer oversiktlig JSON kan vi bruke jq, som er en JSON prosessor, med curl: curl URL | jq &amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title>2024-04-19</title>
+      <link>http://example.org/laeringslogg/2024-04-19/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/laeringslogg/2024-04-19/</guid>
+      <description>Hugo Lærte at url i frontmatter brukes for å angi manuell adresse til en side. Lært at resources.Copy kan kopiere en ressurs. tags kan også få eget design ved å legge til `content/tags/[tagnavn]/_index.md NVIM :e [bane][filnavn]: åpne ny fil uten å lukke den gjeldende. :bn / br: Bytte mellom åpne filer. :w [filnavn]: Kopiere gjeldende fil til nytt filnavn, men holde gjeldende fil åpen. :sav [filnavn]: Kopiere gjeldende fil til nytt filnavn, og åpne den nye filen.</description>
+    </item>
+    
+    <item>
+      <title>Opprette sider i Hugo via API</title>
+      <link>http://example.org/blogg/opprette-sider-i-hugo-fra-data-i-et-api-kall/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogg/opprette-sider-i-hugo-fra-data-i-et-api-kall/</guid>
+      <description>Under opprettelsen av denne bloggen hadde jeg et ønske om å koble til Zotero, slik at alle kilder jeg har benyttet og henviser til i tekster automatisk konverteres til sider i Hugo.
+Etter litt søking forsto jeg at det å opprette sider basert på en ekstern kilde under byggingen av et Hugo-nettsted lenge har blitt sett på som et av Hugos største begrensninger. Operasjonen har alltid krevd en to-stegs prosess.</description>
+    </item>
+    
+    <item>
+      <title>2024-04-18</title>
+      <link>http://example.org/laeringslogg/2024-04-18/</link>
+      <pubDate>Thu, 18 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/laeringslogg/2024-04-18/</guid>
+      <description>Hugo Lærte om og benyttet Hugos OS-funksjon fileExists for å sjekke om filer eksisterer i en mappe ved nedlasting fra API. Lærte at JSON tolkes som Frontmatter i Hugo. Man kan dermed importere et JSON-objekt i en fil, uten å tenke på formatering, for deretter å bruke innholdet som Frontmatter. Lærte også hvordan man oppretter filer med resources.FromString og RelPermalink. </description>
+    </item>
+    
+    <item>
+      <title>Les med intensjon for bedre effektivitet</title>
+      <link>http://example.org/blogg/les-med-intensjon-for-bedre-effektivitet/</link>
+      <pubDate>Wed, 17 Apr 2024 14:09:45 +0200</pubDate>
+      
+      <guid>http://example.org/blogg/les-med-intensjon-for-bedre-effektivitet/</guid>
+      <description>Å sette seg et mål før man leser en tekst har for meg vært en svært viktig lærdom.
+Det høres kanskje absurd ut, at noe så enkelt kan være av betydning, men å lese med intensjon har økt min effektivitet betraktelig.
+Overflod av informasjon Tidligere satt jeg min ære i å lese alle bøker jeg startet på fra perm til perm. Det krevde selvsagt både tid og energi. I tillegg skrev jeg mange notater og markerte en rekke setninger.</description>
+    </item>
+    
+    <item>
+      <title>Hvordan velge gode kilder</title>
+      <link>http://example.org/blogg/hvordan-velge-gode-kilder/</link>
+      <pubDate>Wed, 17 Apr 2024 14:03:58 +0200</pubDate>
+      
+      <guid>http://example.org/blogg/hvordan-velge-gode-kilder/</guid>
+      <description>At nivået og kvaliteten på egen kunnskap beror på kildene er kanskje opplagt, men hvordan finner og velger man de beste ressursene?
+I følge Kildekompasset.no finnes det to typer kilder å velge mellom: primærkilder og sekundærkilder.
+Et eksempel på en primærkilde er en forskers forskningsrapport, mens en avisartikkel som omtaler forskningsrapporten er en sekundærkilde.
+Førstnevnte er å foretrekke, da den er basert på opphavspersonens egne tanker, erfaringer og forskning. Sekundærkilden er basert på journalistens forståelse og tolkning av rapporten.</description>
+    </item>
+    
+    <item>
+      <title>Min tredje seksjon i zettelkasten</title>
+      <link>http://example.org/journal/min-tredje-seksjon-i-zettelkasten/</link>
+      <pubDate>Wed, 17 Apr 2024 14:03:58 +0200</pubDate>
+      
+      <guid>http://example.org/journal/min-tredje-seksjon-i-zettelkasten/</guid>
+      <description>Jeg startet min zettelkasten med notater om læring og skriving. I dag utvidet jeg notat-systemet med en ny seksjon om kreativitet.
+Zettelkasten deles ikke inn i rigide kategorier1 som for eksempel en mappestruktur i en app eller på en PC, men det er likevel ryddig å ha en simpel overordnet seksjonering for enklere håndtering.
+Niklas Luhmann, opphavsmannen til zettelkasten, hadde også løse kategorier som dette i følge Scott P. Scheper.</description>
+    </item>
+    
+    <item>
+      <title>Nullstilling av bokhyllen</title>
+      <link>http://example.org/journal/nullstilling-av-bokhyllen/</link>
+      <pubDate>Wed, 17 Apr 2024 14:03:58 +0200</pubDate>
+      
+      <guid>http://example.org/journal/nullstilling-av-bokhyllen/</guid>
+      <description>I dag startet jeg jobben med å tømme bokhyllene for bøker.
+I alt for lang tid har jeg latt meg påvirke av sosiale medier og influensere til å kjøpe anbefalte bøker om selvhjelp, effektivitet, produktivitet og andre temaer.
+De færreste av bøkene er lest, mens de de andre har resultert i en masse usystematiske notater og markeringer, men ikke noe nytt, konkret eller nyttig.
+Dagens bokhylle representerer således sløsing av både penger, tid og energi, og skal dermed nullstilles.</description>
+    </item>
+    
+    <item>
+      <title>Hvordan kan jeg handtere kunnskap på en smart og effektiv måte</title>
+      <link>http://example.org/blogg/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/</link>
+      <pubDate>Wed, 17 Apr 2024 13:48:55 +0200</pubDate>
+      
+      <guid>http://example.org/blogg/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/</guid>
+      <description>Hjemmekontoret mitt flyter over av bøker, notater, apper, hårete mål og gode intensjoner, men ingenting av verdi å vise til. Hvorfor er det slik? Og enda viktigere: hvordan kan jeg endre det? Finnes det en prosess for kunnskapsutvikling som fungerer?
+I mange år har jeg lest og lært om emner som interesserer meg. Formålet har alltid vært å utvikle meg som person, øke min forståelse samt videreformidle kunnskap til andre.</description>
+    </item>
+    
+    <item>
+      <title>Scenialitet: de beste ideene skapes i et fellesskap</title>
+      <link>http://example.org/blogg/scenialitet-de-beste-ideene-skapes-i-et-fellesskap/</link>
+      <pubDate>Wed, 17 Apr 2024 13:21:46 +0200</pubDate>
+      
+      <guid>http://example.org/blogg/scenialitet-de-beste-ideene-skapes-i-et-fellesskap/</guid>
+      <description>Om du ønsker å være på ditt mest kreative bør du oppsøke en arena med andre likesinnede mennesker. De beste ideene oppstår nemlig i et fellesskap eller &amp;ldquo;scenius&amp;rdquo; som Brian Eno kaller det, og sjeldent i et vakum hos noen få enslige personer slik historien gjerne vil ha oss til å tro.
+Scenius is like a genius, only embedded in a scene rather than in genes
+– Kevin Kelly
+Historien og populærkulturen fremstiller mange av menneskehetens store fremskritt som resultat av enslige geniers standhaftige arbeid i isolasjon fra omverdenen.</description>
+    </item>
+    
+    <item>
+      <title>2024-04-17</title>
+      <link>http://example.org/laeringslogg/2024-04-17/</link>
+      <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/laeringslogg/2024-04-17/</guid>
+      <description>Hugo printf &amp;quot;%#v&amp;quot; printer ut alle tilgjengelige variabler, verdier og annet i gjeldende kontekst. transform.Unmarshal endrer data til &amp;ldquo;map&amp;rdquo; eller &amp;ldquo;array&amp;rdquo; og fungerer med JSON, CSV, XML med mer. resource.GetRemote URL brukes for å koble til eksterne API-er. Å lage sider av data fra eksternt API Linux Fedora Man kan angi tastatursnarveier for terminal-kommandoer under innstillinger / tastatur / egendefinert. Jeg satt opp Alt + Home som snarvei for å åpne terminalen.</description>
+    </item>
+    
+    <item>
+      <title>Jeg er en evig amatør</title>
+      <link>http://example.org/blogg/jeg-er-en-evig-amator/</link>
+      <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogg/jeg-er-en-evig-amator/</guid>
+      <description>Å være entusiasten som åpenlyst forfølger sine interesser er både spennende, lærerikt, skremmende, og forhåpentligvis inspirerende. &amp;ldquo;Bestem deg for hva du vil lære, og forplikt deg til å lære foran andre&amp;rdquo;, skriver Austin Kleon i sin bok &amp;ldquo;Show your work&amp;rdquo;. Nå1 er ikke jeg en kunstner slik som han eller en ekspert på noe som helst, men jeg er en nysgjerrig type med mange interesser. Og i følge Kleon handler det ikke om hvor flink eller intelligent man er, men at man bidrar med noe.</description>
+    </item>
+    
+    <item>
+      <title>2024-04-15</title>
+      <link>http://example.org/laeringslogg/2024-04-15/</link>
+      <pubDate>Mon, 15 Apr 2024 19:20:00 -0500</pubDate>
+      
+      <guid>http://example.org/laeringslogg/2024-04-15/</guid>
+      <description>Hugo Man looper gjennom sider i Hugo med {{ range .Site.RegularPages }}. Det er det samme som en for loop i javascript. .Site er forøvrig en global funksjon som gir tilgang til gjeldende &amp;ldquo;site&amp;rdquo;, som omtales som et objekt i dokumentasjonen.
+Man kan bruke både site og .Site. Hugo anbefaler å benytte site i &amp;ldquo;templates&amp;rdquo;. .RegularPages er en &amp;ldquo;site&amp;rdquo;-metode som returnerer en samling (&amp;ldquo;collection&amp;rdquo;) av alle standard-sider. Variabler i Hugo angis på følgende måte: {{ $name := &amp;quot;Mikke&amp;quot; }}.</description>
+    </item>
+    
+    <item>
+      <title>2024-04-16</title>
+      <link>http://example.org/laeringslogg/2024-04-16/</link>
+      <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/laeringslogg/2024-04-16/</guid>
+      <description>VIM For å legge til en ny fil i Explore-modus så taster man prosenttegn %. &amp;ldquo;Redo&amp;rdquo; i VIM er Ctrl + R. </description>
+    </item>
+    
+    <item>
+      <title>Om</title>
+      <link>http://example.org/na/</link>
+      <pubDate>Thu, 11 Apr 2024 13:30:50 +0200</pubDate>
+      
+      <guid>http://example.org/na/</guid>
+      <description>Akkurat nå Hva jeg holder på med i skrivende stund.
+Nå
+Kult!</description>
+    </item>
+    
+    <item>
+      <title>Om</title>
+      <link>http://example.org/om/</link>
+      <pubDate>Thu, 11 Apr 2024 13:30:50 +0200</pubDate>
+      
+      <guid>http://example.org/om/</guid>
+      <description>Om Om meg, Mikke.
+About
+Kult!</description>
+    </item>
+    
+  </channel>
+</rss>

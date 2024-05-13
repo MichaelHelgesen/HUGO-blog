@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mikkes blogg</title>
+    <link>http://example.org/tags/</link>
+    <description>Recent content on Mikkes blogg</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>api</title>
+      <link>http://example.org/emneknagger/tags/api/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/emneknagger/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>http://example.org/emneknagger/tags/hugo/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/emneknagger/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zotero</title>
+      <link>http://example.org/emneknagger/tags/zotero/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/emneknagger/tags/zotero/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>effektivitet</title>
+      <link>http://example.org/emneknagger/tags/effektivitet/</link>
+      <pubDate>Wed, 17 Apr 2024 14:09:45 +0200</pubDate>
+      
+      <guid>http://example.org/emneknagger/tags/effektivitet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lesing</title>
+      <link>http://example.org/emneknagger/tags/lesing/</link>
+      <pubDate>Wed, 17 Apr 2024 14:09:45 +0200</pubDate>
+      
+      <guid>http://example.org/emneknagger/tags/lesing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>læring</title>
+      <link>http://example.org/emneknagger/tags/l%C3%A6ring/</link>
+      <pubDate>Wed, 17 Apr 2024 14:03:58 +0200</pubDate>
+      
+      <guid>http://example.org/emneknagger/tags/l%C3%A6ring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>skriving</title>
+      <link>http://example.org/emneknagger/tags/skriving/</link>
+      <pubDate>Wed, 17 Apr 2024 14:03:58 +0200</pubDate>
+      
+      <guid>http://example.org/emneknagger/tags/skriving/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zettelkasten</title>
+      <link>http://example.org/emneknagger/tags/zettelkasten/</link>
+      <pubDate>Wed, 17 Apr 2024 14:03:58 +0200</pubDate>
+      
+      <guid>http://example.org/emneknagger/tags/zettelkasten/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kreativitet</title>
+      <link>http://example.org/emneknagger/tags/kreativitet/</link>
+      <pubDate>Wed, 17 Apr 2024 13:21:46 +0200</pubDate>
+      
+      <guid>http://example.org/emneknagger/tags/kreativitet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>inspirasjon</title>
+      <link>http://example.org/emneknagger/tags/inspirasjon/</link>
+      <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/emneknagger/tags/inspirasjon/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

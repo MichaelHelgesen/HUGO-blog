@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vim on Mikkes blogg</title>
+    <link>http://example.org/emneknagger/logs/vim/</link>
+    <description>Recent content in vim on Mikkes blogg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 17 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/emneknagger/logs/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024-04-17</title>
+      <link>http://example.org/laeringslogg/2024-04-17/</link>
+      <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/laeringslogg/2024-04-17/</guid>
+      <description>Hugo printf &amp;quot;%#v&amp;quot; printer ut alle tilgjengelige variabler, verdier og annet i gjeldende kontekst. transform.Unmarshal endrer data til &amp;ldquo;map&amp;rdquo; eller &amp;ldquo;array&amp;rdquo; og fungerer med JSON, CSV, XML med mer. resource.GetRemote URL brukes for å koble til eksterne API-er. Å lage sider av data fra eksternt API Linux Fedora Man kan angi tastatursnarveier for terminal-kommandoer under innstillinger / tastatur / egendefinert. Jeg satt opp Alt + Home som snarvei for å åpne terminalen.</description>
+    </item>
+    
+    <item>
+      <title>2024-04-16</title>
+      <link>http://example.org/laeringslogg/2024-04-16/</link>
+      <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/laeringslogg/2024-04-16/</guid>
+      <description>VIM For å legge til en ny fil i Explore-modus så taster man prosenttegn %. &amp;ldquo;Redo&amp;rdquo; i VIM er Ctrl + R. </description>
+    </item>
+    
+  </channel>
+</rss>

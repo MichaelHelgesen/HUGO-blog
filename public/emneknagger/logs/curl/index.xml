@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>curl on Mikkes blogg</title>
+    <link>http://example.org/emneknagger/logs/curl/</link>
+    <description>Recent content in curl on Mikkes blogg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 20 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/emneknagger/logs/curl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024-04-20</title>
+      <link>http://example.org/laeringslogg/2024-04-20/</link>
+      <pubDate>Sat, 20 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/laeringslogg/2024-04-20/</guid>
+      <description>Curl Curl er et kommandolinje-program for overføring av data med URLer. Det ble utviklet av en svenske i 1998, som fortsatt utvikler det. Det er open source. Skriver man curl URL så er GET satt som standard. Ønsker man å sende &amp;ldquo;bearer&amp;rdquo;-nøkkel kan det gjøres på følgende måte: curl URL - H &amp;#34;Accept: application/JSON&amp;#34; - H &amp;#34;Authorization: Bearer {token}&amp;#34; -H står for &amp;ldquo;headers&amp;rdquo; jq For en mer oversiktlig JSON kan vi bruke jq, som er en JSON prosessor, med curl: curl URL | jq &amp;#34;.</description>
+    </item>
+    
+  </channel>
+</rss>

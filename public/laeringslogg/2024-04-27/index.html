@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="nb">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+
+    <title>Mikke Helgesen</title>
+</head>
+
+    <body>
+    
+    <header>
+    <div class="logo">
+        <a href="/">
+            MH
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/">Hjem</a></li>
+            <li><a href="/blogg">Blogg</a></li>
+            <li><a href="/journal">Journal</a></li>
+            <li><a href="/laeringslogg">Læringslogg</a></li>
+            <li><a href="/emneknagger">Emneknagger</a></li>
+            <li><a href="/kilder">Kilder</a></li>
+            <li><a href="/lenker">Lenker</a></li>
+            <li><a href="/om">Om</a></li>
+            <li><a href="/na">Nå</a></li>
+        </ul>
+    </nav>
+</header>
+ 
+   
+
+   
+   <main>
+       
+<div class="intro blogg">
+    
+    <h1>27. apr. 2024</h1>
+    
+    <p class="last-posts-list__meta">
+    
+    <span>Red: 2. mai 2024 | </span>
+    
+    <span>Pub: 27. apr. 2024 | </span>    
+     
+ 
+
+    
+    
+         <a href="/emneknagger/logs/terminal/"> 
+        
+        #terminal</a>, 
+         <a href="/emneknagger/logs/hugo/"> 
+        
+            #hugo</a>
+        
+
+
+    </p>
+</div>
+<article><h3 id="terminal">Terminal</h3>
+<ul>
+<li>Man kan bruke variabler/funksjoner i terminalen sammen med andre funksjoner. Når jeg skal opprette filer med dato som filnavn kan jeg skrive følgende i terminalen: `hugo new blogg/$(date).md.</li>
+</ul>
+<h3 id="hugo">Hugo</h3>
+<ul>
+<li>Shortcodes er kommandoer vi kan angi i &ldquo;markdown&rdquo;-filer, for å injisere kode i sidene som renderes. De kan kalles på ulike måter:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>{{ /* Metode 1 */ }}
+</span></span><span style="display:flex;"><span>{{ &lt; <span style="color:#f92672">myShortcode</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;This is data&#34;</span> &gt; }}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{{ /* Metode 2 */ }}
+</span></span><span style="display:flex;"><span>{{ &lt; <span style="color:#f92672">myShortcode</span> &gt; }}
+</span></span><span style="display:flex;"><span>    This is data
+</span></span><span style="display:flex;"><span>{{ &lt; /<span style="color:#f92672">myShortcode</span> &gt;}}
+</span></span></code></pre></div><ul>
+<li><code>myShortcode</code> over henviser til <code>myShortcode.html</code> som må plasseres i <code>/layout/shortcodes/myShortcode.html</code>. Dataene hentes henholdsvis på følgende måte:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#75715e">/* Metode 1 */</span>}}
+</span></span><span style="display:flex;"><span>{{ .<span style="color:#a6e22e">Get</span> <span style="color:#a6e22e">data</span>}}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{{ <span style="color:#75715e">/* Metode 2 */</span> }}
+</span></span><span style="display:flex;"><span>{{ .<span style="color:#a6e22e">Inner</span> }}
+</span></span></code></pre></div></article>
+
+   </main>
+   
+
+    
+        <footer class="mt-16 border-t border-white text-center pt-8 pb-4"> 
+    Laget selv med <a href="https://www.gohugo.io">Hugo</a>
+</footer>
+
+
+   
+</body>
+</html>

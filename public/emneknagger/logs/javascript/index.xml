@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on Mikkes blogg</title>
+    <link>http://example.org/emneknagger/logs/javascript/</link>
+    <description>Recent content in javascript on Mikkes blogg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 24 Apr 2024 08:43:09 +0200</lastBuildDate><atom:link href="http://example.org/emneknagger/logs/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024-04-24T08:43:09&#43;02:00</title>
+      <link>http://example.org/laeringslogg/2024-04-24/</link>
+      <pubDate>Wed, 24 Apr 2024 08:43:09 +0200</pubDate>
+      
+      <guid>http://example.org/laeringslogg/2024-04-24/</guid>
+      <description>Javascript Lært om this i ulike kontekster: I &amp;ldquo;function invocation&amp;rdquo;, altså når man kaller eller kjører en funksjon (inkludert IIFE (immediately invoked function) / umiddelbart selvkallende funksjon) er this det globale objektet. Bruker man strict er det undefined. I et metodekall er this objektet som &amp;ldquo;eier&amp;rdquo; metoden, eller objektet hvor metoden er definert. Det er gjerne på venstre side av &amp;ldquo;dotten&amp;rdquo; når man kaller en metode, som her: person.fullName(). I dette tilfellet er this person-objektet.</description>
+    </item>
+    
+    <item>
+      <title>2024-04-21</title>
+      <link>http://example.org/laeringslogg/2024-04-21/</link>
+      <pubDate>Sun, 21 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/laeringslogg/2024-04-21/</guid>
+      <description>Javascript hasOwnProperty(property): En metode for å sjekke om angit egenskap er definert i gjeldende objekt eller prototype. Object.setPrototypeOf(currentObject, targetObject): Angi et objekt (targetObject) som gjeldende objekt (currentTarget) skal arve fra. Man kan arve metoder og egenskaper fra mange ulike objekter. call(): En metode for å kopiere egenskaper fra en construktor til et annet objekt. Men skal de linkes må det gjøres med Object.setPropertyOf. Det oppstår ikke en automatisk link ved å bruke call.</description>
+    </item>
+    
+  </channel>
+</rss>

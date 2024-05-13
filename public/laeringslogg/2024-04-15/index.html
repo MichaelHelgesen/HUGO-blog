@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="nb">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+
+    <title>Mikke Helgesen</title>
+</head>
+
+    <body>
+    
+    <header>
+    <div class="logo">
+        <a href="/">
+            MH
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/">Hjem</a></li>
+            <li><a href="/blogg">Blogg</a></li>
+            <li><a href="/journal">Journal</a></li>
+            <li><a href="/laeringslogg">Læringslogg</a></li>
+            <li><a href="/emneknagger">Emneknagger</a></li>
+            <li><a href="/kilder">Kilder</a></li>
+            <li><a href="/lenker">Lenker</a></li>
+            <li><a href="/om">Om</a></li>
+            <li><a href="/na">Nå</a></li>
+        </ul>
+    </nav>
+</header>
+ 
+   
+
+   
+   <main>
+       
+<div class="intro blogg">
+    
+    <h1>15. apr. 2024</h1>
+    
+    <p class="last-posts-list__meta">
+    
+    <span>Red: 2. mai 2024 | </span>
+    
+    <span>Pub: 15. apr. 2024 | </span>    
+     
+ 
+
+    
+    
+         <a href="/emneknagger/logs/hugo/"> 
+         
+            #hugo</a>
+         
+
+
+    </p>
+</div>
+<article><h2 id="hugo">Hugo</h2>
+<ul>
+<li>Man <strong>looper gjennom sider</strong> i Hugo med <code>{{ range .Site.RegularPages }}</code>. Det er det samme som en <code>for loop</code> i javascript.
+<ul>
+<li><strong><code>.Site</code></strong> er forøvrig en <strong>global funksjon</strong> som gir <strong>tilgang til gjeldende &ldquo;site&rdquo;</strong>, som omtales som et objekt i dokumentasjonen.<br>
+Man kan bruke både <code>site</code> og <code>.Site</code>. Hugo anbefaler å benytte <code>site</code> i &ldquo;templates&rdquo;.</li>
+<li><strong><code>.RegularPages</code></strong> er en &ldquo;site&rdquo;-metode som <strong>returnerer en samling (&ldquo;collection&rdquo;) av alle standard-sider</strong>.</li>
+</ul>
+</li>
+<li><strong>Variabler i Hugo</strong> angis på følgende måte: <code>{{ $name := &quot;Mikke&quot; }}</code>.</li>
+<li><strong><code>{{ PAGE.RawContent }}</code></strong> returnerer <strong>innholdet på en side som rå tekst</strong>, uten &ldquo;frontmatter&rdquo; og kode.</li>
+<li><strong>&ldquo;if-statement&rdquo;</strong> i Hugo:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-GO" data-lang="GO"><span style="display:flex;"><span>{{ <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">STATEMENT</span> }}
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>{{ <span style="color:#a6e22e">end</span> }}
+</span></span></code></pre></div><ul>
+<li><strong>Slå sammen variabel og streng:</strong> <code>print &quot;Hello&quot; $name &quot;!&quot;</code>.</li>
+<li><strong><code>in</code>:</strong> Sjekke om en <strong>angitt verdi finnes i en samling</strong>, som kan være array, slice eller string. <code>{{ if in $l (print &quot;&lt; ref \&quot;&quot; $o &quot;\&quot; &gt;&quot;) }}</code>.</li>
+<li></li>
+</ul>
+</article>
+
+   </main>
+   
+
+    
+        <footer class="mt-16 border-t border-white text-center pt-8 pb-4"> 
+    Laget selv med <a href="https://www.gohugo.io">Hugo</a>
+</footer>
+
+
+   
+</body>
+</html>

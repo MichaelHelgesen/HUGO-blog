@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>api on Mikkes blogg</title>
+    <link>http://example.org/emneknagger/tags/api/</link>
+    <description>Recent content in api on Mikkes blogg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 19 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/emneknagger/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Opprette sider i Hugo via API</title>
+      <link>http://example.org/blogg/opprette-sider-i-hugo-fra-data-i-et-api-kall/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogg/opprette-sider-i-hugo-fra-data-i-et-api-kall/</guid>
+      <description>Under opprettelsen av denne bloggen hadde jeg et ønske om å koble til Zotero, slik at alle kilder jeg har benyttet og henviser til i tekster automatisk konverteres til sider i Hugo.
+Etter litt søking forsto jeg at det å opprette sider basert på en ekstern kilde under byggingen av et Hugo-nettsted lenge har blitt sett på som et av Hugos største begrensninger. Operasjonen har alltid krevd en to-stegs prosess.</description>
+    </item>
+    
+  </channel>
+</rss>
