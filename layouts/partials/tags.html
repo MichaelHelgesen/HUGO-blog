@@ -1,19 +1,35 @@
-{{ $taxonomy := "tags" }} 
-    {{ with .Param $taxonomy }}
+{{ $tags := "tags" }} 
+{{ $logs := "logs" }} 
+{{ if .Param $tags }}
+    {{ with .Param $tags }}
     {{ $range := .}}
         {{ range $index, $tag := . }} {{ with $.Site.GetPage (printf "/%s/%s"
-  $taxonomy $tag) -}}
+  $tags $tag) -}}
 
         <a href="{{ .RelPermalink }}"> 
         {{ if eq (len $range) 1 }} 
-            #{{ $tag }}
-      </a>
+            #{{ $tag }}</a>
          {{ else if and (eq (len $range) (add $index 1)) (ne $index 0) }}
-            #{{ $tag }}
-      </a>
+            #{{ $tag }}</a>
         {{ else }}
-        #{{ $tag }} 
-      </a>, 
+        #{{ $tag }}</a>, 
         {{ end }}
   {{- end -}} {{- end -}}
 {{ end }}
+{{else if .Param $logs}}
+    {{ with .Param $logs }}
+    {{ $range := .}}
+        {{ range $index, $tag := . }} {{ with $.Site.GetPage (printf "/%s/%s"
+  $logs $tag) -}}
+
+        <a href="{{ .RelPermalink }}"> 
+        {{ if eq (len $range) 1 }} 
+            #{{ $tag }}</a>
+         {{ else if and (eq (len $range) (add $index 1)) (ne $index 0) }}
+            #{{ $tag }}</a>
+        {{ else }}
+        #{{ $tag }}</a>, 
+        {{ end }}
+  {{- end -}} {{- end -}}
+{{ end }}
+{{end}}

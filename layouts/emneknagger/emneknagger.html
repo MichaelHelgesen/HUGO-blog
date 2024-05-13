@@ -1,7 +1,11 @@
 {{ define "main" }}
- 
-{{ .Content }}
 {{ if not .Params.type }}
+<div class="intro">
+                <h1>
+                    Emneknagger
+                </h1>
+                <p>En oversikt over emner jeg har skrevet om</p>
+</div>
 <div class="emneknagger">
     <h5>Emner jeg har skrevet om:</h5>
         <ul class="taglist-index">
@@ -21,6 +25,49 @@
         {{ end }}
         </ul>
 
+</div>
+{{ else }}
+
+                {{ $p := where site.Pages "Params.tags" "intersect" (slice .Params.Title) }}
+<div class="intro">
+                <h1>
+                    #{{.Params.Title}} <sup>{{len $p }}</sup>
+                </h1>
+                <p>Saker som omhandler {{.Params.Title}}</p>
+</div>
+<div class="last-posts-list">
+
+
+
+                {{ if len $p}}
+                <ul>
+                    {{range $p }}
+                    <li>
+                        <h4>
+                        <a href="{{.Permalink}}">
+                            {{.Title}}
+
+                        </a>
+                        </h4>
+                        <div>
+                            <p class="last-posts-list__meta">
+                                {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
+                                <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
+                                {{ end }}
+                                <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }} | </span>    
+                                {{ partial "tags.html" .}}
+                            </p>
+                        </div>
+                        {{ if .Params.ingress }}
+                        <p class="last-posts-list__ingress">{{.Params.ingress}}</p>
+                        {{ end }}
+                    </li>
+                    <li><hr></li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </div>
+        </div>
 </div>
 {{ end }}
 {{ end }}

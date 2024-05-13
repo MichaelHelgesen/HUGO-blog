@@ -1,135 +1,39 @@
-<ul class="flex flex-col">
-list    
-    {{ $source := .type }}
-    {{ $sourceType := "" }}
-    {{ $sourceTag := "" }}
-    {{ $page := .page }}
-    {{ $data := . }}
-    {{ range .range}}
-        {{ if $source }}
-            {{ if eq .data.itemType "book" }}
-                {{ $sourceType = "bok" }}
-            {{ else if eq .data.itemType "blogPost"}}
-                {{ $sourceType = "bloggartikkel" }}
-            {{ else if eq .data.itemType "videoRecording"}}
-                {{ $sourceType = "video" }}
-            {{ end }}
-        {{ end }}
-        
-        {{if $source }}
-            {{ range .data.tags }}
-                {{ $sourceTag = .tag }}
-            {{ end }}
-        {{ end }}
-        
-        <li class="flex">
-        {{ if .Type }}
-        <div class="flex gap-5">
-            <div class="blog-line">
-                <div class="flex flex-col items-center bg-gray-800 py-1">
-                <span class="text-sm"><b>{{ .Date | time.Format "2. Jan" }}</b></span>
-                <span class="text-sm">{{ .Date | time.Format "2006" }}</span>
-                </div>
-                <!--
-                <div class="flex flex-col items-center bg-gray-800 py-1">
+<div class="last-posts-list">
+    <ul>
+        {{ $tag := strings.FirstUpper .tag}}
+        {{ range .range}}
+
+
+
+
+
+        <li>
+            <h4>
+                <a href="{{.Permalink}}">
+                    {{.Title | dateFormat ":date_medium" }}
+
+                </a>
+            </h4>
+            <div>
+                <p class="last-posts-list__meta">
                 {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
-                <span class="text-sm">{{ .Lastmod | time.Format "2. Jan" }}</span>
-                <span class="text-sm">{{ .Lastmod | time.Format "2006" }}</span>
+                <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
                 {{ end }}
-                </div>
-                -->
-            </div>
-        {{ end }}
-        <div class="flex flex-col gap-4 flex-1 pb-20">
-            {{ if or (eq $page "home") (eq $page "term")}}
-                <small>{{ .Type }}</small>
-            {{ end }}
-
-            {{ if $source }}
-                <small>{{ $sourceType }}</small>
-            {{ end }}
-
-            <h3 class="text-2xl font-bold text-pink-400">
-                {{ if and .Type (ne .Type "læringslogg")}}
-                    <a href="{{ .RelPermalink }}" class="hover:underline">{{ .Title }}</a>
-                {{else if eq .Type "læringslogg" }}    
-                    <a href="{{ .RelPermalink }}">{{ .Title | dateFormat ":date_medium" }}</a>
-                {{ else if $source }}
-                    <a href="{{.data.url}}" id={{ $sourceTag }}>{{.data.title}}</a> 
-                {{ else }}
-                    <a href="{{.link}}">{{.title}}</a> 
-                {{ end }}
-            </h3>
-            
-            {{ if and .Type (ne .Type "læringslogg") }}
-            {{ if eq $page "term" }}
-            {{ if eq (substr $data.tag 0 1) "_"}}
-                
-            <p>
-                {{ .Content }}
-            </p>
-                {{else}}
-                <p>
-                
+                <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }} | </span>    
+                {{ partial "tags.html" .}}
                 </p>
-                {{end}}
+            </div>
+            {{$regEX := print `(?s)(?i)` $tag `</h[0-9]>.*?</ul>`}} 
+        <article>
+            {{ $test := .Content | findRE $regEX }}
+            {{ range $test}}
+            {{ $test4 := . | findRE `(?s)<ul>.*?</ul>`}}
+            {{ index $test4 0 | safeHTML}}
+            {{ end }}
+        </article>
 
-            {{end}}
-            {{ end }}
-
-            {{ if eq .Type "læringslogg" }}
-            <article>
-            {{ .Content }}
-            </article>
-            {{ end }}
-
-            {{/* API-sider */}}
-            {{ if not .Type }}
-                {{ with .data }}
-                    <ul>
-                        {{ range .creators }}
-                            <li>{{ .firstName }} {{ .lastName }}</li>
-                        {{ end }}
-                    </ul>
-                {{ end }}
-                
-                {{ if .excerpt }}
-                    <blockquote>
-                        <p>
-                            {{ .excerpt }}
-                        </p>
-                    </blockquote>
-                    <div>
-                        <a href="{{ .link }}">
-                            {{ .domain }}
-                        </a>
-                    </div>
-                {{ end }}
-            {{ end }}
-            
-            {{ if $source}}
-                <ul>
-                    {{- range site.RegularPages -}}
-                        {{ if in .RawContent $sourceTag }}
-                            <li>
-                                <a href="{{ .Page.Permalink }}">{{.Title}}</a>
-                                <small>{{ .Type }}</small>
-                                {{ partial "tags.html" .}}
-                            </li>
-                        {{ end }}
-                    {{- end -}}
-                </ul>
-            {{ end }}
-            
-            {{/* Show tags if any */}}
-            {{ if .Type }}
-                {{ if eq .Type "læringslogg" }}
-                    {{ partial "tags-laeringslogg.html" . }}
-                {{ else }} 
-                    {{ partial "tags.html" .}}
-                {{ end }}
-            {{ end }}
-        </div>
         </li>
-    {{ end }}
-</ul>
+                    <li><hr></li>
+        {{ end }}
+        </ul>
+        </div>

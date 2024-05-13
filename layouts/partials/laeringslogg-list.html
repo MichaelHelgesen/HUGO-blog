@@ -5,7 +5,7 @@
     {{ range .range}}
     <div>
     <h3>{{ strings.FirstUpper .Key}}</h3>
-    {{ $rangeLaering := .Pages.ByDate}}
+    {{ $rangeLaering := .Pages.ByDate.Reverse}}
     <div class="cal">
     {{ partial "laeringslogg-homepage2" (dict "range" $rangeLaering "content" .)}}
     </div>

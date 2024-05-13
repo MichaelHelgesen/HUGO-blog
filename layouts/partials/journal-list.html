@@ -1,5 +1,5 @@
 <div class="last-posts-list">
-<ul class="flex flex-col">
+    <ul> 
     
     {{ range .range}}
         
@@ -14,11 +14,11 @@
                                 {{ partial "tags.html" .}}
                             </p>
                         </div>
-                        <div>
+                        <article class="journal">
                             {{.Content}}
-                        </div>
+                        </article>
                     </li>
-                    <li style="padding: 0;"><hr style="width:100%;max-width:50px;float:left;"></li>
+                    <li><hr></li>
     {{ end }}
 </ul>
 </div>

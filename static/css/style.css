@@ -24,7 +24,6 @@ img {
 }
 /* END RESET */
 
-
 .relative {
 	position: relative;
 }
@@ -66,7 +65,7 @@ img {
     --large_3: 3.5rem;
     --max: 4rem;
 
-    --section-margin: 10rem;
+    --section-margin: min(20vw, 10rem);
 
     color: var(--primary-color); 
 }
@@ -85,14 +84,13 @@ a {
 }
 
 .cal {
-    display: flex;
-    flex-wrap:wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     margin-top: var(--medium_2);
 }
 
 .cal > a {
     color: var(--primary-color);
-    flex-basis: calc(33.33% - 1px);
     padding: var(--medium_2);
     text-decoration: none;
     outline: 1px solid var(--primary-color);
@@ -127,7 +125,9 @@ a {
 }
 
 article code {
+    border-radius: .25rem;
     padding: .125rem .35rem;
+    color: var(--base-color);
     background: #272822;
     font-size: .9rem;
 }
@@ -141,14 +141,34 @@ article h2 {
     margin-top: var(--large_2);
 }
 
+article h3 {
+    margin-bottom: var(--medium_1);
+    margin-top: var(--large_1);
+}
+
+article h4 {
+    margin-bottom: var(--small);
+    margin-top: var(--medium_2);
+}
+
+article.journal {
+    margin-top: var(--medium_2);
+}
+
 article ol {
     list-style-type: numbers;
     list-style-position: inside;
     margin: var(--medium_2);
 }
 
-article ol li {
-    margin-bottom: 10px;
+article ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin: var(--medium_2);
+}
+
+article ol li, article ul li {
+    margin-bottom: var(--small);
 }
 
 article p + p {
@@ -176,8 +196,9 @@ body {
 blockquote {
     border-left: 3px solid var(--primary-color);
     font-size: calc(var(--medium_1) * 1.25);
-    margin: 2rem 1rem;
-    padding-left: 2rem;
+    font-weight: 300;
+    margin: 2rem 0 2rem clamp(0vw, 2vw, 1rem);
+    padding-left: min(6vw, 2rem);
 }
 
 .emneknagger ul + h5 {
@@ -187,7 +208,10 @@ blockquote {
 footer {
     background: var(--primary-color);
     color: var(--base-color);
-    margin: var(--section-margin) calc(var(--large_2) * -1) calc(var(--large_2) * -1) calc(var(--large_2) * -1);
+    margin: var(--section-margin) calc(clamp(var(--medium_2), 8vw, var(--large_2))
+ * -1) calc(clamp(var(--medium_2), 8vw, var(--large_2))
+ * -1) calc(clamp(var(--medium_2), 8vw, var(--large_2))
+ * -1);
     padding: var(--medium_1);
     text-align: center;
 }
@@ -197,31 +221,31 @@ footer a {
 }
 
 h1 {
-    font-size: 2.986rem; 
+    font-size: clamp(1.5rem, 10vw, 2.986rem); 
     font-weight: 800;
-    line-height: 150%;
+    line-height: 1.4;
 }
 
 h2 {
-    font-size: 2.488rem;
+    font-size: clamp(1.25rem, 8vw, 2.488rem);
     font-weight: 600;
     line-height: 150%;
 }
 
 h3 {
-    font-size: 2.074rem;
+    font-size: clamp(1.15rem, 6vw, 2.074rem);
     font-weight: 600;
     line-height: 150%;
 }
 
 h4 {
-    font-size:1.728rem;
+    font-size:clamp(1.05rem, 5vw, 1.728rem);
     font-weight: 600;
     line-height: 150%;
 }
 
 h5 {
-    font-size: 1.44rem;
+    font-size: clamp(1rem, 2vw, 1.44rem);
     font-weight: 600;
     line-height: 150%;
 }
@@ -236,16 +260,21 @@ h6 {
 header {
     align-items: center;
     display: flex;
+    flex-wrap:wrap;
+    gap: var(--large_1);
     justify-content: space-between;
     margin-bottom: var(--section-margin);
 }
 
 header nav {
+    margin-left: -.5rem;
     margin-right: -.5rem;
 }
 
 header nav ul {
     display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -270,11 +299,15 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
+.highlight {
+    margin: var(--medium_2) 0;
+}
+
 html {
     background: var(--base-color);
     display: flex;
     min-height: 100%;
-    padding: var(--large_2)
+    padding: clamp(var(--medium_2), 8vw, var(--large_2))
 }
 
 .index-top p + h5 {
@@ -282,7 +315,7 @@ html {
 }
 
 .intro {
-    margin-bottom: 6rem;
+    margin-bottom: clamp(2rem, 10vw, 6rem);
 }
 
 .intro.blogg {
@@ -290,18 +323,18 @@ html {
 }
 
 .intro.blogg h1 {
-    margin-bottom: 4rem;
+    margin-bottom: var(--medium_1);
 }
 
 .intro p {
-    font-size: var(--medium_3);
+    font-size: clamp(1.5rem, 5vw, var(--medium_3));
     font-weight: 500;
     line-height: 150%;
 }
 
 .intro.blogg p {
-    font-size: var(--medium_1);
-    font-weight: 600;
+    font-size: 0.975rem;
+    font-weight: 300;
     margin-bottom: 4rem;
 }
 
@@ -317,7 +350,7 @@ html {
     margin-top: var(--medium_2);
 }
 
-.last-posts-list ul {
+.last-posts-list > ul {
     display: flex;
     flex-direction: column;
     gap: var(--medium_3);
@@ -345,6 +378,7 @@ html {
 
 .last-posts-list__meta {
    font-size: .875rem; 
+   font-weight: 300;
 }
 
 .last-posts-list__ingress {
@@ -360,7 +394,9 @@ html {
 }
 
 .logo a {
+    border-bottom: 3px solid var(--primary-color);
     color: var(--primary-color);
+    padding-right: 10px;
     text-decoration: none;
 }
 
@@ -369,7 +405,7 @@ main {
 }
 
 .section {
-    margin-top: 6rem;
+    margin-top: min(10rem, 6rem);
 }
 
 .section h2 {
@@ -412,7 +448,7 @@ main {
 }
 
 .taglist > li + li {
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .taglist__source {

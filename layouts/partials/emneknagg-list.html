@@ -13,7 +13,11 @@
                 <ul>
                     {{range $p }}
                     <li><a href="{{.Permalink}}">
+                            {{ if eq .Type "læringslogg" }}
+                            <h6>{{.Title | time.Format ":date_medium"}}</h6>
+                            {{ else }}
                             <h6>{{.Title}}</h6>
+                            {{end}}
                         <div>
                             <p class="last-posts-list__meta">
                                 {{strings.FirstUpper .Type }} | 

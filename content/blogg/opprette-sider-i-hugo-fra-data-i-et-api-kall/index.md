@@ -144,12 +144,10 @@ Det vil si at vi må bruke `Params` som nøkkel i malene, som her i `/layouts/ki
 ### Slå sammen prosessen til en kommando
 For at dette skal virke må vi først kjøre `hugo`-kommandoen fra `/prebuild`-mappen, og deretter fra hovedprosjektet. Dette kan vi slå sammen på følgende måte:
 
-```
+```text
 hugo -s prebuild && hugo
 ```
 
 `-s` er en forkortelse for `--source` og angir hva som skal bygges først.
 
 Det er det hele. Nå kan du lage Hugo-sider med masse spennende innhold fra eksterne API-er.
-
-Test
