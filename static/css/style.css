@@ -8,6 +8,7 @@ h1, h2, h3, h4, h5, figure, p, ol, ul {
   margin: 0;
 }
 
+
 ol, ul {
   list-style: none;
   padding-inline: 0;
@@ -53,7 +54,7 @@ img {
 :root {
     --base-color: hsl(35, 100%, 98%);
     --primary-color: hsl(0, 0%, 8%);
-    --accent-color: hsl(239, 78%, 26%);
+    --accent-color: hsl(0, 100%, 60%, 1);
 
     --mini: 0.25rem;
     --small: 0.5rem;
@@ -85,7 +86,7 @@ a {
 
 .cal {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     margin-top: var(--medium_2);
 }
 
@@ -109,6 +110,7 @@ a {
 }
 
 .cal .cal__date {
+    margin-bottom: .5rem;
     text-align: right;
 }
 
@@ -221,31 +223,31 @@ footer a {
 }
 
 h1 {
-    font-size: clamp(1.5rem, 10vw, 2.986rem); 
+    font-size: clamp(2.2rem, 10vw, 2.986rem); 
     font-weight: 800;
     line-height: 1.4;
 }
 
 h2 {
-    font-size: clamp(1.25rem, 8vw, 2.488rem);
+    font-size: clamp(1.7rem, 8vw, 2.488rem);
     font-weight: 600;
     line-height: 150%;
 }
 
 h3 {
-    font-size: clamp(1.15rem, 6vw, 2.074rem);
+    font-size: clamp(1.2rem, 6vw, 2.074rem);
     font-weight: 600;
     line-height: 150%;
 }
 
 h4 {
-    font-size:clamp(1.05rem, 5vw, 1.728rem);
+    font-size:clamp(1.45rem, 5vw, 1.728rem);
     font-weight: 600;
     line-height: 150%;
 }
 
 h5 {
-    font-size: clamp(1rem, 2vw, 1.44rem);
+    font-size: clamp(1.15rem, 4.5vw, 1.44rem);
     font-weight: 600;
     line-height: 150%;
 }
@@ -378,11 +380,17 @@ html {
 
 .last-posts-list__meta {
    font-size: .875rem; 
-   font-weight: 300;
+   margin-top: .25rem;
+   font-style: italic;
+}
+
+.last-posts-list__meta a {
+   font-size: .875rem; 
+   text-decoration: underline; 
 }
 
 .last-posts-list__ingress {
-    font-size: 1rem;
+    font-size: 1.15rem;
     margin-top: var(--medium_1);
 }
 
@@ -396,6 +404,7 @@ html {
 .logo a {
     border-bottom: 3px solid var(--primary-color);
     color: var(--primary-color);
+    display: inline-block;
     padding-right: 10px;
     text-decoration: none;
 }
@@ -409,7 +418,7 @@ main {
 }
 
 .section h2 {
-    margin-bottom: var(--medium_2);
+    margin-bottom: var(--medium_3);
 }
 
 .taglist ul {
@@ -467,6 +476,7 @@ main {
     border-radius: 9999px;
     color: var(--primary-color);
     display: inline-block;
+    font-weight: 500;
     padding: var(--small) var(--medium_2);
     text-decoration: none;
 }

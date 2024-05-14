@@ -1,6 +1,7 @@
 <div class="last-posts-list">
 <ul>
     
+                    <li><hr></li>
     {{ $page := .page }}
 
     {{ range .range}}
@@ -19,6 +20,7 @@
                         </div>
                         {{ if .Params.ingress }}
                         <p class="last-posts-list__ingress">{{.Params.ingress}}</p>
+                        <p style="display:inline-block;text-decoration:underline;font-weight:600;margin-top: 8px;">Les videre</p>
                         {{ end }}
                     </li>
                     <li><hr></li>
