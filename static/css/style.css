@@ -355,7 +355,7 @@ html {
 .last-posts-list > ul {
     display: flex;
     flex-direction: column;
-    gap: var(--medium_3);
+    gap: var(--small);
 }
 
 .last-posts-list ul li {
