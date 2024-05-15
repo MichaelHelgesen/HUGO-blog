@@ -230,7 +230,7 @@ h1 {
 
 h2 {
     font-size: clamp(1.7rem, 8vw, 2.488rem);
-    font-weight: 600;
+    font-weight: 800;
     line-height: 150%;
 }
 
@@ -243,7 +243,7 @@ h3 {
 h4 {
     font-size:clamp(1.45rem, 5vw, 1.728rem);
     font-weight: 600;
-    line-height: 150%;
+    line-height: 1.4em;
 }
 
 h5 {
@@ -355,11 +355,16 @@ html {
 .last-posts-list > ul {
     display: flex;
     flex-direction: column;
-    gap: var(--small);
+    gap: var(--large_1);
 }
 
 .last-posts-list ul li {
     border-radius: .5rem;
+}
+
+.last-posts-list ul li h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .last-posts-list ul li h4 a {
@@ -381,10 +386,10 @@ html {
 .last-posts-list__meta {
    font-size: .875rem; 
    margin-top: .25rem;
-   font-style: italic;
 }
 
 .last-posts-list__meta a {
+    color: black;
    font-size: .875rem; 
    text-decoration: underline; 
 }

@@ -18,7 +18,6 @@
                 <div class="last-posts-list">
                 {{range where (.Pages | first 5) "Section" "blogg"}}
                 <ul>
-                    <li><hr></li>
                     {{range .Pages}}
                     <li>
                         <h4><a href="{{.Permalink}}">{{.Title}}</a></h4>
@@ -33,9 +32,9 @@
                         </div>
                         {{ if .Params.ingress }}
                         <p class="last-posts-list__ingress">{{.Params.ingress}}</p>
+                        <a style="margin-top:.5rem;display:inline-block;">Les videre</a>
                         {{ end }}
                     </li>
-                    <li><hr></li>
                     {{ end}}
                 </ul>
                 {{end}}
