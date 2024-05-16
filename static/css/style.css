@@ -55,6 +55,8 @@ img {
     --base-color: hsl(35, 100%, 98%);
     --primary-color: hsl(0, 0%, 8%);
     --accent-color: hsl(0, 100%, 60%, 1);
+    --accent-color-light: hsl(0, 100%, 60%, .05);
+
 
     --mini: 0.25rem;
     --small: 0.5rem;
@@ -91,10 +93,11 @@ a {
 }
 
 .cal > a {
+    background: var(--accent-color-light);
     color: var(--primary-color);
     padding: var(--medium_2);
     text-decoration: none;
-    outline: 1px solid var(--primary-color);
+    outline: 1px solid var(--accent-color);
     margin-top: 1px;
     margin-left: 1px;
 }
@@ -110,14 +113,13 @@ a {
 }
 
 .cal .cal__date {
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
     text-align: right;
 }
 
 .cal .cal__date h5 {
-    font-size: var (--small);
     font-weight: 800;
-    line-height: 1.5rem;
+    line-height: 1.4rem;
 }
 
 .cal .cal__date h5 span {
@@ -201,6 +203,15 @@ blockquote {
     font-weight: 300;
     margin: 2rem 0 2rem clamp(0vw, 2vw, 1rem);
     padding-left: min(6vw, 2rem);
+}
+
+.emneknagger a + h5 {
+    margin-top: var(--medium_3);
+}
+
+.emneknagger ul + a {
+    display: inline-block;
+    margin: var(--medium_2) 0;
 }
 
 .emneknagger ul + h5 {
@@ -320,12 +331,12 @@ html {
     margin-bottom: clamp(2rem, 10vw, 6rem);
 }
 
-.intro.blogg {
-    margin-bottom: 0;
+.intro h1 {
+    margin-bottom: var(--medium_1);
 }
 
-.intro.blogg h1 {
-    margin-bottom: var(--medium_1);
+.intro.blogg {
+    margin-bottom: 0;
 }
 
 .intro p {
@@ -352,22 +363,27 @@ html {
     margin-top: var(--medium_2);
 }
 
+.last-posts-list .readmore {
+margin-top:.5rem;display:inline-block;font-weight:500;
+}
+
 .last-posts-list > ul {
     display: flex;
     flex-direction: column;
-    gap: var(--large_1);
+    gap: var(--large_2);
 }
 
 .last-posts-list ul li {
     border-radius: .5rem;
 }
 
-.last-posts-list ul li h4 {
-    font-size: 1.5rem;
-    font-weight: 600;
+.last-posts-list ul li h4.journal a  {
+    color: var(--primary-color);
+    display: block;
+    font-weight: 400;
+    text-decoration: none;
 }
-
-.last-posts-list ul li h4 a {
+.last-posts-list ul li h4 a  {
     color: var(--primary-color);
     display: block;
     text-decoration: none;
@@ -375,6 +391,10 @@ html {
 
 .last-posts-list ul li h4 a:hover {
     text-decoration: underline;
+}
+
+.last-posts-list ul li h4 .date {
+    font-weight: 600;
 }
 
 .last-posts-list ul li hr {
@@ -386,6 +406,7 @@ html {
 .last-posts-list__meta {
    font-size: .875rem; 
    margin-top: .25rem;
+   opacity: .7;
 }
 
 .last-posts-list__meta a {
@@ -395,7 +416,6 @@ html {
 }
 
 .last-posts-list__ingress {
-    font-size: 1.15rem;
     margin-top: var(--medium_1);
 }
 
@@ -416,6 +436,9 @@ html {
 
 main {
     flex: 1;
+    margin: 0 auto;
+    max-width: 70ch;
+    width: 100%;
 }
 
 .section {
@@ -477,10 +500,12 @@ main {
 }
 
 .taglist-index li a {
-    border: 1px solid var(--primary-color);
+    background-color: var(--accent-color-light);
+    border: 1px solid var(--accent-color);
     border-radius: 9999px;
     color: var(--primary-color);
     display: inline-block;
+    font-size: .85rem;
     font-weight: 500;
     padding: var(--small) var(--medium_2);
     text-decoration: none;

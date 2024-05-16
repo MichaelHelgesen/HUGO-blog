@@ -14,8 +14,8 @@
                 {{ partial "tags-homepage" (dict "page" . "name" $name "taxonomy" $taxonomy "count" $cnt )}}
             {{ end }}
         {{ end }}
-        <li><a href="./tags">Se listen</a></li>
         </ul>
+        <a href="./tags">Se som liste</a>
         <h5>Emner jeg har lært om:</h5>
         <ul class="taglist-index">
             {{range $name, $taxonomy := .Site.Taxonomies.logs}} {{ $cnt := .Count }}
@@ -25,6 +25,7 @@
         {{ end }}
         </ul>
 
+        <a href="./logs">Se som liste</a>
 </div>
 {{ else }}
 

@@ -32,13 +32,18 @@
                         </div>
                         {{ if .Params.ingress }}
                         <p class="last-posts-list__ingress">{{.Params.ingress}}</p>
-                        <a style="margin-top:.5rem;display:inline-block;">Les videre</a>
                         {{ end }}
+                        <a class="readmore" href="{{.Permalink}}">Les videre</a>
                     </li>
                     {{ end}}
                 </ul>
                 {{end}}
                 </div>
+                <ul class="taglist-index" style="margin-top: 3rem;">
+                    <li>
+                        <a>Se alle saker</a>
+                    </li>
+                </ul>
             </div>
             <div class="section laeringslogg">
             <h2>Læringslogg</h2>

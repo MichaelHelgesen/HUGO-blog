@@ -19,8 +19,8 @@
                         </div>
                         {{ if .Params.ingress }}
                         <p class="last-posts-list__ingress">{{.Params.ingress}}</p>
-                        <p style="display:inline-block;text-decoration:underline;font-weight:600;margin-top: 8px;">Les videre</p>
                         {{ end }}
+                        <a class="readmore" href="{{.Permalink}}">Les videre</a>
                     </li>
     {{ end }}
 </ul>
