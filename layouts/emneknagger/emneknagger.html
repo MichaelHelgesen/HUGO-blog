@@ -42,7 +42,6 @@
 
                 {{ if len $p}}
                 <ul>
-                    <li><hr></li>
                     {{range $p }}
                     <li>
                         <h4>
@@ -63,8 +62,8 @@
                         {{ if .Params.ingress }}
                         <p class="last-posts-list__ingress">{{.Params.ingress}}</p>
                         {{ end }}
+                        <a class="readmore" href="{{.Permalink}}">Les videre</a>
                     </li>
-                    <li><hr></li>
                     {{ end }}
                 </ul>
                 {{ end }}

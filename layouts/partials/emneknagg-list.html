@@ -2,16 +2,15 @@
     <li>
 
            <a href="{{ .page.RelPermalink }}">
-               <h3>
+               <h4>
             
                 #{{.name}} <sup>{{.count}}</sup>
-                </h3>
+                </h4>
             </a>
                 {{ $p := where site.Pages $tagtype "intersect" (slice .name) }}
 
                 {{ if len $p}}
                 <ul>
-                    <li><hr></li>
                     {{range $p }}
                     <li><a href="{{.Permalink}}">
                             {{ if eq .Type "læringslogg" }}
@@ -29,7 +28,6 @@
                             </p>
                         </div></a>
                     </li>
-                    <li><hr></li>
                     {{ end }}
                 </ul>
                 {{ end }}

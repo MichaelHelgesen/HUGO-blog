@@ -1,10 +1,11 @@
 {{ define "main" }}
-<div class="intro blogg">
+    {{ if eq .Type "blogg" "or" "læringslogg" }}
+    <div class="intro blogg">
+    {{ else }}
+    <div class="intro">
+        {{end}}
     {{ if eq .Type "læringslogg" }}
     <h1>{{ .Title | time.Format ":date_medium" }}</h1>
-    {{ else }}
-    <h1>{{ .Title }}</h1>
-    {{ end }}
     <p class="last-posts-list__meta">
     {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
     <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
@@ -12,7 +13,20 @@
     <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }} | </span>    
     {{ partial "tags.html" .}}
     </p>
-</div>
+    {{ else if eq .Type "blogg" }}
+    <h1>{{ .Title }}</h1>
+    <p class="last-posts-list__meta">
+    {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
+    <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
+    {{ end }}
+    <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }} | </span>    
+    {{ partial "tags.html" .}}
+    </p>
+    {{ else }}
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Params.ingress }}</p>
+    {{ end }}
+    </div>
 <article>
 {{- .Content -}}
 </article>

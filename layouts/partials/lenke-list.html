@@ -4,13 +4,12 @@
     {{ $data := . }}
     {{ range .range}}
                     <li>
-                        <h4>{{.title}}</h4>
+                        <h4><a href="{{.link}}">{{.title}}</a></h4>
                         {{ if .excerpt }}
                         <p class="last-posts-list__ingress">{{.excerpt}}</p>
-                        <p>{{.domain}}</p>
                         {{ end }}
+                        <a class="readmore" href="{{.Link}}">Besøk siden</a>
                     </li>
-                    <li><hr></li>
     {{ end }}
 </ul>
 </div>

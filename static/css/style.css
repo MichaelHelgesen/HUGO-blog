@@ -75,6 +75,7 @@ img {
 
 a {
     color: var(--accent-color);
+    text-decoration: none;
 }
 
 .animate-fade {
@@ -169,6 +170,15 @@ article ul {
     list-style-type: disc;
     list-style-position: inside;
     margin: var(--medium_2);
+}
+
+article li ul {
+    list-style-type: circle;
+    margin-top: var(--small);
+}
+
+article.logg ul {
+    margin-bottom: 0;
 }
 
 article ol li, article ul li {
@@ -384,7 +394,7 @@ margin-top:.5rem;display:inline-block;font-weight:500;
     text-decoration: none;
 }
 .last-posts-list ul li h4 a  {
-    color: var(--primary-color);
+    color: var(--accent-color);
     display: block;
     text-decoration: none;
 }
@@ -405,8 +415,6 @@ margin-top:.5rem;display:inline-block;font-weight:500;
 
 .last-posts-list__meta {
    font-size: .875rem; 
-   margin-top: .25rem;
-   opacity: .7;
 }
 
 .last-posts-list__meta a {
@@ -416,6 +424,7 @@ margin-top:.5rem;display:inline-block;font-weight:500;
 }
 
 .last-posts-list__ingress {
+    font-weight: 600;
     margin-top: var(--medium_1);
 }
 
@@ -452,7 +461,7 @@ main {
 .taglist ul {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: var(--medium_1);
 }
 
 .taglist a {
@@ -461,19 +470,23 @@ main {
     text-decoration: none;
 }
 
-.taglist a:hover h6, .taglist a:hover h3 {
-    text-decoration: underline;
+.taglist h6 {
+    color: var(--accent-color);
 }
 
-.taglist h3 {
-    margin-bottom: var(--medium_1);
+.taglist a:hover h6, .taglist a:hover h4 {
+    text-decoration: underline;
 }
 
 .taglist h4 {
     margin-bottom: var(--medium_1);
 }
 
-.taglist h4 span {
+.taglist h5 {
+    margin-bottom: var(--medium_1);
+}
+
+.taglist h5 span {
    font-weight: 400;
    margin-bottom: var(--medium_1);
 }
@@ -489,7 +502,7 @@ main {
 }
 
 .taglist__source {
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .taglist-index  {

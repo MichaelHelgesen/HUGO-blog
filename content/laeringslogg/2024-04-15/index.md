@@ -20,5 +20,3 @@ Man kan bruke både `site` og `.Site`. Hugo anbefaler å benytte `site` i "templ
 ```
 * **Slå sammen variabel og streng:** `print "Hello" $name "!"`. 
 * **`in`:** Sjekke om en **angitt verdi finnes i en samling**, som kan være array, slice eller string. `{{ if in $l (print "< ref \"" $o "\" >") }}`.
-* 
-

@@ -1,6 +1,5 @@
 <div class="last-posts-list">
     <ul>
-                    <li><hr></li>
         {{ $tag := strings.FirstUpper .tag}}
         {{ range .range}}
 
@@ -24,12 +23,13 @@
                 {{ partial "tags.html" .}}
                 </p>
             </div>
-            {{$regEX := print `(?s)(?i)` $tag `</h[0-9]>.*?</ul>`}} 
-        <article>
-            {{ $test := .Content | findRE $regEX }}
-            {{ range $test}}
-            {{ $test4 := . | findRE `(?s)<ul>.*?</ul>`}}
-            {{ index $test4 0 | safeHTML}}
+            {{$regExString := print `(?s)(?i)` $tag `<\/h[0-9]>.*?<h[0-9]|(?s)(?i)` $tag `<\/h[0-9]>.*`}} 
+        <article class="logg">
+            {{ $regExMatch := .Content | findRE $regExString }}
+            {{ range $regExMatch}}
+                {{ $contentMatch := . | findRE `(?s)(?i)<ul>.*?<h|(?s)(?i)<ul>.*`}}
+                        {{ $content := strings.TrimRight "<h" (index $contentMatch 0)}}
+                {{ $content | safeHTML}}
             {{ end }}
         </article>
 

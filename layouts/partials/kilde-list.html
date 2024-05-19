@@ -21,8 +21,7 @@
     {{ if $sourceTag }}
 
     <li>
-        <span class="taglist__source">{{$sourceType}}</span>
-        <h4>
+        <span class="taglist__source">{{$sourceType}} | </span>
             {{ with .data }}
             {{$creators := .creators}}
             {{$firstName := ""}}
@@ -46,7 +45,8 @@
             {{ .lastName }}, {{ .firstName }} og 
             {{ end }}
             {{ end }}
-            <span>{{.title}}</span>
+        <h4>
+            <a href="">{{.title}}</a>
             {{ end }}
         </h4>
         <div>
@@ -74,7 +74,6 @@
             </div>
             </a>
         </li>
-        <li><hr></li>
         {{ end }}
     </ul>
     {{end}}
