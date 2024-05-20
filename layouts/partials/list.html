@@ -27,7 +27,7 @@
         <article class="logg">
             {{ $regExMatch := .Content | findRE $regExString }}
             {{ range $regExMatch}}
-                {{ $contentMatch := . | findRE `(?s)(?i)<ul>.*?<h|(?s)(?i)<ul>.*`}}
+                {{ $contentMatch := . | findRE `(?s)<ul>.*?<h|(?s)<ul>.*`}}
                         {{ $content := strings.TrimRight "<h" (index $contentMatch 0)}}
                 {{ $content | safeHTML}}
             {{ end }}

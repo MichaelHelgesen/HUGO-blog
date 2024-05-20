@@ -78,6 +78,14 @@ a {
     text-decoration: none;
 }
 
+a.active, a.ancestor {
+    color: var(--accent-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .animate-fade {
 	animation: fadeIn 750ms ease-in-out;
 }
@@ -101,10 +109,11 @@ a {
     outline: 1px solid var(--accent-color);
     margin-top: 1px;
     margin-left: 1px;
+    transition: background .2s ease;
 }
 
 .cal > a:hover {
-    background: var(--primary-color);
+    background: var(--accent-color);
     color: var(--base-color);
 }
 
@@ -251,7 +260,7 @@ h1 {
 
 h2 {
     font-size: clamp(1.7rem, 8vw, 2.488rem);
-    font-weight: 800;
+    font-weight: 600;
     line-height: 150%;
 }
 
@@ -357,7 +366,6 @@ html {
 
 .intro.blogg p {
     font-size: 0.975rem;
-    font-weight: 300;
     margin-bottom: 4rem;
 }
 
@@ -418,9 +426,13 @@ margin-top:.5rem;display:inline-block;font-weight:500;
 }
 
 .last-posts-list__meta a {
-    color: black;
+    color: var(--primary-color);
    font-size: .875rem; 
    text-decoration: underline; 
+}
+
+.last-posts-list__meta a:hover {
+    color:var(--accent-color);
 }
 
 .last-posts-list__ingress {
@@ -441,6 +453,12 @@ margin-top:.5rem;display:inline-block;font-weight:500;
     display: inline-block;
     padding-right: 10px;
     text-decoration: none;
+    transition: color .2s ease, border-color .2s ease;
+}
+
+.logo a:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
 }
 
 main {
@@ -480,6 +498,15 @@ main {
 
 .taglist h4 {
     margin-bottom: var(--medium_1);
+}
+
+.taglist h4 svg {
+    position: relative;
+    top: -5px;
+}
+
+.taglist h4 a:hover {
+    text-decoration: underline;
 }
 
 .taglist h5 {
@@ -522,9 +549,10 @@ main {
     font-weight: 500;
     padding: var(--small) var(--medium_2);
     text-decoration: none;
+    transition: background .2s ease;
 }
 
 .taglist-index li a:hover {
-    background: var(--primary-color);
+    background: var(--accent-color);
     color: var(--base-color);
 }

@@ -13,3 +13,50 @@ title = 'Mikkes blogg'
 tags = "/emneknagger/tags/:slug"
 logs = "/emneknagger/logs/:slug"
 
+[menus]
+  [[menus.main]]
+    name = 'Hjem'
+    pageRef = '/'
+    weight = 10
+  [[menus.main]]
+    name = 'Blogg'
+    pageRef = '/blogg'
+    weight = 20
+  [[menus.main]]
+    name = 'Journal'
+    pageRef = '/journal'
+    weight = 30
+  [[menus.main]]
+    name = 'Læringslogg'
+    pageRef = '/laeringslogg'
+    weight = 40
+  [[menus.main]]
+    name = 'Emneknagger'
+    pageRef = '/emneknagger'
+    weight = 50
+  [[menus.main]]
+    name = 'Kilder'
+    pageRef = '/kilder'
+    weight = 60
+  [[menus.main]]
+    name = 'Lenker'
+    pageRef = '/lenker'
+    weight = 70
+  [[menus.main]]
+    name = 'Nå'
+    pageRef = '/na'
+    weight = 80
+  [[menus.main]]
+    name = 'Om'
+    pageRef = '/om'
+    weight = 90
+  [[menus.main]]
+    name = 'Tags'
+    pageRef = '/tags/api'
+    parent = "Emneknagger"
+    weight = 100
+  [[menus.main]]
+    name = 'Logs'
+    pageRef = '/logs'
+    parent = "Emneknagger"
+    weight = 110

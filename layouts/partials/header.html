@@ -1,3 +1,4 @@
+{{ $page := .}}
 <header>
     <div class="logo">
         <a href="{{ relURL "" }}">
@@ -6,15 +7,29 @@
     </div>
     <nav>
         <ul>
-            <li><a href="{{ relURL "" }}">Hjem</a></li>
-            <li><a href="{{ relURL "blogg" }}">Blogg</a></li>
-            <li><a href="{{ relURL "journal" }}">Journal</a></li>
-            <li><a href="{{ relURL "laeringslogg" }}">Læringslogg</a></li>
-            <li><a href="{{ relURL "emneknagger" }}">Emneknagger</a></li>
-            <li><a href="{{ relURL "kilder" }}">Kilder</a></li>
-            <li><a href="{{ relURL "lenker" }}">Lenker</a></li>
-            <li><a href="{{ relURL "om" }}">Om</a></li>
-            <li><a href="{{ relURL "na" }}">Nå</a></li>
+{{- range site.Menus.main }}
+{{- $attrs := dict "href" .URL }}
+{{- if $page.IsMenuCurrent "main" . }}
+      {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
+    {{- else if or ($page.HasMenuCurrent "main" .) (and (strings.Contains $page.Permalink .PageRef) (ne .Name "Hjem"))}}
+      {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
+    {{- end }}
+    {{- $name := .Name }}
+    {{- with .Identifier }}
+      {{- with T . }}
+        {{- $name = . }}
+      {{- end }}
+    {{- end }}
+<li>
+      <a
+        {{- range $k, $v := $attrs }}
+          {{- with $v }}
+            {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+          {{- end }}
+        {{- end -}}
+      >{{ $name }}</a>
+    </li>
+{{- end }}
         </ul>
     </nav>
 </header>
