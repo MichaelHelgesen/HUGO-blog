@@ -1,6 +1,7 @@
 {{- $respSizes := slice "320" "640" "960" "1280" "1600" "1920" -}}
 {{- $src := .Page.Resources.GetMatch (.Get "src") -}}
 {{- $alt := .Get "alt" -}}
+{{- $figcaption := .Get "figcaption" -}}
 {{- $holder := default "GIP" (.Get "holder") -}}
 {{- $hint := default "photo" (.Get "hint") -}}
 {{- /* ^^ applicable only to webp: https://gohugo.io/content-management/image-processing/#hint */ -}}
@@ -11,6 +12,7 @@
 {{- $dataSzes := "(min-width: 1024px) 100vw, 50vw" -}}
 {{- $actualImg := $src.Resize (printf "%s%s" "640x jpg " $filter) -}}
 
+<figure>
 <div class="{{ $divClass }}">
 	<picture>
 		<source type="image/webp" srcset="
@@ -32,3 +34,7 @@
 		<img class="{{ $imgClass }}" src="{{ $actualImg.RelPermalink }}" width="{{ $src.Width }}" height="{{ $src.Height }}" alt="{{ $alt }}" title="{{ $alt }}" loading="lazy" />
 	</picture>
 </div>
+{{- with $figcaption -}}
+<figcaption>{{. | safeHTML}}</figcaption>
+{{- end -}}
+</figure>

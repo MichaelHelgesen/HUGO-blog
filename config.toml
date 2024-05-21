@@ -60,3 +60,4 @@ logs = "/emneknagger/logs/:slug"
     pageRef = '/logs'
     parent = "Emneknagger"
     weight = 110
+

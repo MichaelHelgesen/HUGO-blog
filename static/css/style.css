@@ -86,8 +86,27 @@ a:hover {
     text-decoration: underline;
 }
 
+hr.single {
+    float: left;
+    max-width: 50px;
+    width: 100%;
+    margin-top: 3rem;
+}
+
 .animate-fade {
 	animation: fadeIn 750ms ease-in-out;
+}
+
+figure {
+    margin: var(--medium_2) 0;
+}
+
+figcaption {
+    font-size: .85rem;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    margin-top: .5rem;
 }
 
 .laeringslogg-homepage li {
@@ -109,7 +128,7 @@ a:hover {
     outline: 1px solid var(--accent-color);
     margin-top: 1px;
     margin-left: 1px;
-    transition: background .2s ease;
+    transition: background .2s ease, color .2s ease;
 }
 
 .cal > a:hover {
@@ -179,6 +198,7 @@ article ul {
     list-style-type: disc;
     list-style-position: inside;
     margin: var(--medium_2);
+    margin-right: 0;
 }
 
 article li ul {
@@ -252,8 +272,16 @@ footer a {
     color: var(--base-color);
 }
 
+.footnotes {
+    margin-top: 6rem;
+}
+
+.footnotes ol {
+    list-style-position: outside;
+}
+
 h1 {
-    font-size: clamp(2.2rem, 10vw, 2.986rem); 
+    font-size: clamp(2rem, 9vw, 2.986rem); 
     font-weight: 800;
     line-height: 1.4;
 }
@@ -328,6 +356,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
+    color: var(--accent-color);
     text-decoration: underline;
 }
 
@@ -396,7 +425,7 @@ margin-top:.5rem;display:inline-block;font-weight:500;
 }
 
 .last-posts-list ul li h4.journal a  {
-    color: var(--primary-color);
+    color: var(--accent-color);
     display: block;
     font-weight: 400;
     text-decoration: none;
@@ -405,6 +434,12 @@ margin-top:.5rem;display:inline-block;font-weight:500;
     color: var(--accent-color);
     display: block;
     text-decoration: none;
+}
+
+.last-posts-list h4 svg {
+    color: var(--accent-color);
+    position: relative;
+    top: -5px;
 }
 
 .last-posts-list ul li h4 a:hover {
@@ -549,7 +584,7 @@ main {
     font-weight: 500;
     padding: var(--small) var(--medium_2);
     text-decoration: none;
-    transition: background .2s ease;
+    transition: background .2s ease, color .2s ease;
 }
 
 .taglist-index li a:hover {

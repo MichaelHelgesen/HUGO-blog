@@ -8,9 +8,6 @@
                 <p>Saker som omhandler {{.Params.Title}}</p>
 </div>
 <div class="last-posts-list">
-
-
-
                 {{ if len $p}}
                 <ul>
                     {{range $p }}
@@ -18,11 +15,11 @@
                         <h4>
                         <a href="{{.Permalink}}">
                             {{.Title}}
-
                         </a>
                         </h4>
                         <div>
                             <p class="last-posts-list__meta">
+                            <span>{{strings.FirstUpper .Type}} | </span>
                                 {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
                                 <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
                                 {{ end }}

@@ -1,5 +1,5 @@
 {{ define "main" }}
-    {{ if eq .Type "blogg" "or" "læringslogg" }}
+    {{ if eq .Type "blogg" "or" "læringslogg" "or" "journal" }}
     <div class="intro blogg">
     {{ else }}
     <div class="intro">
@@ -13,7 +13,7 @@
     <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }} | </span>    
     {{ partial "tags.html" .}}
     </p>
-    {{ else if eq .Type "blogg" }}
+    {{ else if or (eq .Type "blogg") (eq .Type "journal") }}
     <h1>{{ .Title }}</h1>
     <p class="last-posts-list__meta">
     {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
@@ -30,4 +30,5 @@
 <article>
 {{- .Content -}}
 </article>
+<hr class="single">
 {{ end }}
