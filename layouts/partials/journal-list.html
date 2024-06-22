@@ -1,3 +1,4 @@
+{{ $isHome := .content.IsHome }}
 <div class="last-posts-list">
     <ul> 
     
@@ -22,7 +23,9 @@
                             {{.Content}}
                         </article>
                     </li>
+                    {{ if not $isHome }}
                     <li><hr></li>
+                    {{ end }}
     {{ end }}
 </ul>
 </div>

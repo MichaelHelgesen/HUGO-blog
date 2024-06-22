@@ -3,9 +3,10 @@ title: "Scenialitet: de beste ideene skapes i et fellesskap"
 date: 2024-04-17T13:21:46+02:00
 tags: [kreativitet]
 draft: false
+type: blogg
 ---
 
-Om du ønsker å være på ditt mest kreative bør du oppsøke en arena med andre likesinnede mennesker. De beste ideene oppstår nemlig i et fellesskap eller "scenius" som Brian Eno kaller det, og sjeldent i et vakum hos noen få enslige personer slik historien gjerne vil ha oss til å tro.
+Om du ønsker å være på ditt mest kreative bør du oppsøke en arena med andre likesinnede mennesker. De beste ideene oppstår nemlig i et fellesskap eller "scenius"[^1] som Brian Eno kaller det, og sjeldent i et vakum hos noen få enslige personer slik historien gjerne vil ha oss til å tro.
 
 > Scenius is like a genius, only embedded in a scene rather than in genes   
 > – Kevin Kelly
@@ -111,3 +112,4 @@ Uansett fysisk eller digital versjon er det viktig og effektivt for kreativitete
 
 **En gruppe utgjør et økosystem av talent.**
 
+[^1]: [Brian Eno on Scenius]({{< relref "/kilder/#e.sceniuseno">}})

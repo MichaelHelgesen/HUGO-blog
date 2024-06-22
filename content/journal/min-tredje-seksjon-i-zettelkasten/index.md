@@ -7,6 +7,8 @@ tags: [zettelkasten, skriving, læring]
 
 Jeg startet min zettelkasten med notater om læring og skriving. I dag utvidet jeg notat-systemet med en ny seksjon om kreativitet.
 
+{{< imgh src="min-tredje-seksjon-i-zettelkasten.JPEG" alt="Et bilde av min zettelkasten-boks med kategorien kreativitet fremhevet." holder="LQTIP" >}}
+
 Zettelkasten deles ikke inn i rigide kategorier1 som for eksempel en mappestruktur i en app eller på en PC, men det er likevel ryddig å ha en simpel overordnet seksjonering for enklere håndtering.
 
 Niklas Luhmann, opphavsmannen til zettelkasten, hadde også løse kategorier som dette i følge Scott P. Scheper.

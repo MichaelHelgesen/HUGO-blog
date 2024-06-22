@@ -1,5 +1,4 @@
-{{ define "main" }}
-    {{ if eq .Type "blogg" "or" "læringslogg" "or" "journal" }}
+{{ define "main" }}    {{ if eq .Type "blogg" "or" "læringslogg" "or" "journal" }}
     <div class="intro blogg">
     {{ else }}
     <div class="intro">
@@ -31,4 +30,38 @@
 {{- .Content -}}
 </article>
 <hr class="single">
+{{ $backlinks := slice }}
+{{ $path_base := .File.ContentBaseName }}
+{{ $path_base_re := printf `["/(]%s["/)]` $path_base }}
+
+{{ range where site.RegularPages "RelPermalink" "ne" .RelPermalink }}
+    {{ if (findRE $path_base_re .RawContent 1) }}
+        {{ $backlinks = $backlinks | append . }}
+    {{ end }}
+{{ end }}
+{{ with $backlinks }}
+    <section class="backlinks">
+        {{ printf "<h5>Andre tekster som henviser til denne: </h5>" | safeHTML }}
+        <nav>
+            <ul class="taglist">
+                {{ range . }}
+        <li>
+            <a href="{{.Permalink}}">
+            <h6>{{.Title}}</h6>
+            <div>
+                <p class="last-posts-list__meta">
+                {{strings.FirstUpper .Type }} | 
+                {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
+                <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
+                {{ end }}
+                <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }}</span>    
+                </p>
+            </div>
+            </a>
+        </li>
+                {{ end }}
+            </ul>
+        </nav>
+    </section>
+{{ end }}
 {{ end }}

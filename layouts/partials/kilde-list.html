@@ -18,9 +18,9 @@
     {{ $sourceTag = .tag }}
     {{ end }}
     {{ if $sourceTag }}
-
+    {{ $date := .data.date }}
     <li>
-        <span class="taglist__source">{{$sourceType}} {{ .data.date }} | </span>
+        <span class="taglist__source">{{$sourceType}} |
             {{ with .data }}
             {{$creators := .creators}}
             {{$firstName := ""}}
@@ -36,14 +36,16 @@
             {{$lastName = .lastName}}
             {{end }}
             
-            {{ if eq (len $creators) 1 }} 
-            {{ $lastName }}, {{ $firstName }}: 
+            {{ if eq (len $creators) 1 }}
+            
+            {{ $firstName }} {{ $lastName }}, {{ $date }}: 
             {{ else if and (eq (len $creators) (add $index 1) (ne $index 0))}}
-            {{ .lastName}}, {{ .firstName }}:
+            {{ .firstName }} {{ .lastName}}, {{ $date }}:
             {{ else }}
-            {{ .lastName }}, {{ .firstName }} og 
+            {{ .firstName }} {{ .lastName }} og 
             {{ end }}
             {{ end }}
+            </span>
             <h4 id="{{ $sourceTag }}">
             <a href="#">{{.title}}
 
@@ -57,6 +59,7 @@
         </h4>
         <div>
         </div>
+        <hr>
     {{- range site.RegularPages -}}
     {{ if and (in .RawContent $sourceTag) (len $sourceTag) }}
     {{ $incomingLinks = $incomingLinks | append .}}

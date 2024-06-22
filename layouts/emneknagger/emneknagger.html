@@ -44,6 +44,7 @@
                 <ul>
                     {{range $p }}
                     <li>
+                            <span>{{strings.FirstUpper .Type}}</span>
                         <h4>
                         <a href="{{.Permalink}}">
                             {{.Title}}

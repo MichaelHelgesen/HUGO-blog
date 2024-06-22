@@ -29,6 +29,7 @@ img {
 	position: relative;
 }
 
+
 .bg-center {
 	background-position: center;
 }
@@ -84,6 +85,15 @@ a.active, a.ancestor {
 
 a:hover {
     text-decoration: underline;
+}
+
+.backlinks {
+    clear: both;
+    padding-top: var(--medium_3);
+}
+
+.backlinks nav {
+    margin-top: var(--medium_1);
 }
 
 hr.single {
@@ -402,12 +412,27 @@ html {
     margin-top: var(--medium_2);
 }
 
+.intro.tag span {
+    display: block;
+    font-size: 1.15rem;
+    margin-top: var(--small);
+}
+
+.journal {
+    margin-top: var(--medium_2);
+}
+
 .laeringslogg-list > div + div {
     margin-top: var(--large_1);
 }
 
 .laeringslogg p + p {
     margin-top: var(--medium_2);
+}
+
+.last-posts-list li > span {
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .last-posts-list .readmore {
@@ -515,6 +540,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: var(--medium_1);
+    padding-top: var(--medium_1);
 }
 
 .taglist a {
@@ -533,6 +559,10 @@ main {
 
 .taglist h4 {
     margin-bottom: var(--medium_1);
+}
+
+.taglist h4 a {
+    color: var(--accent-color);
 }
 
 .taglist h4 svg {
@@ -564,6 +594,8 @@ main {
 }
 
 .taglist__source {
+    font-size: 1.1rem;
+    font-weight: 600;
     text-transform: capitalize;
 }
 

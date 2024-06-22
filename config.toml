@@ -1,4 +1,4 @@
-baseURL = '/blogg-public/'
+baseURL = '/'
 defaultContentLanguage = "nb"
 title = 'Mikkes blogg'
 
@@ -61,3 +61,5 @@ logs = "/emneknagger/logs/:slug"
     parent = "Emneknagger"
     weight = 110
 
+[markup]
+  [markup.goldmark]

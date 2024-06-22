@@ -1,42 +1,41 @@
 {{ define "main" }}
 <div>
     <div class="index-top">
-        {{ .Content }}
-        
+        {{ .Content }} 
         <h5>Temaer jeg foreløpig har skrevet om:</h5>
-        <ul class="taglist-index">
-            {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
-            {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-                {{ partial "tags-homepage" (dict "page" . "name" $name "taxonomy" $taxonomy "count" $cnt )}}
+            <ul class="taglist-index">
+                {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+                    {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+                        {{ partial "tags-homepage" (dict "page" . "name" $name "taxonomy" $taxonomy "count" $cnt )}}
+                {{ end }}
             {{ end }}
-        {{ end }}
-        </ul>
+            </ul>
         </div>
         <div>
             <div class="section">
                 <h2>Siste fem saker</h2>
                 <div class="last-posts-list">
                 {{range where (.Pages | first 5) "Section" "blogg"}}
-                <ul>
-                    {{range .Pages}}
-                    <li>
-                        <h4><a href="{{.Permalink}}">{{.Title}}</a></h4>
-                        <div>
-                            <p class="last-posts-list__meta">
-                                {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
-                                <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
-                                {{ end }}
-                                <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }} | </span>    
-                                {{ partial "tags.html" .}}
-                            </p>
-                        </div>
-                        {{ if .Params.ingress }}
-                        <p class="last-posts-list__ingress">{{.Params.ingress}}</p>
-                        {{ end }}
-                        <a class="readmore" href="{{.Permalink}}">Les videre</a>
-                    </li>
-                    {{ end}}
-                </ul>
+                    <ul>
+                        {{range .Pages}}
+                        <li>
+                            <h4><a href="{{.Permalink}}">{{.Title}}</a></h4>
+                            <div>
+                                <p class="last-posts-list__meta">
+                                    {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
+                                    <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
+                                    {{ end }}
+                                    <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }} | </span>    
+                                    {{ partial "tags.html" .}}
+                                </p>
+                            </div>
+                            {{ if .Params.ingress }}
+                                <p class="last-posts-list__ingress">{{.Params.ingress}}</p>
+                            {{ end }}
+                                <a class="readmore" href="{{.Permalink}}">Les videre</a>
+                        </li>
+                        {{ end}}
+                    </ul>
                 {{end}}
                 </div>
                 <ul class="taglist-index" style="margin-top: 3rem;">
@@ -46,20 +45,38 @@
                 </ul>
             </div>
             <div class="section laeringslogg">
-            <h2>Læringslogg</h2>
-            <p>
-            Jeg forsøker også så godt jeg kan å loggføre all ny kunnskap i en notatbok, som jeg deretter overfører til en digital punktliste som <a href="/laeringslogg">publiseres her</a>.
-            </p>
-            <p> 
-            En slik logg et sterkt visuelt bilde på hvor mye man faktisk har lært, og en god metode for å befeste kunnskapen. Dessuten opplever jeg det som en veldig god inspirasjonskilde for nye skriverier. 
-            Jeg anbefaler deg absolutt å prøve, men hold det enkelt! 
-            </p>
+                <h2>Læringslogg</h2>
+                <p>
+                Jeg forsøker også så godt jeg kan å loggføre all ny kunnskap i en notatbok, som jeg deretter overfører til en digital punktliste som <a href="/laeringslogg">publiseres her</a>.
+                </p>
+                <p> 
+                En slik logg et sterkt visuelt bilde på hvor mye man faktisk har lært, og en god metode for å befeste kunnskapen. Dessuten opplever jeg det som en veldig god inspirasjonskilde for nye skriverier. 
+                Jeg anbefaler deg absolutt å prøve, men hold det enkelt! 
+                </p>
             </div>
-            <div>
             <div class="cal">
-            {{ $rangeLaering := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "=" "læringslogg" | first 6 }}
-            {{ partial "laeringslogg-homepage2" (dict "range" $rangeLaering "content" . "page" .Kind)}}
+                {{ $rangeLaering := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "=" "læringslogg" | first 6 }}
+                {{ partial "laeringslogg-homepage2" (dict "range" $rangeLaering "content" . "page" .Kind)}}
             </div>
+                <ul class="taglist-index" style="margin-top: 3rem;">
+                    <li>
+                        <a href={{ relURL "laeringslogg"}}>Se hele loggen</a>
+                    </li>
+                </ul>
+            <div class="section journal">
+                <h2>Siste fra journalen</h2>
+                <p>
+                I <a href="/journal">journalen</a> dokumenterer jeg det jeg finner interessant i hverdagen. Tekstformen er kortere og enklere sammenlignet med skriveriene. Det er som små glimt av mine interesser og tanker.
+                </p>
+                <div class="journal">
+                {{ $range := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "=" "journal" | first 1 }}
+                {{ partial "journal-list" (dict "range" $range "content" .)}}
+                <ul class="taglist-index" style="margin-top: 3rem;">
+                    <li>
+                        <a href={{ relURL "laeringslogg"}}>Se hele journalen</a>
+                    </li>
+                </ul>
+                </div>
             </div>
         </div>
     </div>

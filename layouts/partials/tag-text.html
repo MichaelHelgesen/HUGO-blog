@@ -1,6 +1,12 @@
-<div class="intro">
+{{ $url := print "emneknagger/tags/" .tag }}
+<div class="intro tag">
 <h1>
     #{{.tag}} <sup>{{.count}}</sup>
-    <p>Saker om {{.tag}}</p>
 </h1>
+    <p>Ting jeg har lært om {{.tag}}</p>
+    <span>
+    {{ if .duplicate }}
+    Jeg har også skrevet tekster om denne emneknaggen. <a href={{ relURL $url }}> Se dem her.</a>
+    {{ end }}
+    </span>
 </div>

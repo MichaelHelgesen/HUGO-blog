@@ -2,8 +2,9 @@
 title: Jeg er en evig amatør
 tags: [læring, inspirasjon]
 date: 2024-04-17
-draft: true
+draft: false
 type: blogg
+ingress: Jeg velger å lære åpenlyst i håp om å skape mer, lære bedre og å være til inspirasjon.
 ---
 "Bestem deg for hva du vil lære, og forplikt deg til å lære foran andre", skriver [Austin Kleon](https://austinkleon.com/) i sin bok ["Show your work"](https://www.adlibris.com/no/bok/show-your-work-9780761178972).[^1] 
 
@@ -17,11 +18,11 @@ Ja, det er en lang avstand fra middelmådig til god i et kreativt spektrum, men 
 
 {{< imgh src="jeg_er_en_evig_amator_02.JPEG" alt="En illustrasjon som viser en strekperson gå i små steg fra middelmådig til god." holder="LQIP" hint="drawing" figcaption="Å bevege seg fra middelmådig til god tar lang tid, men kan oppnås med små skritt av gangen." >}}
 
-Det er en langt større avgrunn fra å ikke bidra til å gjøre noe:
+Det er en langt større avgrunn fra å ikke bidra overhodet til å bidra litt:
 
 {{< imgh src="jeg_er_en_evig_amator_01.JPEG" alt="En illustrasjon som viser en strekperson som med skrekk ser på avgrunnen mellom 'ingenting' og 'noe' (start)" holder="LQIP" hint="drawing" figcaption="Det å gå fra ingenting til å bidra med noe som helst er ofte den største utfordringen." >}}
 
-"Man bør dele det man finner og har, for det kan være mer verdt enn man tror", skiver Kleon.
+"Man bør dele det man finner og har, for det kan være mer verdt enn man tror"[^1], mener Kleon.
 
 På bakgrunn av dette, og med inspirasjon og drahjelp fra Kleons bok starter jeg denne bloggen med fokus på blant annet:
 
@@ -44,7 +45,8 @@ Forhåpentligvis kan også min entusiasme og nysgjerrighet være smittsom og ins
 
 Hvis du også brenner inne med noe så start i dag, og del reisen med oss andre.
 
-> Ha amatørhjertet på utsiden, del det du elsker, og du vil bli funnet. [...] Er ikke arbeidet ditt på nett, så eksisterer det ikke.  
-> *- Austin Kleon*
+````quote {author="Austin Kleon" cite="{{< relref "/kilder#e.kleonshowwork" >}}"} 
+Ha amatørhjertet på utsiden, del det du elsker, og du vil bli funnet. [...] Er ikke arbeidet ditt på nett, så eksisterer det ikke.  
+````
 
-[^1]: Side 19 fra [Show your work!](/kilder/#e.kleonshowwork)
+[^1]: [Show your work!]({{< relref "/kilder#e.kleonshowwork" >}})

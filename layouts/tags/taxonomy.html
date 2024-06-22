@@ -1,17 +1,24 @@
 {{ define "main" }}
-
                 {{ $p := where site.Pages "Params.tags" "intersect" (slice .Params.Title) }}
-<div class="intro">
+                {{ $p_logs := where site.Pages "Params.logs" "intersect" (slice .Params.Title) }}
+{{ $url := print "emneknagger/logs/" .Params.Title }}
+<div class="intro tag">
                 <h1>
                     #{{.Params.Title}} <sup>{{len $p }}</sup>
                 </h1>
-                <p>Saker som omhandler {{.Params.Title}}</p>
+                <p>Tekster som omhandler {{.Params.Title}}</p>
+    <span>
+    {{ if $p_logs }}
+    Denne emneknaggen er også oppført i læringsloggen. <a href={{ relURL $url }}>Se oversikten her.</a>
+    {{ end }}
+    </span>
 </div>
 <div class="last-posts-list">
                 {{ if len $p}}
                 <ul>
                     {{range $p }}
                     <li>
+                        <span>{{strings.FirstUpper .Type}}</span>
                         <h4>
                         <a href="{{.Permalink}}">
                             {{.Title}}
@@ -19,7 +26,6 @@
                         </h4>
                         <div>
                             <p class="last-posts-list__meta">
-                            <span>{{strings.FirstUpper .Type}} | </span>
                                 {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
                                 <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
                                 {{ end }}
@@ -30,7 +36,7 @@
                         {{ if .Params.ingress }}
                         <p class="last-posts-list__ingress">{{.Params.ingress}}</p>
                         {{ end }}
-                        <a class="readmore" href="{{.Permalink}}">Les videre</a>
+                       <a class="readmore" href="{{.Permalink}}">Les videre</a>
                     </li>
                     {{ end }}
                 </ul>
