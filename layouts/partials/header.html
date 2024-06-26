@@ -1,4 +1,8 @@
 {{ $page := .}}
+{{ $url := trim .Page.RelPermalink "/"}}
+{{ $urlsplit := split .Permalink "/" }}
+{{ $urlconstructor := "" }}
+{{ $num := 1 }}
 <header>
     <div class="logo">
         <a href="{{ relURL "" }}">
@@ -32,7 +36,9 @@
     </li>
 {{- end }}
         </ul>
-    </nav><ol class="" itemscope itemtype="https://schema.org/BreadcrumbList">
+    </nav>
+{{ if and (ne $page.Type "tags") (ne $page.Type "logs") }}
+    <ol class="" itemscope itemtype="https://schema.org/BreadcrumbList">
         {{- /* declare a 'variable' to store the each link position */}}
         {{- $data := newScratch }}
 
@@ -58,6 +64,27 @@
                 <meta itemprop="position" content='{{ $data.Get "counter"}}' />
             </li>
     </ol>
-
+    {{ else }}
+    <ol class="" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/">
+                    <span itemprop="name">Hjem</span>
+                </a> / 
+                <meta itemprop="position" content='1' />
+            </li>         
+            {{ range $index, $element := $urlsplit }}
+            {{ if and $element (gt $index 2)}}
+                {{ $num = add $num 1 }}
+                {{ $urlconstructor = (print $urlconstructor $element "/")}}
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="/{{ $urlconstructor }}">
+                            <span itemprop="name">{{ . | humanize}}</span>
+                        </a> / 
+                        <meta itemprop="position" content='{{ $num }}' />
+                    </li>         
+                {{ end }}
+            {{ end }}
+    </ol>
+{{ end }}
     </div>
 </header>

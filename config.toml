@@ -10,8 +10,8 @@ title = 'Mikkes blogg'
   log = "logs"
 
 [permalinks]
-tags = "/emneknagger/tags/:slug"
-logs = "/emneknagger/logs/:slug"
+    tags = "/emneknagger/tags/:slug"
+    logs = "/emneknagger/logs/:slug"
 
 [menus]
   [[menus.main]]
@@ -50,16 +50,6 @@ logs = "/emneknagger/logs/:slug"
     name = 'Om'
     pageRef = '/om'
     weight = 90
-  [[menus.main]]
-    name = 'Tags'
-    pageRef = '/tags/api'
-    parent = "Emneknagger"
-    weight = 100
-  [[menus.main]]
-    name = 'Logs'
-    pageRef = '/logs'
-    parent = "Emneknagger"
-    weight = 110
 
 [markup]
   [markup.goldmark]
