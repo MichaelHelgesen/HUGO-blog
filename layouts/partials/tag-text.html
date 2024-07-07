@@ -1,4 +1,4 @@
-{{ $url := print "emneknagger/tags/" .tag }}
+{{ $url := print "emneknagger/tags/" (lower .tag) }}
 <div class="intro tag">
 <h1>
     #{{.tag}} <sup>{{.count}}</sup>

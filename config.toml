@@ -1,6 +1,8 @@
 baseURL = '/'
 defaultContentLanguage = "nb"
 title = 'Mikkes blogg'
+[author]
+name = "Michael Helgesen"
 
 [frontmatter]
     lastmod = ["lastmod", ":fileModTime", ":default"]

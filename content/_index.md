@@ -1,6 +1,8 @@
 ---
 title: "Mikke Helgesen"
 draft: false
+description: Test
+keywords: ["test", "teset2"]
 ---
 {{< introtekst >}}
 <h1>Hei! Mikke her.</h1> 

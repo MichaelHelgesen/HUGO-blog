@@ -1,12 +1,14 @@
 {{ define "main" }}
-                {{ $p := where site.Pages "Params.tags" "intersect" (slice .Params.Title) }}
-                {{ $p_logs := where site.Pages "Params.logs" "intersect" (slice .Params.Title) }}
-{{ $url := print "emneknagger/logs/" .Params.Title }}
+
+                {{ $p := where site.Pages "Params.tags" "intersect" (slice (lower .Title)) }}
+                {{ $p_logs := where site.Pages "Params.logs" "intersect" (slice (lower .Title)) }}
+{{ $url := print "emneknagger/logs/" (lower .Title) }}
+
 <div class="intro tag">
                 <h1>
-                    #{{.Params.Title}} <sup>{{len $p }}</sup>
+                    #{{.Title}} <sup>{{len $p }}</sup>
                 </h1>
-                <p>Tekster som omhandler {{.Params.Title}}</p>
+                <p>Tekster som omhandler {{lower .Title}}</p>
     <span>
     {{ if $p_logs }}
     Denne emneknaggen er også oppført i læringsloggen. <a href={{ relURL $url }}>Se oversikten her.</a>
