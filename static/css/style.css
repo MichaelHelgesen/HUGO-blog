@@ -80,7 +80,7 @@ a {
 }
 
 a.active, a.ancestor {
-    color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 a:hover {
@@ -94,6 +94,21 @@ a:hover {
 
 .backlinks nav {
     margin-top: var(--medium_1);
+}
+
+.breadcrumb {
+    display: flex;
+    font-size: .85rem;
+    margin-top: 1rem;
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.breadcrumb a:hover {
+    color: var(--accent-color);
 }
 
 hr.single {
@@ -362,7 +377,7 @@ header nav ul li a {
     font-weight: 500;
     padding: 0 var(--small);
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 header nav ul li a:hover {
@@ -540,7 +555,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: var(--medium_1);
-    padding-top: var(--medium_1);
+    padding-top: var(--small);
 }
 
 .taglist a {

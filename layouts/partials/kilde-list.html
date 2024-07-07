@@ -59,13 +59,11 @@
         </h4>
         <div>
         </div>
-        <hr>
     {{- range site.RegularPages -}}
     {{ if and (in .RawContent $sourceTag) (len $sourceTag) }}
     {{ $incomingLinks = $incomingLinks | append .}}
     {{ end }}
     {{- end -}}
-
     {{ if len $incomingLinks}}
     <ul>
         {{range $incomingLinks }}
@@ -85,6 +83,7 @@
         </li>
         {{ end }}
     </ul>
+        <hr style="margin-top: 2rem;">
     {{end}}
     </li>
     {{end}}

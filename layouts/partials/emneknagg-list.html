@@ -1,17 +1,18 @@
 {{ $tagtype := printf "%s%s" "Params." .tagtype}}
+{{ $count := .count }}
     <li>
 
            <a href="{{ .page.RelPermalink }}">
                <h4>
             
-                #{{.name}} <sup>{{.count}}</sup>
+                #{{.name}} <sup>{{ $count }}</sup>
                 </h4>
             </a>
                 {{ $p := where site.Pages $tagtype "intersect" (slice .name) }}
 
                 {{ if len $p}}
                 <ul>
-                    {{range $p }}
+                    {{range $p | first 5 }}
                     <li><a href="{{.Permalink}}">
                             {{ if eq .Type "læringslogg" }}
                             <h6>{{.Title | time.Format ":date_medium"}}</h6>
@@ -30,6 +31,13 @@
                     </li>
                     {{ end }}
                 </ul>
+                {{ if gt .count 5 }}
+                <ul class="taglist-index">
+                    <li>
+                <a class="button" href="{{ .page.Permalink }}">Se alle</a>
+                    </li>
+                </ul>
+                {{ end }}
                 {{ end }}
             </div>
         </div>
