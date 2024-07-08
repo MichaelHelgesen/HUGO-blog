@@ -1,7 +1,7 @@
 {{ define "main" }}
-{{ .Content }}
+{{ .Content }} 
 <ul class="taglist">
-    {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+    {{ range $name, $taxonomy := .Site.Taxonomies.tags }} {{ $cnt := .Count }}
     {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
     {{ partial "emneknagg-list" (dict "page" . "name" $name "taxonomy" $taxonomy "count" $cnt "tagtype" "tags" )}}
     {{ end }}

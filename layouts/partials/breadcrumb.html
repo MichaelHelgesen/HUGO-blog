@@ -3,9 +3,6 @@
 {{ $urlsplit := split .Permalink "/" }}
 {{ $urlconstructor := "" }}
 {{ $num := 1 }}
-{{ if .IsHome}}
-test
-{{ end }}
 
 {{ if and (ne $page.Type "tags") (ne $page.Type "logs") }}
     <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
