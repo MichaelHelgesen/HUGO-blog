@@ -1,11 +1,54 @@
-
 {{ define "main" }}
-{{ .Content }}    
+    {{ .Content }}
+    {{- $currentPage := . -}}
+    <div class="last-posts-list">
+<ul class="last_posts">
+    {{ range .Pages }}
+        {{ $sourceTag := "" }}
+        {{ range .Params.tags }}
+            {{ $sourceTag = .tag }}
+        {{ end }}
+        {{ $date := .Params.date }}
+        {{ if .Title}}
+    <li>
+        <span class="taglist__source">
+        {{$creators := .Params.creators}}
+        {{$firstName := ""}}
+        {{$lastName := ""}}
+        {{ range $index, $name := $creators }}
+            {{ if not .firstName }}
+                {{ with .lastName }}
+                    {{$firstName = index (split . " ") 0 }}
+                    {{$lastName = index (split . " ") 1 }}
+                {{ end }}
+            {{ else }}
+                {{$firstName = .firstName}}
+                {{$lastName = .lastName}}
+            {{end }}
+            
+            {{ if eq (len $creators) 1 }}
+            {{ $firstName }} {{ $lastName }}, {{ $date }}: 
+            {{ else if and (eq (len $creators) (add $index 1) (ne $index 0))}}
+            {{ .firstName }} {{ .lastName}}, {{ $date }}:
+            {{ else }}
+            {{ .firstName }} {{ .lastName }} og 
+            {{ end }}
+            {{ end }}
+            </span>
+            <h4 id="{{ $sourceTag }}">
+        <a href="{{ .Path }}">{{ .Title }}</a>
+            </h4>
 
-{{ with resources.GetRemote "https://api.zotero.org/groups/5454933/collections/UTX4VKZV/items/top?format=json&v=3"}}
-    {{ $kilder := unmarshal .Content }}
-    {{ partial "kilde-list" (dict "range" $kilder "content" . "type" "kilde")}}
-{{ end }}
-
-
+    <p class="last-posts-list__meta">
+    {{ if .Params.dateUpdated }}
+    <span>Red: {{ .Params.dateUpdated }} | </span>
+    {{ end }}
+    <span>Pub: {{ .Params.dateAdded }} </span>    
+    </p>
+            <p class="last-posts-list__ingress">{{ .Params.extra }}</p>
+    </li>
+    {{ end }}
+    {{ end }}
+</ul>
+    </div>
 {{ end }}

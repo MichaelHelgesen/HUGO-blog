@@ -1,0 +1,77 @@
+{{ define "main" }}
+{{ $date := .Params.date }}
+    <div class="intro blogg">
+
+        <span class="taglist__source">
+        {{$creators := .Params.creators}}
+        {{$firstName := ""}}
+        {{$lastName := ""}}
+        {{ range $index, $name := $creators }}
+            {{ if not .firstName }}
+                {{ with .lastName }}
+                    {{$firstName = index (split . " ") 0 }}
+                    {{$lastName = index (split . " ") 1 }}
+                {{ end }}
+            {{ else }}
+                {{$firstName = .firstName}}
+                {{$lastName = .lastName}}
+            {{end }}
+            
+            {{ if eq (len $creators) 1 }}
+            {{ $firstName }} {{ $lastName }}, {{ $date }}: 
+            {{ else if and (eq (len $creators) (add $index 1) (ne $index 0))}}
+            {{ .firstName }} {{ .lastName}}, {{ $date }}:
+            {{ else }}
+            {{ .firstName }} {{ .lastName }} og 
+            {{ end }}
+            {{ end }}
+
+            </span>
+        <h1>{{ .Title }}</h1>
+    <p class="last-posts-list__meta">
+    {{ if .Params.dateUpdated }}
+    <span>Red: {{ .Params.dateUpdated }} | </span>
+    {{ end }}
+    <span>Pub: {{ .Params.dateAdded }} </span>    
+    <br />    
+    </p>
+    </div>
+    <article>
+        {{- .Content -}}
+    </article>
+    <hr class="single">
+
+{{ $backlinks := slice }}
+{{ $path_base := (strings.TrimPrefix "/bibliotek/" .Path ) }}
+{{ $path_base_re := printf `["/(]%s["/)]` $path_base }}
+{{ range where site.RegularPages "RelPermalink" "ne" .RelPermalink }}
+    {{ if (findRE $path_base_re .RawContent 1) }}
+        {{ $backlinks = $backlinks | append . }}
+    {{ end }}
+{{ end }}
+{{ with $backlinks }}
+    <section class="backlinks">
+        {{ printf "<h5>Andre tekster som henviser til denne: </h5>" | safeHTML }}
+        <nav>
+            <ul class="taglist">
+                {{ range . }}
+        <li>
+            <a href="{{.Permalink}}">
+            <h6>{{.Title}}</h6>
+            <div>
+                <p class="last-posts-list__meta">
+                {{strings.FirstUpper .Type }} | 
+                {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
+                <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
+                {{ end }}
+                <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }}</span>    
+                </p>
+            </div>
+            </a>
+        </li>
+                {{ end }}
+            </ul>
+        </nav>
+    </section>
+{{ end }}
+{{ end }}

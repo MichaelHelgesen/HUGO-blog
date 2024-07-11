@@ -503,12 +503,15 @@ margin-top:.5rem;display:inline-block;font-weight:500;
 
 .last-posts-list__meta a {
     color: var(--primary-color);
-   font-size: .875rem; 
    text-decoration: underline; 
 }
 
 .last-posts-list__meta a:hover {
     color:var(--accent-color);
+}
+
+.last-posts-list__meta svg {
+    margin-left: 2px;
 }
 
 .last-posts-list__ingress {

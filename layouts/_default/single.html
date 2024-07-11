@@ -1,4 +1,4 @@
-{{ define "main" }}    {{ if eq .Type "blogg" "or" "læringslogg" "or" "journal" }}
+{{ define "main" }}    {{ if eq .Type "blogg" "or" "læringslogg" "or" "journal"}}
     <div class="intro blogg">
     {{ else }}
     <div class="intro">
@@ -33,7 +33,7 @@
 {{ $backlinks := slice }}
 {{ $path_base := .File.ContentBaseName }}
 {{ $path_base_re := printf `["/(]%s["/)]` $path_base }}
-
+{{ $path_base_re}}
 {{ range where site.RegularPages "RelPermalink" "ne" .RelPermalink }}
     {{ if (findRE $path_base_re .RawContent 1) }}
         {{ $backlinks = $backlinks | append . }}
