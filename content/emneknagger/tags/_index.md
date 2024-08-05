@@ -4,7 +4,7 @@ url: emneknagger/tags
 type: tags
 layout: terms
 aliases:
-    - tags
+    - /tags
 ---
 {{< introtekst >}}
 <h1>Emneknagger for skriverier</h1>

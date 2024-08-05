@@ -1,5 +1,5 @@
 ---
-title: "læring"
+title: Læring
 url: emneknagger/tags/laering
 type: term
 layout: terms

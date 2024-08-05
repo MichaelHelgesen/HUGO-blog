@@ -1,5 +1,6 @@
 <ul class="taglist">
 
+    {{ $site := .ctx.Site }}
     {{ range .range}}
     {{ $sourceType := "" }}
     {{ $sourceTag := "" }}
@@ -47,7 +48,7 @@
             {{ end }}
             </span>
             <h4 id="{{ $sourceTag }}">
-            <a href="#">{{.title}}
+                <a href="#">{{.title}}
 
 <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g id="Interface / External_Link">
@@ -55,10 +56,17 @@
 </g>
 </svg>
             </a>
-            {{ end }}
         </h4>
-        <div>
-        </div>
+        <p class="last-posts-list__ingress">
+        {{ .extra }} 
+        </p>
+       {{ with $site.GetPage (print "/bibliotek/" (.title | urlize))}}
+                        <a class="readmore" href="../bibliotek/{{.Title | urlize}}">Les min omtale</a>
+       {{ end }}
+        <p class="last-posts-list__ingress">
+            Tekster som henviser til denne kilden:
+        </p>
+            {{ end }}
     {{- range site.RegularPages -}}
     {{ if and (in .RawContent $sourceTag) (len $sourceTag) }}
     {{ $incomingLinks = $incomingLinks | append .}}

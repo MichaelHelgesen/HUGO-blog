@@ -612,6 +612,11 @@ main {
     margin-top: 3rem;
 }
 
+.taglist .readmore {
+margin-top:.5rem;display:inline-block;font-weight:500;
+color: var(--accent-color);
+}
+
 .taglist__source {
     font-size: 1.1rem;
     font-weight: 600;

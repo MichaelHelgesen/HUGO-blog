@@ -29,7 +29,7 @@
 </div>
 {{ else }}
 
-                {{ $p := where site.Pages "Params.tags" "intersect" (slice .Params.Title) }}
+                {{ $p := where site.Pages "Params.tags" "intersect" (slice (strings.ToLower .Params.Title)) }}
 <div class="intro">
                 <h1>
                     #{{.Params.Title}} <sup>{{len $p }}</sup>
