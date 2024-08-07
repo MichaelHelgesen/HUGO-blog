@@ -8,28 +8,29 @@
 </div>
 <div class="emneknagger">
     <h5>Emner jeg har skrevet om:</h5>
+
         <ul class="taglist-index">
-            {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
-            {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+            {{range $name, $taxonomy := .Site.Taxonomies.tekstemner}} {{ $cnt := .Count }}
+            {{ with $.Site.GetPage (printf "/tekstemner/%s" $name) }}
                 {{ partial "tags-homepage" (dict "page" . "name" $name "taxonomy" $taxonomy "count" $cnt )}}
             {{ end }}
         {{ end }}
         </ul>
-        <a href="./tags">Se som liste</a>
+        <a href="./tekstemner">Se som liste</a>
         <h5>Emner jeg har lært om:</h5>
         <ul class="taglist-index">
-            {{range $name, $taxonomy := .Site.Taxonomies.logs}} {{ $cnt := .Count }}
-            {{ with $.Site.GetPage (printf "/logs/%s" $name) }}
+            {{range $name, $taxonomy := .Site.Taxonomies.laeringsemner}} {{ $cnt := .Count }}
+            {{ with $.Site.GetPage (printf "/laeringsemner/%s" $name) }}
                 {{ partial "tags-homepage" (dict "page" . "name" $name "taxonomy" $taxonomy "count" $cnt )}}
             {{ end }}
         {{ end }}
         </ul>
 
-        <a href="./logs">Se som liste</a>
+        <a href="./laeringsemner">Se som liste</a>
 </div>
 {{ else }}
 
-                {{ $p := where site.Pages "Params.tags" "intersect" (slice (strings.ToLower .Params.Title)) }}
+                {{ $p := where site.Pages "Params.tekstemner" "intersect" (slice (strings.ToLower .Params.Title)) }}
 <div class="intro">
                 <h1>
                     #{{.Params.Title}} <sup>{{len $p }}</sup>

@@ -1,8 +1,7 @@
 ---
 title: 2024-04-18
 date: 2024-04-18
-type: læringslogg
-logs: [hugo]
+laeringsemner: [hugo]
 ---
 ## Hugo
 

@@ -1,8 +1,7 @@
 ---
 title: "2024-04-27T07:57:36+02:00"
 date: 2024-04-27T07:57:36+02:00
-type: læringslogg
-logs: [terminal, hugo]
+laeringsemner: [terminal, hugo]
 draft: false
 ---
 

@@ -15,9 +15,9 @@
             <div class="section">
                 <h2>Siste fem saker</h2>
                 <div class="last-posts-list">
-                {{range where (.Pages | first 5) "Section" "blogg"}}
+                {{range where .Pages "Section" "tekster"}}
                     <ul>
-                        {{range .Pages}}
+                        {{range .Pages | first 5}}
                         <li>
                             <h4><a href="{{.Permalink}}">{{.Title}}</a></h4>
                             <div>
@@ -40,7 +40,7 @@
                 </div>
                 <ul class="taglist-index" style="margin-top: 3rem;">
                     <li>
-                        <a href={{ relURL "blogg"}}>Se alle saker</a>
+                        <a href={{ relURL "tekster"}}>Se alle saker</a>
                     </li>
                 </ul>
             </div>

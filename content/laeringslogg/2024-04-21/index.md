@@ -1,8 +1,7 @@
 ---
 title: 2024-04-21
 date: 2024-04-21
-type: læringslogg
-logs: [terminal, javascript, tailwind]
+laeringsemner: [terminal, javascript, tailwind]
 ---
 ## Javascript
 * `hasOwnProperty(property)`: En metode for å sjekke om angit egenskap er definert i gjeldende objekt eller prototype.

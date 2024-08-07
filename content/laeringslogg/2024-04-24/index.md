@@ -1,8 +1,7 @@
 ---
 title: "2024-04-24T08:43:09+02:00"
 date: 2024-04-24T08:43:09+02:00
-type: læringslogg
-logs: [javascript]
+laeringsemner: [javascript]
 draft: false
 ---
 

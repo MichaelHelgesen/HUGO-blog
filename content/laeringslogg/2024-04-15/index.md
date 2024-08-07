@@ -1,9 +1,8 @@
 ---
 title: 2024-04-15
 date: 2024-04-15T19:20:00-05:00
-logs:
+laeringsemner:
 - hugo
-type: læringslogg
 ---
 ## Hugo
 * Man **looper gjennom sider** i Hugo med `{{ range .Site.RegularPages }}`. Det er det samme som en `for loop` i javascript.   

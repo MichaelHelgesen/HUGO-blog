@@ -1,8 +1,7 @@
 ---
 title: 2024-04-20
 date: 2024-04-20
-type: læringslogg
-logs: [curl, jq, terminal]
+laeringsemner: [curl, jq, terminal]
 ---
 ## Curl
 * Curl er et kommandolinje-program for overføring av data med URLer. Det ble utviklet av en svenske i 1998, som fortsatt utvikler det. Det er open source.

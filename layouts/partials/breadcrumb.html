@@ -4,7 +4,7 @@
 {{ $urlconstructor := "" }}
 {{ $num := 1 }}
 
-{{ if and (ne $page.Type "tags") (ne $page.Type "logs") }}
+{{ if and (ne $page.Type "tekstemner") (ne $page.Type "laeringsemner") }}
     <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
         {{- /* declare a 'variable' to store the each link position */}}
         {{- $data := newScratch }}

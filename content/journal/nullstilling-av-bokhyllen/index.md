@@ -21,7 +21,7 @@ Jeg starter min nye bokhylle med Scott P. Schepers "Antinet Zettelkasten" og Aus
 
 {{< imgh src="nullstilling-av-bokhyllen-02.JPEG" >}}
 
-Førstnevnte er en kilde til notat- og kunnskapssystemet Zettelkasten, og skal forhåpentligvis lære meg å systematisere mine notater og min kunnskap, noe [jeg har vært dårlig på]({{< ref "blogg/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate" >}}).
+Førstnevnte er en kilde til notat- og kunnskapssystemet Zettelkasten, og skal forhåpentligvis lære meg å systematisere mine notater og min kunnskap, noe [jeg har vært dårlig på]({{< ref "hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate" >}}).
 
 Sistnevnte er en enkel bok som inspirerer deg til å komme i gang med dine kreative prosjekter, og som oppfordrer til å dele prosessen online. Den er som et effektivt spark bak.
 

@@ -1,8 +1,7 @@
 ---
 title: "2024-04-26T09:16:06+02:00"
 date: 2024-04-26T09:16:06+02:00
-type: læringslogg
-logs: [hugo, design, nvim]
+laeringsemner: [hugo, design, nvim]
 draft: false
 ---
 ## Hugo

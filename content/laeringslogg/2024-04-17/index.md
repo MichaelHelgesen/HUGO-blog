@@ -1,8 +1,7 @@
 ---
 title: 2024-04-17
-logs: [vim, linux, hugo]
+laeringsemner: [vim, linux, hugo]
 date: 2024-04-17
-type: læringslogg
 ---
 ## Hugo
 * `printf "%#v"` printer ut alle tilgjengelige variabler, verdier og annet i gjeldende kontekst.

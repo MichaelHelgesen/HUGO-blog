@@ -1,0 +1,10 @@
+{{ define "main" }}
+{{ .Content }} 
+<ul class="taglist">
+    {{ range $name, $taxonomy := .Site.Taxonomies.tekstemner }} {{ $cnt := .Count }}
+    {{ with $.Site.GetPage (printf "/tekstemner/%s" $name) }}
+    {{ partial "emneknagg-list" (dict "page" . "name" $name "taxonomy" $taxonomy "count" $cnt "tagtype" "tekstemner" )}}
+    {{ end }}
+    {{ end }}
+</ul>
+{{ end }}

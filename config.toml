@@ -9,12 +9,12 @@ name = "Michael Helgesen"
     lastmod = ["lastmod", ":fileModTime", ":default"]
 
 [taxonomies]
-  tag = "tags"
-  log = "logs"
+  tekstemne = "tekstemner"
+  laeringsemne = "laeringsemner"
 
 [permalinks]
-    tags = "/emneknagger/tags/:slug"
-    logs = "/emneknagger/logs/:slug"
+    tekstemner = "/emneknagger/tekstemner/:slug"
+    laeringsemner = "/emneknagger/laeringsemner/:slug"
 
 [menus]
   [[menus.main]]
@@ -22,8 +22,8 @@ name = "Michael Helgesen"
     pageRef = '/'
     weight = 10
   [[menus.main]]
-    name = 'Blogg'
-    pageRef = '/blogg'
+    name = 'Tekster'
+    pageRef = '/tekster'
     weight = 20
   [[menus.main]]
     name = 'Journal'

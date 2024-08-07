@@ -1,8 +1,0 @@
-{{ define "main" }}
-{{ $title := .Title }}
-{{ $range := where .Site.RegularPages "Params.logs" "intersect" (slice (lower $title)) }}
-{{ $range_tags := where .Site.RegularPages "Params.tags" "intersect" (slice (lower $title)) }}
-{{ $count := len $range}}
-{{ partial "tag-text"  (dict "tag" .Title "count" $count "duplicate" $range_tags)}}
-{{ partial "list" (dict "range" $range "content" . "page" .Kind "tag" .Title "count" $count)}}
-{{ end }}
