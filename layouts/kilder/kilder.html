@@ -4,24 +4,13 @@
 {{ with resources.GetRemote "https://api.zotero.org/groups/5454933/collections/U68Q8VUJ/items/top?format=json&v=3"}}
     {{ $kilder := unmarshal .Content }}
     {{ range $kilder }}
-    --
-    <br>
-    {{ .data.title }}<br>
     {{ $key := .data.key }}
-    {{ .meta.numChildren }}
     {{ if .meta.numChildren }}
         {{ $test := print "https://api.zotero.org/groups/5454933/items/" $key "/children?format=json&v=3"}}
-        {{ $test }}
 {{ with resources.GetRemote $test }}
 {{ $test2 := unmarshal .Content }}
-<article>
-    {{ range $test2}}
-        {{ .data.note | safeHTML }}
-    {{ end }}
-</article>
     {{end }}
     {{ end }}
-    --
         {{  end }}
     {{ partial "kilde-list" (dict "range" $kilder "content" . "type" "kilde" "ctx" $)}}
 {{ end }}

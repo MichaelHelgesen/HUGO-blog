@@ -1,7 +1,7 @@
 ---
 title: Nullstilling av bokhyllen
-date: 2024-04-17T14:03:58+02:00
-tags: [lesing, læring]
+date: 2024-04-17
+tekstemner: [lesing, læring]
 ---
 I dag startet jeg jobben med å tømme bokhyllene for bøker.
 
@@ -17,7 +17,7 @@ Fra nå av skal bøkene som settes inn ha en klar hensikt. De skal omhandle tema
 
 Oppfyller de ikke kravene skal de ut igjen.
 
-Jeg starter min nye bokhylle med Scott P. Schepers "Antinet Zettelkasten" og Austin Kleons "Show Your Work".
+Jeg starter min nye bokhylle med Scott P. Schepers «[Antinet Zettelkasten]({{< relref "kilder/#e.scheperantinet" >}})» og Austin Kleons «[Show Your Work]({{< relref "kilder/#e.kleonshowwork">}})».
 
 {{< imgh src="nullstilling-av-bokhyllen-02.JPEG" >}}
 

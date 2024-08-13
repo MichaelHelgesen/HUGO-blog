@@ -73,9 +73,9 @@
 {{ end }}
 {{ with $backlinks }}
     <section class="backlinks">
-        {{ printf "<h5>Andre tekster som henviser til denne: </h5>" | safeHTML }}
+        {{ printf "<h5>Tekster som henviser til denne boken: </h5>" | safeHTML }}
         <nav>
-            <ul class="taglist">
+            <ul class="taglist single">
                 {{ range . }}
         <li>
             <a href="{{.Permalink}}">

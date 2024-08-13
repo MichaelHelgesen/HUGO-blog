@@ -1,4 +1,4 @@
-{{ $taxonomy := "logs" }} {{ with .Param $taxonomy }}
+{{ $taxonomy := "laeringsemner" }} {{ with .Param $taxonomy }}
 {{ $range := .}}
   {{ range $index, $tag := . }} 
       {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}

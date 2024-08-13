@@ -4,8 +4,8 @@
         {{ .Content }} 
         <h5>Temaer jeg foreløpig har skrevet om:</h5>
             <ul class="taglist-index">
-                {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
-                    {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+                {{range $name, $taxonomy := .Site.Taxonomies.tekstemner}} {{ $cnt := .Count }}
+                    {{ with $.Site.GetPage (printf "/tekstemner/%s" $name) }}
                         {{ partial "tags-homepage" (dict "page" . "name" $name "taxonomy" $taxonomy "count" $cnt )}}
                 {{ end }}
             {{ end }}
@@ -29,8 +29,8 @@
                                     {{ partial "tags.html" .}}
                                 </p>
                             </div>
-                            {{ if .Params.ingress }}
-                                <p class="last-posts-list__ingress">{{.Params.ingress}}</p>
+                            {{ with .Params.listeintro }}
+                                <p class="last-posts-list__ingress">{{.}}</p>
                             {{ end }}
                                 <a class="readmore" href="{{.Permalink}}">Les videre</a>
                         </li>
@@ -55,8 +55,10 @@
                 </p>
             </div>
             <div class="cal">
-                {{ $rangeLaering := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "=" "læringslogg" | first 6 }}
+                {{ $rangeLaering := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "=" "laeringslogg" | first 6 }}
                 {{ partial "laeringslogg-homepage2" (dict "range" $rangeLaering "content" . "page" .Kind)}}
+                {{ range .Site.RegularPages}}
+                {{ end }}
             </div>
                 <ul class="taglist-index" style="margin-top: 3rem;">
                     <li>
@@ -73,7 +75,7 @@
                 {{ partial "journal-list" (dict "range" $range "content" .)}}
                 <ul class="taglist-index" style="margin-top: 3rem;">
                     <li>
-                        <a href={{ relURL "laeringslogg"}}>Se hele journalen</a>
+                        <a href={{ relURL "/journal"}}>Se hele journalen</a>
                     </li>
                 </ul>
                 </div>

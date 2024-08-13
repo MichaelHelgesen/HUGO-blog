@@ -1,9 +1,9 @@
-{{ define "main" }}    {{ if eq .Type "blogg" "or" "læringslogg" "or" "journal" }}
+{{ define "main" }}    {{ if eq .Type "tekster" "or" "laeringslogg" "or" "journal" }}
     <div class="intro blogg">
     {{ else }}
     <div class="intro">
         {{end}}
-    {{ if eq .Type "læringslogg" }}
+    {{ if eq .Type "laeringslogg" }}
     <h1>{{ .Title | time.Format ":date_medium" }}</h1>
     <p class="last-posts-list__meta">
     {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
@@ -12,7 +12,7 @@
     <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }} | </span>    
     {{ partial "tags.html" .}}
     </p>
-    {{ else if or (eq .Type "blogg") (eq .Type "journal") }}
+    {{ else if or (eq .Type "tekster") (eq .Type "journal") }}
     <h1>{{ .Title }}</h1>
     <p class="last-posts-list__meta">
     {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
@@ -27,6 +27,9 @@
     {{ end }}
     </div>
 <article>
+{{ with .Params.ingress }}
+<p class="ingress">{{.}}</p>
+{{ end }}
 {{- .Content -}}
 </article>
 <hr class="single">
@@ -43,7 +46,7 @@
     <section class="backlinks">
         {{ printf "<h5>Andre tekster som henviser til denne: </h5>" | safeHTML }}
         <nav>
-            <ul class="taglist">
+            <ul class="taglist single">
                 {{ range . }}
         <li>
             <a href="{{.Permalink}}">

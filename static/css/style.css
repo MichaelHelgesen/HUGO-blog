@@ -303,7 +303,34 @@ footer a {
 }
 
 .footnotes ol {
-    list-style-position: outside;
+    list-style-position: inside;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.footnotes ol p {
+    display: inline;
+}
+
+article.journal .footnotes {
+    margin-top: 0rem;
+}
+
+article.journal .footnotes hr {
+    display: none;
+}
+
+article.journal .footnotes ol {
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+article.journal .footnotes ol li {
+    margin-bottom: 0;
+}
+
+article.journal .footnotes ol p {
+    display: inline;
 }
 
 h1 {
@@ -395,6 +422,10 @@ html {
     display: flex;
     min-height: 100%;
     padding: clamp(var(--medium_2), 8vw, var(--large_2))
+}
+
+.ingress {
+    font-weight: 600;
 }
 
 .index-top p + h5 {
@@ -610,6 +641,10 @@ main {
 
 .taglist > li + li {
     margin-top: 3rem;
+}
+
+.taglist.single > li + li {
+    margin-top: 1rem;
 }
 
 .taglist .readmore {

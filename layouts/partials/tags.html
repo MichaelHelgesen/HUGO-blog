@@ -8,7 +8,7 @@
 
         <a href="{{ .RelPermalink }}"> 
         {{ if eq (len $range) 1 }} 
-            #{{ $tag }}</a>
+        #{{ $tag }}</a>
          {{ else if and (eq (len $range) (add $index 1)) (ne $index 0) }}
             #{{ $tag }}</a>
         {{ else }}

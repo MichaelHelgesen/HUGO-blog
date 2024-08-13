@@ -4,10 +4,10 @@
                 <h1>
                     Emneknagger
                 </h1>
-                <p>En oversikt over emner jeg har skrevet om</p>
+                <p>En oversikt over emner jeg har skrevet og lært om.</p>
 </div>
 <div class="emneknagger">
-    <h5>Emner jeg har skrevet om:</h5>
+    <h5>Emner jeg har skrevet om i <a href="/tekster">tekster</a> og i <a href="/journal">journalen</a> </h5>
 
         <ul class="taglist-index">
             {{range $name, $taxonomy := .Site.Taxonomies.tekstemner}} {{ $cnt := .Count }}
@@ -17,7 +17,7 @@
         {{ end }}
         </ul>
         <a href="./tekstemner">Se som liste</a>
-        <h5>Emner jeg har lært om:</h5>
+        <h5>Emner jeg har lært om i <a href="/laeringslogg">læringsloggen</a>:</h5>
         <ul class="taglist-index">
             {{range $name, $taxonomy := .Site.Taxonomies.laeringsemner}} {{ $cnt := .Count }}
             {{ with $.Site.GetPage (printf "/laeringsemner/%s" $name) }}
