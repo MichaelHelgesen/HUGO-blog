@@ -14,8 +14,8 @@
                 <ul>
                     {{range $p | first 5 }}
                     <li><a href="{{.Permalink}}">
-                            {{ if eq .Type "læringslogg" }}
-                            <h6>{{.Title | time.Format ":date_medium"}}</h6>
+                            {{ if eq .Type "laeringslogg" }}
+                            <h6>{{.Title | time.Format ":date_long"}}</h6>
                             {{ else }}
                             <h6>{{.Title}}</h6>
                             {{end}}

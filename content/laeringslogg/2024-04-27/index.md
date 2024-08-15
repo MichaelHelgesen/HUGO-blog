@@ -1,6 +1,6 @@
 ---
-title: "2024-04-27T07:57:36+02:00"
-date: 2024-04-27T07:57:36+02:00
+title: "2024-04-27"
+date: 2024-04-27
 laeringsemner: [terminal, hugo]
 draft: false
 ---

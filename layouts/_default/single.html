@@ -1,10 +1,10 @@
 {{ define "main" }}    {{ if eq .Type "tekster" "or" "laeringslogg" "or" "journal" }}
     <div class="intro blogg">
     {{ else }}
-    <div class="intro">
+    <div class="intro sider">
         {{end}}
     {{ if eq .Type "laeringslogg" }}
-    <h1>{{ .Title | time.Format ":date_medium" }}</h1>
+    <h1>{{ .Title | time.Format ":date_long" }}</h1>
     <p class="last-posts-list__meta">
     {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
     <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
@@ -23,13 +23,22 @@
     </p>
     {{ else }}
     <h1>{{ .Title }}</h1>
-    <p>{{ .Params.ingress }}</p>
+    <p class="last-posts-list__meta">
+    {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
+    <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
+    {{ end }}
+    <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }} | </span>    
+    {{ partial "tags.html" .}}
+    </p>
+    <p class="ingress">{{ .Params.ingress }}</p>
     {{ end }}
     </div>
 <article>
+    {{ if ne .Type "staticpage" }}
 {{ with .Params.ingress }}
 <p class="ingress">{{.}}</p>
 {{ end }}
+{{end }}
 {{- .Content -}}
 </article>
 <hr class="single">
@@ -48,12 +57,16 @@
         <nav>
             <ul class="taglist single">
                 {{ range . }}
+                {{$type := .Type}}
+                {{- if eq .Type "staticpage" -}}
+                    {{$type = "Side"}}
+                {{- end -}}
         <li>
             <a href="{{.Permalink}}">
             <h6>{{.Title}}</h6>
             <div>
                 <p class="last-posts-list__meta">
-                {{strings.FirstUpper .Type }} | 
+                <span style="font-weight: 600">{{strings.FirstUpper $type }}</span> | 
                 {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
                 <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
                 {{ end }}

@@ -11,6 +11,7 @@
 {{- $imgClass := "w-full h-auto animate-fade" -}}
 {{- $dataSzes := "(min-width: 1024px) 100vw, 50vw" -}}
 {{- $actualImg := $src.Resize (printf "%s%s" "640x jpg " $filter) -}}
+{{- $title := .Get "title" -}}
 
 <figure>
 <div class="{{ $divClass }}">
@@ -31,7 +32,7 @@
 				{{- end -}}
 			{{- end -}}
 		{{- end -}}" sizes="{{ $dataSzes }}" />
-		<img class="{{ $imgClass }}" src="{{ $actualImg.RelPermalink }}" width="{{ $src.Width }}" height="{{ $src.Height }}" alt="{{ $alt }}" title="{{ $alt }}" loading="lazy" />
+		<img class="{{ $imgClass }}" src="{{ $actualImg.RelPermalink }}" width="{{ $src.Width }}" height="{{ $src.Height }}" alt="{{ $alt }}" title="{{ $title }}" loading="lazy" />
 	</picture>
 </div>
 {{- with $figcaption -}}

@@ -56,13 +56,14 @@
 
         </h4>
        {{ with $site.GetPage (print "/bibliotek/" ($title | urlize))}}
-       <ul class="taglist-index" style="margin-top: 0rem; margin-bottom: 1rem; flex-direction: row;">
+       <ul class="taglist-index" style="margin-top: 0rem; margin-bottom: 1.5rem; flex-direction: row;">
            <li>
                         <a href="../bibliotek/{{$title | urlize}}">Min omtale av boken</a>
            </li>
                 </ul>
        {{ end }}
             {{ end }}
+    
     {{- range site.RegularPages -}}
     {{ if and (in .RawContent $sourceTag) (len $sourceTag) }}
     {{ $incomingLinks = $incomingLinks | append .}}

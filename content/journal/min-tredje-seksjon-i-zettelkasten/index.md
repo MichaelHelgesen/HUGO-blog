@@ -1,6 +1,6 @@
 ---
 title: Min tredje seksjon i zettelkasten
-date: 2024-04-17
+date: 2024-05-23
 tekstemner: [zettelkasten, skriving, læring]
 ---
 

@@ -1,12 +1,12 @@
 ---
-title: "2024-04-26T09:16:06+02:00"
-date: 2024-04-26T09:16:06+02:00
+title: "2024-04-26"
+date: 2024-04-26
 laeringsemner: [hugo, design, nvim]
 draft: false
 ---
 ## Hugo
 
-* Det finnes ikke noe tilsvarende javascripts `switch` i Hugo. Man må bruke `if else' eller `with`.
+* Det finnes ikke noe tilsvarende javascripts `switch` i Hugo. Man må bruke `if else` eller `with`.
 * `with` endrer konteksten av "dott" til et uttrykk ("expression") og utfører kodeblokken dersom uttrykket er sant.
 * Man kan begrese antall poster i `range` med tall:
     * Med `where` kan man "pipe" eller hekte på nummeret til slutt: `{{ where EXPR | 5 }}`.
