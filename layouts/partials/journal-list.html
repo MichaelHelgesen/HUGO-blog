@@ -5,9 +5,10 @@
     {{ range .range}}
         
                     <li>
-                        <h4 class="journal">
-                            <span class="date">{{.Date | time.Format ":date_long"}}</span><br />
-                        </h4>
+                        <span class="date">{{.Date | time.Format ":date_long"}}:</span>
+                        <h3 class="journal">
+                            {{.Title}}
+                        </h3>
                         <div>
                             <p class="last-posts-list__meta">
                                 {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
@@ -17,9 +18,6 @@
                             </p>
                         </div>
                         <article class="journal">
-                            <h5>
-                                <a href="{{.Permalink}}">{{.Title}}</a>
-                            </h5>
                             {{.Content}}
                         </article>
                     </li>

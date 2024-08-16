@@ -6,7 +6,7 @@ keywords: ["test", "teset2"]
 ---
 {{< introtekst >}}
 <h1>Hei! Mikke her.</h1> 
-<p>
+<p class="ingress">
 Jeg deler tanker og innsikt i håp om å være til inspirasjon og hjelp, samt for å lære mer og bedre.
 </p>
 {{< /introtekst >}}

@@ -1,47 +1,51 @@
-{{ define "main" }}    {{ if eq .Type "tekster" "or" "laeringslogg" "or" "journal" }}
-    <div class="intro blogg">
+{{ define "main" }}    
+    {{ if eq .Type "tekster" "or" "laeringslogg" "or" "journal" }}
+        <div class="intro blogg">
     {{ else }}
-    <div class="intro sider">
-        {{end}}
+        <div class="intro sider">
+    {{end}}
     {{ if eq .Type "laeringslogg" }}
-    <h1>{{ .Title | time.Format ":date_long" }}</h1>
-    <p class="last-posts-list__meta">
-    {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
-    <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
-    {{ end }}
-    <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }} | </span>    
-    {{ partial "tags.html" .}}
-    </p>
+        <h1>{{ .Title | time.Format ":date_long" }}</h1>
+        <p class="last-posts-list__meta">
+            {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
+                <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
+            {{ end }}
+            <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }} | </span>    
+            {{ partial "tags.html" .}}
+        </p>
     {{ else if or (eq .Type "tekster") (eq .Type "journal") }}
-    <h1>{{ .Title }}</h1>
-    <p class="last-posts-list__meta">
-    {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
-    <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
-    {{ end }}
-    <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }} | </span>    
-    {{ partial "tags.html" .}}
-    </p>
+        <h1>{{ .Title }}</h1>
+        <p class="last-posts-list__meta">
+            {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
+                <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
+            {{ end }}
+            <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }} | </span>    
+            {{ partial "tags.html" .}}
+        </p>
     {{ else }}
-    <h1>{{ .Title }}</h1>
-    <p class="last-posts-list__meta">
-    {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
-    <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
+        <h1>{{ .Title }}</h1>
+        <p class="ingress">{{ .Params.ingress }}</p>
+        <p class="last-posts-list__meta">
+            {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
+                <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
+            {{ end }}
+            <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }}</span>    
+        </p>
     {{ end }}
-    <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }} | </span>    
-    {{ partial "tags.html" .}}
-    </p>
-    <p class="ingress">{{ .Params.ingress }}</p>
-    {{ end }}
-    </div>
+        </div>
 <article>
     {{ if ne .Type "staticpage" }}
-{{ with .Params.ingress }}
-<p class="ingress">{{.}}</p>
-{{ end }}
-{{end }}
+        {{ with .Params.ingress }}
+            <p class="ingress">{{.}}</p>
+        {{ end }}
+    {{ end }}
 {{- .Content -}}
 </article>
 <hr class="single">
+<section class="mail">
+<h5>Ris, ros eller respons?</h5>
+<p>Send meg gjerne <a href="mailto:mikke@mikke.no?subject={{.Title}}">df</a> om du har en kommentar, korrektur eller konstruktiv kritikk til denne saken. 
+</section>
 {{ $backlinks := slice }}
 {{ $path_base := .File.ContentBaseName }}
 {{ $path_base_re := printf `["/(]%s["/)]` $path_base }}
@@ -52,6 +56,7 @@
     {{ end }}
 {{ end }}
 {{ with $backlinks }}
+<hr class="single">
     <section class="backlinks">
         {{ printf "<h5>Andre tekster som henviser til denne: </h5>" | safeHTML }}
         <nav>

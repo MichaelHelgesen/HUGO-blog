@@ -1,6 +1,6 @@
 ---
 title: 2024-04-15
-date: 2024-04-15T19:20:00-05:00
+date: 2024-04-15
 laeringsemner:
 - hugo
 ---

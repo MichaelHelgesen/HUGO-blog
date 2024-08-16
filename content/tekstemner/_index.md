@@ -7,7 +7,7 @@ aliases:
     - tekstemner
 ---
 {{< introtekst >}}
-<h1>Emneknagger for skriverieroo</h1>
-<p>En liste over emner og fem siste relaterte saker.</p>
+<h1>Emneknagger for tekster</h1>
+<p class="ingress">En liste over emner jeg har skrevet om og tilhørende tekster.</p>
 {{< /introtekst >}}
 

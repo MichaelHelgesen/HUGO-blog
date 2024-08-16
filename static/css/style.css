@@ -284,18 +284,58 @@ blockquote {
 }
 
 footer {
-    background: var(--primary-color);
+    background: #272822;
     color: var(--base-color);
-    margin: var(--section-margin) calc(clamp(var(--medium_2), 8vw, var(--large_2))
+    margin: var(--max) calc(clamp(var(--medium_2), 8vw, var(--large_2))
  * -1) calc(clamp(var(--medium_2), 8vw, var(--large_2))
  * -1) calc(clamp(var(--medium_2), 8vw, var(--large_2))
  * -1);
-    padding: var(--medium_1);
+    padding: clamp(var(--medium_2), 8vw, var(--large_2));;
     text-align: center;
 }
 
 footer a {
     color: var(--base-color);
+}
+
+footer nav {
+    margin-bottom: var(--medium_2);
+}
+
+footer nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+footer nav ul li::after {
+        content:"|"
+}
+
+footer nav ul li:last-child::after {
+    content:"";
+}
+
+footer a {
+text-decoration: underline;
+}
+
+footer a:hover {
+text-decoration: none;
+color: var(--accent-color);
+}
+
+footer nav ul li a {
+padding: 0 var(--small);
+text-decoration: underline;
+}
+
+footer nav ul li a.active, footer a.ancestor {
+    color: var(--accent-color);
+}
+
+footer p {
+    font-size: .85rem;
 }
 
 .footnotes {
@@ -436,6 +476,14 @@ html {
     margin-bottom: clamp(2rem, 10vw, 6rem);
 }
 
+.intro.sider {
+    margin-bottom: clamp(1.5rem, 10vw, 3rem);
+}
+
+.intro.sider .last-posts-list__meta {
+    margin-top:  clamp(1.5rem, 10vw, 3rem);
+}
+
 .intro h1 {
     margin-bottom: var(--medium_1);
 }
@@ -444,7 +492,7 @@ html {
     margin-bottom: 0;
 }
 
-.intro p {
+.intro.sider .ingress {
     font-size: clamp(1.5rem, 5vw, var(--medium_3));
     font-weight: 500;
     line-height: 150%;
@@ -494,6 +542,10 @@ margin-top:.5rem;display:inline-block;font-weight:500;
 
 .last-posts-list ul li {
     border-radius: .5rem;
+}
+
+.last-posts-list ul li h3.journal {
+    margin-top: var(--medium)
 }
 
 .last-posts-list ul li h4.journal a  {
@@ -569,6 +621,11 @@ margin-top:.5rem;display:inline-block;font-weight:500;
 .logo a:hover {
     color: var(--accent-color);
     border-color: var(--accent-color);
+}
+
+.mail {
+    clear: both;
+    padding-top: var(--large_1);
 }
 
 main {

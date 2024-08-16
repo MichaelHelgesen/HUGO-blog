@@ -4,11 +4,11 @@
                 {{ $p_logs := where site.Pages "Params.laeringsemner" "intersect" (slice (lower .Title)) }}
 {{ $url := print "emneknagger/laeringsemner/" (lower .Title) }}
 
-<div class="intro tag">
+<div class="intro sider tag">
                 <h1>
                     #{{.Title}} <sup>{{len $p }}</sup>
                 </h1>
-                <p>Tekster som omhandler {{lower .Title}}</p>
+                <p class="ingress">Tekster som omhandler {{lower .Title}}</p>
     <span>
     {{ if $p_logs }}
     Denne emneknaggen er også oppført i læringsloggen. <a href={{ relURL $url }}>Se oversikten her.</a>

@@ -1,6 +1,6 @@
 ---
 title: 2024-04-17
-laeringsemner: [vim, linux, hugo]
+laeringsemner: [nvim, fedora, hugo]
 date: 2024-04-17
 ---
 ## Hugo
@@ -9,8 +9,8 @@ date: 2024-04-17
 * `resource.GetRemote URL` brukes for å koble til eksterne API-er.
 * Å lage sider av data fra eksternt API
 
-## Linux Fedora
+## Fedora
 * Man kan angi tastatursnarveier for terminal-kommandoer under innstillinger / tastatur / egendefinert. Jeg satt opp `Alt + Home` som snarvei for å åpne terminalen.
 
 ## NVIM
-* `set wrap linebreak` anktiverer linjebryting uten å brekke ord.
+* `set wrap linebreak` aktiverer linjebryting uten å dele ord.

@@ -1,4 +1,38 @@
+{{ $page := .}}
+{{ $url := trim .Page.RelPermalink "/"}}
+{{ $urlsplit := split .Permalink "/" }}
+{{ $urlconstructor := "" }}
+{{ $num := 1 }}
+
 <footer class="mt-16 border-t border-white text-center pt-8 pb-4"> 
-    Laget selv med <a href="https://www.gohugo.io">Hugo</a>
+    <nav>
+        <ul>
+{{- range site.Menus.main }}
+{{- $attrs := dict "href" .URL }}
+{{- if $page.IsMenuCurrent "main" . }}
+      {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
+    {{- else if or ($page.HasMenuCurrent "main" .) (and (strings.Contains $page.Permalink .PageRef) (ne .Name "Hjem"))}}
+      {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
+    {{- end }}
+    {{- $name := .Name }}
+    {{- with .Identifier }}
+      {{- with T . }}
+        {{- $name = . }}
+      {{- end }}
+    {{- end }}
+<li>
+      <a
+        {{- range $k, $v := $attrs }}
+          {{- with $v }}
+            {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+          {{- end }}
+        {{- end -}}
+      >{{ $name }}</a>
+    </li>
+{{- end }}
+        </ul>
+    </nav>
+    <p>Nettsiden er laget av <a href="/om">meg</a>, med <a href="https://www.gohugo.io">Hugo</a>.</p>
+    <p>Her finnes ingen sporingsmekanismer, bare deg og meg.</p> 
 </footer>
 
