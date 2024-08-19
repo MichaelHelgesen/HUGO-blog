@@ -60,7 +60,26 @@
     <hr class="single">
 <section class="mail">
 <h5>Ris, ros eller respons?</h5>
-<p>Send meg gjerne <a href="mailto:mikke@mikke.no?subject={{.Title}}">df</a> om du har en kommentar, korrektur eller konstruktiv kritikk til denne saken. 
+<p> 
+<style>
+  #span-0c2f3098.cloaked-e-mail:before {
+    content:attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi:bidi-override;
+    direction:rtl;
+  }
+</style>
+ Send meg gjerne &#32;<span class="cloaked-e-mail" data-user="tsop" data-domain="on.neseglehleahcim" id="span-0c2f3098"></span>&#32; om du har en kommentar, korrektur eller konstruktiv kritikk til denne saken. 
+
+
+<script id="script-0c2f3098">
+  var scriptTag = document.getElementById("script-0c2f3098");
+  var link = document.createElement("a");
+  var address = "tsop".split('').reverse().join('') + "@" + "on.neseglehleahcim".split('').reverse().join('');
+  link.href = "mailto" + ":" + address + "?subject=Kommentar til siden {{.Title}}";
+  link.innerText = "en e-post";
+  scriptTag.parentElement.insertBefore(link, scriptTag.previousElementSibling);
+  scriptTag.parentElement.removeChild(scriptTag.previousElementSibling)
+</script>
 </section>
     <hr class="single">
     <div>
@@ -87,7 +106,7 @@
             <h6>{{.Title}}</h6>
             <div>
                 <p class="last-posts-list__meta">
-                {{strings.FirstUpper .Type }} | 
+                <span style="font-weight: 600">{{strings.FirstUpper .Type }}</span> | 
                 {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
                 <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
                 {{ end }}

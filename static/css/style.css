@@ -585,8 +585,7 @@ margin-top:.5rem;display:inline-block;font-weight:500;
 }
 
 .last-posts-list__meta a {
-    color: var(--primary-color);
-   text-decoration: underline; 
+    color: var(--accent-color);
 }
 
 .last-posts-list__meta a:hover {
@@ -669,7 +668,7 @@ main {
 }
 
 .taglist h4 a {
-    color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 .taglist h4 svg {
