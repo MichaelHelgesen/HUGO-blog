@@ -55,7 +55,7 @@ name = "Michael Helgesen"
     weight = 80
   [[menus.main]]
     name = 'Om'
-    pageRef = '/om'
+    pageRef = '/om_mikke'
     weight = 90
 
 [markup]

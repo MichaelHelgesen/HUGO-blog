@@ -2,6 +2,7 @@
 title: "Om"
 date: 2024-04-11
 type: "staticpage"
+url: om
 ingress: Jeg deler tanker og innsikt for egen læring, og forhåpentligvis til andres inspirasjon.
 ---
 Hei! Jeg er Mikke, en [nysgjerrig entusiast som har valgt å dele både opp- og nedturer]({{< relref "/tekster/jeg-er-en-evig-amator" >}}) i søken etter kunnskap. Jeg deler tanker og innsikt for å lære mer og bedre, samt i håp om å være til inspirasjon og hjelp.
