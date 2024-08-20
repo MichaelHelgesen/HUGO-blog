@@ -1,7 +1,8 @@
 {{ define "main" }}
 {{ .Content }}    
-
-{{ with resources.GetRemote "https://api.zotero.org/groups/5454933/collections/U68Q8VUJ/items/top?format=json&v=3"}}
+{{ $zotero_group := getenv "HUGO_zotero_group" }}
+{{ $zotero_collection := getenv "HUGO_zotero_collection" }}
+{{ with resources.GetRemote (print "https://api.zotero.org/groups/" $zotero_group "/collections/" $zotero_collection "/items/top?format=json&v=3")}}
     {{ $kilder := unmarshal .Content }}
     {{ range $kilder }}
     {{ $key := .data.key }}

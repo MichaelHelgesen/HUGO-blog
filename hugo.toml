@@ -16,6 +16,10 @@ name = "Michael Helgesen"
     tekstemner = "/emneknagger/tekstemner/:slug"
     laeringsemner = "/emneknagger/laeringsemner/:slug"
 
+[security]
+  [security.funcs]
+    getenv = ['^HUGO_', '^CI$', '^USER$', '^HOME$']
+
 [menus]
   [[menus.main]]
     name = 'Hjem'

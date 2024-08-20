@@ -1,8 +1,5 @@
 ---
 title: "Mikke Helgesen"
-draft: false
-description: Test
-keywords: ["test", "teset2"]
 ---
 {{< introtekst >}}
 <h1>Hei! Mikke her.</h1> 
@@ -19,4 +16,3 @@ Med inspirasjon fra Auston Kleons bok "Show your work" og trender som "digital g
 
 [comment]: <> (## **Viktig!**
 I tråd med tankegangen bak "digital garden" er ikke mine skriverier å anse som ferdige tekster. De utvikles til stadighet ettersom jeg lærer mer, får ny innsikt eller blir korrigert. Jeg deler en prosess mer enn et sluttprodukt. Det er mer som en privat wikipedia, med en god blanding av fakta, antagelser, tanker og ideer, antagelig ispedd noen misforståelser, misoppfatninger og rene feil fra tid til annen. Korriger meg gjerne!)
-{{< cloakemail address="post@michaelhelgesen.no" display="en e-post" >}}

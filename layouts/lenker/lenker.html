@@ -1,8 +1,10 @@
 {{ define "main" }}
     {{ .Content }}
-    {{ $url := "https://api.raindrop.io/rest/v1/raindrops/24212208" }}
+    {{ $raindrop_id := print "Bearer " (getenv "HUGO_raindrop_id")}}
+    {{ $raindrop_collection := getenv "HUGO_raindrop_collection"}}
+    {{ $url := print "https://api.raindrop.io/rest/v1/raindrops/" $raindrop_collection }}
     {{ $opts := dict
-      "headers" (dict "Authorization" "Bearer 45c7d941-a7c6-4217-87c8-46a81c9b65a3")
+      "headers" (dict "Authorization" $raindrop_id)
     }}
     {{ $resource := resources.GetRemote $url $opts }}
     {{ with $resource }}
