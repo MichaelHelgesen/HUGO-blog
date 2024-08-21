@@ -1,6 +1,6 @@
 baseURL = '/'
-defaultContentLanguage = "nb"
-title = 'Mikkes blogg'
+defaultContentLanguage = "nb" 
+title = 'Michael Helgesen'
 
 [params.author]
 name = "Michael Helgesen"
@@ -53,6 +53,14 @@ name = "Michael Helgesen"
     name = 'Lenker'
     pageRef = '/lenker'
     weight = 70
+  [[menus.main]]
+    name = "Galleri"
+    pageRef = "/galleri"
+    weight = 75
+  [[menus.main]]
+    name = "KI"
+    pageRef = "/ki"
+    weight = 78
   [[menus.main]]
     name = 'Nå'
     pageRef = '/na'
