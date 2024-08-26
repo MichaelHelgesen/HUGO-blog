@@ -59,7 +59,7 @@ name = "Michael Helgesen"
     weight = 75
   [[menus.main]]
     name = "KI"
-    pageRef = "/ki"
+    pageRef = "/kunstig-intelligens"
     weight = 78
   [[menus.main]]
     name = 'Nå'

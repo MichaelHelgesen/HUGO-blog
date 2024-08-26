@@ -62,7 +62,7 @@ Konseptet «scenialitet» hylles også av forfatteren og kunstneren Austin Kleon
 
 I og med at gode ideer oppstår på bakgrunn av et kreativt fellesskap handler det ikke om hvor smart man er, men hva man bidrar med, som innsikt, gode samtaler, spørsmål, nysgjerrighet og interesse, samt en vilje til å lære bort.
 
-Han bruker dette som argument når han påstår at alle bør dele det de kan og lærer, selv om man er en amatør, for det kan alltid være til nytte for noen [^3]. En påstand som for øvrig er [utgangspunktet for denne nettsiden]({{< relref "jeg-er-en-evig-amator">}}).
+Han bruker dette som argument når han påstår at alle bør dele det de kan og lærer, selv om man er en amatør, for det kan alltid være til nytte for noen [^3]. En påstand som for øvrig er [utgangspunktet for denne nettsiden]({{< relref "tekster/jeg-er-en-evig-amator">}}).
 
 ## Hvorfor virker det?
 I tillegg til ren påvirkning og inspirasjon fra andre i kollektivet er det flere andre grunner til at en scenialitet vokser frem.

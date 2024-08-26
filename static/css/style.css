@@ -1,4 +1,52 @@
 @import "normalize.css";
+@font-face {
+    font-family: "Poppins";
+    src: url('/fonts/Poppins-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url('/fonts/Poppins-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url('/fonts/Poppins-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url('/fonts/Poppins-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url('/fonts/Poppins-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url('/fonts/Poppins-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url('/fonts/Poppins-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: bold;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url('/fonts/Poppins-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
 /* RESET */
 :root {
   line-height: 1.6;
@@ -25,6 +73,32 @@ img {
 }
 /* END RESET */
 
+.portrett {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+
+.portrett figure > div {
+    width: 200px;
+}
+
+.portrett img {
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 808px) {
+.portrett {
+    align-items: flex-start;
+    flex-direction:column-reverse;
+    gap: 24px;
+}
+.portrett figure > div {
+    width: 150px;
+    height: 150px;
+}
+}
 .relative {
 	position: relative;
 }
@@ -32,6 +106,21 @@ img {
 
 .bg-center {
 	background-position: center;
+}
+
+.bibliotek-list {
+    display: flex;
+    gap: 1rem;
+}
+
+.bok {
+    float: left;
+    margin: 0 16px 8px 0;
+    width: 100px;
+}
+
+.bok figure {
+    margin-bottom: 0;
 }
 
 .w-full {
@@ -69,7 +158,7 @@ img {
     --large_3: 3.5rem;
     --max: 4rem;
 
-    --section-margin: min(20vw, 10rem);
+    --section-margin: min(20vw, 6rem);
 
     color: var(--primary-color); 
 }
@@ -140,6 +229,23 @@ figcaption {
     padding: 1rem 0;
 }
 
+.last {
+    display: flex;
+    justify-content: space-between;
+}
+
+.last > div {
+    width: calc(50% - 1rem);
+}
+
+@media only screen and (max-width: 810px) {
+    .last {
+        flex-direction: column;
+    }
+    .last > div {
+    width: calc(100%);
+}
+}
 .cal {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -286,7 +392,7 @@ blockquote {
 footer {
     background: #272822;
     color: var(--base-color);
-    margin: var(--max) calc(clamp(var(--medium_2), 8vw, var(--large_2))
+    margin: min(20vw, 12rem) calc(clamp(var(--medium_2), 8vw, var(--large_2))
  * -1) calc(clamp(var(--medium_2), 8vw, var(--large_2))
  * -1) calc(clamp(var(--medium_2), 8vw, var(--large_2))
  * -1);
@@ -353,13 +459,30 @@ footer p {
 }
 
 .gallery {
-    display: grid;
+  display: grid;
    gap: .5rem; 
-   margin: 0 calc(((50vw - 3.5rem) - 35ch) * -1);
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
-.gallery img {
+.gallery_home figure, .gallery figure {
+    margin: 0;
+}
+
+.gallery_home {
+  display: grid;
+   gap: .5rem; 
+   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+@media only screen and (max-width: 810px) {
+.gallery-module {
+    margin-top: var(--section-margin);
+}
+}
+
+@media only screen and (min-width: 810px) {
+  .gallery {
+   margin: 0 calc(((50vw - 3.5rem) - 35ch) * -1);
+   }
 }
 
 article.journal .footnotes {
@@ -426,15 +549,23 @@ header {
     flex-wrap:wrap;
     gap: var(--large_1);
     justify-content: space-between;
-    margin-bottom: var(--section-margin);
+    margin:0 auto var(--section-margin) auto;
+    
+    max-width: 70ch;
 }
 
+@media only screen and (max-width: 808px) {
+header {
+    gap: var(--medium_2);
+}
+}
 header nav {
     margin-left: -.5rem;
     margin-right: -.5rem;
 }
 
 header nav ul {
+    color: var(--accent-color);
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -474,7 +605,31 @@ html {
     padding: clamp(var(--medium_2), 8vw, var(--large_2))
 }
 
+.img_hover figure {
+    display: inline-block;
+ -webkit-box-shadow: inset 0 0 0 10px rgba(255,255,255, 0);
+  -moz-box-shadow: inset 0 0 0 10px rgba(255,255,255, 0);
+  box-shadow: inset 0 0 0 10px rgba(255,255,255, 0);
+  
+  -webkit-transition: all .5s 0s;
+  -moz-transition: all .5s 0s;
+  transition: all .5s 0s;
+}
+
+.img_hover:hover figure {
+  -webkit-box-shadow: inset 0 0 0 10px rgba(255,51,51, .4);
+  -moz-box-shadow: inset 0 0 0 10px rgba(255,51,51, .4);
+  box-shadow: inset 0 0 0 10px rgba(255,51,51, .4);
+}
+
+.img_hover figure img {
+   display: block;
+   position: relative;
+   z-index: -1;
+}
+
 .ingress {
+    font-size: 1.15rem;
     font-weight: 600;
 }
 
@@ -510,7 +665,7 @@ html {
 
 .intro.blogg p {
     font-size: 0.975rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .intro ~ p {
@@ -611,6 +766,20 @@ margin-top:.5rem;display:inline-block;font-weight:500;
     margin-top: var(--medium_1);
 }
 
+.last-posts-list h4 {
+    margin-bottom: .5rem;
+}
+
+.library-module h5 {
+   margin: var(--small) 0;
+}
+
+@media only screen and (max-width: 810px) {
+    .library-module figure {
+        max-width: 250px;
+    }
+}
+
 .logo {
     font-size: 2rem;
     font-weight: 800;
@@ -619,8 +788,8 @@ margin-top:.5rem;display:inline-block;font-weight:500;
 }
 
 .logo a {
-    border-bottom: 3px solid var(--primary-color);
-    color: var(--primary-color);
+    border-bottom: 3px solid hsla(37, 57%, 47%, .46);;
+    color: hsla(37, 57%, 47%, .46);
     display: inline-block;
     padding-right: 10px;
     text-decoration: none;
@@ -644,12 +813,9 @@ main {
     width: 100%;
 }
 
-main.gallery {
-    max-width: unset;
-}
 
 .section {
-    margin-top: min(10rem, 6rem);
+    margin-top: var(--section-margin);
 }
 
 .section h2 {

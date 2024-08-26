@@ -1,17 +1,5 @@
 {{ define "main" }}
     {{ .Content }}
-    {{ $cloudinary_key := getenv "HUGO_cloudinary_key" }}
-    {{ $cloudinary_secret := getenv "HUGO_cloudinary_secret" }}
-    {{ $cloudinary_name := getenv "HUGO_cloudinary_name" }}
-    {{ $url := print "https://" $cloudinary_key ":" $cloudinary_secret "@api.cloudinary.com/v1_1/" $cloudinary_name "/resources/search?expression=folder:mikkesblogg&max_results=100" }}
-    {{ $resource := resources.GetRemote $url}}
-    {{ with $resource }}
-        {{ $images := unmarshal .Content }}
-        <section class="gallery">
-        {{ range $images.resources}}
-        <img src="{{.url}}" loading="lazy" />
-        {{ end}}
-        </section>
-    {{ end }}
+        {{ partial "gallery-2" (dict "number" "100" "class" "gallery" )}}
 
 {{ end }}

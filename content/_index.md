@@ -1,18 +1,14 @@
 ---
 title: "Mikke Helgesen"
+overskrift: Hei! Mikke her.
+intro: Jeg deler tanker og innsikt for å lære mer og bedre, samt i håp om å være til inspirasjon.
 ---
-{{< introtekst >}}
-<h1>Hei! Mikke her.</h1> 
-<p class="ingress">
-Jeg deler tanker og innsikt i håp om å være til inspirasjon og hjelp, samt for å lære mer og bedre.
-</p>
-{{< /introtekst >}}
+Dette er [min digitale hage]({{< relref "/om_mikke">}}) hvor ideer, interesser og innsikt gror.
 
-Velkommen til min lille plass på nettet. Jeg er Mikke, en mann i midten av livet med en fin familie og en spennende jobb i et reklamebyrå, hvor jeg koser jeg meg med frontend-programmering.
+Inspirasjonen til å kultivere min egen lille flekk på nettet fikk jeg fra Autin Kleons bok [Show your work]({{< relref "bibliotek/show-your-work-10-ways-to-share-your-creativity-and-get-discovered" >}}) og hans oppfordring om å [lære åpenlyst]({{< relref "tekster/jeg-er-en-evig-amator" >}}), samt etter en vandring i [Maggie Appletons frodige park](https://maggieappleton.com/garden-history?ref=ideasurg.pub).
 
-I tillegg til webutvikling har jeg mange andre interesser, men jeg har [aldri klart å håndtere ny innsikt på en god måte]({{< ref hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate.md >}} "Hvordan kan jeg håndtere kunnskap på en smart og effektiv måte" ).
+En «digital garden» er på mange måter en retur til internetts tidligere dager hvor man dyrket sine interesser for interessens egen del, uten hensyn til klikkagn, målinger og standarder som senere vokste frem som ugress. 
 
-Med inspirasjon fra Auston Kleons bok "Show your work" og trender som "digital gardening" [prøver jeg en gang til]({{< ref nullstilling-av-bokhyllen.md>}}). Jeg har bestemt meg for å [åpenlyst være en amatør]({{< ref jeg-er-en-evig-amator.md >}} "Jeg er en evig amatør" ) ved å dokumentere min læring. Formålet er å bli en bedre skribent, en bedre tenker, en bedre kunnskapsforvalter, og et bedre og lykkeligere menneske. Og ideelt sett vil andre kunne lære både av og med meg underveis.
+Jeg deler således en prosess mer enn et sluttprodukt i [håp om å lære bedre]({{< relref "/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/" >}}) og inspirere andre.
 
-[comment]: <> (## **Viktig!**
-I tråd med tankegangen bak "digital garden" er ikke mine skriverier å anse som ferdige tekster. De utvikles til stadighet ettersom jeg lærer mer, får ny innsikt eller blir korrigert. Jeg deler en prosess mer enn et sluttprodukt. Det er mer som en privat wikipedia, med en god blanding av fakta, antagelser, tanker og ideer, antagelig ispedd noen misforståelser, misoppfatninger og rene feil fra tid til annen. Korriger meg gjerne!)
+Velkommen inn blant digital skvallerkål og prydbusker.

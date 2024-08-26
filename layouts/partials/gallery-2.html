@@ -1,0 +1,19 @@
+
+{{$class := .class}}
+    {{ $cloudinary_key := getenv "HUGO_cloudinary_key" }}
+    {{ $cloudinary_secret := getenv "HUGO_cloudinary_secret" }}
+    {{ $cloudinary_name := getenv "HUGO_cloudinary_name" }}
+    {{ $cloudinary_folder := getenv "HUGO_cloudinary_folder" }}
+    {{ $url := print "https://" $cloudinary_key ":" $cloudinary_secret "@api.cloudinary.com/v1_1/" $cloudinary_name "/resources/search?expression=folder:" $cloudinary_folder "&max_results=" .number "&sort_by[][created_at]=desc&&fields[]=width&fields[]=height&fields[]=url&fields[]=filename&fields[]=context" }}
+    {{$opts := dict
+    "body" "{max_results1}"
+    }}
+    {{ $resource := resources.GetRemote $url $opts}}
+    {{ with $resource }}
+        {{ $images := unmarshal .Content }}
+        <section class={{$class}}>
+        {{ range $images.resources}}
+{{ partial "imgh-2" (dict "ctx" . "src" .url "alt" .context.alt "holder" "LQTIP" "title" .context.caption "source" "ext") }}
+        {{ end}}
+        </section>
+    {{ end }}

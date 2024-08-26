@@ -9,8 +9,12 @@
             {{ $sourceTag = .tag }}
         {{ end }}
         {{ $date := .Params.date }}
+        {{ $score := .Params.score }}
+        {{ $path := .Title | urlize}}
         {{ if .Title}}
-    <li>
+    <li style="display: flex; gap: 16px;">
+
+        <div>
         <span class="taglist__source">
         {{$creators := .Params.creators}}
         {{$firstName := ""}}
@@ -36,7 +40,7 @@
             {{ end }}
             </span>
             <h4 id="{{ $sourceTag }}">
-        <a href="{{ .Path }}">{{ .Title }}</a>
+        <a href="{{ .Path }}#h1">{{ .Title }}</a>
             </h4>
 
     <p class="last-posts-list__meta">
@@ -45,7 +49,17 @@
     {{ end }}
     <span>Pub: {{ .Params.dateAdded }} </span>    
     </p>
-            <p class="last-posts-list__ingress">{{ .Params.extra }}</p>
+
+    <div class="bok">
+{{ with resources.Get (print "images/" $path ".webp") }}
+<a href="{{$path}}" class="img_hover">{{ partial "imgh-2" (dict "ctx" . "src" .RelPermalink  "figcaption" "" "alt" "En." "holder" "LQTIP" "title" "Kaninen Snøhvit er tilfreds") }}
+    {{end}}</a>
+    </div>
+    <p class="last-posts-list__ingress">{{ .Params.extra }}</p>
+    <p class="last-posts-list__ingress">
+    Min vurdering: {{.Params.score}}/10 </span></p>
+    <p><a class="readmore" href="{{$path}}#h1">Les omtale</a></p>
+    </div>
     </li>
     {{ end }}
     {{ end }}

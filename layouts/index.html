@@ -1,9 +1,19 @@
 {{ define "main" }}
 <div>
     <div class="index-top">
-        {{getenv "HUGO_test" }}
+        <div class="intro sider">
+            <div class="portrett">
+                <div>
+                    <h1>{{.Params.overskrift}}</h1> 
+                    <p class="ingress">
+                        {{.Params.intro}}
+                    </p>
+                </div>
+{{ partial "imgh-2" (dict "ctx" . "src" "images/mikke.webp" "figcaption" "" "alt" "En." "holder" "LQTIP" "title" "Kaninen Snøhvit er tilfreds") }}
+            </div>
+        </div>
         {{ .Content }} 
-        <h5>Temaer jeg foreløpig har skrevet om:</h5>
+        <h5>Emner jeg har skrevet om:</h5>
             <ul class="taglist-index">
                 {{range $name, $taxonomy := .Site.Taxonomies.tekstemner}} {{ $cnt := .Count }}
                     {{ with $.Site.GetPage (printf "/tekstemner/%s" $name) }}
@@ -48,7 +58,7 @@
             <div class="section laeringslogg">
                 <h2>Læringslogg</h2>
                 <p>
-                Jeg forsøker også så godt jeg kan å loggføre all ny kunnskap i en notatbok, som jeg deretter overfører til en digital punktliste som <a href="/laeringslogg">publiseres her</a>.
+                Jeg forsøker å loggføre all ny kunnskap i en notatbok som jeg deretter overfører til en digital punktliste som <a href="/laeringslogg">publiseres her</a>.
                 </p>
                 <p> 
                 En slik logg et sterkt visuelt bilde på hvor mye man faktisk har lært, og en god metode for å befeste kunnskapen. Dessuten opplever jeg det som en veldig god inspirasjonskilde for nye skriverier. 
@@ -69,7 +79,7 @@
             <div class="section journal">
                 <h2>Siste fra journalen</h2>
                 <p>
-                I <a href="/journal">journalen</a> dokumenterer jeg det jeg finner interessant i hverdagen. Tekstformen er kortere og enklere sammenlignet med skriveriene. Det er som små glimt av mine interesser og tanker.
+                I <a href="/journal">journalen</a> dokumenterer jeg små glimt fra hverdagen som får meg til å stoppe opp, eller som gjør meg ettertenksom.
                 </p>
                 <div class="journal">
                 {{ $range := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "=" "journal" | first 1 }}
@@ -77,6 +87,36 @@
                 <ul class="taglist-index" style="margin-top: 3rem;">
                     <li>
                         <a href={{ relURL "/journal"}}>Se hele journalen</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            <div class="section last">
+                <div class="library-module">
+                    <h2>Sist leste bok</h2>
+                    {{range first 1 (where .Site.RegularPages "Type" "bibliotek")}}
+                    {{ $img := print "images/" (.Title | urlize) ".webp"}}
+
+{{ partial "imgh-2" (dict "ctx" . "src" $img "alt" "En." "holder" "LQTIP" "title" "Kaninen Snøhvit er tilfreds") }}
+<p>{{range .Params.creators}}
+{{.firstName}} {{.lastName}}
+{{end}}
+</p>
+<h5><a href="{{print "bibliotek/" .Title | urlize}}">{{.Title}}</a></h5>
+<p><b>Min vurdering: {{.Params.score}}/10</b></p>
+                <ul class="taglist-index" style="margin-top: 3rem;">
+                    <li>
+                        <a href={{print "bibliotek/" .Title | urlize}}>Les omtalen</a>
+                    </li>
+                </ul>
+                    {{end}}
+                </div>
+                <div class="gallery-module">
+                    <h2>Fra galleriet</h2>
+                    {{ partial "gallery-2" (dict "number" "8" "class" "gallery_home") }}
+                <ul class="taglist-index" style="margin-top: 3rem;">
+                    <li>
+                        <a href="/galleri">Se alle bildene</a>
                     </li>
                 </ul>
                 </div>

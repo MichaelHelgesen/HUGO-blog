@@ -1,5 +1,5 @@
 ---
-title: journal
+title: Journal
 ---
 
 {{< introtekst >}}

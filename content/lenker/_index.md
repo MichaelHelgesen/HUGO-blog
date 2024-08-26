@@ -1,6 +1,6 @@
 --- 
 type: "staticpage"
-title: "lenker"
+title: Lenker
 date: 2024-04-11
 ---
 {{< introtekst >}}

@@ -2,6 +2,7 @@
 title: Nullstilling av bokhyllen
 date: 2024-04-17
 tekstemner: [lesing, læring]
+listeintro: "Jeg «kastet» alle bøkene ut av bokhyllen for å fylle den på nytt."
 ---
 I dag startet jeg jobben med å tømme bokhyllene for bøker.
 

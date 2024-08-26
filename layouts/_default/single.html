@@ -90,10 +90,17 @@
             <div>
                 <p class="last-posts-list__meta">
                 <span style="font-weight: 600">{{strings.FirstUpper $type }}</span> | 
+                {{ if .Date }}
                 {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
                 <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
                 {{ end }}
                 <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }}</span>    
+                {{else}}
+                {{ if ne .Params.dateAdded .Params.dateUpdated }}
+                <span>Red: {{ .Params.dateUpdated }} | </span>
+                {{ end }}
+                <span>Pub: {{ .Params.dateAdded }}</span>    
+                {{ end }}
                 </p>
             </div>
             </a>

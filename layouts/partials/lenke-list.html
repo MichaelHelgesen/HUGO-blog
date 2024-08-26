@@ -4,7 +4,7 @@
     {{ $data := . }}
     {{ range .range}}
                     <li>
-                        <h4><a href="{{.link}}">{{.title}}
+                        <h4><a href="{{.link}}" target="_blank">{{.title}}
 
 <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g id="Interface / External_Link">
@@ -12,10 +12,10 @@
 </g>
 </svg>
                             </a></h4>
-                        {{ if .excerpt }}
-                        <p class="last-posts-list__ingress">{{.excerpt}}</p>
+                        {{ if .note }}
+                        <p class="last-posts-list__ingress">{{.note}}</p>
                         {{ end }}
-                        <a class="readmore" href="{{.Link}}">Besøk siden</a>
+                        <a class="readmore" target="_blank" href="{{.link}}">Besøk siden</a>
                     </li>
     {{ end }}
 </ul>

@@ -6,7 +6,7 @@
 {{ $tag = .tag}}
 {{end}}
 {{ end }}
-    <div class="intro blogg">
+    <div class="intro blogg" id="h1">
 
         <span class="taglist__source">
         {{$creators := .Params.creators}}
@@ -31,9 +31,12 @@
             {{ .firstName }} {{ .lastName }} og 
             {{ end }}
             {{ end }}
+            
+        {{ $score := .Params.score }}
+        {{ $path := .Title | urlize}}
 
             </span>
-        <h1>{{ .Title }}</h1>
+            <h1>{{ .Title }}</h1>
     <p class="last-posts-list__meta">
     {{ if .Params.dateUpdated }}
     <span>Red: {{ .Params.dateUpdated }} | </span>
@@ -42,12 +45,19 @@
     <br />    
     </p>
     </div>
-    <article>
-        {{- .Content -}}
-    </article>
-<ul class="taglist-index" style="margin-top: 3rem;">
+    <div class="book_image" style="display: flex; gap: 24px; flex-wrap:wrap; align-items: center;">
+{{ with resources.Get (print "images/" $path ".webp") }}
+<div style="width: 150px">
+{{ partial "imgh-2" (dict "ctx" . "src" .RelPermalink  "figcaption" "" "alt" "En." "holder" "LQTIP" "title" "Kaninen Snøhvit er tilfreds") }}
+</div>
+{{ end }}
+<div>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; "> 
+    
+                <p><b> Min vurdering: {{$score}}/10</b></p>
+ <ul class="taglist-index" style="margin-top: 0;">
                     <li>
-                        <a href="{{ .Params.url }}">Les mer om boken
+                        <a href="{{ .Params.url }}" target="_blank">Kjøp boken
 
         <svg width="14px" height="14px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g id="Interface / External_Link">
@@ -57,6 +67,12 @@
                         </a>
                     </li>
                 </ul>
+    </div>
+</div>
+    </div>
+    <article>
+        {{- .Content -}}
+    </article>
     <hr class="single">
 <section class="mail">
 <h5>Ris, ros eller respons?</h5>

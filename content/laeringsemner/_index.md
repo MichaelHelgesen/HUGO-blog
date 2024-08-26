@@ -1,5 +1,5 @@
 ---
-title: Emneknagger i læringsloggen
+title: Læringsemner
 url: /emneknagger/laeringsemner
 type: laeringsemner
 layout: terms

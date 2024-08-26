@@ -2,6 +2,7 @@
 title: Endelig mulig å opprette sider i HUGO fra ekstern data!
 date: 2024-05-21
 tekstemner: [hugo, programmering]
+listeintro: "Nå blir det mange spennende sider fra API-er."
 ---
 
 I dag kom jeg helt tilfeldig over en [video på YouTube](https://www.youtube.com/watch?v=UnfR2NiEhrM) som opplyste om at HUGO nå endelig kan [opprette sider fra ekstern data](https://gohugo.io/content-management/content-adapters/) som blant annet JSON, YAML og XML.

@@ -14,7 +14,7 @@
 
   {{/* Add page. */}}
   {{ $content := dict "mediaType" "text/markdown" "value" .data.abstractNote "url" .data.url}}
-  {{ $params := dict "url" .data.url "datePublished" .data.date "isbn" .data.ISBN "dateUpdated" (.data.dateModified | time.Format "2. Jan 2006") "dateAdded" (.data.dateAdded | time.Format "2. Jan 2006") "tags" .data.tags "extra" .data.extra "creators" .data.creators "date" .data.date }}
+  {{ $params := dict "url" .data.url "datePublished" .data.date "score" .data.volume "isbn" .data.ISBN "dateUpdated" (.data.dateModified | time.Format "2. Jan 2006") "dateAdded" (.data.dateAdded | time.Format "2. Jan 2006") "tags" .data.tags "extra" .data.extra "creators" .data.creators "date" .data.date }}
   {{ $page := dict
     "content" $content
     "kind" "page"

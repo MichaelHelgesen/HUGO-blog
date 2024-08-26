@@ -1,5 +1,5 @@
 ---
-title: læringslogg
+title: Læringslogg
 url: /laeringslogg
 ---
 {{< introtekst >}}

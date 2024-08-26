@@ -6,12 +6,6 @@
     {{ $kilder := unmarshal .Content }}
     {{ range $kilder }}
     {{ $key := .data.key }}
-    {{ if .meta.numChildren }}
-        {{ $test := print "https://api.zotero.org/groups/5454933/items/" $key "/children?format=json&v=3"}}
-{{ with resources.GetRemote $test }}
-{{ $test2 := unmarshal .Content }}
-    {{end }}
-    {{ end }}
         {{  end }}
     {{ partial "kilde-list" (dict "range" $kilder "content" . "type" "kilde" "ctx" $)}}
 {{ end }}

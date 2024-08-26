@@ -1,5 +1,5 @@
 ---
-title: kilder
+title: Kilder
 ---
 
 {{< introtekst >}}
