@@ -1,10 +1,10 @@
 ---
 title: "2024-04-27"
 date: 2024-04-27
-laeringsemner: [gnome-terminal, hugo]
+laeringsemner: [linux, hugo]
 ---
 
-### Gnome-Terminal
+### Linux
 
 * Man kan bruke variabler/funksjoner i terminalen sammen med andre funksjoner. Når jeg skal opprette filer med dato som filnavn kan jeg skrive følgende i terminalen: `hugo new blogg/$(date).md.
 

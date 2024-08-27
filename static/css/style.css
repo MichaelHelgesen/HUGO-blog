@@ -85,7 +85,7 @@ img {
 
 .portrett {
     display: flex;
-    gap: 16px;
+    gap: 2rem;
     align-items: center;
 }
 
@@ -102,7 +102,6 @@ img {
 .portrett {
     align-items: flex-start;
     flex-direction:column-reverse;
-    gap: 24px;
 }
 .portrett figure > div {
     width: 150px;
@@ -324,7 +323,7 @@ article h3 {
 
 article h4 {
     margin-bottom: var(--small);
-    margin-top: var(--medium_2);
+    margin-top: var(--medium_3);
 }
 
 article.journal {

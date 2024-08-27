@@ -1,7 +1,7 @@
 ---
 title: 2024-04-30
 date: 2024-04-30
-laeringsemner: [hugo, gnome-terminal, html, devtools]
+laeringsemner: [hugo, linux, html, devtools]
 ---
 
 ### Hugo
@@ -17,7 +17,7 @@ laeringsemner: [hugo, gnome-terminal, html, devtools]
 * `len` er HUGOs metode for å hente lengden på en liste.
 * `substr` er HUGOs metode for å returnere en del av en streng.
 
-### Gnome-terminal
+### Linux
 * Bruk `ls -l` («long») for mer informasjon om filene i en mappe.
 * `ls -l --block-size=MB` viser størrelsen på filer i megabit.
 

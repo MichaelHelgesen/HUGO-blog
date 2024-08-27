@@ -1,7 +1,7 @@
 ---
 title: 2024-04-20
 date: 2024-04-20
-laeringsemner: [curl, jq, gnome-terminal]
+laeringsemner: [curl, jq, linux]
 ---
 ## Curl
 * Curl er et kommandolinje-program for overføring av data med URLer. Det ble utviklet av en svenske i 1998, som fortsatt utvikler det. Det er open source.
@@ -25,7 +25,7 @@ curl URL | jq "."
 - H "Authorization: Bearer {token}"
 ```
 
-## Gnome-terminal
+## Linux
 * For å navigere opp og ned i terminal bruker man Shift + PgUp eller PgDown.
 * Hvis vi "piper" på "more" etter en kommando i terminalen vil terminalen pause ved scroll, og man fortsetter med mellomrom-tasten.
 
