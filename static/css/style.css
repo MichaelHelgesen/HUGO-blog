@@ -1,4 +1,11 @@
 @import "normalize.css";
+
+@font-face {
+    font-family: "caveat";
+    src: url('/fonts/Caveat-VariableFont_wght.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
 @font-face {
     font-family: "Poppins";
     src: url('/fonts/Poppins-Light.woff2') format('woff2');
@@ -42,11 +49,14 @@
     font-style: bold;
 }
 @font-face {
-    font-family: "Poppins";
+    font-family: "poppins";
     src: url('/fonts/Poppins-ExtraBold.woff2') format('woff2');
     font-weight: 800;
     font-style: normal;
 }
+
+
+
 /* RESET */
 :root {
   line-height: 1.6;
@@ -147,7 +157,6 @@ img {
     --accent-color: hsl(0, 100%, 60%, 1);
     --accent-color-light: hsl(0, 100%, 60%, .05);
 
-
     --mini: 0.25rem;
     --small: 0.5rem;
     --medium_1: 1rem;
@@ -159,6 +168,8 @@ img {
     --max: 4rem;
 
     --section-margin: min(20vw, 6rem);
+
+    --breakpoint: 810px;
 
     color: var(--primary-color); 
 }
@@ -507,13 +518,13 @@ article.journal .footnotes ol p {
 }
 
 h1 {
-    font-size: clamp(2rem, 9vw, 2.986rem); 
+    font-size: clamp(1.9rem, 8vw, 2.986rem); 
     font-weight: 800;
     line-height: 1.4;
 }
 
 h2 {
-    font-size: clamp(1.7rem, 8vw, 2.488rem);
+    font-size: clamp(1.7rem, 7.5vw, 2.488rem);
     font-weight: 600;
     line-height: 150%;
 }
@@ -565,7 +576,7 @@ header nav {
 }
 
 header nav ul {
-    color: var(--accent-color);
+    color: var(--main-color);
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -678,8 +689,16 @@ html {
     margin-top: var(--small);
 }
 
-.journal {
-    margin-top: var(--medium_2);
+.journal-wrap {
+    background: hsl(44.31deg 100% 60% / 9%);
+    background: hsl(37deg 57% 47% / 5%);
+    background-image: linear-gradient(hsl(0deg 0% 80% / 30%) 1px, transparent 1px);
+background-size: 1px 23px;
+    padding: clamp(1rem, 5vw, 2rem);
+}
+
+.journal-wrap .date {
+    font-size: .85rem;
 }
 
 .laeringslogg-list > div + div {
@@ -710,7 +729,14 @@ margin-top:.5rem;display:inline-block;font-weight:500;
 }
 
 .last-posts-list ul li h3.journal {
-    margin-top: var(--medium)
+    margin-top: var(--medium);
+font-family: "caveat";
+  font-optical-sizing: auto;
+    font-size: clamp(2.5rem, 6vw, 3rem);
+  font-weight: 600;
+  font-style: normal;
+  line-height: 100%;
+  margin: .75rem 0 1rem 0;
 }
 
 .last-posts-list ul li h4.journal a  {
@@ -767,7 +793,7 @@ margin-top:.5rem;display:inline-block;font-weight:500;
 }
 
 .last-posts-list h4 {
-    margin-bottom: .5rem;
+    margin-bottom: .25rem;
 }
 
 .library-module h5 {
@@ -788,7 +814,7 @@ margin-top:.5rem;display:inline-block;font-weight:500;
 }
 
 .logo a {
-    border-bottom: 3px solid hsla(37, 57%, 47%, .46);;
+    border-bottom: 3px solid hsla(37, 57%, 47%, .75);
     color: hsla(37, 57%, 47%, .46);
     display: inline-block;
     padding-right: 10px;
@@ -820,6 +846,13 @@ main {
 
 .section h2 {
     margin-bottom: var(--medium_3);
+}
+
+
+@media only screen and (max-width: 810px) {
+    .section h2 {
+        margin-bottom: var(--medium_1);
+    }
 }
 
 .taglist ul {

@@ -66,22 +66,19 @@
                 </p>
             </div>
             <div class="cal">
-                {{ $rangeLaering := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "=" "laeringslogg" | first 6 }}
+                {{ $rangeLaering := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "=" "laeringslogg" | first 8 }}
                 {{ partial "laeringslogg-homepage2" (dict "range" $rangeLaering "content" . "page" .Kind)}}
-                {{ range .Site.RegularPages}}
-                {{ end }}
             </div>
                 <ul class="taglist-index" style="margin-top: 3rem;">
                     <li>
                         <a href={{ relURL "laeringslogg"}}>Se hele loggen</a>
                     </li>
                 </ul>
-            <div class="section journal">
+            <div class="section">
                 <h2>Siste fra journalen</h2>
-                <p>
-                I <a href="/journal">journalen</a> dokumenterer jeg små glimt fra hverdagen som får meg til å stoppe opp, eller som gjør meg ettertenksom.
+                <p style="margin-bottom: 2rem;">
+                I <a href="/journal">journalen</a> noterer jeg små glimt fra hverdagen som får meg til å stoppe opp, eller som gjør meg ettertenksom.
                 </p>
-                <div class="journal">
                 {{ $range := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "=" "journal" | first 1 }}
                 {{ partial "journal-list" (dict "range" $range "content" .)}}
                 <ul class="taglist-index" style="margin-top: 3rem;">
@@ -89,7 +86,6 @@
                         <a href={{ relURL "/journal"}}>Se hele journalen</a>
                     </li>
                 </ul>
-                </div>
             </div>
             <div class="section last">
                 <div class="library-module">

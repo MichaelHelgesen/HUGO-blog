@@ -3,9 +3,8 @@
     <ul> 
     
     {{ range .range}}
-        
-                    <li>
-                        <span class="date">{{.Date | time.Format ":date_long"}}:</span>
+                    <li class="journal-wrap">
+                        <span class="date">{{.Date | time.Format ":date_long"}}</span>
                         <h3 class="journal">
                             {{.Title}}
                         </h3>
@@ -20,6 +19,9 @@
                         <article class="journal">
                             {{.Content}}
                         </article>
+                        <p style="margin-top: 1rem;">
+                        <a style="font-size:.85rem;" href="{{.Permalink}}">Se notatest opprinnelige side.</a>
+                        </p>
                     </li>
                     {{ if not $isHome }}
                     <li><hr></li>

@@ -11,7 +11,7 @@ Jeg startet min zettelkasten med notater om læring og skriving. I dag utvidet j
 
 Zettelkasten deles ikke inn i rigide kategorier som for eksempel en mappestruktur i en app eller på en PC, men det er likevel ryddig å ha en simpel overordnet seksjonering for enklere håndtering.
 
-Niklas Luhmann, opphavsmannen til zettelkasten, hadde også løse kategorier som dette i følge Scott P. Scheper (1).
+Niklas Luhmann, opphavsmannen til zettelkasten, hadde også løse kategorier som dette i følge Scott P. Scheper {{< sup "1" >}}.
 
 1: [Antinet Zettelkasten]({{< relref "/kilder#e.scheperantinet" >}}) s. 345, 575.
 
