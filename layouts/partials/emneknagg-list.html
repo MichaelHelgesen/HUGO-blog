@@ -3,10 +3,10 @@
     <li>
 
            <a href="{{ .page.RelPermalink }}">
-               <h4>
+               <h2>
             
                 #{{.name}} <sup>{{ $count }}</sup>
-                </h4>
+                </h2>
             </a>
                 {{ $p := where site.Pages $tagtype "intersect" (slice .name) }}
 
@@ -15,10 +15,11 @@
                     {{range $p | first 5 }}
                     <li><a href="{{.Permalink}}">
                             {{ if eq .Type "laeringslogg" }}
-                            <h6>{{.Title | time.Format ":date_long"}}</h6>
+                            <h3>{{.Title | time.Format ":date_long"}}
                             {{ else }}
-                            <h6>{{.Title}}</h6>
-                            {{end}}
+                            {{.Title}}
+                            {{end}}</h3>
+                            </h3>
                         <div>
                             <p class="last-posts-list__meta">
                             <span style="font-weight: 600">{{ if eq .Type "laeringslogg" }}

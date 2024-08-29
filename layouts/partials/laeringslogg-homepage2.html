@@ -1,16 +1,19 @@
+    {{ $data := .}}
     {{ range .range}}
     {{ $dayNum := .Params.Date.Weekday | printf "%d" | int }} 
+    <li>
     <a href="{{ .RelPermalink }}">
         <div>
         <div class="cal__date">
-        <h5 class="text-1xl font-bold mb-2 mt-4">
+            <h3>
             {{ .Title | dateFormat "2." }}
         <span>
             {{ .Title | dateFormat "January" }}
         </span>
-        </h5>
+            </h3>
         </div>
         {{ partial "tags-laeringslogg.html" . }}
         </div>
     </a>
+    </li>
     {{ end }}

@@ -1,6 +1,5 @@
 {{ define "main" }}
-<div>
-    <div class="index-top">
+    <section class="index-top">
         <div class="intro sider">
             <div class="portrett">
                 <div>
@@ -13,7 +12,7 @@
             </div>
         </div>
         {{ .Content }} 
-        <h5>Emner jeg har skrevet om:</h5>
+        <h2>Emner jeg har skrevet om:</h2>
             <ul class="taglist-index">
                 {{range $name, $taxonomy := .Site.Taxonomies.tekstemner}} {{ $cnt := .Count }}
                     {{ with $.Site.GetPage (printf "/tekstemner/%s" $name) }}
@@ -21,16 +20,15 @@
                 {{ end }}
             {{ end }}
             </ul>
-        </div>
-        <div>
-            <div class="section">
+        </section>
+            <section class="section texts">
                 <h2>Siste fem tekster</h2>
                 <div class="last-posts-list">
                 {{range where .Pages "Section" "tekster"}}
                     <ul>
                         {{range .Pages | first 5}}
                         <li>
-                            <h4><a href="{{.Permalink}}">{{.Title}}</a></h4>
+                            <h3><a href="{{.Permalink}}">{{.Title}}</a></h3>
                             <div>
                                 <p class="last-posts-list__meta">
                                     {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
@@ -54,8 +52,8 @@
                         <a href={{ relURL "tekster"}}>Se alle saker</a>
                     </li>
                 </ul>
-            </div>
-            <div class="section laeringslogg">
+            </section>
+            <section class="section laeringslogg">
                 <h2>Læringslogg</h2>
                 <p>
                 Jeg forsøker å loggføre all ny kunnskap i en notatbok som jeg deretter overfører til en digital punktliste som <a href="/laeringslogg">publiseres her</a>.
@@ -64,17 +62,17 @@
                 En slik logg et sterkt visuelt bilde på hvor mye man faktisk har lært, og en god metode for å befeste kunnskapen. Dessuten opplever jeg det som en veldig god inspirasjonskilde for nye skriverier. 
                 Jeg anbefaler deg absolutt å prøve, men hold det enkelt! 
                 </p>
-            </div>
-            <div class="cal">
+            <ul class="cal">
                 {{ $rangeLaering := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "=" "laeringslogg" | first 8 }}
                 {{ partial "laeringslogg-homepage2" (dict "range" $rangeLaering "content" . "page" .Kind)}}
-            </div>
+            </ul>
                 <ul class="taglist-index" style="margin-top: 3rem;">
                     <li>
                         <a href={{ relURL "laeringslogg"}}>Se hele loggen</a>
                     </li>
                 </ul>
-            <div class="section">
+            </section>
+            <section class="section">
                 <h2>Siste fra journalen</h2>
                 <p style="margin-bottom: 2rem;">
                 I <a href="/journal">journalen</a> noterer jeg små glimt fra hverdagen som får meg til å stoppe opp, eller som gjør meg ettertenksom.
@@ -86,9 +84,9 @@
                         <a href={{ relURL "/journal"}}>Se hele journalen</a>
                     </li>
                 </ul>
-            </div>
-            <div class="section last">
-                <div class="library-module">
+            </section>
+            <section class="section last">
+                <section class="library-module">
                     <h2>Sist leste bok</h2>
                     {{range first 1 (where .Site.RegularPages "Type" "bibliotek")}}
                     {{ $img := print "images/" (.Title | urlize) ".webp"}}
@@ -98,7 +96,7 @@
 {{.firstName}} {{.lastName}}
 {{end}}
 </p>
-<h5><a href="{{print "bibliotek/" .Title | urlize}}">{{.Title}}</a></h5>
+<h3><a href="{{print "bibliotek/" .Title | urlize}}">{{.Title}}</a></h3>
 <p><b>Min vurdering: {{.Params.score}}/10</b></p>
                 <ul class="taglist-index" style="margin-top: 3rem;">
                     <li>
@@ -106,8 +104,8 @@
                     </li>
                 </ul>
                     {{end}}
-                </div>
-                <div class="gallery-module">
+                </section>
+                <section class="gallery-module">
                     <h2>Fra galleriet</h2>
                     {{ partial "gallery-2" (dict "number" "8" "class" "gallery_home") }}
                 <ul class="taglist-index" style="margin-top: 3rem;">
@@ -115,8 +113,6 @@
                         <a href="/galleri">Se alle bildene</a>
                     </li>
                 </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+                </section>
+        </section>
 {{ end }}

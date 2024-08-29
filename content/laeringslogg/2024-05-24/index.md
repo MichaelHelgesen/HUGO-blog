@@ -4,7 +4,7 @@ title: 2024-05-24
 laeringsemner: [figma]
 ---
 
-### Figma
+## Figma
 * Opprette variabler
 * Lage komponenter
 * «Tokenization»

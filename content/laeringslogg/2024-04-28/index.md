@@ -4,8 +4,7 @@ date: 2024-04-28
 laeringsemner: [hugo]
 ---
 
-### Hugo
-
+## Hugo
 * Vi kan angi ulike parametre for å vise når et dokument sist ble oppdatert. I `config-toml` definerte jeg følgende: 
 ```md
 [frontmatter]

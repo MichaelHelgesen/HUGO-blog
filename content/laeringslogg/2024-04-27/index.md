@@ -4,11 +4,10 @@ date: 2024-04-27
 laeringsemner: [linux, hugo]
 ---
 
-### Linux
-
+## Linux
 * Man kan bruke variabler/funksjoner i terminalen sammen med andre funksjoner. Når jeg skal opprette filer med dato som filnavn kan jeg skrive følgende i terminalen: `hugo new blogg/$(date).md.
 
-### Hugo
+## Hugo
 * Shortcodes er kommandoer vi kan angi i "markdown"-filer, for å injisere kode i sidene som renderes. De kan kalles på ulike måter:
 
 ```md

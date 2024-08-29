@@ -4,7 +4,7 @@ title: 2024-05-05
 laeringsemner: [hugo]
 ---
 
-### Hugo
+## Hugo
 * Med «page bundles» i HUGO kan man liste opp alle sider og tilhørende ressurser i en «bundle» eller seksjon. Med følgende oppsett...
 ```html
 ├───blogg

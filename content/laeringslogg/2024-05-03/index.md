@@ -4,10 +4,10 @@ title: 2024-05-03
 laeringsemner: [hugo, css]
 ---
 
-### Hugo
+## Hugo
 * I HUGO kan vi gruppere og omrokkere på lister med henholdsvis `range .Pages.GroupByDate` og `range .Pages.ByDateReverse`.
 
-### CSS
+## CSS
 * Jeg knotet veldig med «HSL»-farger i CSS, men det består altså av «hue», «saturation» og «lightness».
     * «Hue» er farge, fra 0 til 366. 0 er rød, 120 er grønn og 240 er blå.
     * «Saturation» er hvor mange prosent grått man vil legge til. 0% er grått mens 100% er den fulle fargen.

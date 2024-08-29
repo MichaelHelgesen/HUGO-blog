@@ -4,6 +4,6 @@ title: 2024-05-25
 laeringsemner: [figma]
 ---
 
-### Figma
+## Figma
 * Opprette varianter av komponenter
 * Benytte plugins

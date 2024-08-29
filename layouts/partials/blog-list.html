@@ -1,5 +1,4 @@
-<div class="last-posts-list">
-<ul>
+<ul class="last-posts-list">
     
     {{ $page := .page }}
 
@@ -7,7 +6,7 @@
         
         
                     <li>
-                        <h4><a href="{{.Permalink}}">{{.Title}}</a></h4>
+                        <h2><a href="{{.Permalink}}">{{.Title}}</a></h2>
                         <div>
                             <p class="last-posts-list__meta">
                                 {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
@@ -24,4 +23,3 @@
                     </li>
     {{ end }}
 </ul>
-</div>

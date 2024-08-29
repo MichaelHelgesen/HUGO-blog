@@ -1,31 +1,32 @@
 {{ $isHome := .content.IsHome }}
-<div class="last-posts-list">
-    <ul> 
+    <ul class="last-posts-list"> 
     
     {{ range .range}}
                     <li class="journal-wrap">
-                        <span class="date">{{.Date | time.Format ":date_long"}}</span>
-                        <h3 class="journal">
-                            {{.Title}}
-                        </h3>
-                        <div>
-                            <p class="last-posts-list__meta">
-                                {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
-                                <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}}  |  </span>
-                                {{ end }}
-                                {{ partial "tags.html" .}}
-                            </p>
-                        </div>
-                        <article class="journal">
+                        <article >
+                            <section>
+                                <span class="date">{{.Date | time.Format ":date_long"}}</span>
+                                <h{{if $isHome}}3{{else}}2{{end}} class="journal">
+                                    {{.Title}}
+                                </h{{if $isHome}}3{{else}}2{{end}}>
+                                <div>
+                                    <p class="last-posts-list__meta">
+                                        {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
+                                        <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}}  |  </span>
+                                        {{ end }}
+                                        {{ partial "tags.html" .}}
+                                    </p>
+                                </div>
+                            </section>
+                        <section class="journal">
                             {{.Content}}
-                        </article>
-                        <p style="margin-top: 1rem;">
-                        <a style="font-size:.85rem;" href="{{.Permalink}}">Se notatest opprinnelige side.</a>
-                        </p>
+                        </section>
+                        <section class="journal_link">
+                        <a style="font-size:.85rem;" href="{{.Permalink}}">Se notatets opprinnelige side.</a>
+                        </section>
                     </li>
                     {{ if not $isHome }}
                     <li><hr></li>
                     {{ end }}
     {{ end }}
 </ul>
-</div>

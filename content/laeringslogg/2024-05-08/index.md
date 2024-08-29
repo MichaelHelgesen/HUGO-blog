@@ -4,7 +4,7 @@ title: 2024-05-08
 laeringsemner: [hugo]
 ---
 
-### Hugo 
+## Hugo 
 * I HUGO kan kan slå sammen en variabel og streng på følgende måte:
 ```md
 {{ printf "%s%s" "Hei" $name }}

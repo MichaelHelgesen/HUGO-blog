@@ -5,7 +5,6 @@ laeringsemner: ["hugo"]
 draft: false
 ---
 ## Hugo
-
 * I Hugo oppretter man en `dict` på følgende måte: `{{ $myDict := dict }}`.
 * `dict` kan sammenlignes med Javascripts objekt.
 * For å slå opp i `dict` med variabel må vi benytte `index`: `{{ index $myDict $myVar }}`.

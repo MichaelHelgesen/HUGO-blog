@@ -4,7 +4,7 @@ title: 2024-05-19
 laeringsemner: [hugo]
 ---
 
-### Hugo 
+## Hugo 
 * Jeg fant ut at HUGO ikke har støtte for «regular expressions» «look ahead» eller «capture groups». Jeg måtte derfor dele opp prosessen med å hente ut tekst fra en artikkel.
 1. Måtte først lage en regex-streng med ``$regExString := print `(?s)(?i)` $tag `<\/h[0-9]>.*?<h[0-9]|(?s)(?i)` $tag `<\/h[0-9]>.*` ``   
     * `(?s)` betyr «single line mode» og ignorerer «whitespace» inkludert mellomrom, tabulator og ny linje.

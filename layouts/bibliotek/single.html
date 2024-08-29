@@ -75,7 +75,7 @@
     </article>
     <hr class="single">
 <section class="mail">
-<h5>Ris, ros eller respons?</h5>
+<h2>Ris, ros eller respons?</h2>
 <p> 
 <style>
   #span-0c2f3098.cloaked-e-mail:before {
@@ -113,13 +113,13 @@
 {{ end }}
 {{ with $backlinks }}
     <section class="backlinks">
-        {{ printf "<h5>Tekster som henviser til denne boken: </h5>" | safeHTML }}
+        {{ printf "<h2>Tekster som henviser til denne boken: </h2>" | safeHTML }}
         <nav>
             <ul class="taglist single">
                 {{ range . }}
         <li>
             <a href="{{.Permalink}}">
-            <h6>{{.Title}}</h6>
+            <h3>{{.Title}}</h3>
             <div>
                 <p class="last-posts-list__meta">
                 <span style="font-weight: 600">{{strings.FirstUpper .Type }}</span> | 

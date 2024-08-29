@@ -3,12 +3,12 @@
         {{ $tag := strings.FirstUpper .tag}}
         {{ range .range}}
         <li>
-            <h4>
+            <h2>
                 <a href="{{.Permalink}}">
                     {{.Title | dateFormat ":date_long" }}
 
                 </a>
-            </h4>
+            </h2>
             <div>
                 <p class="last-posts-list__meta">
                 {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}

@@ -4,7 +4,7 @@ title: 2024-06-07
 laeringsemner: [hugo, linux]
 ---
 
-### Hugo
+## Hugo
 * For å vise bilder fra HUGOs «assets»-mappe brukes følgende: `{{ (resources.Get "[bane]").RelPermalink }}`.
 * Man må huske på å angi «assets»-mappe i «config.toml»:
 ```toml
@@ -14,6 +14,6 @@ laeringsemner: [hugo, linux]
 ```
 * Man oppdaterer HUGO ved å blytte ny versjon til `bin`.
 * For å starte server uten å bygge «public»-versjon: `hugo server --renderToMemory`
-### Linux
+## Linux
 * `whereis` er en kommando for å lokalisere en «package», for eksempel HUGO: `whereis hugo`
 

@@ -3,12 +3,12 @@
     {{ $page := .page }}
     {{ $data := . }}
     {{ range .range}}
-    <div>
-    <h3>{{ strings.FirstUpper .Key}}</h3>
+    <li>
+    <h2>{{ strings.FirstUpper .Key}}</h3>
     {{ $rangeLaering := .Pages.ByDate.Reverse}}
-    <div class="cal">
+    <ul class="cal">
     {{ partial "laeringslogg-homepage2" (dict "range" $rangeLaering "content" .)}}
-    </div>
-    </div>
+    </ul>
+    </li>
     {{ end }}
 </ul>

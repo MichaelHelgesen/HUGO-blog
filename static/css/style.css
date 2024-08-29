@@ -5,54 +5,63 @@
     src: url('/fonts/Caveat-VariableFont_wght.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: "Poppins";
     src: url('/fonts/Poppins-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: "Poppins";
     src: url('/fonts/Poppins-LightItalic.woff2') format('woff2');
     font-weight: 300;
     font-style: italic;
+    font-display: swap;
 }
 @font-face {
     font-family: "Poppins";
     src: url('/fonts/Poppins-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: "Poppins";
     src: url('/fonts/Poppins-Italic.woff2') format('woff2');
     font-weight: 400;
     font-style: italic;
+    font-display: swap;
 }
 @font-face {
     font-family: "Poppins";
     src: url('/fonts/Poppins-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: "Poppins";
     src: url('/fonts/Poppins-SemiBold.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: "Poppins";
     src: url('/fonts/Poppins-Bold.woff2') format('woff2');
     font-weight: 700;
-    font-style: bold;
+    font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: "poppins";
     src: url('/fonts/Poppins-ExtraBold.woff2') format('woff2');
     font-weight: 800;
     font-style: normal;
+    font-display: swap;
 }
 
 
@@ -82,6 +91,10 @@ img {
   max-inline-size: 100%;
 }
 /* END RESET */
+
+p a {
+    text-decoration: underline;
+}
 
 .portrett {
     display: flex;
@@ -153,8 +166,10 @@ img {
 :root {
     --base-color: hsl(35, 100%, 98%);
     --primary-color: hsl(0, 0%, 8%);
-    --accent-color: hsl(0, 100%, 60%, 1);
-    --accent-color-light: hsl(0, 100%, 60%, .05);
+    --accent-color: hsl(360, 90%, 48%, 1);
+    --accent-color-light: hsl(360, 90%, 48%, .05);
+    --accent-color-visited: hsl(360, 90%, 30%, 1);
+    --accent-color-hover: hsl(205, 90%, 30%);
 
     --mini: 0.25rem;
     --small: 0.5rem;
@@ -170,25 +185,69 @@ img {
 
     --breakpoint: 810px;
 
+    --h1-size: clamp(1.9rem, 8vw, 2.986rem); 
+    --h1-weight: 800;
+    --h1-lineheight: 1.4;
+
+    --h2-size: clamp(1.7rem, 7.5vw, 2.488rem);
+    --h2-weight: 600;
+    --h2-lineheight: 150%;
+
+    --h3-size: clamp(1.2rem, 6vw, 2.074rem);
+    --h3-weight: 600;
+    --h3-lineheight: 150%;
+
+    --h4-size:clamp(1.45rem, 5vw, 1.728rem);
+    --h4-weight: 600;
+    --h4-lineheight: 1.4em;
+
+    --h5-size: clamp(1.15rem, 4.5vw, 1.44rem);
+    --h5-weight: 600;
+    --h5-lineheight: 150%;
+
+    --h6-size: 1.2rem;
+    --h6-weight: 600;
+    --h6-lineheight: 150%;
+
     color: var(--primary-color); 
 }
 
 a {
     color: var(--accent-color);
     text-decoration: none;
+    transition: color .2s ease;
+}
+
+a:hover {
+    color: var(--accent-color-visited);
 }
 
 a.active, a.ancestor {
-    color: var(--primary-color);
+    color: var(--accent-color-visited);
+    text-decoration: underline;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
+p a:visited {
+    color: var(--accent-color);
+}
+
+p a:visited:hover {
+    color: var(--accent-color-visited);
+}
+
 .backlinks {
     clear: both;
     padding-top: var(--medium_3);
+}
+
+.backlinks h2 {
+    font-size: var(--h5-size);
+    font-weight: var(--h5-weight);
+    line-height: var(--h5-lineheight);
 }
 
 .backlinks nav {
@@ -234,6 +293,11 @@ figcaption {
     margin-top: .5rem;
 }
 
+.kilde-list {
+    list-style-type: circle;
+    margin-left: 1rem; 
+}
+
 .laeringslogg-homepage li {
     border-bottom: 1px solid hotpink;
     padding: 1rem 0;
@@ -244,7 +308,7 @@ figcaption {
     justify-content: space-between;
 }
 
-.last > div {
+.last > section {
     width: calc(50% - 1rem);
 }
 
@@ -252,7 +316,7 @@ figcaption {
     .last {
         flex-direction: column;
     }
-    .last > div {
+    .last > section {
     width: calc(100%);
 }
 }
@@ -262,10 +326,9 @@ figcaption {
     margin-top: var(--medium_2);
 }
 
-.cal > a {
+.cal > li {
     background: var(--accent-color-light);
     color: var(--primary-color);
-    padding: var(--medium_2);
     text-decoration: none;
     outline: 1px solid var(--accent-color);
     margin-top: 1px;
@@ -273,8 +336,21 @@ figcaption {
     transition: background .2s ease, color .2s ease;
 }
 
-.cal > a:hover {
-    background: var(--accent-color);
+.cal > li a {
+    color: var(--primary-color);
+    display: block;
+    height: 100%;
+    padding: var(--medium_2);
+    text-decoration: none;
+}
+
+.cal > li:hover {
+    background: var(--accent-color-visited);
+    color: var(--base-color);
+    outline: 1px solid var(--accent-color-visited);
+}
+
+.cal > li:hover a {
     color: var(--base-color);
 }
 
@@ -288,12 +364,15 @@ figcaption {
     text-align: right;
 }
 
-.cal .cal__date h5 {
+.cal .cal__date h3 {
+    font-size: var(--h5-size);
+    font-weight: var(--h5-weight);
+    line-height: var(--h5-lineheight);
     font-weight: 800;
     line-height: 1.4rem;
 }
 
-.cal .cal__date h5 span {
+.cal .cal__date h3 span {
     font-size: var(--medium_1);
     font-weight: 500;
     display: block;
@@ -312,21 +391,30 @@ article code > span {
 }
 
 article h2 {
+    font-size: var(--h2-size);
+    font-weight: var(--h2-weight);
+    line-height: var(--h2-lineheight);
     margin-bottom: var(--medium_2);
     margin-top: var(--large_2);
 }
 
 article h3 {
+    font-size: var(--h3-size);
+    font-weight: var(--h3-weight);
+    line-height: var(--h3-lineheight);
     margin-bottom: var(--medium_1);
     margin-top: var(--large_1);
 }
 
 article h4 {
+    font-size: var(--h4-size);
+    font-weight: var(--h4-weight);
+    line-height: var(--h4-lineheight);
     margin-bottom: var(--small);
     margin-top: var(--medium_3);
 }
 
-article.journal {
+section.journal {
     margin-top: var(--medium_2);
 }
 
@@ -386,11 +474,17 @@ blockquote {
     padding-left: min(6vw, 2rem);
 }
 
-.emneknagger a + h5 {
+.emneknagger p + h2 {
     margin-top: var(--medium_3);
 }
 
-.emneknagger ul + a {
+.emneknagger h2 {
+    font-size: var(--h5-size);
+    font-weight: var(--h5-weight);
+    line-height: var(--h5-lineheight);
+}
+
+.emneknagger ul + p {
     display: inline-block;
     margin: var(--medium_2) 0;
 }
@@ -400,8 +494,8 @@ blockquote {
 }
 
 footer {
-    background: #272822;
-    color: var(--base-color);
+    background: var(--accent-color-light);
+    color: var(--primary-color);
     margin: min(20vw, 12rem) calc(clamp(var(--medium_2), 8vw, var(--large_2))
  * -1) calc(clamp(var(--medium_2), 8vw, var(--large_2))
  * -1) calc(clamp(var(--medium_2), 8vw, var(--large_2))
@@ -411,7 +505,12 @@ footer {
 }
 
 footer a {
-    color: var(--base-color);
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer p a {
+    text-decoration: underline;
 }
 
 footer nav {
@@ -432,22 +531,22 @@ footer nav ul li:last-child::after {
     content:"";
 }
 
-footer a {
-text-decoration: underline;
+footer p a:visited {
+    color: var(--main-color);
 }
 
 footer a:hover {
-text-decoration: none;
-color: var(--accent-color);
+text-decoration: underline;
+color: var(--accent-color-visited);
 }
 
 footer nav ul li a {
 padding: 0 var(--small);
-text-decoration: underline;
 }
 
 footer nav ul li a.active, footer a.ancestor {
-    color: var(--accent-color);
+    color: var(--accent-color-visited);
+    text-decoration: underline;
 }
 
 footer p {
@@ -515,7 +614,7 @@ article.journal .footnotes ol li {
 article.journal .footnotes ol p {
     display: inline;
 }
-
+/*
 h1 {
     font-size: clamp(1.9rem, 8vw, 2.986rem); 
     font-weight: 800;
@@ -545,11 +644,9 @@ h5 {
     font-weight: 600;
     line-height: 150%;
 }
+*/
 
 h6 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    line-height: 150%;
     margin: 0;
 }
 
@@ -597,10 +694,11 @@ header nav ul li a {
     padding: 0 var(--small);
     text-decoration: none;
     color: var(--accent-color);
+    transition: color .2s ease;
 }
 
 header nav ul li a:hover {
-    color: var(--accent-color);
+    color: var(--accent-color-visited);
     text-decoration: underline;
 }
 
@@ -643,8 +741,10 @@ html {
     font-weight: 600;
 }
 
-.index-top p + h5 {
-    margin-top: var(--large_1)
+.index-top p + h2 {
+    margin-top: var(--large_1);
+    font-size: var(--h5-size);
+    font-weight: var(--h5-weight);
 }
 
 .intro {
@@ -660,6 +760,9 @@ html {
 }
 
 .intro h1 {
+    font-size: var(--h1-size);
+    line-height: var(--h1-lineheight);
+    font-weight: var(--h1-weight);
     margin-bottom: var(--medium_1);
 }
 
@@ -700,8 +803,14 @@ background-size: 1px 23px;
     font-size: .85rem;
 }
 
-.laeringslogg-list > div + div {
-    margin-top: var(--large_1);
+.laeringslogg-list > li + li {
+    margin-top: var(--large_3);
+}
+
+.laeringslogg-list h2 {
+    font-size: var(--h4-size);   
+    font-weight: var(--h4-weight);
+    line-height: var(--h4-lineheight);
 }
 
 .laeringslogg p + p {
@@ -714,40 +823,48 @@ background-size: 1px 23px;
 }
 
 .last-posts-list .readmore {
-margin-top:.5rem;display:inline-block;font-weight:500;
+    margin-top:.5rem;
+    display:inline-block;
+    font-weight:500;
 }
 
-.last-posts-list > ul {
+.last-posts-list {
     display: flex;
     flex-direction: column;
     gap: var(--large_2);
 }
 
-.last-posts-list ul li {
+.last-posts-list li {
     border-radius: .5rem;
 }
 
-.last-posts-list ul li h3.journal {
+.last-posts-list li h2.journal, .last-posts-list li h3.journal {
     margin-top: var(--medium);
-font-family: "caveat";
-  font-optical-sizing: auto;
+    font-family: "caveat";
+    font-optical-sizing: auto;
     font-size: clamp(2.5rem, 6vw, 3rem);
-  font-weight: 600;
-  font-style: normal;
-  line-height: 100%;
-  margin: .75rem 0 1rem 0;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 100%;
+    margin: .75rem 0 1rem 0;
 }
 
-.last-posts-list ul li h4.journal a  {
+.last-posts-list li h4.journal a  {
     color: var(--accent-color);
     display: block;
     font-weight: 400;
     text-decoration: none;
 }
-.last-posts-list ul li h4 a  {
+.last-posts-list li h4 a  {
     color: var(--accent-color);
     display: block;
     text-decoration: none;
+}
+
+.last-posts-list h2 {
+    font-size: var(--h4-size);
+    font-weight: var(--h4-weight);
+    line-height: var(--h4-lineheight);
 }
 
 .last-posts-list h4 svg {
@@ -756,15 +873,15 @@ font-family: "caveat";
     top: -5px;
 }
 
-.last-posts-list ul li h4 a:hover {
+.last-posts-list li h4 a:hover {
     text-decoration: underline;
 }
 
-.last-posts-list ul li h4 .date {
+.last-posts-list li h4 .date {
     font-weight: 600;
 }
 
-.last-posts-list ul li hr {
+.last-posts-list li hr {
     float: left;
     max-width: 50px;
     width: 100%;
@@ -772,15 +889,10 @@ font-family: "caveat";
 
 .last-posts-list__meta {
    font-size: .875rem; 
+   color: #5E5E5E;
 }
 
-.last-posts-list__meta a {
-    color: var(--accent-color);
-}
 
-.last-posts-list__meta a:hover {
-    color:var(--accent-color);
-}
 
 .last-posts-list__meta svg {
     margin-left: 2px;
@@ -795,8 +907,10 @@ font-family: "caveat";
     margin-bottom: .25rem;
 }
 
-.library-module h5 {
-   margin: var(--small) 0;
+.library-module h3 {
+    font-size: var(--h5-size);
+    font-weight: var(--h5-weight);
+    margin: var(--small) 0;
 }
 
 @media only screen and (max-width: 810px) {
@@ -813,8 +927,7 @@ font-family: "caveat";
 }
 
 .logo a {
-    border-bottom: 3px solid hsla(37, 57%, 47%, .75);
-    color: hsla(37, 57%, 47%, .46);
+    border-bottom: 3px solid var(--accent-color);
     display: inline-block;
     padding-right: 10px;
     text-decoration: none;
@@ -822,13 +935,19 @@ font-family: "caveat";
 }
 
 .logo a:hover {
-    color: var(--accent-color);
+    color: var(--accent-color-visited);
     border-color: var(--accent-color);
 }
 
 .mail {
     clear: both;
     padding-top: var(--large_1);
+}
+
+.mail h2 {
+    font-size: var(--h5-size);
+    font-weight: var(--h5-weight);
+    line-height: var(--h5-lineheight);
 }
 
 main {
@@ -844,7 +963,21 @@ main {
 }
 
 .section h2 {
+    font-size: var(--h2-size);
+    font-weight: var(--h2-weight);
     margin-bottom: var(--medium_3);
+}
+
+section.journal_link a {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: .85rem;
+    text-decoration: underline;
+}
+
+.section.texts h3 {
+    font-size: var(--h4-size);
+    font-weight: var(--h4-weight);
 }
 
 
@@ -867,20 +1000,31 @@ main {
     text-decoration: none;
 }
 
-.taglist h6 {
+.taglist h3 {
+    font-size: var(--h6-size);
+    font-weight: var(--h6-weight);
+    line-height: var(--h6-lineheight);
     color: var(--accent-color);
 }
 
-.taglist a:hover h6, .taglist a:hover h4 {
-    text-decoration: underline;
+.taglist a h3, .taglist a h2  {
+    transition: color .2s ease;
 }
 
-.taglist h4 {
+.taglist a:hover h3, .taglist a:hover h2  {
+    text-decoration: underline;
+    color: var(--accent-color-visited);
+}
+
+.taglist h2 {
+    font-size: var(--h4-size);
+    font-weight: var(--h4-weight);
+    line-height: var(--h4-lineheight);
     margin-bottom: var(--medium_1);
 }
 
-.taglist h4 a {
-    color: var(--primary-color);
+.taglist h2 a {
+    color: var(--accent-color);
 }
 
 .taglist h4 svg {
@@ -888,7 +1032,8 @@ main {
     top: -5px;
 }
 
-.taglist h4 a:hover {
+.taglist h2 a:hover {
+    color: var(--accent-color-visited);
     text-decoration: underline;
 }
 
@@ -947,6 +1092,7 @@ color: var(--accent-color);
 }
 
 .taglist-index li a:hover {
-    background: var(--accent-color);
+    background: var(--accent-color-visited);
     color: var(--base-color);
+    border-color: var(--accent-color-visited);
 }

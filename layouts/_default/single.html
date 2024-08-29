@@ -1,8 +1,9 @@
 {{ define "main" }}    
+<article>
     {{ if eq .Type "tekster" "or" "laeringslogg" "or" "journal" }}
-        <div class="intro blogg">
+        <section class="intro blogg">
     {{ else }}
-        <div class="intro sider">
+        <section class="intro sider">
     {{end}}
     {{ if eq .Type "laeringslogg" }}
         <h1>{{ .Title | time.Format ":date_long" }}</h1>
@@ -32,18 +33,19 @@
             <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }}</span>    
         </p>
     {{ end }}
-        </div>
-<article>
+        </section>
+        <section>
     {{ if ne .Type "staticpage" }}
         {{ with .Params.ingress }}
             <p class="ingress">{{.}}</p>
         {{ end }}
     {{ end }}
 {{- .Content -}}
+        </section>
 </article>
 <hr class="single">
 <section class="mail">
-<h5>Ris, ros eller respons?</h5>
+<h2>Ris, ros eller respons?</h2>
 <p> 
 <style>
   #span-0c2f3098.cloaked-e-mail:before {
@@ -76,7 +78,7 @@
 {{ with $backlinks }}
 <hr class="single">
     <section class="backlinks">
-        {{ printf "<h5>Andre tekster som henviser til denne: </h5>" | safeHTML }}
+        {{ printf "<h2>Andre tekster som henviser til denne: </h2>" | safeHTML }}
         <nav>
             <ul class="taglist single">
                 {{ range . }}
@@ -86,7 +88,7 @@
                 {{- end -}}
         <li>
             <a href="{{.Permalink}}">
-            <h6>{{.Title}}</h6>
+            <h3>{{.Title}}</h3>
             <div>
                 <p class="last-posts-list__meta">
                 <span style="font-weight: 600">{{strings.FirstUpper $type }}</span> | 
