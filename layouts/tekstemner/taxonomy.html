@@ -15,17 +15,17 @@
     {{ end }}
     </span>
 </div>
-<div class="last-posts-list">
+<div >
                 {{ if len $p}}
-                <ul>
+                <ul class="last-posts-list">
                     {{range $p }}
                     <li>
                         <span>{{strings.FirstUpper .Type}}</span>
-                        <h4>
+                        <h2>
                         <a href="{{.Permalink}}">
                             {{.Title}}
                         </a>
-                        </h4>
+                        </h2>
                         <div>
                             <p class="last-posts-list__meta">
                                 {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}

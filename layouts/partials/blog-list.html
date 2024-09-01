@@ -18,8 +18,8 @@
                         </div>
                         {{ if .Params.listeintro }}
                         <p class="last-posts-list__ingress">{{.Params.listeintro}}</p>
+                            <p> <a class="readmore" href="{{.Permalink}}">Les teksten</a></p>
                         {{ end }}
-                        <a class="readmore" href="{{.Permalink}}">Les videre</a>
                     </li>
     {{ end }}
 </ul>

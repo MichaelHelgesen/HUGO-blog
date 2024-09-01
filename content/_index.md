@@ -3,11 +3,12 @@ title: "Mikke Helgesen"
 overskrift: Hei! Mikke her.
 intro: Jeg deler tanker og innsikt for å lære mer og bedre, samt i håp om å være til inspirasjon.
 tittel-tag: "Mikkes personlige nettside"
-meta-beskrivelse: "Velkommen til Mikkes digitale hage."
+Description: "Velkommen til Mikkes digitale hage."
 meta-bilde:
 meta-type:
 meta-url:
 meta-sidenavn:
+images: [mikke.webp]
 ---
 Dette er [min digitale hage]({{< relref "/om_mikke">}}) hvor ideer, interesser og innsikt gror.
 

@@ -40,7 +40,7 @@
             {{ end }}
             </span>
             <h2 id="{{ $sourceTag }}">
-        <a href="{{ .Path }}#h1">{{ .Title }}</a>
+        <a href="{{ .Path }}">{{ .Title }}</a>
             </h2>
 
     <p class="last-posts-list__meta">
@@ -56,9 +56,9 @@
     {{end}}</a>
     </div>
     <p class="last-posts-list__ingress">{{ .Params.extra }}</p>
-    <p class="last-posts-list__ingress">
-    Min vurdering: {{.Params.score}}/10 </span></p>
-    <p><a class="readmore" href="{{$path}}#h1">Les omtale</a></p>
+    <p class="last-posts-list__ingress"><b>
+    Min vurdering: {{.Params.score}}/10 </b></p>
+    <p><a class="readmore" href="{{$path}}">Les omtale</a></p>
     </div>
     </li>
     {{ end }}

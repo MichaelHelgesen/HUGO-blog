@@ -23,9 +23,8 @@
         </section>
             <section class="section texts">
                 <h2>Siste fem tekster</h2>
-                <div class="last-posts-list">
                 {{range where .Pages "Section" "tekster"}}
-                    <ul>
+                    <ul class="last-posts-list">
                         {{range .Pages | first 5}}
                         <li>
                             <h3><a href="{{.Permalink}}">{{.Title}}</a></h3>
@@ -41,15 +40,14 @@
                             {{ with .Params.listeintro }}
                                 <p class="last-posts-list__ingress">{{.}}</p>
                             {{ end }}
-                                <a class="readmore" href="{{.Permalink}}">Les videre</a>
+                            <p> <a class="readmore" href="{{.Permalink}}">Les teksten</a></p>
                         </li>
                         {{ end}}
                     </ul>
                 {{end}}
-                </div>
                 <ul class="taglist-index" style="margin-top: 3rem;">
                     <li>
-                        <a href={{ relURL "tekster"}}>Se alle saker</a>
+                        <a href={{ relURL "tekster"}}>Se alle tekster</a>
                     </li>
                 </ul>
             </section>

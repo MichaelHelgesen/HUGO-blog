@@ -2,17 +2,21 @@
 {{ $range := .}}
   {{ range $index, $tag := . }} 
       {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
-      <div>
+      <span>
          
         {{ if eq (len $range) 1 }} 
            kun {{ $tag }} 
         {{ else if and (eq (len $range) (add $index 1)) (ne $index 0) }}
             og {{ $tag }}
+        {{ else if eq (len $range) 2}}
+        {{ $tag }}
+        {{else if and (eq (sub (len $range) 1) (add $index 1)) (gt (add $index 1 ) 1)}}
+        {{$tag}}
         {{ else }}
-        {{ $tag }},
+        {{$tag}},
         {{ end }}
       
-      </div>
+      </span>
       {{- end -}}
 {{ end }}
 {{ end }}

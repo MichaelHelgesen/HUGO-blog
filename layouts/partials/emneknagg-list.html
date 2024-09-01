@@ -17,9 +17,8 @@
                             {{ if eq .Type "laeringslogg" }}
                             <h3>{{.Title | time.Format ":date_long"}}
                             {{ else }}
-                            {{.Title}}
+                            <h3>{{.Title}}
                             {{end}}</h3>
-                            </h3>
                         <div>
                             <p class="last-posts-list__meta">
                             <span style="font-weight: 600">{{ if eq .Type "laeringslogg" }}

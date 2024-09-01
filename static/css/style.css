@@ -1,5 +1,5 @@
 @import "normalize.css";
-
+/*
 @font-face {
     font-family: "caveat";
     src: url('/fonts/Caveat-VariableFont_wght.woff2') format('woff2');
@@ -63,8 +63,7 @@
     font-style: normal;
     font-display: swap;
 }
-
-
+*/
 
 /* RESET */
 :root {
@@ -80,10 +79,14 @@ ol, ul {
   list-style: none;
   padding-inline: 0;
 }
+article ol, article ul {
+    font-size: clamp(1rem, 0.9024rem + 0.4878vi, 1.25rem)
+}
 
 h1, h2, h3, h4, h5 {
   font-size: inherit;
   font-weight: inherit;
+  letter-spacing: -0.03ch;
 }
 
 img {
@@ -94,6 +97,12 @@ img {
 
 p a {
     text-decoration: underline;
+}
+
+p, header nav ul {
+    font-size: clamp(1rem, 0.9024rem + 0.4878vi, 1.25rem);
+    letter-spacing: -0.001ch;
+    line-height: 1.6;
 }
 
 .portrett {
@@ -168,8 +177,9 @@ p a {
     --primary-color: hsl(0, 0%, 8%);
     --accent-color: hsl(360, 90%, 48%, 1);
     --accent-color-light: hsl(360, 90%, 48%, .05);
-    --accent-color-visited: hsl(360, 90%, 30%, 1);
+    --accent-color-visited: hsl(360, 90%, 48%, 1);
     --accent-color-hover: hsl(205, 90%, 30%);
+    --gray-color: #5E5E5E;
 
     --mini: 0.25rem;
     --small: 0.5rem;
@@ -187,27 +197,27 @@ p a {
 
     --h1-size: clamp(1.9rem, 8vw, 2.986rem); 
     --h1-weight: 800;
-    --h1-lineheight: 1.4;
+    --h1-lineheight: 1.2;
 
     --h2-size: clamp(1.7rem, 7.5vw, 2.488rem);
     --h2-weight: 600;
-    --h2-lineheight: 150%;
+    --h2-lineheight: 1.2;
 
     --h3-size: clamp(1.2rem, 6vw, 2.074rem);
     --h3-weight: 600;
-    --h3-lineheight: 150%;
+    --h3-lineheight: 1.2;
 
     --h4-size:clamp(1.45rem, 5vw, 1.728rem);
     --h4-weight: 600;
-    --h4-lineheight: 1.4em;
+    --h4-lineheight: 1.2em;
 
     --h5-size: clamp(1.15rem, 4.5vw, 1.44rem);
     --h5-weight: 600;
-    --h5-lineheight: 150%;
+    --h5-lineheight: 1.3;
 
-    --h6-size: 1.2rem;
+    --h6-size: clamp(1.10rem, 4.5vw, 1.35rem);
     --h6-weight: 600;
-    --h6-lineheight: 150%;
+    --h6-lineheight: 1.3;
 
     color: var(--primary-color); 
 }
@@ -219,24 +229,24 @@ a {
 }
 
 a:hover {
-    color: var(--accent-color-visited);
+    color: var(--accent-color);
+    text-decoration: underline;
 }
 
 a.active, a.ancestor {
-    color: var(--accent-color-visited);
+    color: var(--primary-color);
     text-decoration: underline;
 }
 
-a:hover {
-    text-decoration: underline;
+
+p a:hover {
+    background: var(--accent-color);
+    color: var(--base-color)
 }
 
-p a:visited {
-    color: var(--accent-color);
-}
 
 p a:visited:hover {
-    color: var(--accent-color-visited);
+    color: var(--base-color);
 }
 
 .backlinks {
@@ -257,17 +267,18 @@ p a:visited:hover {
 .breadcrumb {
     display: flex;
     flex-wrap: wrap;
-    font-size: .85rem;
+    font-size: 90%;
     margin-top: 1rem;
 }
 
 .breadcrumb a {
-    color: var(--primary-color);
+    color: var(--gray-color);
     text-decoration: underline;
 }
 
 .breadcrumb a:hover {
-    color: var(--accent-color);
+    color: var(--base-color);
+    background: var(--accent-color);
 }
 
 hr.single {
@@ -286,16 +297,34 @@ figure {
 }
 
 figcaption {
-    font-size: .85rem;
+    color: var(--gray-color);
     font-style: italic;
     font-weight: 300;
     margin-bottom: 2rem;
     margin-top: .5rem;
+    line-height: 1.6;
+}
+
+blockquote {
+    font-weight: 300;
+}
+
+blockquote figcaption {
+    color: var(--primary-color);
+    font-size: 85%;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+figcaption a:hover {
+    background: var(--accent-color);
+    color: var(--base-color);
 }
 
 .kilde-list {
-    list-style-type: circle;
-    margin-left: 1rem; 
+    /*list-style-type: circle;
+    margin-left: 1rem; */
 }
 
 .laeringslogg-homepage li {
@@ -345,9 +374,8 @@ figcaption {
 }
 
 .cal > li:hover {
-    background: var(--accent-color-visited);
+    background: var(--accent-color);
     color: var(--base-color);
-    outline: 1px solid var(--accent-color-visited);
 }
 
 .cal > li:hover a {
@@ -383,7 +411,7 @@ article code {
     padding: .125rem .35rem;
     color: var(--base-color);
     background: #272822;
-    font-size: .9rem;
+    font-size: 90%;
 }
 
 article code > span {
@@ -416,6 +444,7 @@ article h4 {
 
 section.journal {
     margin-top: var(--medium_2);
+    font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;;
 }
 
 article ol {
@@ -468,10 +497,45 @@ body {
 
 blockquote {
     border-left: 3px solid var(--primary-color);
-    font-size: calc(var(--medium_1) * 1.25);
-    font-weight: 300;
+    color: var(--gray-color);
+    font-size: clamp(1.15rem, 4vw, 1.35rem);
     margin: 2rem 0 2rem clamp(0vw, 2vw, 1rem);
     padding-left: min(6vw, 2rem);
+}
+
+blockquote .source {
+    font-weight: normal;
+    font-style: italic;
+    font-size: .85em;
+}
+
+div.message {
+    background: var(--accent-color);
+    border-radius: .5rem;
+    color: var(--base-color);
+    padding: var(--medium_2);
+    margin-bottom: var(--medium_2);
+}
+
+div.message a {
+    color: var(--base-color);
+}
+
+div.message a:hover {
+    color: var(--accent-color);
+    background: var(--base-color);
+}
+
+
+div.message > svg {
+    float: left;
+    max-width: 50px;
+    margin: 0 2rem .5rem 0;
+}
+
+@media only screen and (max-width: 810px) {
+div.message {
+}
 }
 
 .emneknagger p + h2 {
@@ -494,8 +558,8 @@ blockquote {
 }
 
 footer {
-    background: var(--accent-color-light);
-    color: var(--primary-color);
+    background: var(--accent-color);
+    color: var(--base-color);
     margin: min(20vw, 12rem) calc(clamp(var(--medium_2), 8vw, var(--large_2))
  * -1) calc(clamp(var(--medium_2), 8vw, var(--large_2))
  * -1) calc(clamp(var(--medium_2), 8vw, var(--large_2))
@@ -505,7 +569,7 @@ footer {
 }
 
 footer a {
-    color: var(--primary-color);
+    color: var(--base-color);
     text-decoration: none;
 }
 
@@ -520,7 +584,7 @@ footer nav {
 footer nav ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 4px;
     justify-content: center;
 }
 footer nav ul li::after {
@@ -531,13 +595,9 @@ footer nav ul li:last-child::after {
     content:"";
 }
 
-footer p a:visited {
-    color: var(--main-color);
-}
-
 footer a:hover {
 text-decoration: underline;
-color: var(--accent-color-visited);
+color: var(--base-color);
 }
 
 footer nav ul li a {
@@ -545,7 +605,7 @@ padding: 0 var(--small);
 }
 
 footer nav ul li a.active, footer a.ancestor {
-    color: var(--accent-color-visited);
+    color: var(--base-color);
     text-decoration: underline;
 }
 
@@ -554,7 +614,7 @@ footer p {
 }
 
 .footnotes {
-    margin-top: 6rem;
+    margin-top: clamp(4rem, 10vw, 6rem);
 }
 
 .footnotes ol {
@@ -580,7 +640,7 @@ footer p {
 .gallery_home {
   display: grid;
    gap: .5rem; 
-   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
 }
 @media only screen and (max-width: 810px) {
 .gallery-module {
@@ -672,10 +732,10 @@ header nav {
 }
 
 header nav ul {
-    color: var(--main-color);
+    color: var(--gray-color);
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 4px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -690,15 +750,16 @@ header nav ul li:last-child::after {
 }
 
 header nav ul li a {
-    font-weight: 500;
     padding: 0 var(--small);
     text-decoration: none;
+    font-weight: 500;
+    line-height: 1.4;
     color: var(--accent-color);
+    margin-right: -3px;
     transition: color .2s ease;
 }
 
 header nav ul li a:hover {
-    color: var(--accent-color-visited);
     text-decoration: underline;
 }
 
@@ -737,8 +798,8 @@ html {
 }
 
 .ingress {
-    font-size: 1.15rem;
-    font-weight: 600;
+    font-size: clamp(1.15rem, 3vw, 1.30rem);
+    font-weight: 500;
 }
 
 .index-top p + h2 {
@@ -756,7 +817,7 @@ html {
 }
 
 .intro.sider .last-posts-list__meta {
-    margin-top:  clamp(1.5rem, 10vw, 3rem);
+    margin-top:  var(--medium_1);
 }
 
 .intro h1 {
@@ -767,17 +828,15 @@ html {
 }
 
 .intro.blogg {
-    margin-bottom: 0;
+    margin-bottom: clamp(4rem, 10vw, 6rem);
 }
 
 .intro.sider .ingress {
-    font-size: clamp(1.5rem, 5vw, var(--medium_3));
-    font-weight: 500;
-    line-height: 150%;
+    font-size: clamp(1.25rem, 5vw, 1.5rem);
+    line-height: 1.4;
 }
 
 .intro.blogg p {
-    font-size: 0.975rem;
     margin-bottom: 2rem;
 }
 
@@ -799,9 +858,6 @@ background-size: 1px 23px;
     padding: clamp(1rem, 5vw, 2rem);
 }
 
-.journal-wrap .date {
-    font-size: .85rem;
-}
 
 .laeringslogg-list > li + li {
     margin-top: var(--large_3);
@@ -811,6 +867,7 @@ background-size: 1px 23px;
     font-size: var(--h4-size);   
     font-weight: var(--h4-weight);
     line-height: var(--h4-lineheight);
+    text-align: center;
 }
 
 .laeringslogg p + p {
@@ -825,13 +882,13 @@ background-size: 1px 23px;
 .last-posts-list .readmore {
     margin-top:.5rem;
     display:inline-block;
-    font-weight:500;
+    text-decoration: underline;
 }
 
 .last-posts-list {
     display: flex;
     flex-direction: column;
-    gap: var(--large_2);
+    gap: clamp(3rem, 1.3913rem + 3.0435vi, 3.75rem);
 }
 
 .last-posts-list li {
@@ -840,13 +897,11 @@ background-size: 1px 23px;
 
 .last-posts-list li h2.journal, .last-posts-list li h3.journal {
     margin-top: var(--medium);
-    font-family: "caveat";
-    font-optical-sizing: auto;
-    font-size: clamp(2.5rem, 6vw, 3rem);
-    font-weight: 600;
-    font-style: normal;
-    line-height: 100%;
-    margin: .75rem 0 1rem 0;
+    font-family: "serif";
+    font-style: italic;
+    font-size: var(--h2-size);
+    line-height: 1.3;
+    margin: .25rem 0 1rem 0;
 }
 
 .last-posts-list li h4.journal a  {
@@ -888,18 +943,20 @@ background-size: 1px 23px;
 }
 
 .last-posts-list__meta {
-   font-size: .875rem; 
    color: #5E5E5E;
+   font-size: 90%;
+   margin-top: var(--mini);
 }
 
-
+.last-posts-list__meta a {
+    color: inherit;
+}
 
 .last-posts-list__meta svg {
     margin-left: 2px;
 }
 
 .last-posts-list__ingress {
-    font-weight: 600;
     margin-top: var(--medium_1);
 }
 
@@ -910,7 +967,8 @@ background-size: 1px 23px;
 .library-module h3 {
     font-size: var(--h5-size);
     font-weight: var(--h5-weight);
-    margin: var(--small) 0;
+    margin: 0 0 var(--small) 0;
+    line-height: 1.4;
 }
 
 @media only screen and (max-width: 810px) {
@@ -922,21 +980,23 @@ background-size: 1px 23px;
 .logo {
     font-size: 2rem;
     font-weight: 800;
-    letter-spacing: -0.6rem;
+    letter-spacing: -0.5rem;
     line-height: 1;
 }
 
 .logo a {
     border-bottom: 3px solid var(--accent-color);
     display: inline-block;
-    padding-right: 10px;
+    padding-right: 14px;
+    padding-left: 5px;
     text-decoration: none;
+    color: var(--primary-color);
     transition: color .2s ease, border-color .2s ease;
 }
 
 .logo a:hover {
-    color: var(--accent-color-visited);
-    border-color: var(--accent-color);
+    color: var(--accent-color);
+    border-color: var(--primary-color);
 }
 
 .mail {
@@ -948,6 +1008,10 @@ background-size: 1px 23px;
     font-size: var(--h5-size);
     font-weight: var(--h5-weight);
     line-height: var(--h5-lineheight);
+}
+
+.mail p {
+    margin-top: var(--medium_1);
 }
 
 main {
@@ -971,13 +1035,14 @@ main {
 section.journal_link a {
     display: inline-block;
     margin-top: 1rem;
-    font-size: .85rem;
     text-decoration: underline;
 }
+
 
 .section.texts h3 {
     font-size: var(--h4-size);
     font-weight: var(--h4-weight);
+    line-height: 1.2;
 }
 
 
@@ -1017,9 +1082,9 @@ section.journal_link a {
 }
 
 .taglist h2 {
-    font-size: var(--h4-size);
-    font-weight: var(--h4-weight);
-    line-height: var(--h4-lineheight);
+    font-size: var(--h3-size);
+    font-weight: var(--h2-weight);
+    line-height: var(--h3-lineheight);
     margin-bottom: var(--medium_1);
 }
 
@@ -1057,11 +1122,11 @@ section.journal_link a {
 }
 
 .taglist.single > li + li {
-    margin-top: 1rem;
+    margin-top: 1.25rem;
 }
 
 .taglist .readmore {
-margin-top:.5rem;display:inline-block;font-weight:500;
+margin-top:.5rem;display:inline-block;
 color: var(--accent-color);
 }
 
@@ -1084,15 +1149,16 @@ color: var(--accent-color);
     border-radius: 9999px;
     color: var(--primary-color);
     display: inline-block;
-    font-size: .85rem;
     font-weight: 500;
+    font-size: 90%;
+    letter-spacing: 0.04ch;
     padding: var(--small) var(--medium_2);
     text-decoration: none;
     transition: background .2s ease, color .2s ease;
 }
 
 .taglist-index li a:hover {
-    background: var(--accent-color-visited);
+    background: var(--accent-color);
     color: var(--base-color);
-    border-color: var(--accent-color-visited);
+    border-color: var(--accent-color);
 }

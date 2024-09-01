@@ -6,13 +6,15 @@
         <div>
         <div class="cal__date">
             <h3>
-            {{ .Title | dateFormat "2." }}
+            {{ .Title | dateFormat "2" }}
         <span>
             {{ .Title | dateFormat "January" }}
         </span>
             </h3>
         </div>
+        <p>
         {{ partial "tags-laeringslogg.html" . }}
+        </p>
         </div>
     </a>
     </li>

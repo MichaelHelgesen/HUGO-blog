@@ -4,6 +4,8 @@ date: 2024-04-19
 tekstemner: [hugo, api, zotero, programmering]
 ingress: "Det er i utgangspunktet ikke mulig å opprette sider i Hugo via et API, men det finnes måter å komme rundt problemet."
 listeintro: Et alternativ for å løse et av Hugos største begrensninger.
+merknad: "I oppdatering 0.126.0 av HUGO ble det endelig mulig å opprette sider dynamisk under bygging! Det kalles «content adapters». Dermed er ikke denne teksten like relevant lenger. [Les mer om «content adapters» her](https://gohugo.io/content-management/content-adapters/)" 
+merknad_dato: 2024-05-21
 ---
 Under opprettelsen av denne bloggen hadde jeg et ønske om å koble til [Zotero](https://zotero.org), slik at alle kilder jeg har benyttet og henviser til i tekster automatisk konverteres til sider i Hugo.
 

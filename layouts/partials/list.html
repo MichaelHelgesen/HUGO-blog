@@ -1,5 +1,4 @@
-<div class="last-posts-list">
-    <ul>
+    <ul class="last-posts-list">
         {{ $tag := strings.FirstUpper .tag}}
         {{ range .range}}
         <li>
@@ -32,4 +31,3 @@
                     <li><hr></li>
         {{ end }}
         </ul>
-        </div>

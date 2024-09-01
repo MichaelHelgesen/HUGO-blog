@@ -15,6 +15,6 @@ Foreløpig har jeg kun testet noen av tjenestene, men **aldri brukt KI til å sk
 
 [comment]: <> (Jeg er veldig spent på hvordan KI og teknologi generelt vil påvirke vår inspirasjon, motivasjon, læring og samhold, i tillegg til følelsen av å være menneske. Foreløpig er jeg en mild skeptiker.) 
 
-```quote {author="George Leonard, «Mastery: The Keys to Success and Long-Term Fulfillment»" cite="https://www.adlibris.com/no/bok/mastery-the-keys-to-success-and-long-term-fulfillment-9780452267565"}
+```quote {author="George Leonard" source="«Mastery: The Keys to Success and Long-Term Fulfillment»" cite="https://www.adlibris.com/no/bok/mastery-the-keys-to-success-and-long-term-fulfillment-9780452267565"}
 A human being is the kind of machine that wears out from *lack* of use.
 ```

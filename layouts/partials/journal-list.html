@@ -5,7 +5,7 @@
                     <li class="journal-wrap">
                         <article >
                             <section>
-                                <span class="date">{{.Date | time.Format ":date_long"}}</span>
+                                <p class="date">{{.Date | time.Format ":date_long"}}:</p>
                                 <h{{if $isHome}}3{{else}}2{{end}} class="journal">
                                     {{.Title}}
                                 </h{{if $isHome}}3{{else}}2{{end}}>
@@ -21,8 +21,16 @@
                         <section class="journal">
                             {{.Content}}
                         </section>
+                        </article>
                         <section class="journal_link">
-                        <a style="font-size:.85rem;" href="{{.Permalink}}">Se notatets opprinnelige side.</a>
+{{ if not $isHome }}
+
+                <ul class="taglist-index" style="list-style-type: none; margin: 0; margin-top: 1rem;">
+                    <li>
+                        <a href="{{.Permalink}}">Se som egen side</a>
+                    </li>
+                </ul>
+{{end}}
                         </section>
                     </li>
                     {{ if not $isHome }}
