@@ -1,7 +1,8 @@
 baseURL = '/'
 defaultContentLanguage = "nb" 
 title = 'Michael Helgesen'
-
+[params]
+og_image = "images/mikke.webp"
 [params.author]
 name = "Michael Helgesen"
 

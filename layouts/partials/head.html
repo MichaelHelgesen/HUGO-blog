@@ -2,12 +2,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="preload" href="{{ relURL "css/style.css"}}" as="style">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
     <link rel="stylesheet" href="{{ relURL "css/style.css"}}">
     {{ partial "head-imgs-css"}}
-    <title>{{ .Title }}</title>
-    <meta name="description" content="{{ .Description }}">
     <meta name="author" content="{{ .Site.Author.name }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{ template "_internal/opengraph.html" . }}
+ {{ with .Params.relcanonical }}
+  <link rel="canonical" href="{{ . | relLangURL }}" itemprop="url" />
+{{ else -}}
+  <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
+{{ end -}}   
+{{ template "_internal/opengraph.html" . }}
+{{ if not .Params.images }}
+{{ $site := .Site }}
+{{ if eq .Type "bibliotek" }}
+{{ if .Description}}
+{{ with resources.Get .Site.Params.og_image }}
+<meta property="og:image" content="{{ $site.BaseURL}}{{ .RelPermalink | relURL }}"/>
+          <meta property="og:image:secure_url" content="{{ $site.Params.og_image | absURL }}"/>
+          {{end}}
+{{else}}
+{{ with resources.Get (print "images/" (.Title | urlize) ".webp") }}
+<meta property="og:image" content="{{ $site.BaseURL}}{{ .RelPermalink | relURL }}"/>
+          <meta property="og:image:secure_url" content="{{ $site.Params.og_image | absURL }}"/>
+{{end}}
+          {{ end }}
+          {{ else }}
+{{ with resources.Get .Site.Params.og_image }}
+<meta property="og:image" content="{{ $site.BaseURL}}{{ .RelPermalink | relURL }}"/>
+          <meta property="og:image:secure_url" content="{{ $site.Params.og_image | absURL }}"/>
+          {{ end }}
+{{ end }}
+          {{ end }}
+{{ if not .Description }}
+    {{ if eq .Type "bibliotek"}}
+        <meta name="description" content="{{ .Params.description }}">
+        <meta property="og:description" content="{{ .Params.description }}">
+    {{ else if eq .Type "laeringslogg" }}
+        {{ $emner := ""}}
+        {{ $range := .Params.laeringsemner}}
+            {{with .Params.laeringsemner}}
+                {{ range $index, $tag := . }}
+                {{ if eq (len $range) 1 }} 
+                    {{$emner = printf "%s%s" $emner .}}  
+                {{ else if and (eq (len $range) (add $index 1)) (ne $index 0) }}
+                    {{$emner = printf "%s%s%s" $emner " og " .}}  
+                {{ else if eq (len $range) 2}}
+                    {{$emner = printf "%s%s%s" $emner " " .}}  
+                {{else if and (eq (sub (len $range) 1) (add $index 1)) (gt (add $index 1 ) 1)}}
+                    {{$emner = printf "%s%s%s" $emner " " .}}  
+                {{ else }}
+                    {{$emner = printf "%s%s%s" $emner . ", "}}  
+                {{ end }}
+            {{ end }}
+        {{end}}
+<meta name="description" content="En punktliste over ting jeg lærte om {{ $emner }}.">
+<meta property="og:description" content="En punktliste over ting jeg lærte om {{ $emner }}.">
+{{end}}
+{{ else }}
+<meta name="description" content="{{ .Description }}">
+{{end}}
+{{ if and (eq .Type "laeringsemner") .Data.Term}}
+<meta name="description" content="Ting jeg har lært om {{ .Title }} i læringsloggen.">
+<meta property="og:description" content="Ting jeg har lært om {{ .Title }} i læringsloggen.">
+{{end}}
+{{ if and (eq .Type "tekstemner") .Data.Term}}
+<meta name="description" content="Tekster jeg har skrevet som omhandler {{ .Title }}.">
+<meta property="og:description" content="Tekster jeg har skrevet som omhandler {{ .Title }}.">
+{{end}}
 </head>

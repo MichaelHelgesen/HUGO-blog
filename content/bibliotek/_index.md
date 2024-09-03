@@ -1,8 +1,10 @@
 ---
 title: Bibliotek
+Description: Korte omtaler av utvalgte bøker jeg har lest.
+h1: Mitt bibliotek av utvalgte bøker
 ---
 
 {{< introtekst >}}
-<h1>Bibliotek</h1>
-<p class="ingress">Omtaler av bøker jeg har lest.</p>
+<h1>Mitt bibliotek av utvalgte bøker</h1>
+<p class="ingress">Korte omtaler av utvalgte bøker jeg har lest.</p>
 {{< /introtekst >}}

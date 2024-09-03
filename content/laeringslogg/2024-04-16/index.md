@@ -6,4 +6,4 @@ date: 2024-04-16
 
 ## NVIM
 * For å legge til en ny fil i Explore-modus så taster man prosenttegn `%`.
-* "Redo" i VIM er `Ctrl + R`. 
+* «Redo» i VIM er `Ctrl + R`. 

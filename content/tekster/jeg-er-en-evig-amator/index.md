@@ -2,8 +2,9 @@
 title: Jeg er en evig amatør
 tekstemner: [læring, inspirasjon]
 date: 2024-04-17
-ingress: Å lære åpenlyst ved å dele både opp- og nedturer er en av kjennetegnene på en entustiast som dyrker sine interesser. Ved å være en amatør håper jeg å lære bedre, skape mer og å være til inspirasjon.
-listeintro: Jeg velger å lære åpenlyst i håp om å lære bedre, skape mer og å være til inspirasjon.
+ingress: Å lære åpenlyst ved å dele både opp- og nedturer er visstnok et av kjennetegnene på en entustiast som dyrker sin interesse. Det viktigste er nemlig å bidra, uansett nivå eller felt, for det du anser som gråstein kan være gull for andre.
+listeintro: Jeg velger å lære åpenlyst i håp om å forstå mer, skape mer og være til inspirasjon.
+Description: Jeg har valgt å være en evig amatør i håp om å forstå mer, skape mer og å være til inspirasjon.
 ---
 «Bestem deg for hva du vil lære, og forplikt deg til å lære foran andre», skriver [Austin Kleon](https://austinkleon.com/) i sin bok [«Show your work»](https://www.adlibris.com/no/bok/show-your-work-9780761178972). [^1] 
 
@@ -11,7 +12,7 @@ Dette sitatet, og boken forøvrig, inspirerte meg til å ta Kleon på ordet.
 
 Å være entusiasten som åpenlyst forfølger sine interesser er både spennende, lærerikt, skremmende og forhåpentligvis inspirerende.
 
-Nå er ikke jeg en kunstner slik som han eller en ekspert på noe som helst, men jeg er en nysgjerrig type med mange interesser. Og i følge Kleon handler det ikke om hvor flink eller intelligent man er, men at man bidrar med noe.
+Nå er ikke jeg en kunstner slik som Kleon eller en ekspert på noe som helst, men jeg er en nysgjerrig type med mange interesser. Og i følge Kleon handler det ikke om hvor flink eller intelligent man er, men at man bidrar med noe.
 
 Ja, det er en lang avstand fra middelmådig til god i et kreativt spektrum, men med små steg kan man bevege seg fra den ene siden til den andre:
 
@@ -35,7 +36,7 @@ På bakgrunn av dette, og med inspirasjon og drahjelp fra forfatterens bok start
 
 Målet er å bli en bedre skribent, en bedre tenker, en bedre kunnskapsforvalter, og et bedre og lykkeligere menneske. Og ideelt sett vil andre kunne lære både av, og med meg, underveis.
 
-Jeg følger således Kleons oppfordring når jeg åpenlyst velger å være en glad amatør: entusiasten som forfølger interesser han har en forkjærlighet for (amatør betyr [«en som elsker»](https://no.wikipedia.org/wiki/Amat%C3%B8r)), en av de som Kleon mener er livslange kunnskapssøkere som gjerne lærer åpenlyst med den hensikt å dele både opp- og nedturer. 
+Jeg følger således Kleons oppfordring når jeg åpenlyst velger å være en glad amatør: Entusiasten som forfølger interesser han har en forkjærlighet for (amatør betyr [«en som elsker»](https://no.wikipedia.org/wiki/Amat%C3%B8r)), en av de som Kleon mener er livslange kunnskapssøkere som gjerne lærer åpenlyst med den hensikt å dele både opp- og nedturer. 
 
 Forhåpentligvis kan også min entusiasme og nysgjerrighet være smittsom og inspirerende.
 
@@ -43,7 +44,7 @@ Forhåpentligvis kan også min entusiasme og nysgjerrighet være smittsom og ins
 In the beginner’s mind there are many possibilities, but in the expert’s there are few.
 ````
 
-Hvis du også brenner inne med noe så start i dag, og del reisen med oss andre.
+Hvis du også brenner inne med noe eller har en formidlingstrang så start i dag, og del reisen med oss andre.
 
 ````quote {author="Austin Kleon" cite="{{< relref "/kilder#e.kleonshowwork" >}}"} 
 Ha amatørhjertet på utsiden, del det du elsker, og du vil bli funnet. [...] Er ikke arbeidet ditt på nett, så eksisterer det ikke.  

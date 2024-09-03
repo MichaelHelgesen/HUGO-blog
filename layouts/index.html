@@ -3,12 +3,12 @@
         <div class="intro sider">
             <div class="portrett">
                 <div>
-                    <h1>{{.Params.overskrift}}</h1> 
+                    <h1>{{.Params.overskrift | safeHTML }}</h1> 
                     <p class="ingress">
                         {{.Params.intro}}
                     </p>
                 </div>
-{{ partial "imgh-2" (dict "ctx" . "src" "images/mikke.webp" "figcaption" "" "alt" "En." "holder" "LQTIP" "title" "Kaninen Snøhvit er tilfreds") }}
+{{ partial "imgh-2" (dict "ctx" . "src" "images/mikke.webp" "figcaption" "" "alt" "Portrettbilde av Mikke" "holder" "LQTIP" "title" "Velkommen til min digitale hage." "lazy" "false" "fade" "false") }}
             </div>
         </div>
         {{ .Content }} 
@@ -52,13 +52,9 @@
                 </ul>
             </section>
             <section class="section laeringslogg">
-                <h2>Læringslogg</h2>
+                <h2>Siste fra læringsloggen</h2>
                 <p>
                 Jeg forsøker å loggføre all ny kunnskap i en notatbok som jeg deretter overfører til en digital punktliste som <a href="/laeringslogg">publiseres her</a>.
-                </p>
-                <p> 
-                En slik logg et sterkt visuelt bilde på hvor mye man faktisk har lært, og en god metode for å befeste kunnskapen. Dessuten opplever jeg det som en veldig god inspirasjonskilde for nye skriverier. 
-                Jeg anbefaler deg absolutt å prøve, men hold det enkelt! 
                 </p>
             <ul class="cal">
                 {{ $rangeLaering := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "=" "laeringslogg" | first 8 }}
@@ -73,7 +69,7 @@
             <section class="section">
                 <h2>Siste fra journalen</h2>
                 <p style="margin-bottom: 2rem;">
-                I <a href="/journal">journalen</a> noterer jeg små glimt fra hverdagen som får meg til å stoppe opp, eller som gjør meg ettertenksom.
+                I <a href="/journal">journalen</a> noterer jeg små glimt fra hverdagen som gjør inntrykk på meg eller som er av spesiell betydning.
                 </p>
                 {{ $range := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "=" "journal" | first 1 }}
                 {{ partial "journal-list" (dict "range" $range "content" .)}}

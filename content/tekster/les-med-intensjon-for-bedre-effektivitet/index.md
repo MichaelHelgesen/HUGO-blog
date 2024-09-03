@@ -4,6 +4,8 @@ date: 2024-06-01
 tekstemner: [effektivitet, lesing]
 ingress: Selektiv lesing er en teknikk som kan hjelpe oss med å finne relevant informasjon i kilder på en mer effektiv måte, og dermed gjøre oss mer produktive.
 listeintro: Å sette seg et mål for lesingen av en tekst kan gjøre oss mer effektive og produktive.
+Description: Å sette seg et mål for lesingen av en tekst kan gjøre oss mer effektive og produktive.
+
 ---
 Å sette seg et mål før man leser en tekst har for meg vært en svært viktig lærdom.
 
@@ -23,9 +25,9 @@ Hvis jeg for eksempel ønsker å skrive om gode teknikker for læring, vil jeg v
 
 **Hvordan går man da frem, hvis man skal lete etter kunnskap uten å lese fra perm til perm?**
 
-Scheper skriver at dersom man er kjent med materialet, kan man benytte en teknikk han kaller selektiv lesing. Det vil si at man skumleser man avsnittene i stedet for å lese hvert ord og alle setninger [^2].
+Scheper skriver at dersom man er kjent med materialet, kan man benytte en teknikk han kaller selektiv lesing. Det vil si at man skumleser avsnittene i stedet for å lese hvert ord og alle setninger [^2].
 
-Man kan også benytte innholdsfortegnelsen for å hoppe til den delen av boken man antar svaret kan ligge, for så å sonderer sidene etter relevant informasjon.
+Man kan også benytte innholdsfortegnelsen for å hoppe til den delen av boken hvor man antar svaret kan ligge, for så å sonderer sidene etter relevant informasjon.
 
 Hvis materialet eller temaet derimot er vanskelig eller ukjent bør man ta seg bedre tid, og lese mer tradisjonelt fra start til slutt. Prøv likevel å begrense notater og markeringer til bokens hovedideer. Man kan heller komme tilbake til boken ved en senere anledning, om man trenger flere detaljer.
 

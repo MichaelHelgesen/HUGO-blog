@@ -3,9 +3,11 @@ title: "Nå"
 date: 2024-04-11
 type: "staticpage"
 ingress: "Hvordan det står til? Jo, takk, det skal jeg fortelle deg."
+h1: Akkurat nå for tiden
+Description: En side dedikert til spørsmålet «hvordan står det til?».
 ---
 
-Denne [nå-siden](https://nownownow.com/about) er inspirert av [Derek Sivers](https://sive.rs/nowff), og er dedikert til svaret på spørsmålet "hvordan står det til" [^1].  Det er rett og slett en oppdatering på livets tilstand samt en intern refleksjon over prioriteringer.
+Denne [nå-siden](https://nownownow.com/about) er inspirert av [Derek Sivers](https://sive.rs/nowff), og er dedikert til svaret på spørsmålet «hvordan står det til» [^1].  Det er rett og slett en oppdatering på livets tilstand samt en intern refleksjon over prioriteringer.
 
 ````quote {author="Derek Sivers" cite="https://nownownow.com/about"}
 Besides answering the common question, “What are you up to these days?”, those who have a now page say it’s a good reminder of their priorities. 
@@ -14,7 +16,7 @@ Besides answering the common question, “What are you up to these days?”, tho
 ## Tanker
 Akkurat nå er jeg opptatt av hvordan teknologi og teknologer påvirker oss som mennesker. 
 
-Jeg jobber meg gjennom boken «[Dont be a gadget](https://www.jaronlanier.com/gadgetwebresources.html)» av Jaron Lanier som argumenterer for at individet er i ferd med å erstattes av en kollektiv bevissthet, og at vi i den forbindelse nedgraderer oss selv til binærtenkende maskiner (gadgets) som kan komme til å glemme hva det vil si å være et menneske.
+Jeg jobber meg gjennom boken «[You are not a gadget](https://www.jaronlanier.com/gadgetwebresources.html)» av Jaron Lanier, som argumenterer for at individet er i ferd med å erstattes av en kollektiv bevissthet, og at vi i den forbindelse nedgraderer oss selv til binærtenkende maskiner («gadgets») som kan komme til å glemme hva det vil si å være et menneske.
 
 Jeg har også lest «[Brave New world](https://www.goodreads.com/book/show/5129.Brave_New_World?from_search=true&from_srp=true&qid=ek50n7DT5R&rank=1)» og «[1984](https://www.goodreads.com/book/show/61439040-1984?from_search=true&from_srp=true&qid=f7466QswLa&rank=1)» i sommer, noe som er med på å forsterke min usikkerhet om fremtiden.
 
@@ -38,12 +40,12 @@ Hagearbeid og vedlikehold av huset her i Halden tar tid, men nå er endelig Tuja
 Jentene på 12 og snart 16 er klare for henholdsvis syvende trinn og første året på videregående, og kona har startet på jobb etter en lang avspassering (hun er lærer).
 
 ## Bøker
-I tillegg til «You are not a gadget» leser jeg «[Good habits Bad habbits](https://www.goodreads.com/book/show/43565368-good-habits-bad-habits?from_search=true&from_srp=true&qid=JNGsyEwoGy&rank=2)» av Wendy Wood for å lære mer om det å bygge, endre og avslutte vaner samt «Til naturen» av David Henry Thoreau som en kontrast til teknologi og jag. Hans «Kunsten å gå» burde være pensum.
+I tillegg til «You are not a gadget» leser jeg «[Good habits Bad habbits](https://www.goodreads.com/book/show/43565368-good-habits-bad-habits?from_search=true&from_srp=true&qid=JNGsyEwoGy&rank=2)» av Wendy Wood for å lære mer om det å bygge, endre og avslutte vaner samt «[Til naturen](https://www.pax.no/til-naturen.5963564-331611.html)» av David Henry Thoreau som en kontrast til teknologi og jag. Hans «Kunsten å gå» burde være pensum.
 
 ## Musikk
 Det går for det meste i klassisk, ambient og synthwave når jeg arbeider.
 
-Ellers hører jeg på de nyeste låtene til London Grammar i tillegg til Hania Rani, Starcadian og Tom Odell.
+Ellers hører jeg på de nyeste låtene til [London Grammar](https://www.londongrammar.com/) i tillegg til [Hania Rani](https://haniarani.com/), [Starcadian](https://www.starcadian.com/) og [Tom Odell](https://www.tomodell.com/).
 ## Prosjekter, jobb og hobbyer
 Jeg jobber med å ferdigstille og lansere denne nettsiden. 
 
@@ -52,7 +54,7 @@ En LinkedIn-konto har jeg også opprettet. Nå gjenstår det å utfylle både pr
 Og som alltid prøver jeg å skrive så mye som mulig, for hånd, i notatbøkene mine med ulike fyllepenner og blekk samt å lære så ofte jeg kan.
 
 ## Mentalt
-Å ta vare på et sykt bar i over et år krever sitt, og jeg føler meg litt sliten. Heldigvis kan det virke som om det er i ferd med å snu. 
+Å ta vare på et sykt individ i over ett år krever sitt, og jeg føler meg litt sliten. Heldigvis går det fremover. 
 
 Til slutt er det som vanlig fortsatt frustrerende å føle at man kan så lite, og samtidig streve med formidlingen og håndteringen av kunnskap. Men det håper jeg denne bloggen kan hjelpe meg med.
 

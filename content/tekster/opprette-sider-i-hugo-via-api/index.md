@@ -6,6 +6,7 @@ ingress: "Det er i utgangspunktet ikke mulig å opprette sider i Hugo via et API
 listeintro: Et alternativ for å løse et av Hugos største begrensninger.
 merknad: "I oppdatering 0.126.0 av HUGO ble det endelig mulig å opprette sider dynamisk under bygging! Det kalles «content adapters». Dermed er ikke denne teksten like relevant lenger. [Les mer om «content adapters» her](https://gohugo.io/content-management/content-adapters/)" 
 merknad_dato: 2024-05-21
+Description: En alternativ fremgangsmåte for å opprette sider i HUGO via et API.
 ---
 Under opprettelsen av denne bloggen hadde jeg et ønske om å koble til [Zotero](https://zotero.org), slik at alle kilder jeg har benyttet og henviser til i tekster automatisk konverteres til sider i Hugo.
 
@@ -92,7 +93,7 @@ Slik ser JSON-frontmatter ut i dette tilfellet:
 {"data":{"ISBN":"9780671212094 9781476790152","abstractNote":"","accessDate":"","archive":"","archiveLocation":"","callNumber":"","collections":["U68Q8VUJ"],"creators":[{"creatorType":"author","firstName":"Mortimer Jerome","lastName":"Adler"},{"creatorType":"author","firstName":"Charles Lincoln","lastName":"Van Doren"}],"date":"2014","dateAdded":"2024-03-19T17:12:51Z","dateModified":"2024-03-19T17:12:51Z","edition":"Touchstone edition","extra":"","itemType":"book","key":"KDJ8DIH4","language":"eng","libraryCatalog":"K10plus ISBN","numPages":"424","numberOfVolumes":"","place":"New York","publisher":"Touchstone","relations":{},"rights":"","series":"","seriesNumber":"","shortTitle":"","tags":[],"title":"How to read a book","url":"","version":11,"volume":""},"key":"KDJ8DIH4","library":{"id":5454933,"links":{"alternate":{"href":"https://www.zotero.org/groups/mikkesblogg","type":"text/html"}},"name":"mikkesblogg","type":"group"},"links":{"alternate":{"href":"https://www.zotero.org/groups/mikkesblogg/items/KDJ8DIH4","type":"text/html"},"self":{"href":"https://api.zotero.org/groups/5454933/items/KDJ8DIH4","type":"application/json"}},"meta":{"createdByUser":{"id":9890568,"links":{"alternate":{"href":"https://www.zotero.org/mikke02","type":"text/html"}},"name":"","username":"Mikke02"},"creatorSummary":"Adler and Van Doren","numChildren":1,"parsedDate":"2014"},"version":11}
 ```
 ### Forenkle bygge-kommandoen
-Før vi kjører `hugo`-kommandoen og oppretter filene er det en fordel å forenkle oppsettet, lik at vi skaper en så minimalistisk og kjapp byggeprosess som mulig. Denne Hugo-instansen skal jo kun benyttes til å skape «markdown»-filer. 
+Før vi kjører `hugo`-kommandoen og oppretter filene er det en fordel å forenkle oppsettet, slik at vi skaper en så minimalistisk og kjapp byggeprosess som mulig. Denne Hugo-instansen skal tross alt kun benyttes til å skape «markdown»-filer. 
 
 I `prebuild/config.yaml` anbefales det å angi følgende: 
 

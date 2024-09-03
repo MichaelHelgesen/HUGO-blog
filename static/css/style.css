@@ -108,15 +108,38 @@ p, header nav ul {
 .portrett {
     display: flex;
     gap: 2rem;
-    align-items: center;
 }
 
+.portrett figure {
+    margin: 0;
+}
 
 .portrett figure > div {
     width: 200px;
 }
 
 .portrett img {
+    border-radius: 50%;
+}
+
+.portrett .ingress {
+    margin-bottom: 0!important;
+}
+
+.portrett-om {
+    float: right;
+    margin: 0 0 1rem 2rem;
+}
+
+.portrett-om figure {
+    margin: 0;
+}
+
+.portrett-om figure > div {
+    width: 150px;
+}
+
+.portrett-om img {
     border-radius: 50%;
 }
 
@@ -129,6 +152,11 @@ p, header nav ul {
     width: 150px;
     height: 150px;
 }
+
+.portrett-om figure > div {
+    width: 100px;
+}
+
 }
 .relative {
 	position: relative;
@@ -195,7 +223,7 @@ p, header nav ul {
 
     --breakpoint: 810px;
 
-    --h1-size: clamp(1.9rem, 8vw, 2.986rem); 
+    --h1-size: clamp(1.9rem, 8vw, 2.786rem); 
     --h1-weight: 800;
     --h1-lineheight: 1.2;
 
@@ -225,7 +253,7 @@ p, header nav ul {
 a {
     color: var(--accent-color);
     text-decoration: none;
-    transition: color .2s ease;
+    transition: all .2s ease;
 }
 
 a:hover {
@@ -258,10 +286,10 @@ p a:visited:hover {
     font-size: var(--h5-size);
     font-weight: var(--h5-weight);
     line-height: var(--h5-lineheight);
+    margin-bottom: var(--medium_1);
 }
 
 .backlinks nav {
-    margin-top: var(--medium_1);
 }
 
 .breadcrumb {
@@ -311,7 +339,7 @@ blockquote {
 
 blockquote figcaption {
     color: var(--primary-color);
-    font-size: 85%;
+    font-size: clamp(1rem, 0.9024rem + 0.4878vi, 1.25rem);
     font-style: normal;
     font-weight: 600;
     line-height: 1.4;
@@ -498,9 +526,10 @@ body {
 blockquote {
     border-left: 3px solid var(--primary-color);
     color: var(--gray-color);
-    font-size: clamp(1.15rem, 4vw, 1.35rem);
+    font-size: clamp(1.15rem, 4vw, 1.55rem);
     margin: 2rem 0 2rem clamp(0vw, 2vw, 1rem);
     padding-left: min(6vw, 2rem);
+    line-height: 1.4;
 }
 
 blockquote .source {
@@ -510,7 +539,7 @@ blockquote .source {
 }
 
 div.message {
-    background: var(--accent-color);
+    background: var(--primary-color);
     border-radius: .5rem;
     color: var(--base-color);
     padding: var(--medium_2);
@@ -522,10 +551,14 @@ div.message a {
 }
 
 div.message a:hover {
-    color: var(--accent-color);
+    color: var(--primary-color);
     background: var(--base-color);
 }
 
+div.message h2 {
+    font-size: var(--h6-size);
+    margin: 0;
+}
 
 div.message > svg {
     float: left;
@@ -558,7 +591,7 @@ div.message {
 }
 
 footer {
-    background: var(--accent-color);
+    background: var(--primary-color);
     color: var(--base-color);
     margin: min(20vw, 12rem) calc(clamp(var(--medium_2), 8vw, var(--large_2))
  * -1) calc(clamp(var(--medium_2), 8vw, var(--large_2))
@@ -799,13 +832,17 @@ html {
 
 .ingress {
     font-size: clamp(1.15rem, 3vw, 1.30rem);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .index-top p + h2 {
     margin-top: var(--large_1);
     font-size: var(--h5-size);
     font-weight: var(--h5-weight);
+}
+
+.index-top .intro.sider {
+    margin-bottom: clamp(4rem, 10vw, 6rem);
 }
 
 .intro {
@@ -832,8 +869,14 @@ html {
 }
 
 .intro.sider .ingress {
-    font-size: clamp(1.25rem, 5vw, 1.5rem);
+    font-size: clamp(1.35rem, 5vw, 1.5rem);
     line-height: 1.4;
+    margin-bottom: clamp(1.5rem, 10vw, 3rem);
+    font-weight: 500;
+}
+
+.intro.sider p + p {
+    margin-top: 1rem;
 }
 
 .intro.blogg p {
@@ -1122,7 +1165,7 @@ section.journal_link a {
 }
 
 .taglist.single > li + li {
-    margin-top: 1.25rem;
+    margin-top: .95rem;
 }
 
 .taglist .readmore {

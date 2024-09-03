@@ -34,5 +34,6 @@
     </nav>
     <p>Nettsiden er laget av <a href="/om">meg</a>, med <a href="https://www.gohugo.io">Hugo</a>.</p>
     <p>Her finnes ingen sporingsmekanismer, bare deg og meg.</p> 
+    {{- with resources.Get "images/MadeByAHuman_01.png"}}<a style="display: inline-block; margin-top: 1rem;" href="https://ko-fi.com/s/4662b19f61" target="_blank"><img loading="lazy" alt="Merkelapp med teksten «Made by a human»" width="{{.Width}}" height="{{.Height}} "title="Laget av et menneske" src="{{.RelPermalink}}" }} /></a>{{ end -}}
 </footer>
 

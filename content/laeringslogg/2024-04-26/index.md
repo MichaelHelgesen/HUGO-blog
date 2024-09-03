@@ -13,12 +13,12 @@ laeringsemner: [hugo, design, nvim]
 * `.Kind` i Hugo returnerer typen side, for eksempel `home` `page` `term` og lignende.
 
 ## Design
-* Jeg lærte meg at akronymet "CRAP" i design står for:
+* Jeg lærte meg at akronymet «CRAP» i design står for:
     * contrast
     * repetition
     * alignment
     * proximity
 
-## VIM
+## NVIM
 * For å lukke en bufferfil, så skriver man `:bd`.
 

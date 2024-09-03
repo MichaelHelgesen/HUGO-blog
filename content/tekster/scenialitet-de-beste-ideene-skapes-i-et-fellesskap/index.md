@@ -4,6 +4,7 @@ date: 2024-05-01
 tekstemner: [kreativitet]
 ingress: Om du ønsker å være på ditt mest kreative bør du oppsøke en arena med andre likesinnede mennesker. De beste ideene oppstår nemlig i et fellesskap eller «scenius» som Brian Eno kaller det, og sjeldent i et vakum hos noen få enslige personer slik historien gjerne vil ha oss til å tro.
 listeintro: Om du ønsker å maksimere din kreativitet bør du oppsøke en kreativ arena fremfor å sitte for deg selv.
+Description: Om du ønsker å maksimere din kreativitet bør du oppsøke en kreativ arena fremfor å sitte for deg selv.
 ---
 
 Historien og populærkulturen fremstiller mange av menneskehetens store fremskritt som resultat av enslige geniers standhaftige arbeid i isolasjon fra omverdenen.
@@ -76,7 +77,7 @@ Tidligere redaktør og grunnlegger av «The Wire» Kevin Kelly trekker spesielt 
 1. Felles anerkjennelse og god innflytelse. Risikable sjanser applauderes og vennlig konkurranse provoserer / inspirerer / stimulerer medlemmene.
 2. Rask og effektiv deling av verktøy og teknikker.
 3. Nettverkseffekt av suksess: Andres vellykkethet skaper flere suksesser.
-4. Lokalmiljøet tolererer og aksepterer uvanlige, nye og moderne impulser.
+4. Et Lokalmiljø som tolererer, heier på og aksepterer uvanlige, nye og moderne impulser.
 
 ````quote {author="Kevin Kelly"}
 When buoyed by scenius, you act like a genius
@@ -99,10 +100,10 @@ Seek likeminded souls. Encourage other creatives. Reach out, and find your tribe
 
 Hvis en kreativ scene skulle være i ferd med å etablere seg påpeker Kelly viktigheten av å ikke kvele det [^4]. Ikke stopp det, ikke formaliser det eller overvåk det. Tennes gnisten, så blås heller på den. La det være ineffektivt, tullete, på kanten, marginalt og i bakevja. Beskytt det og hedre det.
 
-## Er det forskjell på digital og fysisk scenialitet?
+## Mine grublerier: Er det forskjell på digital og fysisk scenialitet?
 Kleon og Garratt anbefaler å gå online om man ikke har noen fysiske kreative arenaer i nærheten, men vil det være like effektivt? Kan blogger, forum og sosiale medier skape samme dynamikk som et fysisk møtested?
 
-Er det ikke en større sjanse å komme over noe uventet og nytt i direkte kontakt med andre mennesker, ansikt til ansikt? Vil ikke en digital versjon i større grad bli enveiskjørt, styrt av algoritmer basert på allerede eksisterende interesser? For ikke å snakke om forstyrrelser og kjøpepress, og KI-generert innhold som er i ferd med å oversvømme nettet.
+Er det ikke en større sjanse for å komme over noe uventet og nytt i direkte kontakt med andre mennesker, ansikt til ansikt? Vil ikke en digital versjon i større grad bli enveiskjørt, styrt av algoritmer basert på allerede eksisterende interesser? For ikke å snakke om forstyrrelser og kjøpepress, og KI-generert innhold som er i ferd med å oversvømme nettet.
 
 Og er ikke dialogen på nett av en mer giftig karakter sammenlignet med en prat på gangen, i kafeteriaen eller i arbeidsmiljøet? Krever ikke nettet også en større innsatsvilje og konsentrasjon i form av lesing, søking, scrolling og konsumering av video og lyd? Gir det mindre rom for overraskelser og impulsivitet?
 
@@ -112,11 +113,13 @@ Hvis jeg bruker meg selv som eksempel opplever jeg en helt annen inspirasjon og 
 
 Det sitter lenger inne å kommunisere det samme online. Jeg har ofte ikke lyst, tid eller inspirasjon til å skrive der. Fysiske situasjoner føles mer impulsive og kreative.
 
-Etter en god samtale ser jeg kanskje på en kunstutstilling eller hører musikk som får tankene over på noe helt annet, og kan være triggere for kreativiteten. De tankene og den påvirkningen opplever jeg sjeldent på nett. Det nærmeste man kommer er kanskje hangouts, for å prøve å skape noe av det samme kreative kaoset.
+Etter en god samtale ser jeg kanskje på en kunstutstilling eller hører musikk som får tankene over på noe helt annet, og som kan være triggere for kreativiteten. De tankene og den påvirkningen opplever jeg sjeldent på nett. Det nærmeste man kommer er kanskje hangouts, for å prøve å skape noe av det samme kreative kaoset.
 
-Når det er sagt ønsker jo jeg å være en bidragsyter på nett via denne bloggen, med det håp å inspirere andre. Og det er mange suksesshistorier om vellykkede digitale grupperinger.
+Når det er sagt ønsker jo jeg å være en bidragsyter på nett via denne nettsiden, med det håp å inspirere andre. Og det er mange suksesshistorier om vellykkede digitale grupperinger.
 
 Uansett fysisk eller digital versjon er det viktig og effektivt for kreativiteten å være sammen med andre kreative mennesker, gjerne innenfor ulike disipliner, og med andre interesser, siden inspirasjon kan komme hvor som helst fra.
+
+Dessuten er jeg av den oppfatning at kreativiteten, undringen og grublingen er sterkt truet av teknologi.
 
 **En gruppe utgjør et økosystem av talent.**
 

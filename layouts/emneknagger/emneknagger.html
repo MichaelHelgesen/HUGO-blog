@@ -1,10 +1,7 @@
 {{ define "main" }}
 {{ if not .Params.type }}
 <div class="intro sider">
-                <h1>
-                    Emneknagger
-                </h1>
-                <p class="ingress">En oversikt over emner jeg har skrevet og lært om.</p>
+    {{.Content}}
 </div>
 <div class="emneknagger">
     <h2>Emner jeg har skrevet om i <a href="/tekster">tekster</a> og i <a href="/journal">journalen</a>:</h2>

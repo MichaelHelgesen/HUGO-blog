@@ -4,6 +4,8 @@ date: 2024-05-23
 tekstemner: [læring, skriving]
 ingress: At nivået og kvaliteten på egen kunnskap beror på kildene er kanskje opplagt, men hvordan finner og velger man de beste ressursene?
 listeintro: Hvordan finner man de beste kildene, og hvordan bør man bruke dem?
+Description: Hvordan finner man de beste kildene, og hvordan bør man bruke dem?
+
 ---
 
 I følge [Kildekompasset.no](https://kildekompasset.no/) finnes det to typer kilder å velge mellom:
@@ -14,7 +16,7 @@ Et eksempel på en primærkilde er en forskers forskningsrapport, mens en avisar
 
 Førstnevnte er å foretrekke, da den er basert på opphavspersonens egne tanker, erfaringer og forskning. Sekundærkilden er basert på journalistens forståelse og tolkning av rapporten.
 
-Slikt sett bør man strebe etter å benytte primærkilder, for å gjøre opp sin egen mening, i og med at sekundærkilder kan ha misforstått eller feiltolket primærkilden, eller kan ha en agenda eller egeninteresse av å omtale originalmaterialet på en spesifikk måte.
+Derfor bør man strebe etter å benytte primærkilder, for å gjøre opp sin egen mening, i og med at sekundærkilder kan ha misforstått eller feiltolket primærkilden, eller ha en agenda eller egeninteresse av å omtale originalmaterialet på en spesifikk måte.
 
 ````quote {author="Scott Scheper"}
 Primærkilder er et must. Det er ikke sekundærkilder.  
