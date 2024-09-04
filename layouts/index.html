@@ -8,7 +8,7 @@
                         {{.Params.intro}}
                     </p>
                 </div>
-{{ partial "imgh-2" (dict "ctx" . "src" "images/mikke.webp" "figcaption" "" "alt" "Portrettbilde av Mikke" "holder" "LQTIP" "title" "Velkommen til min digitale hage." "lazy" "false" "fade" "false") }}
+{{ partial "imgh-2" (dict "ctx" . "src" "images/mikke.webp" "figcaption" "" "alt" "Portrettbilde av Mikke" "holder" "LQTIP" "title" "Velkommen til min digitale hage." "lazy" "false" "fade" "false" "small" "true") }}
             </div>
         </div>
         {{ .Content }} 
@@ -85,7 +85,7 @@
                     {{range first 1 (where .Site.RegularPages "Type" "bibliotek")}}
                     {{ $img := print "images/" (.Title | urlize) ".webp"}}
 
-{{ partial "imgh-2" (dict "ctx" . "src" $img "alt" "En." "holder" "LQTIP" "title" "Kaninen Snøhvit er tilfreds") }}
+{{ partial "imgh-2" (dict "ctx" . "src" $img "alt" (print "Coveret til boken " .Title) "holder" "LQTIP" "title" .Title) }}
 <p>{{range .Params.creators}}
 {{.firstName}} {{.lastName}}
 {{end}}

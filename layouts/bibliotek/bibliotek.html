@@ -4,6 +4,7 @@
     <div class="last-posts-list">
 <ul class="last_posts">
     {{ range .Pages }}
+    {{ $title := .Title}}
         {{ $sourceTag := "" }}
         {{ range .Params.tags }}
             {{ $sourceTag = .tag }}
@@ -52,7 +53,7 @@
 
     <div class="bok">
 {{ with resources.Get (print "images/" $path ".webp") }}
-<a href="{{$path}}" class="img_hover">{{ partial "imgh-2" (dict "ctx" . "src" .RelPermalink  "figcaption" "" "alt" "En." "holder" "LQTIP" "title" "Kaninen Snøhvit er tilfreds") }}
+<a href="{{$path}}" class="img_hover">{{ partial "imgh-2" (dict "ctx" . "src" .RelPermalink  "figcaption" "" "alt" (print "Coveret til boken " $title) "holder" "LQTIP" "title" $title "small" "true") }}
     {{end}}</a>
     </div>
     <p class="last-posts-list__ingress">{{ .Params.extra }}</p>

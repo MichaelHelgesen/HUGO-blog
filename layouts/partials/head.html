@@ -4,7 +4,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }}</title>
-    <link rel="stylesheet" href="{{ relURL "css/style.css"}}">
+{{ $style1 := resources.Get "css/normalize.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style1.Permalink }}">
+{{ $style := resources.Get "css/style.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
     {{ partial "head-imgs-css"}}
     <meta name="author" content="{{ .Site.Author.name }}">
  {{ with .Params.relcanonical }}

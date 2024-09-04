@@ -49,7 +49,7 @@
     <div class="book_image" style="display: flex; gap: 24px; flex-wrap:wrap; align-items: center;">
 {{ with resources.Get (print "images/" $path ".webp") }}
 <div style="width: 150px">
-    {{ partial "imgh-2" (dict "ctx" . "src" .RelPermalink  "figcaption" "" "alt" "Coveret på boken" "holder" "LQTIP" "title" $title "lazy" "false") }}
+    {{ partial "imgh-2" (dict "ctx" . "src" .RelPermalink  "figcaption" "" "alt" (print "Coveret på boken" $title) "holder" "LQTIP" "title" $title "lazy" "false") }}
 </div>
 {{ end }}
 <div>
