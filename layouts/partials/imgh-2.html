@@ -59,7 +59,7 @@
 				{{- end -}}
 			{{- end -}}
 		{{- end -}}" sizes="{{ $dataSzes }}" />
-        <img class="{{ $imgClass }}" src="{{ $actualImg.RelPermalink }}" width="{{ $width }}" height="{{ $height }}" alt="{{ $alt }}" title="{{ $title }}" loading="{{ if $lazy }}eager{{ else }}lazy{{end}}" />
+        <img class="{{ $imgClass }}" src="{{ $actualImg.RelPermalink }}" width="{{ $width }}" height="{{ $height }}" alt="{{ $alt }}" title="{{ $title }}" loading="{{ if eq $lazy "false"}}eager{{ else }}lazy{{end}}" />
 	</picture>
 </div>
 {{- with $figcaption -}}

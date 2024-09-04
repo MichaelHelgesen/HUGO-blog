@@ -8,4 +8,7 @@
       Returner heller til startsiden.
     </a>
   </p>
+  {{ with resources.Get "images/myst-404.jpg"}}
+    {{ partial "imgh-2" (dict "ctx" . "lazy" "false" "src" .RelPermalink  "figcaption" "" "alt" "My name is Sirrus… Release me… I beg you to find the missing page" "holder" "LQTIP" "title" "My name is Sirrus… Release me… I beg you to find the missing page") }}
+    {{ end }}
 {{ end }}

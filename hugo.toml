@@ -5,7 +5,8 @@ title = 'Michael Helgesen'
 og_image = "images/mikke.webp"
 [params.author]
 name = "Michael Helgesen"
-
+[params.meta]
+    favicon = true
 [frontmatter]
     lastmod = ["lastmod", ":fileModTime", ":default"]
 
