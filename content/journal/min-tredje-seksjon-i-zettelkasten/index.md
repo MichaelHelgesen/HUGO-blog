@@ -3,7 +3,7 @@ title: Min tredje seksjon i zettelkasten
 date: 2024-05-23
 tekstemner: [zettelkasten, skriving, læring]
 listeintro: "Jeg utvidet notatsystemet mitt med en seksjon om kreativitet."
-Description: Jeg har utvidet notatsystemet mitt med en seksjon om kreativitet."
+Description: Jeg har utvidet notatsystemet mitt med en seksjon om kreativitet.
 
 ---
 

@@ -9,9 +9,9 @@
     {{- $imgBd5 = md5 .ctx.filename -}}
     {{$width = .ctx.width}}
     {{$height = .ctx.height}}
-    {{ with resources.GetRemote .ctx.url }}
-        {{ $data = .}}
-    {{end}}
+    {{ $img := resources.GetRemote .ctx.url }} 
+    {{ $img := $img.Content | resources.FromString (print "images/" .ctx.filename ".webp") }} 
+        {{ $data = $img}}
 {{ else }}
     {{- $imgBd5 = md5 .ctx.Title -}}
     {{ with resources.Get .src }}
