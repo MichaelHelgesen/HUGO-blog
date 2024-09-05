@@ -1,4 +1,10 @@
 {{- $respSizes := slice "640" "960" "1280" "1600" "1920" -}}
+{{ $small := .Get "small" }}
+
+{{ $lazy := .Get "lazy" }}
+{{ if eq $small "true" }}
+{{- $respSizes = slice "320" "640" "960" "1280" "1600" "1920" -}}
+{{end}}
 {{- $src := .Page.Resources.GetMatch (.Get "src") -}}
 {{- $alt := .Get "alt" -}}
 {{- $figcaption := .Get "figcaption" -}}
@@ -32,7 +38,7 @@
 				{{- end -}}
 			{{- end -}}
 		{{- end -}}" sizes="{{ $dataSzes }}" />
-		<img class="{{ $imgClass }}" src="{{ $actualImg.RelPermalink }}" width="{{ $src.Width }}" height="{{ $src.Height }}" alt="{{ $alt }}" title="{{ $title }}" loading="lazy" />
+		<img class="{{ $imgClass }}" src="{{ $actualImg.RelPermalink }}" width="{{ $src.Width }}" height="{{ $src.Height }}" alt="{{ $alt }}" title="{{ $title }}" loading="{{ if eq $lazy "false"}}eager{{ else }}lazy{{end}}" />
 	</picture>
 </div>
 {{- with $figcaption -}}

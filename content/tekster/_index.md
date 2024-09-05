@@ -5,6 +5,6 @@ Description: "Tekster om det som interesserer, inspirerer, imponerer og informer
 ---
 
 {{< introtekst >}}
-<h1>Mine grublende tekster</h1>
+<h1>Mine tekster om mine interesser</h1>
 <p class="ingress">Jeg skriver om det som interesserer, inspirerer, imponerer og informerer meg.</p>
 {{< /introtekst >}}

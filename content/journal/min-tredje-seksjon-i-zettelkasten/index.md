@@ -9,7 +9,7 @@ Description: Jeg har utvidet notatsystemet mitt med en seksjon om kreativitet.
 
 Jeg startet min zettelkasten med notater om læring og skriving. I dag utvidet jeg notat-systemet med en ny seksjon om kreativitet.
 
-{{< imgh title="Ny seksjon i zettelkasten" src="min-tredje-seksjon-i-zettelkasten.JPEG" alt="Min zettelkasten-boks med kategorien kreativitet fremhevet." holder="LQTIP" >}}
+{{< imgh lazy="false" title="Ny seksjon i zettelkasten" src="min-tredje-seksjon-i-zettelkasten.JPEG" alt="Min zettelkasten-boks med kategorien kreativitet fremhevet." holder="LQTIP" >}}
 
 Zettelkasten deles ikke inn i rigide kategorier som for eksempel en mappestruktur i en app eller på en PC, men det er likevel ryddig å ha en simpel overordnet seksjonering for enklere håndtering.
 
