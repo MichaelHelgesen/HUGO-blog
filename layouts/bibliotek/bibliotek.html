@@ -1,8 +1,8 @@
 {{ define "main" }}
     {{ .Content }}
     {{- $currentPage := . -}}
-    <div class="last-posts-list">
-<ul class="last_posts">
+    <div>
+<ul class="last-posts-list">
     {{ range .Pages }}
     {{ $title := .Title}}
         {{ $sourceTag := "" }}
