@@ -428,6 +428,10 @@ article li ul {
     margin-top: var(--small);
 }
 
+article li ol {
+    margin-top: var(--small);
+}
+
 article.logg ul {
     margin-bottom: 0;
 }
