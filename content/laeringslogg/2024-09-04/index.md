@@ -9,7 +9,7 @@ laeringsemner: [hugo, linux, github]
 * Man kan endre dette ved å angi en mappe foran filnavnet på ressursene man laster ned. Så i steden for `bildenavn.jpg` kan man angi `images/bildenavn-jpg`. [Se mer her](https://discourse.gohugo.io/t/setting-the-folder-for-resources-getremote-resources/37351).
 
 ## Linux
-* Ønsker man å fjerne alt i en mappe fortsett fra én fil kan man i terminalen skrive:
+* Ønsker man å fjerne alt i en mappe bortsett fra én fil kan man i terminalen skrive:
 ```text
 rm -v -rf !("FIL_SOM_IKKE_SKAL_SLETTES")
 ```

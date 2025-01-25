@@ -36,13 +36,13 @@ do
     echo "## ${array[index]}"
     echo 
 done
-exit 0
+# exit 0
 }
 
 file-creation() {
     local OUTPUT_FILE="index.md"
     generate_output $1  > $OUTPUT_FILE
-    exit 0
+    # exit 0
 }
 
 folder-creation() {
@@ -52,10 +52,14 @@ folder-creation() {
         mkdir $1
         if [ -d ${PATH_TO_DIR}/${1} ]
         then
+            echo "sdfsfds"
             echo "Successfully created folder $1" 
             cd $1
             file-creation $1
-            echo "Successfully created file"
+            if [ $OPEN_FILE ]; then
+                nvim index.md
+                exit 0
+            fi
             exit 0
         else
             echo "Something went wrong."
@@ -87,3 +91,5 @@ else
     folder-creation $CURRENT_DATE
     exit 0
 fi
+
+
