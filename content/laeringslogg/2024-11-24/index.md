@@ -5,7 +5,7 @@ laeringsemner: [csharp]
 ---
 ## Csharp
 - Array er en samling av samme type data. Man må angi datatype og størrelse på array:
-```
+```Csharp
 string[] ordreID = new string[3];
 ```
 - Det er også mulig å angi en array på følgende måte:
