@@ -34,6 +34,10 @@ p a {
     text-decoration: underline;
 }
 
+p.poem {
+    font-style: italic;
+}
+
 p, header nav ul {
     font-size: clamp(1rem, 0.9024rem + 0.4878vi, 1.25rem);
     letter-spacing: -0.001ch;

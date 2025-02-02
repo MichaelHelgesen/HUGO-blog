@@ -30,7 +30,7 @@ Kunstnere, artister, teknologer håndverkere og andre med felles interesser har 
 
 Firenze, renessansens fødested, er et annet eksempel, hvor en hel by fremsto som en eneste stor kreativ scene.
 
-I biografien om Leonardo DaVinci beskriver forfatteren Walter Isaacson hvordan Firenze på 1400-tallet var en gryte av inspirasjon og nytenkning basert på felles interesse for kunst, filosofi, teknologi og antikk kultur.
+I biografien om Leonardo DaVinci beskriver forfatteren Walter Isaacson hvordan Firenze på 1400-tallet var en gryte av inspirasjon og nytenkning basert på felles interesse for kunst, filosofi, teknologi og antikk kultur [^3]. 
 
 Hele byen var tuftet på deling av kunnskap og innovasjon på tvers av disipliner. Skreddere, pottemakere, gullsmeder, trearbeidere, linsemakere, kunstnere og artister jobbet side om side og inspirerte hverandre. I pausen møttes de alle og diskuterte seg i mellom mens de ble underholdt av teater og andre kunstformer.
 
@@ -59,11 +59,11 @@ Isaacson mener dette er viktig å belyse, uten at han konkret nevner Enos «scen
 **Ideen om «scenialitet» fjerner altså ikke oppnåelsen til store og betydningsfulle individer, men erkjenner at kreativitet på en eller annen måte alltid er et samarbeid.**
 
 ## Gir rom for ikke-genier
-Konseptet «scenialitet» hylles også av forfatteren og kunstneren Austin Kleon. I sin bok [«Show your work»]({{< relref "show-your-work-10-ways-to-share-your-creativity-and-get-discovered/">}}) mener han dette gir rom for alle oss som ikke føler seg som kreative genier [^3].
+Konseptet «scenialitet» hylles også av forfatteren og kunstneren Austin Kleon. I sin bok [«Show your work»]({{< relref "show-your-work-10-ways-to-share-your-creativity-and-get-discovered/">}}) mener han dette gir rom for alle oss som ikke føler seg som kreative genier [^4].
 
 I og med at gode ideer oppstår på bakgrunn av et kreativt fellesskap handler det ikke om hvor smart man er, men hva man bidrar med, som innsikt, gode samtaler, spørsmål, nysgjerrighet og interesse, samt en vilje til å lære bort.
 
-Han bruker dette som argument når han påstår at alle bør dele det de kan og lærer, selv om man er en amatør, for det kan alltid være til nytte for noen [^3]. En påstand som for øvrig er [utgangspunktet for denne nettsiden]({{< relref "tekster/jeg-er-en-evig-amator">}}).
+Han bruker dette som argument når han påstår at alle bør dele det de kan og lærer, selv om man er en amatør, for det kan alltid være til nytte for noen [^4]. En påstand som for øvrig er [utgangspunktet for denne nettsiden]({{< relref "tekster/jeg-er-en-evig-amator">}}).
 
 ## Hvorfor virker det?
 I tillegg til ren påvirkning og inspirasjon fra andre i kollektivet er det flere andre grunner til at en scenialitet vokser frem.
@@ -72,7 +72,7 @@ I tillegg til ren påvirkning og inspirasjon fra andre i kollektivet er det fler
 Scenius is like a genius, only embedded in a scene rather than in genes 
 ````
 
-Tidligere redaktør og grunnlegger av «The Wire» Kevin Kelly trekker spesielt frem fire punkter som gjør et kreativt fellesskap så attraktivt og effektivt [^4]:
+Tidligere redaktør og grunnlegger av «The Wire» Kevin Kelly trekker spesielt frem fire punkter som gjør et kreativt fellesskap så attraktivt og effektivt [^5]:
 
 1. Felles anerkjennelse og god innflytelse. Risikable sjanser applauderes og vennlig konkurranse provoserer / inspirerer / stimulerer medlemmene.
 2. Rask og effektiv deling av verktøy og teknikker.
@@ -86,9 +86,9 @@ When buoyed by scenius, you act like a genius
 Merk at det i dette eksempelet er snakk om en fysisk «scenialitet» som et kulturhus, Silicon Valley, Camp 4 eller lignende kreative scener, men man kan også finne det på nettet eller skape det selv.
 
 ## Søk likesinnede
-Musikk-journalisten Sheryl Garratt skriver i et blogginnlegg på «Creative minds» at det å oppsøke en kreativ arena med likesinnede er oppskriften til å maksimere egen kreativitet [^5].
+Musikk-journalisten Sheryl Garratt skriver i et blogginnlegg på «Creative minds» at det å oppsøke en kreativ arena med likesinnede er oppskriften til å maksimere egen kreativitet [^6].
 
-Dersom du ikke har et slikt fellesskap i nærheten anbefaler både Garratt og Kleon at du går online for å finne en eller skape den selv [^4] [^5].
+Dersom du ikke har et slikt fellesskap i nærheten anbefaler både Garratt og Kleon at du går online for å finne en eller skape den selv [^6] [^4].
 
 ````quote {author="Austin Kleon"}
 The internet is basically a bunch of sceniuses connected together, divorced from physical geography [...] Online, everyone has the ability to contribute something.  
@@ -98,7 +98,7 @@ The internet is basically a bunch of sceniuses connected together, divorced from
 Seek likeminded souls. Encourage other creatives. Reach out, and find your tribe.  
 ````
 
-Hvis en kreativ scene skulle være i ferd med å etablere seg påpeker Kelly viktigheten av å ikke kvele det [^4]. Ikke stopp det, ikke formaliser det eller overvåk det. Tennes gnisten, så blås heller på den. La det være ineffektivt, tullete, på kanten, marginalt og i bakevja. Beskytt det og hedre det.
+Hvis en kreativ scene skulle være i ferd med å etablere seg påpeker Kelly viktigheten av å ikke kvele det [^5]. Ikke stopp det, ikke formaliser det eller overvåk det. Tennes gnisten, så blås heller på den. La det være ineffektivt, tullete, på kanten, marginalt og i bakevja. Beskytt det og hedre det.
 
 ## Mine grublerier: Er det forskjell på digital og fysisk scenialitet?
 Kleon og Garratt anbefaler å gå online om man ikke har noen fysiske kreative arenaer i nærheten, men vil det være like effektivt? Kan blogger, forum og sosiale medier skape samme dynamikk som et fysisk møtested?
@@ -125,6 +125,7 @@ Dessuten er jeg av den oppfatning at kreativiteten, undringen og grublingen er s
 
 [^1]: [Brian Eno on Scenius]({{< relref "/kilder/#e.sceniuseno">}}) 0:00
 [^2]: [Brian Eno on Scenius]({{< relref "/kilder/#e.sceniuseno">}}) 0:55
-[^3]: [Show your work]({{< relref "/kilder/#e.kleonshowwork">}}) s. 11.
-[^4]: [Scenius, or Communal Genius]({{< relref "/kilder/#e.sceniuskelly">}})
-[^5]: [Scenius: why creatives are stronger together]({{< relref "/kilder/#e.sceniussheryl">}}) s. 11.
+[^3]: [Walter Isaacson, Leonardo]
+[^4]: [Show your work]({{< relref "/kilder/#e.kleonshowwork">}}) s. 11, 11, 12
+[^5]: [Scenius, or Communal Genius]({{< relref "/kilder/#e.sceniuskelly">}})
+[^6]: [Scenius: why creatives are stronger together]({{< relref "/kilder/#e.sceniussheryl">}})

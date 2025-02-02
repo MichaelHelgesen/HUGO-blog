@@ -1,0 +1,11 @@
+<p class="poem">
+{{- with .Inner -}}
+    {{- $inner := split . "\n" -}}
+    {{ $lines := $inner | len }}
+    {{ range $i, $line := $inner}}
+        {{ if and (not (eq $i 0)) (not (gt $i (sub $lines 2))) }}
+        {{$line}}<br />
+    {{end}}
+    {{ end }}
+{{- end -}}
+</p>
