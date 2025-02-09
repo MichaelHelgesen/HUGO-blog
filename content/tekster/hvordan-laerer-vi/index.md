@@ -20,6 +20,10 @@ Knowledge must grow in his mind if learning is to take place.
 Det er noe jeg lurer på angående dette. Er det slik at dette også er viktig for kreativiteten? I så fall er dette smart å se i sammenheng med en <a href="#">annen bloggpost jeg har skrevet</a>.
 {{</tanker>}}
 
+{{<apropos>}}
+I en samtale mellom John Cleese og Ian McGilchrist om humor kommer de inn på dette temaet. McGilchrist sammenligner det med å ha et filter i hjernen. Konsentrerer vi oss for hardt om å huske noe så kan vi bli stående fast i noen neuron-baner. Filteret er ikke stort eller vidt nok. Oakley refererer til fenomenet som «Einstellung».
+{{</apropos>}}
+
 Adler mener med dette at læring krever tenkning, en handling han definerer som «bruken av intellektet (hjernen) for å oppnå kunnskap og forståelse».
 
 Han går videre til å skille mellom to typer læring:
@@ -52,6 +56,14 @@ Heldigvis kan vi flytte informasjon fra kortidshukommelsen til langtidshukommels
 
 To av våre viktigste minnesystemer er altså avgjørende for grundig og effektiv læring. For maksimal utnyttelse av disse lagringsplassene, har hjernen utviklet spesielle måter å operere på.
 
+
+### Kunnskapssamlinger
+Lærdom kan også lagres som det Oakley kaller «chunks» eller kunnskapssamlinger på norsk.
+
+«Chunks» beskrives i «A mind for numbers» som konseptuelle informasjonssamlinger eller deler av informasjon som er bundet sammen gjennom mening. Litt som en zip-fil på en datamaskin. Det er mentale broer mellom info bundet med mening. Tenk på det å kle på seg eller rygge en bil. Alle operasjonene er samlet i delen "kle på seg" og "rygge med bilen". Slike informasjonssamlinger gjør at hjernen opererer mer effektivt, i og med at man kondenserer flere ting i en pakke / konsept. Så i stedet for å fylle arbeidsminnet med fire deler, kan vi bruke èn plass på en samling som inneholder fire eller flere deler med informasjon. Man henter frem et konsept som består av mange deler. Men å utforme en slik samling krever at man forstår alle delene. Det hjelper ikke med memorering. Det krever forståelse. 
+
+Å fylle hjernen med slike «chunks» er viktig for kreativiteten og for intuisjonen. Evnen til å koble sammen informasjonsdeler på uvanlige måter kan skape gjennombrudd og innovasjon. Så jo større «chunked» mentalt bibliotek, jo enklere kan du løse problemer. Det kan kanskje føles overveldende å skulle lære så mye, men serendipitet spiller en viktig rolle. Lykken favoriserer den som står på og prøver. Så, finnes det noen tips og råd?
+
 ## Diffus- og fokusmodus
 Oakley forklarer i sin bok at hjernen benytter to ulike moduser når det kommer til tenkning. Hun kaller dem fokus- og diffusmodus. 
 
@@ -59,7 +71,7 @@ Førstnevnte modus slår inn når vi konsentrerer oss intenst om noe, og da beny
 
 Diffusmodus derimot er læring som foregår når man egentlig ikke går inn for det, altså mens man gjør helt andre ting som å trene, dusje eller å sove. Forfatter og professor Olav Schewe, som også har skrevet bok om læring sammen med Oakley, omtaler den samme prosessen som «avslappet modus». Det er her man ofte opplever "a-ha-øyeblikk", for denne modusen bruker en mye større del av hjernen.
 
-Oakley bruker spillet pinball som en metafor på hjernens ulike operasjoner. I fokusmodus er det som om ballen spretter mellom nevroner som står tett på hverandre, og ballen har lett for å rulle og sprette i tidligere kjente baner. Det vil si at hjernen fort og effektivt finner frem til konsepter og informasjon du trenger, men det er vanskelig å tenke nytt og å være kreativ.
+Oakley bruker spillet pinball som en metafor på disse to operasjonene. I fokusmodus er det som om ballen spretter mellom nevroner som står tett på hverandre, og ballen har lett for å rulle og sprette i tidligere kjente baner. Det vil si at hjernen fort og effektivt finner frem til konsepter og informasjon du trenger, men det er vanskelig å tenke nytt og å være kreativ.
 
 I diffusmodus er nevronene lenger fra hverandre, og kula ruller lenger og spretter mer, over et større område. Denne modusen fungerer bra når du skal lære noe helt nytt, hvor man har behov for å "zoome litt ut" og se et større og mer generelt bilde. Å prøve å få et overblikk. Her kan det dannes nye og spennende baner mellom nevroner.
 
@@ -72,22 +84,22 @@ Men for å kunne skape overraskende koblinger må man selvsagt ha noe å jobbe m
 ## Metoder som forsterker læring
 Det finnes mange metoder vi kan ta i bruk for å både lære bedre og mer effektivt. Her nevnes kort noen av metodene som omtales av Oakley og Schewe.
 
-- Øvelse: Øvelse gjør mester. Skal man lære seg noe må man også øve.
-- Repetisjon: Øvelse over tid gir svært god effekt. Repetisjon over flere dager er langt mer effektivt enn mange repetisjoner på en og samme dag.
-- Memorisering: Å lære noe utenat gjør at du husker det fortere og bruker mindre energi for å hente det frem.
-- Målbevisst øvelse («deliberate practice»): Å lage en plan og definere mål er en effektiv måte å lære på. 
-- Pomodoro: Henviser til bruken av en klokke for å tvinge oss selv til å jobbe i fokusert- og diffusmodus. Man jobber aktivt og målbevisst i 15-20 minutter, før man kobler helt av og gjør noe avslappende i 10-15 minutter. Dette gjentas flere ganger.
+- **Øvelse**: Øvelse gjør mester heter det. Skal man lære seg noe må man sette av tid til trening og øving.
+- Repetisjon: Øvelse over tid gir svært god effekt, og da helst over flere dager. Repetisjon over 20 dager er langt mer effektivt enn å repetere noe 20 ganger på en og samme dag.
+- **Memorisering**: Å lære noe utenat gjør oss mer effektive. Vi husker det fortere og bruker dermed mindre energi for å hente det frem.
+- Målbevisst øvelse («deliberate practice»): Å lage en plan og definere mål er en effektiv måte å lære på. Da bruker vi mindre energi og tid på å finne ut av hva vi skal lære og øve på. 
+- Pomodoro: Henviser til bruken av en klokke for å tvinge oss selv til å bytte mellom fokusert- og diffusmodus. Man starter med å jobbe aktivt og målbevisst i 15-20 minutter, før man kobler helt av og gjør noe avslappende i 10-15 minutter. Dette gjentas flere ganger.
 - Trening: Å trene viser seg å være et svært viktig element i læring. Det er som gjødsel for hjernen.
-- Gjenfortelle: Å gjenfortelle det vi har prøvd å lære oss viser seg å være en meget effektiv måte å befeste kunnskap på. Om man klarer å gjenfortelle til andre, og gjerne på et annet sted enn der læringen foregikk, er effekten enda større.
-- Tester og prøver: Test deg selv jevnlig for å solidifisere læringen.
+- Gjenfortelle: Å gjenfortelle det vi prøver å lære oss viser seg å være en meget effektiv måte å befeste kunnskap på. Om man kan forklare andre slik at de også forstår er effekten enda større. Også om man klarer å gjenfortelle et annet sted enn der læringen foregår.
+- Tester og prøver: Test deg selv jevnlig for å solidifisere kunnskapen.
 - Søvn: En av de viktigste verktøyene for læring. Hjernen rydder, rensker og kobler nevroner mens vi sover. For ekstra god effekt kan vi gå gjennom noe vi ønsker å lære rett før vi legger oss. 
-- Rom og anledning til å tenke: Skap et rom og finn tid til læring. Sett av tid, og finn et sted uten forstyrrelser.
-- Forhåndspåvirkning (priming): Før vi skal lære noe nytt kan det være lurt å først gå gjennom materialet på en overfladisk måte. Det er med på å sette i gang hjernen, slik at den ligger litt i forkant.
-- Gå turer: Ta pauser og gå ut i luften er svært effektivt. Spesielt om vi står fast på et problem. Diffusmodus kan få oss tilbake på rett kjøl, eller finne løsningen for oss.
-- Power nap: Et kjapp lur på 5-15 minutter kan gjøre underverker og er svært effektivt for å få i gang diffusmodus.
-- Skrive for hånd: Viser seg å være en av de beste metodene for å befeste kunnskap. Bruk egne ord, og la kunnskapen bli en del av muskelminnet i tillegg til langtidsminnet.
-- Spør om hjelp om du har prøvd lenge uten hell: Det stopper for alle i ny og ne. Spør om hjelp. Sparer deg mye tid og frustrasjon.
-- Øv på ulike problem med ulike teknikker: De fleste problem kan løses med ulike teknikker. Jo flere måter du klarer å løse et problem på, jo mer kunnskapsrik og effektiv blir du.
+- Rom og anledning til å tenke: Skap et rom og finn en anledning til læring. Sett av tid, og finn et sted uten forstyrrelser.
+- Forhåndspåvirkning (priming): Før vi skal lære noe nytt kan det være lurt å først gå gjennom materialet på en overfladisk måte. Skumles, se på bilder, les titler, se høydepunkter i en video og lignende. Det er med på å sette i gang hjernen, slik at den er mer forberedt og kan allerede ha startet å koble nevroner sammen.
+- Gå turer: Å ta pauser og gå ut i luften er svært effektivt. Spesielt om vi står fast på et problem. Diffusmodus kan få oss tilbake på rett kjøl, eller finne løsningen for oss.
+- «Power-nap»: Et kjapp lur på 5-15 minutter kan gjøre underverker, og er svært effektivt for å få i gang diffusmodus.
+- Skrive for hånd: Å skrive med penn og papir viser seg å være en av de beste metodene for å befeste kunnskap. Bruk egne ord, og la kunnskapen bli en del av muskelminnet i tillegg til langtidsminnet.
+- Spør om hjelp om du har prøvd lenge uten hell: Det stopper for alle i ny og ne. Spør om hjelp. Det kan spare deg mye tid og unødvendig frustrasjon.
+- Øv på ulike problem med ulike teknikker: De fleste problem kan løses på mange måter. Jo flere teknikker du kan, jo mer kunnskapsrik og effektiv blir du.
 - Lukk øynene for bedre konsentrasjon: Å lukke øynene kan hjelpe oss å komme ut at et spor vi har satt oss fast i, og kan midlertidig skru på diffusmodus.
 - Blunke med øynene for å reevaluere / komme ut av «einstellung»: Sitter man fast i et spor viser det seg at bare det å blunke med øynene også kan hjelpe.
 
@@ -107,8 +119,8 @@ På samme måte som at det finnes mange metoder for læring, finnes det også ma
 - Forsterke feil prosesser ved ikke å dobbelsjekke underveis: Det kan være en risiko å ikke lære sammens med andre eller å inkludere andre på en eller annen måte. Man kan begi seg på feil spor, og holde seg der lenge før man lærer å rette seg inn. 
 - Overlæring (samme om igjen, men bra for f.eks. instrumenter og sport): Overlæring hører til for eksempel sport og instrumenter, hvor man kaller det prenting. Men for andre ting er det viktig å huske på å utfordre seg selv, og ikke lese eller lære noe so blir for lett eller som er gjentagelser. Adler skriver at man alltid bør lese en tekst som utfordrer en, ellers er det omtrent bortkastet.
 
-## Å lære er en reise
-Læring og mestring er en endeløs vei skriver Leonard i «Mastery». Selv om læring og mestring er tilgjengelig for de fleste, er det mange som mangler kart, i tillegg til en verden som motarbeider en. Det er derfor viktig at man lærerer seg å elske prosessen å lære fremfor målet / produkt. Han fremstiller veien mot mestring slik:
+## Å lære er en endeløs reise
+Veien mot mestring er endeløs vei skriver Leonard i «Mastery». Selv om læring og mestring er tilgjengelig for de fleste, er det mange som mangler kart, i tillegg til en verden som motarbeider en. Det er derfor viktig at man lærerer seg å elske prosessen å lære fremfor målet / produkt. Han fremstiller veien mot mestring slik:
 
 ---
 
@@ -147,17 +159,8 @@ Dette, sammens med teknikkene beskrevet over burde gi et meget godt grunnlag for
 
 --
 
-Lærdom kan også lagres som det Oakley kaller «chunks» eller kunnskapssamlinger på norsk.
-
-
-## Konsepter
-
-«Chunks» beskrives i «A mind for numbers» som konseptuelle informasjonssamlinger eller deler av informasjon som er bundet sammen gjennom mening. Litt som en zip-fil på en datamaskin. Det er mentale broer mellom info bundet med mening. Tenk på det å kle på seg eller rygge en bil. Alle operasjonene er samlet i delen "kle på seg" og "rygge med bilen". Slike informasjonssamlinger gjør at hjernen opererer mer effektivt, i og med at man kondenserer flere ting i en pakke / konsept. Så i stedet for å fylle arbeidsminnet med fire deler, kan vi bruke èn plass på en samling som inneholder fire eller flere deler med informasjon. Man henter frem et konsept som består av mange deler. Men å utforme en slik samling krever at man forstår alle delene. Det hjelper ikke med memorering. Det krever forståelse. 
-
-Å fylle hjernen med slike «chunks» er viktig for kreativiteten og for intuisjonen. Evnen til å koble sammen informasjonsdeler på uvanlige måter kan skape gjennombrudd og innovasjon. Så jo større «chunked» mentalt bibliotek, jo enklere kan du løse problemer. Det kan kanskje føles overveldende å skulle lære så mye, men serendipitet spiller en viktig rolle. Lykken favoriserer den som står på og prøver. Så, finnes det noen tips og råd?
 
 --
-I en samtale mellom John Cleese og Ian McGilchrist om humor kommer de inn på dette temaet. McGilchrist sammenligner det med å ha et filter i hjernen. Konsentrerer vi oss for hardt om å huske noe så kan vi bli stående fast i noen neuron-baner. Filteret er ikke stort eller vidt nok. Oakley refererer til fenomenet som «Einstellung».
 
 Fokus- og diffusmodus er knyttet til våre to hjernehalvdeler som ser ut til å ha ulike funksjoner. Venstre er assosiert med logisk, konkret og fokusert oppmerksomhet, mens høyre ser det større bildet, scanner omgivelser, interakterer med mennesker og prosesserer følelser. Men begge halvdelene er alltid i bruk, akkurat som våre to største minnesystemer.
 
