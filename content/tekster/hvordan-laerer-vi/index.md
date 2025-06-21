@@ -26,25 +26,27 @@ I en samtale mellom John Cleese og Ian McGilchrist om humor kommer de inn på de
 
 Adler mener med dette at læring krever tenkning, en handling han definerer som «bruken av intellektet (hjernen) for å oppnå kunnskap og forståelse».
 
+(Dette er interessant med tanke på KI, og fenomenet "skyggelæring" som beskrives i VG-artikkel)
+
 Han går videre til å skille mellom to typer læring:
 - Å fremskaffe informasjon (En bil trenger bensin for å kjøre).
 - Å forstå noe man tidligere ikke hadde grep om (Bensin får en bil til å kjøre fordi...).
 
-Den første varianten er å vite eller å huske at noe er tilfelle, mens den andre typen innebærer kunnskap om _hvorfor_ noe er tilfelle, altså noe man kan forklare. Har du bare fylt opp minnet eller oppnådd innsikt?
+Den første varianten er å vite eller å huske at noe er tilfelle, mens den andre typen innebærer kunnskap om _hvorfor_ noe er tilfelle, altså noe man kan forklare. Har du bare fylt opp minnet med informsasjon eller oppnådd innsikt?
 
 Adler forklarer at kunnskap selvsagt er basert på informasjon, men poengterer viktigheten av å ikke si seg tilfreds med kun overfladisk «fakta». Informasjon er altså ikke det samme som viten, mener han. Men uansett hvor i lærerløpet vi måtte befinne oss er det en ting som er sikkert; man må bruke hodet. 
 
-Så hva skjer egentlig, rent konkret, når vi setter oss fore å memorere noe, eller å «tenke oss» til innsikt?
+Så hva skjer egentlig der oppe i topplokket, rent konkret, når vi setter oss fore å memorere noe, eller å «tenke oss» til innsikt?
 
 ## Koblinger av hjerneceller
 I følge Barbara Oakley, en professor i... og en av de fremste ekspertene på læring, er det å tilegne seg ny kunnskap det samme som å opprette nye koblinger mellom hjerneceller. 
 
 Vi mennesker har millioner av nerveceller i hjernen som kalles nevroner. Disse kan danne forbindelser seg i mellom, såkalte synapser. Og i disse forbindene sendes det signaler mellom nevronene. Den delen av cellen som tar imot informasjonen kalles dendritter, og fra dendrittene sendes informasjonen videre gjennom aksiomet, og til slutt over til neste celle gjennom en av synapsene.
 
-Å lære er rett og slett å lage nye sammensetninger av nevroner; å danne et nytt mønster i hjernen. Enten så oppretter vi nye koblinger mellom informasjon og konsepter vi allerede kjenner til og har memorert, eller så oppretter vi en fullstendig ny bane for å lagre et nytt konsept. I så tilfelle er koblingene ofte skjøre. Repetisjon er derfor et essensielt verktøy for at ny kunnskap ikke glemmes, men lagres i langtidsminnet, et annet viktig konsept i læring.
+Å lære er rett og slett å lage nye sammensetninger av nevroner; å danne et nytt mønster i hjernen. Enten så oppretter vi nye koblinger mellom informasjon og konsepter vi allerede kjenner til og har memorert (se noe i nytt lys eller se sammenhenger eller nye relasjoner), eller så oppretter vi en fullstendig ny bane for å lagre et nytt konsept. I så tilfelle er koblingene ofte skjøre. Repetisjon er derfor et essensielt verktøy for at ny kunnskap ikke glemmes, men lagres i langtidsminnet, et annet viktig konsept i læring.
 
 ## Korttids- og langtidshukommelse
-For å dra nytte av kunnskapen og informasjonen vi tilegner oss må vi ha evnen til å både lagre den og å hente den frem når vi trenger den. Derfor er vi utstyrt med henholdsvis langtids- og korttidshukommelse. Sistnevnte kalles også for arbeidsminnet, og er en meget begrenset og midlertidig lagringsplass som benyttes når vi konsentrerer oss om noe, som for eksempel å forstå noe som er nytt for oss, å løse et problem eller å repetere et telefonnummer vi nettopp hørte.
+For å dra nytte av kunnskapen og informasjonen vi tilegner oss, må vi ha evnen til å både lagre den og å hente den frem når vi trenger den. Derfor er vi utstyrt med henholdsvis langtids- og korttidshukommelse. Sistnevnte kalles også for arbeidsminnet, og er en meget begrenset og midlertidig lagringsplass som benyttes når vi konsentrerer oss om noe, som for eksempel å forstå noe som er nytt for oss, å løse et problem eller å repetere et telefonnummer vi nettopp hørte.
 
 I følge Oakley rommer kortidshukomelsen kun fire deler med informasjon. Når vi fokuserer kan vi forestille oss at en blekksprut med fire armer har inntatt denne plassen. Herfra strekker den armene inn i hjernen for å hente frem kunnskap fra langtidsminnet, og kobler sammen ulike nevroner som inneholder ideer og konsepter vi allerede kjenner til, i søken etter en løsning på problemet vi jobber med. Finner den ikke noe, må vi konsentrere oss ekstra mye for å forstå noe som er helt nytt for oss. 
 
@@ -54,15 +56,16 @@ Heldigvis kan vi flytte informasjon fra kortidshukommelsen til langtidshukommels
 
 Å gjenta ny læring 20 ganger på rad i løpet av en dag er langt mindre effektivt enn å repetere det over 20 dager i strekk. Man må jenvlig hente frem fra minnet nye ting man lærer, ellers klarer man ikke å finne det igjen; vi må forsterke de nye synapsene som dannes mellom nevronene.
 
-To av våre viktigste minnesystemer er altså avgjørende for grundig og effektiv læring. For maksimal utnyttelse av disse lagringsplassene, har hjernen utviklet spesielle måter å operere på.
-
-
 ### Kunnskapssamlinger
-Lærdom kan også lagres som det Oakley kaller «chunks» eller kunnskapssamlinger på norsk.
+Lærdom kan også lagres som det Oakley kaller «chunks» eller kunnskapssamlinger på norsk. En slags komprimert samling av kunnskap som gjør oss mer effektive. Litt som en zip-fil på en datamaskin.
 
-«Chunks» beskrives i «A mind for numbers» som konseptuelle informasjonssamlinger eller deler av informasjon som er bundet sammen gjennom mening. Litt som en zip-fil på en datamaskin. Det er mentale broer mellom info bundet med mening. Tenk på det å kle på seg eller rygge en bil. Alle operasjonene er samlet i delen "kle på seg" og "rygge med bilen". Slike informasjonssamlinger gjør at hjernen opererer mer effektivt, i og med at man kondenserer flere ting i en pakke / konsept. Så i stedet for å fylle arbeidsminnet med fire deler, kan vi bruke èn plass på en samling som inneholder fire eller flere deler med informasjon. Man henter frem et konsept som består av mange deler. Men å utforme en slik samling krever at man forstår alle delene. Det hjelper ikke med memorering. Det krever forståelse. 
+«Chunks» beskrives i «A mind for numbers» som konseptuelle samlinger av informasjon eller deler av informasjon som er bundet sammen gjennom mening. For eksempel konseptet å pusse tennene eller å rygge en bil. Førstnevnte består av å finne frem tannbørsten, deretter tannkremen, klemme ut tannkrem på tannbørsten, for deretter å skru på vannet, dyppe tannbørsten og børste overalt i munnen. Dette kan vi gjøre nesten uten å tenke oss om. Vi trenger ikke å fylle arbeidsminnet med alle disse ulike delene, fordi alle operasjonene er samlet i delen "pusse tenner" eller "rygge med bilen". 
 
-Å fylle hjernen med slike «chunks» er viktig for kreativiteten og for intuisjonen. Evnen til å koble sammen informasjonsdeler på uvanlige måter kan skape gjennombrudd og innovasjon. Så jo større «chunked» mentalt bibliotek, jo enklere kan du løse problemer. Det kan kanskje føles overveldende å skulle lære så mye, men serendipitet spiller en viktig rolle. Lykken favoriserer den som står på og prøver. Så, finnes det noen tips og råd?
+Slike informasjonssamlinger gjør at hjernen opererer mer effektivt, i og med at man kondenserer flere ting i en pakke, hvor alt er bundet sammen. Så i stedet for å fylle arbeidsminnet med fire deler, kan vi bruke èn plass på en samling som inneholder fire eller flere deler med informasjon. Man henter frem et konsept som består av mange deler. Men å utforme en slik samling krever at man forstår alle delene. Det hjelper ikke med memorering. Det krever forståelse. 
+
+Å fylle hjernen med slike «chunks» eller kunnskapssamlinger er også viktig for kreativiteten, og for intuisjonen. Evnen til å koble sammen konsepter på uvanlige måter kan skape gjennombrudd og innovasjon. Så jo større «chunked» mentalt bibliotek, jo enklere kan du løse problemer. Det kan kanskje føles overveldende å skulle lære så mye, men serendipitet spiller en viktig rolle. Lykken favoriserer den som står på og prøver.
+
+Våre minnesystemer er altså avgjørende for grundig og effektiv læring. For maksimal utnyttelse av disse lagringsplassene, har hjernen utviklet spesielle måter å operere på.
 
 ## Diffus- og fokusmodus
 Oakley forklarer i sin bok at hjernen benytter to ulike moduser når det kommer til tenkning. Hun kaller dem fokus- og diffusmodus. 
@@ -80,6 +83,8 @@ Hjernen bytter jevnlig mellom disse modusene hele tiden, men Oakley anbefaler os
 {{< youtube W3NzuVKA7OLdP52V >}}
 
 Men for å kunne skape overraskende koblinger må man selvsagt ha noe å jobbe med. Så jo mer kunnskap vi har, jo mer spennende tanker kan vi tenke, og mer kreative kan vi bli. Finnes det da noen tips og triks for læring? 
+
+(Hva da med KI her?)
 
 ## Metoder som forsterker læring
 Det finnes mange metoder vi kan ta i bruk for å både lære bedre og mer effektivt. Her nevnes kort noen av metodene som omtales av Oakley og Schewe.
@@ -113,14 +118,16 @@ På samme måte som at det finnes mange metoder for læring, finnes det også ma
 - For mye fokus eller diffusmodus: Man bør prøve å ha en jevn fordeling av modusene. For mye fokus kan tappe oss for energi og hindre oss i å komme videre. For mye diffusmodus kan hindre oss i å skape fremgang.
 - Gjøre uten å forstå: Å få gjort noe uten å forstå hvorfor eller hvordan er ikke å lære. Forstår man ikke konseptet eller mekanikkene bak er det vanskelig å ta det i bruk. 
 - Lite søvn: En annen hovedårsak til dårlig læring og konsentrasjon. Hjernen bruker søvn for å "rydde" og å solidifisere kunnskap. Så det er ikke noe å kjimse av. 
-- For mye stimuli: 
+- For mye stimuli: Å lære med TV-en på, musikk på ørene, en youTube-video i hjørnet og så videre gjør det mye vanskeligere å lære. Multitasking gjør at alt blir litt dårligere, selv om det føles effektivt. 
 - Forstyrrelser: Vår tids største utfordring. Vi blir konstant bombardert av meldinger, varslinger, sosiale medier, underholdning og så videre. Man bruker lang tid på å komme tilbake om man mister fokus. Multitasking fungerer ytterst dårlig om man vil lære effektivt. 
-- Illusion of competence / markering, understreking: Å se videoer på Youtube eller å markere tekster gir en illusjon av forståelse. Man tror man forstår det. Hvis man ikke bearbeider det vil man snart oppdage at omtrent ikke noe har festet seg.
+- Illusjon av forståelse (Illusion of competence): Å se videoer på Youtube eller å markere og understreke tekster gir en illusjon av forståelse. Man tror man har lagret kunnskapen og konseptet. Hvis man ikke bearbeider det vil man snart oppdage at omtrent ikke noe har festet seg.
 - Forsterke feil prosesser ved ikke å dobbelsjekke underveis: Det kan være en risiko å ikke lære sammens med andre eller å inkludere andre på en eller annen måte. Man kan begi seg på feil spor, og holde seg der lenge før man lærer å rette seg inn. 
-- Overlæring (samme om igjen, men bra for f.eks. instrumenter og sport): Overlæring hører til for eksempel sport og instrumenter, hvor man kaller det prenting. Men for andre ting er det viktig å huske på å utfordre seg selv, og ikke lese eller lære noe so blir for lett eller som er gjentagelser. Adler skriver at man alltid bør lese en tekst som utfordrer en, ellers er det omtrent bortkastet.
+- Overlæring (samme om igjen, men bra for f.eks. instrumenter og sport): Overlæring hører til for eksempel sport og instrumenter, hvor man kaller det prenting. Men for andre ting er det viktig å huske på å utfordre seg selv, og ikke lese eller lære noe so blir for lett eller som er gjentagelser. Adler skriver for eksempel at man alltid bør lese en tekst som utfordrer en, ellers er det omtrent bortkastet.
+
+Å være klar over hva som hjelper oss og hindrer oss bør gjøre oss mer rustet til effektiv og solid læring. Og det å lære kan være et livslagt prosjekt.
 
 ## Å lære er en endeløs reise
-Veien mot mestring er endeløs vei skriver Leonard i «Mastery». Selv om læring og mestring er tilgjengelig for de fleste, er det mange som mangler kart, i tillegg til en verden som motarbeider en. Det er derfor viktig at man lærerer seg å elske prosessen å lære fremfor målet / produkt. Han fremstiller veien mot mestring slik:
+Veien mot ny innsikt er som oftest lang, og det å lære bør være et livslangt prosjekt.  men det er en ferd de fleste kan begi seg ut på. endeløs vei skriver George Leonard i «Mastery». Men selv om læring og mestring er tilgjengelig for de fleste, er det mange som mangler «kart», i tillegg til at vi har en verden som motarbeider en. Det er derfor viktig at man lærerer seg å elske prosessen å lære fremfor målet / produkt. Han fremstiller veien mot mestring slik:
 
 ---
 
@@ -130,7 +137,7 @@ Mastery is practise, mastery is staying on the path
 ````
 Det fine med dette er at det viser at de med eksepsjonelt talent må jobbe like hardt som de treigere for å oppnå sitt potensiale. Standhaftighet er derfor viktigere enn IQ. Læring fungerer fundamentalt likt for alle, selv om metodene varierer. Og du bør alliere deg med andre likesinnede. 
 
-I følge Leonard er det et sjansespill, i alle fall om man ønsker å mestre noe, å lære alene. Han anbefaler på det sterkeste en til en. Oakley derimot skriver at det å lære på egenhånd er en av de dypeste og mest effektive metodene å tilnærme seg læring på, men påpeker også verdien av mentorer og lærere. De letteste å lure er tross alt oss selv. Søker forklaring må forstå forklaringen, ellers ikke noe forklart. Må lære hvordan andre kilder kan lære oss (Adler s. 15).
+I følge Leonard er det et sjansespill, i alle fall om man ønsker å mestre noe, å lære alene. Han anbefaler på det sterkeste en til en. Oakley derimot skriver at det å lære på egenhånd er en av de dypeste og mest effektive metodene å tilnærme seg læring på, men påpeker også verdien av mentorer og lærere. De letteste å lure er tross alt oss selv, skriver hun. Søker forklaring må forstå forklaringen, ellers ikke noe forklart. Må lære hvordan andre kilder kan lære oss (Adler s. 15).
 
 Både Oakley og Leonard mener samfunnet ikke lenger er basert på læring. Oakley sier i et podcast-intervju at flere land har gått fra god til meget dårlig, og at land som Kina, med mer tradisjonell læring, ligger langt foran. Leonard beskriver også et samfunn som aktivt motarbeider mestring. Og det var i 94, lenge før sosiale medier. Konsumismen, materialisme, underholdning og det konstante jaget etter resultater, gir søken etter «quick fix» og snarveier for penger.
 

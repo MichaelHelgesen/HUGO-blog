@@ -6,7 +6,7 @@
     <title>{{ .Title }}</title>
  <link rel="preload" href="{{ relURL "css/style.css"}}" as="style">
     <link rel="stylesheet" href="{{ relURL "css/style.css"}}">
-    {{ partial "head-imgs-css"}}
+    <!--  {{ partial "head-imgs-css"}} -->
     <meta name="author" content="{{ .Site.Author.name }}">
  {{ with .Params.relcanonical }}
   <link rel="canonical" href="{{ . | relLangURL }}" itemprop="url" />
