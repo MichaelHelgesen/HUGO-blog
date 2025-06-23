@@ -8,7 +8,7 @@ Description: "Jeg fant en praktisk applikasjon som gjør det mulig å ha en ekst
 
 Jeg fikk nylig en Windows-maskin på jobben i forbindelse med læring av C# og .NET. Det ble min fjerde laptop. 
 
-Nå har jeg en med iOS, to med Linux og en med Windows. Jeg liker best å jobbe med nettsiden via kommandolinjen i Linux, og lurte derfor på om det var mulig å koble seg til Linux-maskinen via Windows, slik at jeg slipper å ha så mange maskiner å forholde meg til.
+Nå har jeg en med macOS, to med Linux og en med Windows. Jeg liker best å jobbe med nettsiden via kommandolinjen i Linux, og lurte derfor på om det var mulig å koble seg til Linux-maskinen via Windows, slik at jeg slipper å ha så mange maskiner å forholde meg til.
 
 Det er lenge siden jeg har jobbet i Windows, og først og fremst ble jeg positivt overrasket over PowerShell. Derfra koblet jeg meg til Linux-maskinen via SSH uten problem. Men å kopiere mellom maskinene var litt mer kronglete. 
 

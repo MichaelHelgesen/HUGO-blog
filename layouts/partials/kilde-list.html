@@ -1,5 +1,5 @@
 <ul class="taglist">
-
+    
     {{ $site := .ctx.Site }}
     {{ range .range}}
     {{ $sourceType := "" }}
@@ -13,6 +13,8 @@
     {{ $sourceType = "blogg" }}
     {{ else if eq .data.itemType "videoRecording"}}
     {{ $sourceType = "video" }}
+    {{ else if eq .data.itemType "magazineArticle"}}
+    {{ $sourceType = "magasinartikkel" }}
     {{ end }}
 
     {{ range .data.tags }}
@@ -43,7 +45,7 @@
             {{ else if and (eq (len $creators) (add $index 1) (ne $index 0))}}
             {{ .firstName }} {{ .lastName}}, {{ $date }}:
             {{ else }}
-            {{ .firstName }} {{ .lastName }} og 
+            {{ .firstName }} {{ .lastName }} <span>og</span> 
             {{ end }}
             {{ end }}
             </span>

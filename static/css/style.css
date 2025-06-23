@@ -1180,6 +1180,11 @@ color: var(--accent-color);
     text-transform: capitalize;
 }
 
+
+.taglist__source span {
+    text-transform: lowercase;
+}
+
 .taglist-index  {
     display: flex;
     flex-wrap:wrap;

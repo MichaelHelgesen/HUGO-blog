@@ -27,8 +27,6 @@ I tråd med tankegangen bak «[digital garden](https://maggieappleton.com/garden
 
 Nettsiden er mer som en privat wikipedia, med en god blanding av fakta, antagelser, tanker og ideer, antagelig ispedd noen misforståelser, misoppfatninger og rene feil fra tid til annen. Korriger meg gjerne!
 
-
-
 Til daglig jobber jeg i [Leonberg reklamebyrå](https://www.leonberg.no) i Sarpsborg, men er bosatt i Halden med tre jenter på 12, 16 og 42 år.  
 
 Denne bloggen er laget med [Hugo](https://gohugo.io/), og inneholder ingen sporingsmekanismer. Her er det bare deg og meg.

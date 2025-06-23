@@ -15,23 +15,19 @@ Besides answering the common question, “What are you up to these days?”, tho
 ````
 
 ## Tanker
-Akkurat nå er jeg opptatt av KI og dens påvirkning på oss som mennesker og på samfunnet. Det blir også spennende å se hvordan ting blir med Trump tilbake i presidenstolen. Meta som fjerner moderering og åpner for KI-profiler som kan interaktere og som kan bli en forlengelse av oss selv. Det også. Kan vi tro på noe til slutt? Og YouTube som lager ferdige svar til kommentarfeltet, slik at du slipper å tenke selv... Og hva med markedsføring? The dead internet-teorien ser ut til å komme stadig nærmere. Kanskje kan det få oss til å skifte spor? 
-
-Det jeg er mest bekymret over når KI slippes løs på nettet er hvordan det vil påvirke oss. Med sin hastighet og tilgang på enorm data, og utviklernes kunnskap om menneskenes psyke og hjerne, er jeg spent på resultatene. Spesielt med tanke på syndebukk-fenomenet som virker å ligge i mennesker, og som internett er god på å skape og forsterke, og koblet til massesuggesjon. Vi har sett det mange ganger nå. Og jeg synes det er uheldig at vi bagatelliserer det faktum at de store selskapene får lov til å spesielt utnytte og påvirke spesielt unge sårbare mennesker og samtidig tjene seg styrtrike. Igjen, jeg er på ingen teknofobisk luditt, jeg jobber med teknologi og bruker det og synes det er gøy, men noe av sjarmen er borte. Alt er strømlinjeformet, kjedelig, useriøst, og svært mye unyttig og falskt. Kanskje kan det komme et alternativ? Begynne på nytt? Et nett uten kommersielle aktører, hvor alle har en bruker med bank-ID uten å kunne opprette andre profiler? Man kan ta betalt, for å selge enkle tjenester, eller lagde ting? Hvor alle må lage sin egen nettside?
+Nå for tiden tenker jeg mye på verden, filosofi og spesielt på barna mine. Hva slags samfunn og fremtid er det de går i møte? Jeg må innrømme at jeg er noe pessimistisk. Riktignok er det fint å oppleve verden på nytt etter at jeg tok kontroll over min egen teknologibruk og fikk vridd meg ut av teknologigigantenes grep, men samtidig er det frustrerende. Det er som å stå på utsiden av samfunnet å se det hele forfalle.  
 
 ## Familielivet
-Alle har det etter sigende bra, og jeg forsøker å ha så mye tid sammen som mulig.
+Alle er tilsynelatende friske og fornøyde. Alle jentene er spesielt glade siden de nå har sommerferie.
 
 ## Bøker
-JEg leste flere bøker i julen, og den mest slående var Ekko hvor jeg lærte mer om narsisisme, syndebukk-syndromet og Peter Thiel, en av de rikeste og største i tek eliten som ikke tenker på andre enn seg selv, og ønsker å vinne over døden.
-
-Leste også Mytteriet på Wager, en skikkelig spennende og fascinerende bok om livet på en seilskute på 1700-tallet. Nå leser jeg Master and emisarry.
+Nå leser jeg «Sofies verden», «Filterworld» og biografien «En tankens hærmann» om A. O. Vinje.  
 
 ## Musikk
-Nå for tiden går det mye i klassis og lutt.
+Jeg hører på klassisk, Renaissance, Tobben og Ero i tillegg til 90-tallsfavoritter; det siste tiåret hvor verden fortsatt var optimistisk, fylt med kjærlighet, vennlighet og glede.
 
 ## Prosjekter, jobb og hobbyer
-Ønsker å få ferdig et API om sitater jeg sparer på etter å ha lset en bok. Eller å lære C#. Skrive og lese som vanlig. På jobb er det webutvikling det går i. Spiller litt LOTR når anledningen byr seg.
+DevOps, Kuberneties, serverdrift og Linux opptar mye av fritiden, i tillegg til den vanlige lesingen og skrivingen. Jeg er også opptatt av retten til å eie det man kjøper, retten til å reparere samt retten til å ikke la seg spore og personvern generelt.
 
 ## Mentalt
-Tilfreds stort sett. Prøver å ha en stoisk tilnærming til livet, og leve etter "Amor fati" - elsk sjebnen.
+Jeg prøver etter beste evne å ha en stoisk tilnærming til livet, og leve etter "Amor fati" - elsk sjebnen. Det er ikke alltid så lett. Jeg tenker ikke så mye på meg selv, men er mest bekymret for mine egne barn og den yngre generasjonen.

@@ -8,11 +8,7 @@
     <link rel="stylesheet" href="{{ relURL "css/style.css"}}">
     <!--  {{ partial "head-imgs-css"}} -->
     <meta name="author" content="{{ .Site.Author.name }}">
- {{ with .Params.relcanonical }}
-  <link rel="canonical" href="{{ . | relLangURL }}" itemprop="url" />
-{{ else -}}
   <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
-{{ end -}}   
 {{ template "_internal/opengraph.html" . }}
 {{ if not .Params.images }}
 {{ $site := .Site }}
