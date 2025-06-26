@@ -6,6 +6,8 @@
     {{ $title := .data.title}}
     {{ $sourceTag := "" }}
     {{ $data := . }}
+    {{ $publication := .data.publicationTitle }}
+    {{ $podcastTitle := .data.seriesTitle}}
     {{ $incomingLinks := slice }}
     {{ if eq .data.itemType "book" }}
     {{ $sourceType = "bok" }}
@@ -15,15 +17,19 @@
     {{ $sourceType = "video" }}
     {{ else if eq .data.itemType "magazineArticle"}}
     {{ $sourceType = "magasinartikkel" }}
+    {{ else if eq .data.itemType "webpage"}}
+    {{ $sourceType = "nettside" }}
+    {{ else if eq .data.itemType "podcast"}}
+    {{ $sourceType = "podcast" }}
     {{ end }}
-
     {{ range .data.tags }}
     {{ $sourceTag = .tag }}
     {{ end }}
     {{ if $sourceTag }}
     {{ $date := .data.date }}
+    {{ $date2 := .data.rights }}
     <li id="{{ $sourceTag }}">
-        <span class="taglist__source">{{$sourceType}} |
+        <span class="taglist__source">{{$sourceType}}{{- with .data.websiteTitle -}}, {{.}}{{- end -}}{{- with $publication -}}, {{ . }}{{- end -}}{{- with $podcastTitle -}}, {{ . }}{{- end -}}{{- with .data.episodeNumber -}}&nbsp;#{{ . }}{{- end -}}{{- with .data.issue -}}&nbsp;#{{ . }}{{- end -}}&nbsp;|
             {{ with .data }}
             {{$creators := .creators}}
             {{$firstName := ""}}
@@ -38,12 +44,10 @@
             {{$firstName = .firstName}}
             {{$lastName = .lastName}}
             {{end }}
-            
             {{ if eq (len $creators) 1 }}
-            
-            {{ $firstName }} {{ $lastName }}, {{ $date }}: 
+            {{ $firstName }} {{ $lastName }}, {{ $date }}{{ $date2 }}: 
             {{ else if and (eq (len $creators) (add $index 1) (ne $index 0))}}
-            {{ .firstName }} {{ .lastName}}, {{ $date }}:
+            {{ .firstName }} {{ .lastName}}, {{ $date }}{{ $date2 }}:
             {{ else }}
             {{ .firstName }} {{ .lastName }} <span>og</span> 
             {{ end }}

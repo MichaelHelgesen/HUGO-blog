@@ -9,7 +9,7 @@ draft: false
 ---
 
 
-Mortimer J. Adler skriver i boken «How to read a book» at all læring er en aktiv handling. En lærer kan hjelpe en elev, men det er eleven selv som må utføre læringen.
+Mortimer J. Adler skriver i boken «How to read a book» at all læring er en aktiv handling. En lærer kan guide en student, men det er studenten selv som må utføre læringen. [^1]
 
 ````quote {author="Mortimer J. Adler"} 
 Knowledge must grow in his mind if learning is to take place.
@@ -23,49 +23,49 @@ Det er noe jeg lurer på angående dette. Er det slik at dette også er viktig f
 I en samtale mellom John Cleese og Ian McGilchrist om humor kommer de inn på dette temaet. McGilchrist sammenligner det med å ha et filter i hjernen. Konsentrerer vi oss for hardt om å huske noe så kan vi bli stående fast i noen neuron-baner. Filteret er ikke stort eller vidt nok. Oakley refererer til fenomenet som «Einstellung».
 {{</apropos>}}
 
-Adler mener med dette at læring krever tenkning, en handling han definerer som «bruken av intellektet (hjernen) for å oppnå kunnskap og forståelse».
+Adler mener med dette at læring krever tenkning, en handling han definerer som «bruken av intellektet (hjernen) for å oppnå kunnskap og forståelse». [^2]
 
 (Dette er interessant med tanke på KI, og fenomenet "skyggelæring" som beskrives i VG-artikkel)
 
-Han går videre til å skille mellom to typer læring:
+Han går videre til å skille mellom to typer læring: [^3]
 - Å fremskaffe informasjon (En bil trenger bensin for å kjøre).
 - Å forstå noe man tidligere ikke hadde grep om (Bensin får en bil til å kjøre fordi...).
 
-Den første varianten er å vite eller å huske at noe er tilfelle, mens den andre typen innebærer kunnskap om _hvorfor_ noe er tilfelle, altså noe man kan forklare. Har vi bare fylt opp minnet med informasjon eller oppnådd innsikt?
+Den første varianten er å vite eller å huske at noe er tilfelle, mens den andre typen innebærer kunnskap om _hvorfor_ noe er tilfelle, altså noevi kan forklare. Har vi bare fylt opp minnet med informasjon eller oppnådd innsikt?
 
 Adler forklarer at kunnskap selvsagt er basert på informasjon, men poengterer viktigheten av å ikke si seg tilfreds med kun overfladisk «fakta». Informasjon er altså ikke det samme som viten, mener han. Men uansett hvor i lærerløpet vi måtte befinne oss er det en ting som er sikkert; vi må bruke hodet for å lære. 
 
-Så hva skjer egentlig der oppe i topplokket, rent konkret, når vi prøver å memorere noe eller å «tenke oss» til innsikt? [^1]
+Så hva skjer egentlig der oppe i topplokket, rent konkret, når vi prøver å memorere noe eller å «tenke oss» til innsikt?
 
 ## Koblinger av hjerneceller
-I følge [Barbara Oakley](https://barbaraoakley.com/), en amerikansk professor i ingeniørfag og en av [de fremste ekspertene på læring](https://www.coursera.org/learn/learning-how-to-learn), er det å tilegne seg ny kunnskap det samme som å opprette nye koblinger mellom hjerneceller. 
+I følge [Barbara Oakley](https://barbaraoakley.com/), en amerikansk professor i ingeniørfag og en av [de fremste ekspertene på læring](https://www.coursera.org/learn/learning-how-to-learn), er det å tilegne seg ny kunnskap det samme som å opprette nye koblinger mellom hjerneceller.
 
-Vi mennesker har millioner av nerveceller i hjernen som kalles nevroner. Disse kan danne forbindelser seg i mellom, såkalte synapser. Og i disse forbindelsene sendes det signaler mellom nevronene. Den delen av cellen som tar imot informasjonen kalles dendritter, og fra dendrittene sendes informasjonen videre gjennom aksiomet, og til slutt over til neste celle gjennom en av synapsene.
+Vi mennesker har millioner av nerveceller i hjernen som kalles nevroner. Disse kan danne forbindelser seg i mellom, såkalte synapser. Og i disse forbindelsene sendes det signaler mellom nevronene. Den delen av cellen som tar imot informasjonen kalles dendritter, og fra dendrittene sendes informasjonen videre gjennom aksonet, og til slutt over til neste celle gjennom en av synapsene. [^4]
 
-Å lære er rett og slett å lage nye sammensetninger av nevroner, eller et nytt mønster i hjernen om du vil. Enten så oppretter vi nye koblinger mellom informasjon og konsepter vi allerede kjenner til (tenk på det å se noe i nytt lys eller å oppdage nye sammenhenger eller relasjoner mellom eksisterende kunnskap), eller så oppretter vi en fullstendig ny bane for å lagre et nytt konsept. I siste tilfelle er koblingene ofte tynne og skjøre. Repetisjon er derfor et essensielt verktøy for at ny kunnskap ikke glemmes, men lagres i langtidsminnet som er et annet viktig konsept for læring.
+Å lære er rett og slett å lage nye sammensetninger av nevroner, eller et nytt mønster i hjernen om du vil. [^5] Enten så oppretter vi nye koblinger mellom informasjon og konsepter vi allerede kjenner til (tenk på det å se noe i nytt lys eller å oppdage nye sammenhenger eller relasjoner mellom eksisterende kunnskap), eller så oppretter vi en fullstendig ny bane for å lagre et nytt konsept. I siste tilfelle er koblingene ofte tynne og skjøre. Repetisjon er derfor et essensielt verktøy for at ny kunnskap ikke glemmes, men lagres i langtidsminnet som er et annet viktig konsept for læring.
 
 ## Korttids- og langtidshukommelse
-For å dra nytte av kunnskapen og informasjonen vi tilegner oss, må vi ha evnen til å både lagre den og å hente den frem når vi trenger den. Derfor er vi utstyrt med henholdsvis langtids- og korttidshukommelse. Sistnevnte kalles også for arbeidsminnet, og er en meget begrenset og midlertidig lagringsplass som benyttes når vi konsentrerer oss om noe, som for eksempel å forstå noe som er nytt for oss, å løse et problem eller å repetere et telefonnummer vi nettopp hørte.
+For å dra nytte av kunnskapen og informasjonen vi tilegner oss, må vi ha evnen til å både lagre den og å hente den frem når vi trenger den. Derfor er vi utstyrt med henholdsvis langtids- og korttidshukommelse. Sistnevnte kalles også for arbeidsminnet, og er en meget begrenset og midlertidig lagringsplass som benyttes når vi konsentrerer oss om noe, som for eksempel å prøve å forstå noe som er nytt for oss, å løse et problem eller å repetere et telefonnummer vi nettopp hørte.
 
-I følge Oakley rommer kortidshukomelsen kun fire deler med informasjon. Når vi fokuserer kan vi forestille oss at en blekksprut med fire armer har inntatt denne plassen. Herfra strekker den armene inn i hjernen for å hente frem kunnskap fra langtidsminnet, og kobler sammen ulike nevroner som inneholder ideer og konsepter vi allerede kjenner til, i søken etter en løsning på problemet vi jobber med. Finner den ikke noe, må vi konsentrere oss ekstra mye for å forstå noe som er helt nytt for oss. 
+I følge Oakley rommer kortidshukomelsen kun fire deler med informasjon. [^6] Når vi fokuserer kan vi forestille oss at en blekksprut med fire armer har inntatt denne plassen. Herfra strekker den armene inn i hjernen for å hente frem kunnskap fra langtidsminnet, og kobler sammen ulike nevroner som inneholder ideer og konsepter vi allerede kjenner til, i søken etter en løsning på problemet vi jobber med. Finner den ikke noe, må vi konsentrere oss ekstra mye for å forstå noe som er helt nytt for oss. 
 
 Å fokusere er derfor viktig ved læring, men det krever energi, og det er lett å miste oppmerksomheten spesielt ved stress, forstyrrelser, sinne og redsel. Det er som å sjonglere med fire baller i luften skriver Oakley.
 
 Heldigvis kan vi flytte informasjon fra kortidshukommelsen til langtidshukommelsen for å frigjøre plass og energi i arbeidsminnet. Langtidsminnet har så og si uendelig med lagringsplass, og er stedet vi ønsker å memorere all kunnskap vi opparbeider oss. Men å solidifisere ny kunnskap tar tid og krever repetisjon, noe som er svært viktig for å klare å lagre ideer og konsepter som senere skal kunne hentes frem med fokusert tenkning. Å gjenta ny læring 20 ganger på rad i løpet av én dag er langt mindre effektivt enn å repetere det et par ganger daglig over 20 dager. Man må jenvlig hente frem fra minnet nye ting man lærer, ellers klarer man ikke å finne det igjen. Vi må forsterke de nye synapsene som dannes mellom nevronene.
 
 ### Kunnskapssamlinger
-Lærdom kan også lagres som det Oakley kaller «chunks» eller kunnskapssamlinger på norsk. En slags komprimert samling av kunnskap som gjør oss mer effektive. Litt som en zip-fil på en datamaskin.
+Lærdom kan også lagres som det Oakley kaller «chunks» eller kunnskapssamlinger på norsk. En slags komprimert samling av kunnskap som gjør oss mer effektive. Litt som en zip-fil på en datamaskin. [^7]
 
 «Chunks» beskrives i «A mind for numbers» som konseptuelle samlinger av informasjon eller deler av informasjon som er bundet sammen gjennom mening. For eksempel konseptet å pusse tennene eller å rygge en bil. Førstnevnte består av stegene å finne frem tannbørsten, deretter tannkremen, klemme ut tannkrem på tannbørsten, for deretter å skru på vannet, dyppe tannbørsten i vannet og børste overalt i munnen. Å rygge består av først å justere og se i speilet, se om bilen står i revers, slippe bremsen og deretter tråkke på gassen, og så videre. Men dette kan vi gjøre nesten uten å tenke oss om. Vi trenger ikke å fylle arbeidsminnet med alle disse ulike delene, fordi alle operasjonene er samlet i konseptet "pusse tenner" eller "rygge med bilen". 
 
 Slike informasjonssamlinger gjør at hjernen opererer mer effektivt, i og med at man kondenserer flere ting i en pakke, hvor alt er bundet sammen. Så i stedet for å fylle arbeidsminnet med fire deler, kan vi bruke èn plass på en samling som inneholder flere deler med informasjon. Man henter frem et konsept som består av mange deler. Men å utforme en slik samling krever at man forstår alle delene. Det hjelper ikke med memorering. Det krever forståelse og repetisjon, som nevnt over.
 
-Å fylle hjernen med slike «chunks» eller kunnskapssamlinger er også viktig for kreativiteten, og for intuisjonen. Evnen til å koble sammen konsepter på uvanlige måter kan skape gjennombrudd og innovasjon. Så jo større «chunked» mentalt bibliotek vi har, jo enklere kan vi løse problemer. Det kan kanskje føles overveldende å skulle lære så mye, men serendipitet spiller en viktig rolle. Lykken favoriserer den som står på og prøver.
+Å fylle hjernen med slike «chunks» eller kunnskapssamlinger er også viktig for kreativiteten, og for intuisjonen. [^8] Evnen til å koble sammen konsepter på uvanlige måter kan skape gjennombrudd og innovasjon. Så jo større «chunked» mentalt bibliotek vi har, jo enklere kan vi løse problemer. Det kan kanskje føles overveldende å skulle lære så mye, men serendipitet spiller en viktig rolle. Lykken favoriserer den som står på og prøver.
 
 Våre minnesystemer er altså avgjørende for grundig og effektiv læring. Hjernen har derfor utviklet spesielle måter å operere på, for maksimal utnyttelse av disse lagringsplassene.
 
 ## Diffus- og fokusmodus
-Oakley forklarer i sin bok at hjernen benytter to ulike moduser når det kommer til tenkning. Hun kaller dem fokus- og diffusmodus. 
+Oakley forklarer i sin bok at hjernen benytter to ulike moduser når det kommer til tenkning. Hun kaller dem fokus- og diffusmodus. [^9] 
 
 Førstnevnte slår inn når vi konsentrerer oss intenst om noe. Da benyttes en liten del av hjernen. Denne modusen fungerer derfor best med konsepter vi allerede kjenner til, som for eksempel gangetabellen eller grammatikk.
 
@@ -173,4 +173,12 @@ Dette, sammens med teknikkene beskrevet over burde gi et meget godt grunnlag for
 Fokus- og diffusmodus er knyttet til våre to hjernehalvdeler som ser ut til å ha ulike funksjoner. Venstre er assosiert med logisk, konkret og fokusert oppmerksomhet, mens høyre ser det større bildet, scanner omgivelser, interakterer med mennesker og prosesserer følelser. Men begge halvdelene er alltid i bruk, akkurat som våre to største minnesystemer.
 
 
-[^1]: [Brian Eno on Scenius]({{< relref "/kilder/#e.sceniuseno">}}) 0:00
+[^1]: [How to read a book]({{< relref "/kilder/#e.adlerbook">}}) s. 12
+[^2]: [How to read a book]({{< relref "/kilder/#e.adlerbook">}}) s. 13
+[^3]: [How to read a book]({{< relref "/kilder/#e.adlerbook">}}) s. 11
+[^4]: [SNL: Nerveceller]({{< relref "/kilder/#e.snl.nerveceller">}})
+[^5]: [TKP: Learning How to Learn]({{< relref "/kilder/#e.tkp.bo">}}) 00:16:48
+[^6]: [A mind for numbers]({{< relref "/kilder/#e.numbersoakley">}}) s. 42
+[^7]: [A mind for numbers]({{< relref "/kilder/#e.numbersoakley">}}) s. 52
+[^8]: [A mind for numbers]({{< relref "/kilder/#e.numbersoakley">}}) s. 66
+[^9]: [A mind for numbers]({{< relref "/kilder/#e.numbersoakley">}}) s. 11
