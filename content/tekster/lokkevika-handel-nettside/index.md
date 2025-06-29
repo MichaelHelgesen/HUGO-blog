@@ -5,6 +5,8 @@ tekstemner: [nettside, webdesign, hugo, strapi]
 listeintro: "Løkkevika Handel har endelig fått en egen nettside."
 Description: "Løkkevika Handel har endelig fått en egen nettside."
 ---
+{{< imgh src="lokkevika_web1.png" alt="En illustrasjon som viser en strekperson gå i små steg fra middelmådig til god." holder="LQIP" hint="drawing" figcaption="Å bevege seg fra middelmådig til god tar lang tid, men kan oppnås med små skritt av gangen." >}}
+
 Løkkevika Handel er en koselig liten kafé i Løkkevika som fokuserer på kortreist og hjemmelagde produkter med surdeigsbrød og nydelig kaffe. Siden oppstarten i XXXX har de stort sett operert på Facebook, men hatt et ønske om egne nettsider.
 
 Det synes jeg de burde ha, så jeg tilbø meg å hjelpe dem. Jeg benyttet anedningen til å prøve ut tjenester jeg ikke har brukt før, for å lære noe nytt i prosessen.
@@ -32,10 +34,13 @@ Bilde
 
 En ting er designet, noe annet er hastighet og kompabilitet. Vi ønsket bevisst å ha en enkel side, så Javascript og tunge filer er holdt til et minimum. Resultatet i Google Lighthouse viser at vi langt på vei lykkes med det.
 
+{{< imgh src="lokkevika_web3.png" alt="En illustrasjon som viser en strekperson gå i små steg fra middelmådig til god." holder="LQIP" hint="drawing" figcaption="Å bevege seg fra middelmådig til god tar lang tid, men kan oppnås med små skritt av gangen." >}}
 Bilde av Google Lighthouse
 
 Og sist men ikke minst er det mottakelsen. Nå er dette en svært enkel side, men Løkkevika Handel har likevel fått gode tilbakemeldinger:
 
+{{< imgh src="IMG_5466.png" alt="En illustrasjon som viser en strekperson gå i små steg fra middelmådig til god." holder="LQIP" hint="drawing" figcaption="Å bevege seg fra middelmådig til god tar lang tid, men kan oppnås med små skritt av gangen." >}}
+{{< imgh src="IMG_5467.png" alt="En illustrasjon som viser en strekperson gå i små steg fra middelmådig til god." holder="LQIP" hint="drawing" figcaption="Å bevege seg fra middelmådig til god tar lang tid, men kan oppnås med små skritt av gangen." >}}
 Bilde av tilbakemeldinger.
 
 Et morsomt og lærerikt prosjekt. Jeg anbefaler selvsagt alle å besøke kaféen. 

@@ -1,5 +1,5 @@
 ---
-title: "Hva er initieringssystemet «systemd»"
+title: "Hva er initieringsprosessen «systemd» i Linux?"
 date: 2025-06-29
 tekstemner: [linux]
 ingress: Hva er «systemd», og hvordan fungerer det?
