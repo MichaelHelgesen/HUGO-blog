@@ -8,11 +8,15 @@ h1: Om meg, Mikke
 Description: Om Mikke, som deler tanker og innsikt for egen læring, og forhåpentligvis til andres inspirasjon.
 
 ---
-Hei! Jeg er Mikke, en [nysgjerrig entusiast som har valgt å dele både opp- og nedturer]({{< relref "/tekster/jeg-er-en-evig-amator" >}}) i søken etter kunnskap. Dessuten synes jeg det er viktig og givende med undring.
+Hei, og velkommen til min digitale hage. Jeg er Mikke, en autodidakt[^1] frontend-utvikler, og en [nysgjerrig entusiast som har valgt å dele både opp- og nedturer]({{< relref "/tekster/jeg-er-en-evig-amator" >}}) i søken etter kunnskap. 
 
-**Jeg er en autodidakt[^1] frontend-utvikler, og alt det jeg kan i dag er takket være andres interesse og innsats for å lære bort. Forhåpentligvis kan jeg gi noe tilbake.**
+Inspirasjonen bak det å kultivere min egen lille flekk på nettet fikk jeg fra Austin Kleons bok [Show your work]({{< relref "bibliotek/show-your-work-10-ways-to-share-your-creativity-and-get-discovered" >}}), og hans oppfordring om å lære åpenlyst, samt etter en vandring i [Maggie Appletons innholdsrike park](https://maggieappleton.com/garden-history?ref=ideasurg.pub).
 
-Målet med nettsiden er å lære mer, skape mer, bli en bedre skribent, en bedre tenker, [en bedre kunnskapsforvalter]({{< relref "/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/" >}}), og et bedre og lykkeligere menneske. Og ideelt sett vil andre kunne lære både av og med meg underveis.
+En «digital garden» er på mange måter en retur til internetts tidligere dager hvor man dyrket sine interesser for interessens egen del, uten hensyn til klikkagn, målinger og standarder som senere vokste frem som ugress. 
+
+Jeg deler således en prosess mer enn et sluttprodukt i [håp om å lære bedre]({{< relref "/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/" >}}), og inspirere andre.
+
+I tillegg er håpet at nettsiden vil hjelpe meg å skape mer, bli en bedre skribent, en bedre tenker, [en bedre kunnskapsforvalter]({{< relref "/tekster/hvordan-kan-jeg-handtere-kunnskap-pa-en-smart-og-effektiv-mate/" >}}), og et bedre og lykkeligere menneske. Og ideelt sett vil andre kunne lære både av og med meg underveis.
 
 Mine interesser er blant annet: 
 
@@ -24,7 +28,9 @@ Mine interesser er blant annet:
 * filosofi
 * diverse hobbyer
 
-I tråd med tankegangen bak «[digital garden](https://maggieappleton.com/garden-history?ref=ideasurg.pub)» er ikke mine skriverier alltid å anse som ferdige tekster. De utvikles til stadighet ettersom jeg lærer mer, får ny innsikt eller blir korrigert. Nettsiden er mer som en privat wikipedia, med en god blanding av fakta, antagelser, tanker og ideer, antagelig ispedd noen misforståelser, misoppfatninger og rene feil fra tid til annen. Korriger meg gjerne! Jeg deler en prosess mer enn et sluttprodukt. Det er i alle fall planen.
+I tråd med tankegangen bak «[digital garden](https://maggieappleton.com/garden-history?ref=ideasurg.pub)» er ikke mine skriverier alltid å anse som ferdige tekster. De utvikles til stadighet ettersom jeg lærer mer, får ny innsikt eller blir korrigert. 
+
+Nettsiden er mer som en privat wikipedia, med en god blanding av fakta, antagelser, tanker og ideer, antagelig ispedd noen misforståelser, misoppfatninger og rene feil fra tid til annen. Korriger meg gjerne! Jeg deler en prosess mer enn et sluttprodukt. Det er i alle fall planen.
 
 Til daglig jobber jeg i [Leonberg reklamebyrå](https://www.leonberg.no) i Sarpsborg, men er bosatt i Halden med kone og to ungdommer.  
 

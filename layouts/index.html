@@ -1,25 +1,18 @@
 {{ define "main" }}
+{{ $intro := .Params.intro | markdownify }}
     <section class="index-top">
         <div class="intro sider">
             <div class="portrett">
                 <div>
                     <h1>{{.Params.overskrift | safeHTML }}</h1> 
                     <p class="ingress">
-                        {{.Params.intro}}
+                    {{ $intro }}
                     </p>
                 </div>
 {{ partial "imgh-2" (dict "ctx" . "src" "images/mikke.webp" "figcaption" "" "alt" "Portrettbilde av Mikke" "holder" "LQTIP" "title" "Velkommen til min digitale hage." "lazy" "false" "fade" "false" "small" "true") }}
             </div>
         </div>
         {{ .Content }} 
-        <h2>Emner jeg har skrevet om:</h2>
-            <ul class="taglist-index">
-                {{range $name, $taxonomy := .Site.Taxonomies.tekstemner}} {{ $cnt := .Count }}
-                    {{ with $.Site.GetPage (printf "/tekstemner/%s" $name) }}
-                        {{ partial "tags-homepage" (dict "page" . "name" $name "taxonomy" $taxonomy "count" $cnt )}}
-                {{ end }}
-            {{ end }}
-            </ul>
         </section>
             <section class="section texts">
                 <h2>Siste fem tekster</h2>
@@ -51,6 +44,29 @@
                     </li>
                 </ul>
             </section>
+            <section class="section">
+                <h2>Siste fra journalen</h2>
+                <p style="margin-bottom: 2rem;">
+                I <a href="/journal">journalen</a> samler jeg små notater om hverdagslige øyeblikk.
+                </p>
+                {{ $range := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "=" "journal" | first 1 }}
+                {{ partial "journal-list" (dict "range" $range "content" .)}}
+                <ul class="taglist-index" style="margin-top: 3rem;">
+                    <li>
+                        <a href={{ relURL "/journal"}}>Se hele journalen</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="section">
+        <h2>Alle emner jeg har skrevet om:</h2>
+            <ul class="taglist-index">
+                {{range $name, $taxonomy := .Site.Taxonomies.tekstemner}} {{ $cnt := .Count }}
+                    {{ with $.Site.GetPage (printf "/tekstemner/%s" $name) }}
+                        {{ partial "tags-homepage" (dict "page" . "name" $name "taxonomy" $taxonomy "count" $cnt )}}
+                {{ end }}
+            {{ end }}
+            </ul>
+            </section>
             <section class="section laeringslogg">
                 <h2>Siste fra læringsloggen</h2>
                 <p>
@@ -63,19 +79,6 @@
                 <ul class="taglist-index" style="margin-top: 3rem;">
                     <li>
                         <a href={{ relURL "laeringslogg"}}>Se hele loggen</a>
-                    </li>
-                </ul>
-            </section>
-            <section class="section">
-                <h2>Siste fra journalen</h2>
-                <p style="margin-bottom: 2rem;">
-                I <a href="/journal">journalen</a> samler jeg små notater om hverdagslige øyeblikk.
-                </p>
-                {{ $range := where (where .Site.RegularPages.ByDate.Reverse "Type" "!=" "staticpage") "Type" "=" "journal" | first 1 }}
-                {{ partial "journal-list" (dict "range" $range "content" .)}}
-                <ul class="taglist-index" style="margin-top: 3rem;">
-                    <li>
-                        <a href={{ relURL "/journal"}}>Se hele journalen</a>
                     </li>
                 </ul>
             </section>
