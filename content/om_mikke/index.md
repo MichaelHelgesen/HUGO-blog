@@ -20,6 +20,7 @@ Mine interesser er blant annet:
 * effektivitet og produktivitet
 * kreativitet
 * Linux og programmering
+* server, Kubernetes og DevOps
 * filosofi
 * diverse hobbyer
 
