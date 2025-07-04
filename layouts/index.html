@@ -6,7 +6,7 @@
                 <div>
                     <h1>{{.Params.overskrift | safeHTML }}</h1> 
                     <p class="ingress">
-                    {{ $intro }}
+                    {{ $intro  }}
                     </p>
                 </div>
 {{ partial "imgh-2" (dict "ctx" . "src" "images/mikke.webp" "figcaption" "" "alt" "Portrettbilde av Mikke" "holder" "LQTIP" "title" "Velkommen til min digitale hage." "lazy" "false" "fade" "false" "small" "true") }}
@@ -85,7 +85,7 @@
             <section class="section last">
                 <section class="library-module">
                     <h2>Sist leste bok</h2>
-                    {{range first 1 (where .Site.RegularPages "Type" "bibliotek")}}
+                    {{range first 1 (where (sort .Site.RegularPages "Params.dateAdded" "desc") "Type" "bibliotek")}}
                     {{ $img := print "images/" (.Title | urlize) ".webp"}}
 
 {{ partial "imgh-2" (dict "ctx" . "src" $img "alt" (print "Coveret til boken " .Title) "holder" "LQTIP" "title" .Title) }}

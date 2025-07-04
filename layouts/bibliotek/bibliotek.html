@@ -3,7 +3,8 @@
     {{- $currentPage := . -}}
     <div>
 <ul class="last-posts-list">
-    {{ range .Pages }}
+    {{ range sort .Pages "Params.dateAdded" "desc"}}
+    {{.Params.publishDate }}
     {{ $title := .Title}}
         {{ $sourceTag := "" }}
         {{ range .Params.tags }}
@@ -43,12 +44,11 @@
             <h2 id="{{ $sourceTag }}">
         <a href="{{ .Path }}">{{ .Title }}</a>
             </h2>
-
     <p class="last-posts-list__meta">
-    {{ if .Params.dateUpdated }}
-    <span>Red: {{ .Params.dateUpdated }} | </span>
+    {{ if and .Params.dateUpdated (ne (.Params.dateUpdated | time.Format "2. Jan 2006") (.Params.dateAdded | time.Format "2. Jan 2006")) }}
+    <span>Red: {{ .Params.dateUpdated | time.Format "2. Jan 2006" }} | </span>
     {{ end }}
-    <span>Pub: {{ .Params.dateAdded }} </span>    
+    <span>Pub: {{ .Params.dateAdded | time.Format "2. Jan 2006"}} </span>    
     </p>
 
     <div class="bok">

@@ -2,7 +2,7 @@
 {{ $date := .Params.date }}
 {{ $tag := ""}}
 {{with .Params.tags }}
-{{ range .}}
+{{ range . }}
 {{ $tag = .tag}}
 {{end}}
 {{ end }}

@@ -948,6 +948,10 @@ background-size: 1px 23px;
     margin: .25rem 0 1rem 0;
 }
 
+.last-posts-list li h3.journal {
+    font-size: var(--h3-size);
+}
+
 .last-posts-list li h4.journal a  {
     color: var(--accent-color);
     display: block;
