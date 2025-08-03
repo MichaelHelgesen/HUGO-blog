@@ -1,6 +1,7 @@
 baseURL = ''
 defaultContentLanguage = "nb" 
 title = 'Michael Helgesen'
+removePathAccents=true
 [params]
 og_image = "images/mikke.webp"
 [params.author]

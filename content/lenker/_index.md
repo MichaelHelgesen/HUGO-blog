@@ -6,5 +6,5 @@ Description: En liste med lenker til eksterne sider som jeg ofte benytter og anb
 ---
 {{< introtekst >}}
 <h1>Lenker til eksterne sider</h1>
-<p class="ingress">Lenker til sider jeg ofte benytter, og som jeg anbefaler.</p>
+<p class="ingress">Lenker til sider jeg ofte besøker, og som jeg anbefaler.</p>
 {{< /introtekst >}}

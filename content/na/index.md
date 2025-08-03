@@ -8,7 +8,9 @@ Description: En side dedikert til spørsmålet «hvordan står det til?».
 draft: false
 ---
 ## Tanker
-Akkurat nå er jeg opptatt av hvordan teknologi og teknologer påvirker oss som mennesker, i tillegg til arbeidsmarkedet og økonomien. Med KIs rasende utvikling og tilsynelatende allestedsnærvær er jeg spent på utviklingen. Hva slags samfunn og fremtid er det barna mine går i møte? Jeg må innrømme at jeg er noe pessimistisk.
+Akkurat nå er jeg opptatt av hvordan teknologi og teknologer påvirker arbeidsmarkedet, økonomien og oss som mennesker. Med KIs rasende utvikling og tilsynelatende allestedsnærvær er jeg spent på utviklingen. 
+
+Jeg prøver også å dykke dypere i hvordan vi lærer og hvordan skape rom for kreativitet i en digital verden.
 
 Jeg jobber meg gjennom boken «[You are not a gadget](https://www.jaronlanier.com/gadgetwebresources.html)» av Jaron Lanier, som argumenterer for at individet er i ferd med å erstattes av en kollektiv bevissthet, og at vi i den forbindelse nedgraderer oss selv til binærtenkende maskiner («gadgets») som kan komme til å glemme hva det vil si å være et menneske.
 
@@ -19,13 +21,13 @@ None are more hopelessly enslaved than those who falsely believe they are free
 ````
 
 ## Familielivet
-Alle er tilsynelatende friske og fornøyde. Alle jentene er spesielt glade siden de nå har sommerferie.
+Alle er tilsynelatende friske og fornøyde. Alle jentene er spesielt glade for sommerferie.
 
 ## Bøker
-Nå leser jeg «Sofies verden», «Filterworld» og biografien «En tankens hærmann» om A. O. Vinje.  
+Nå leser jeg Your are not a gadget, Filterworld, The Creative Act og biografien «En tankens hærmann» om A. O. Vinje.  
 
 ## Musikk
-Jeg hører på klassisk, Renaissance, Tobben og Ero i tillegg til 90-tallsfavoritter; kanskje det siste tiåret hvor verden fortsatt var optimistisk, fylt med kjærlighet, vennlighet og glede? Nostalgien er i alle fall sterk.
+Jeg hører på klassisk, Renaissance, Tobben og Ero i tillegg til 90-tallsfavoritter; nostalgien er sterk i sommer.
 
 ## Prosjekter, jobb og hobbyer
 DevOps, Kuberneties, serverdrift og Linux opptar mye av fritiden, i tillegg til den vanlige lesingen og skrivingen. Jeg er også opptatt av retten til å eie det man kjøper, retten til å reparere, samt retten til å ikke la seg spore, og personvern generelt.

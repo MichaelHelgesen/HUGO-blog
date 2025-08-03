@@ -89,9 +89,31 @@
                     {{ $img := print "images/" (.Title | urlize) ".webp"}}
 
 {{ partial "imgh-2" (dict "ctx" . "src" $img "alt" (print "Coveret til boken " .Title) "holder" "LQTIP" "title" .Title) }}
-<p>{{range .Params.creators}}
-{{.firstName}} {{.lastName}}
-{{end}}
+<p>
+
+{{$creators := .Params.creators}}
+        {{$firstName := ""}}
+        {{$lastName := ""}}
+        {{ range $index, $name := $creators }}
+            {{ if not .firstName }}
+                {{ with .lastName }}
+                    {{$firstName = index (split . " ") 0 }}
+                    {{$lastName = index (split . " ") 1 }}
+                {{ end }}
+            {{ else }}
+                {{$firstName = .firstName}}
+                {{$lastName = .lastName}}
+            {{end }}
+            
+            {{ if eq (len $creators) 1 }}
+            {{ $firstName }} {{ $lastName }}: 
+            {{ else if and (eq (len $creators) (add $index 1) (ne $index 0))}}
+            {{ .firstName }} {{ .lastName}}:
+            {{ else }}
+            {{ .firstName }} {{ .lastName }} <span>og</span> 
+            {{ end }}
+            {{ end }}
+
 </p>
 <h3><a href="{{print "bibliotek/" .Title | urlize}}">{{.Title}}</a></h3>
 <p><b>Min vurdering: {{.Params.score}}/10</b></p>
