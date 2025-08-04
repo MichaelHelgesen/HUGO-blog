@@ -3,7 +3,7 @@ title: Min første server
 date: 2025-06-22
 tekstemner: [hjemmeserver]
 listeintro: "Raspberry Pi 5 med Ubuntu har blitt min første hjemmeserver."
-Description: "Jeg fant en praktisk applikasjon som gjør det mulig å ha en ekstern Linux-maskin som egen disk i Windows."
+Description: "Raspberry Pi 5 med Ubuntu har blitt min første hjemmeserver."
 ---
 
 En egen hjemmeserver har lenge stått på ønskelisten. Målet er å undersøke om det finnes alternativer til teknologigigantenes løsninger og alle deres abonnementstjenester. I tillegg er det en lærerik og morsom hobby. 

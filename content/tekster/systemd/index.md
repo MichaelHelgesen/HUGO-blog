@@ -1,29 +1,29 @@
 ---
-title: «Hva er initieringsprosessen «systemd» i Linux?»
-date: 2025-06-29
+title: Hva er initieringsprosessen «systemd» i Linux?
+date: 2025-05-29
 tekstemner: [linux]
-ingress: Hva er «systemd», og hvordan fungerer det?
-listeintro: Hva er «systemd» i Linux, og hvordan fungerer det?
+ingress: I Linux er «init»-systemet det første programmet som kjøres når maskinen har fullført oppstart («boot» / «after kernal»). Oppgaven til «init» er å starte alle andre tjenester og prosesser som trengs for at operativsystemet skal fungere som ønsket.
+listeintro: En beskrivelse av «init-systemet» som sørger for korrekt oppstart av operativsystemet.
 Description: Hva er «systemd» i Linux, og hvordan fungerer det?
 draft: false
 ---
 
-I Linux er «init»-systemet det første programmet som kjøres når maskinen har fullført oppstart («boot» / «after kernal»). Oppgaven til "init" er å starte alle andre tjenester og prosesser som trengs for at operativsystemet skal fungere som ønsket. 
+`systemctl` er den sentrale kommandoen for å kontrollere «init»-systemet, som blant annet brukes til å:
+- håndtere tjenester
+- sjekke statuser
+- endre systemtilstander
 
-«systemd» er et slikt init-system. I tillegg er det en såkalt «system manager», som kan kontrollere systemet under bruk.
+«systemd» kan operere på spesifike enheter eller ressurser som «systemd» vet å håndtere. Disse enhetene er kategorisert etter type og er definert som såkalte «unit files». 
 
-«systemctl» er den sentrale kommandoen for å kontrollere «init»-systemet:
-	- håndtere tjenester
-	- sjekke statuser
-	- endre systemtilstander
+Enhetstypen kan avleses via suffikset i enden av filen. Et eksempel er `.service` som indikerer en service-enhet. 
 
-«systemd» kan operere på spesifike enheter eller ressurser som «systemd» vet å håndtere. Disse enhetene er kategorisert etter type og er definert som såkalte "unit files". Enhetstypen kan avleses via suffikset i enden av filen. Eksempel `.service` som indikerer en service-enhet. Man kan ofte sløyfe suffikset, da "systemd" er smart nok til å forstå at du ønsker å operere på en tjeneste når du bruker "service management"-kommandoer.
+Man kan ofte sløyfe suffikset, da «systemd» er smart nok til å forstå at du ønsker å operere på en tjeneste når du bruker «service management»-kommandoer.
 
 ```text
 sudo systemctl start application.service
 ```
 
-Kan skrives som 
+kan skrives som 
 
 ```text
 sudo systemctl start application
@@ -37,7 +37,7 @@ sudo systemctl start application
 	- Dette lager en symlink av systemets fil for tjenesten (ofte i `/lib/systemd/system` eller `/etc/systemd/system`) og plasserer den i en mappe hvor systemet ser etter autostart-filer, ofte `/etc/systemd/system/sometarget.target.wants`
 - `disable`: fjerner tjeneste fra oppstart.
 - `status`: sjekke status på tjenesten.
-	- gir deg status, linuxcgroup | CGroup og de første linjene fra loggen.
+	- gir deg status, CGroup og de første linjene fra loggen.
 - `is-active`: enkel ja / nei
 - `is-enabled`: enkel ja / nei
 - `is-failed`: enkel ja / nei
@@ -48,7 +48,7 @@ sudo systemctl start application
 		- `--all`: se alle, ikke bare aktive
 		- `--state`=: status f.eks. «inactive»
 		- `--type`: type f.eks. «service»
-	- MERK: Det kan synes en mengde `.device`-filer i oversikten. Slik jeg forstår det er ikke dette faktiske filer. Det er noe som dynamisk opprettes i forbindelse med hardvare. De inneholder ingen data. De er kun en slags peker til hardvare som operativsystemet kan benytte. En slags liste over komponentene i maskinen. Derfor synes de ikke i `list-unit-files`, hvor det vises faktiske filer.
+	- **MERK**: Det kan synes en mengde `.device`-filer i oversikten. Slik jeg forstår det er ikke dette faktiske filer. Det er noe som dynamisk opprettes i forbindelse med hardvare. De inneholder ingen data. De er kun en slags peker til hardvare som operativsystemet kan benytte. En slags liste over komponentene i maskinen. Derfor synes de ikke i `list-unit-files`, hvor det vises faktiske filer.
 - `list-unit-files`: se alle enhetsfiler, selv de som ikke er aktivert.
 ## Unit management
 - `cat [ENHET]`: se innholdet i fila.
@@ -66,12 +66,12 @@ sudo systemctl start application
 	- Flagg:
 		- `--full`: Lar oss redigere den gjeldende filen. Endret fil vil lagres under `/etc/systemd/system`, og tar presedens over systemets enhetsdefinisjon som gjerne ligger under `lib/systemd/system`.
 - Etter sletting av fil eller mapper bør `systemd` lastes på nytt med `systemctl daemon-reload`.
-## Justere systemstatus (linuxrunlevel) med «Targets»
+## Justere systemstatus («linuxrunlevel«) med «Targets»
 `.target` er spesielle enhetsfiler som beskriver en systemstatus eller et synkroniseringspunkt. De utfører ikke noe spesielt selv, men grupperer andre enheter sammen.
 
-Det kan altså brukes til å sette systemet i spesifikke modus i likhet med linuxrunlevel. De fungerer som referansepunkt for når gitte funksjoner er tilgjengelige. Slikt sett kan vi spesifisere ønsket modus for hele systemet, fremfor de individuelle enhetene som trengs for å skape ønsket modus.
+Det kan altså brukes til å sette systemet i spesifikke modus i likhet med «linuxrunlevel». De fungerer som referansepunkt for når gitte funksjoner er tilgjengelige. Slikt sett kan vi spesifisere ønsket modus for hele systemet, fremfor de individuelle enhetene som trengs for å skape ønsket modus.
 
-`swap.target` er et eksempel. Den brukes for å indikere at linuxswap | swap er klart til bruk. Enheter som er en del av denne prosessen kan synkroniseres mot `swap.target` ved å indikere i sine konfigurasjoner at de er `WantedBy=` eller `RequiredBy=` av `swap.target`.
+`swap.target` er et eksempel. Den brukes for å indikere at swap er klart til bruk. Enheter som er en del av denne prosessen kan synkroniseres mot `swap.target` ved å indikere i sine konfigurasjoner at de er `WantedBy=` eller `RequiredBy=` av `swap.target`.
 
 Enheter som krever at `swap` er klar kan spesifisere det med `Wants`, `Requires=` og `After=` for å indikere arten av forholdet dem i mellom.
 
@@ -80,9 +80,9 @@ Enheter som krever at `swap` er klar kan spesifisere det med `Wants`, `Requires=
 - `list-unit-files --type=target`: Liste alle tilgjengelige «target»-filer.
 - `list-units --type=target`: Se alle aktive «targets».
 
-I motsetning til linuxrunlevel |runlevel kan man ha flere «targets» aktive av gangen. Et aktivt «target» indikerer at `systemd` har forsøkt å starte alle enheter knyttet til gjeldende "target", og ikke forsøkt å avslutte dem igjen.
+I motsetning til runlevel kan man ha flere «targets» aktive av gangen. Et aktivt «target» indikerer at `systemd` har forsøkt å starte alle enheter knyttet til gjeldende «target», og ikke forsøkt å avslutte dem igjen.
 
-- `isolate [TARGET]`: Starter alle enheter assosiert med en «target» og stopper alle som ikke er en del av tilhørende avhengighetstre. Ligner på det å endre linuxrunlevel|runlevel. 
+- `isolate [TARGET]`: Starter alle enheter assosiert med en «target» og stopper alle som ikke er en del av tilhørende avhengighetstre. Ligner på det å endre runlevel. 
 
 Hvis systemet opererer i et grafisk grensesnitt via `graphical.target`, kan man stenge dette til fordel for «multi-user» kommandolinje ved å endre systemets modus ved å isolere `multi-user.target`.  Det kan være lurt å se avhengighetslisten før man gjør dette, i tilfelle man stopper vitale tjenester: `list-dependencies [TARGET]`.
 ### Snarveier

@@ -1,5 +1,5 @@
 ---
-title: Nye bøker i kunnskapsbokhyllen.
+title: Nye bøker i kunnskapsbokhyllen
 date: 2024-09-27
 tekstemner: [lesing, læring]
 listeintro: "Tre nye bøker om læring og tilegnelse av kunnskap er satt inn i kunnskapsbokhyllen."

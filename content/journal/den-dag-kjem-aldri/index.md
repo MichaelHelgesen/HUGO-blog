@@ -1,14 +1,14 @@
 ---
-title: «Den dag kjem aldri» av Aasmund Olavsson Vinje
+title: Den dag kjem aldri, av Aasmund Olavsson Vinje
 date: 2025-02-01
 tekstemner: [dikt, lesing]
-listeintro: "I det siste har jeg sett og hørt mye på filosofen og forskeren Iain McGilchrist, og han fascinerer meg enormt. Jeg gleder meg til å lese boken hans «The master and his emissary»."
-Description: "I det siste har jeg sett og hørt mye på filosofen og forskeren Iain McGilchrist, og han fascinerer meg enormt. Jeg gleder meg til å lese boken hans «The master and his emissary»."
+listeintro: "Et vakkert dikt om lengsel og kjærlighet."
+Description: "Et vakkert dikt om lengsel og kjærlighet."
 
 ---
 I dag fortsatte jeg min reise gjennom Öde S. Nerdrums kuraterte diktsamling [Ödes lille røde](https://www.adlibris.com/nb/bok/odes-lille-rode-hoydepunkter-fra-skandinavisk-poesi-9788234702327).
 
-Under kapittelet «Kjærlighetens irrgang» var jeg så heldig å kunne lese «Den dag kjem aldri» av Aasmund Olavsson Vinje. Jeg ble umiddelbart grepet, og nesten rørt til tårer av siste strofe. 
+Under kapittelet Kjærlighetens irrgang var jeg så heldig å kunne lese Den dag kjem aldri av Aasmund Olavsson Vinje. Jeg ble umiddelbart grepet, og nesten rørt til tårer av siste strofe. 
 
 Å oppleve en tekst eller ord som rører ved selve sjelen, eller ved essensen av å være et menneske er alltid en spesiell og mektig opplevelse, og noe jeg er takknemlig over å finne. 
 

@@ -8,11 +8,11 @@ Description: En side dedikert til spørsmålet «hvordan står det til?».
 draft: false
 ---
 ## Tanker
-Akkurat nå er jeg opptatt av hvordan teknologi og teknologer påvirker arbeidsmarkedet, økonomien og oss som mennesker. Med KIs rasende utvikling og tilsynelatende allestedsnærvær er jeg spent på utviklingen. 
+Akkurat nå er jeg opptatt av hvordan teknologi, teknologer og IT-selskaper påvirker arbeidsmarkedet, økonomien og oss som mennesker. Med KIs rasende utvikling og tilsynelatende allestedsnærvær er jeg spent på utviklingen. 
 
-Jeg prøver også å dykke dypere i hvordan vi lærer og hvordan skape rom for kreativitet i en digital verden.
+Jeg søker også kunnskap om hvordan vi lærer, og hvordan skape rom for kreativitet, undring og inspirasjon i en digital verden. Forholdet mellom menneske og maskin fascinerer meg.
 
-Jeg jobber meg gjennom boken «[You are not a gadget](https://www.jaronlanier.com/gadgetwebresources.html)» av Jaron Lanier, som argumenterer for at individet er i ferd med å erstattes av en kollektiv bevissthet, og at vi i den forbindelse nedgraderer oss selv til binærtenkende maskiner («gadgets») som kan komme til å glemme hva det vil si å være et menneske.
+Derfor jobber jeg meg gjennom bøker som «[You are not a gadget](https://www.jaronlanier.com/gadgetwebresources.html)» av Jaron Lanier, som argumenterer for at individet er i ferd med å erstattes av en kollektiv bevissthet, og at vi i den forbindelse nedgraderer oss selv til binærtenkende maskiner («gadgets») som kan komme til å glemme hva det vil si å være et menneske.
 
 Jeg er på ingen måte en teknofobisk ludditt [^1], men jeg er for menneskeheten.
 
@@ -20,22 +20,21 @@ Jeg er på ingen måte en teknofobisk ludditt [^1], men jeg er for menneskeheten
 None are more hopelessly enslaved than those who falsely believe they are free
 ````
 
-## Familielivet
-Alle er tilsynelatende friske og fornøyde. Alle jentene er spesielt glade for sommerferie.
+## Prosjekter, jobb og hobbyer
+DevOps, Kuberneties, serverdrift og Linux opptar mye av fritiden, i tillegg til den vanlige lesingen og skrivingen.
+
+Til høsten blir jeg også student ved Høgskolen i Østfold, på deres KI-studier. Det blir veldig interessant.
 
 ## Bøker
 Nå leser jeg Your are not a gadget, Filterworld, The Creative Act og biografien «En tankens hærmann» om A. O. Vinje.  
 
 ## Musikk
-Jeg hører på klassisk, Renaissance, Tobben og Ero i tillegg til 90-tallsfavoritter; nostalgien er sterk i sommer.
-
-## Prosjekter, jobb og hobbyer
-DevOps, Kuberneties, serverdrift og Linux opptar mye av fritiden, i tillegg til den vanlige lesingen og skrivingen. Jeg er også opptatt av retten til å eie det man kjøper, retten til å reparere, samt retten til å ikke la seg spore, og personvern generelt.
+Jeg hører på klassisk (spesielt Beethoven), Renaissance, Tobben og Ero i tillegg til 90-tallsfavoritter; nostalgien er sterk i sommer.
 
 ## Mentalt
-Jeg prøver etter beste evne å ha en stoisk tilnærming til livet, og leve etter ordtaket "Amor fati" - elsk skjebnen. Det er ikke alltid så lett. 
+Jeg prøver etter beste evne å ha en stoisk tilnærming til livet, og leve etter ordtaket «amor fati» - elsk skjebnen. Det er ikke alltid så lett. 
 
-Det er fint å oppleve verden på nytt etter at jeg tok kontroll over min egen teknologibruk, og fikk vridd meg ut av algoritmenes grep. Samtidig er det frustrerende, og litt ensomt, å føle at man står på utsiden av samfunnet og kikker inn.
+Det er fint å oppleve verden på nytt etter at jeg tok kontroll over min egen teknologibruk, og fikk vridd meg ut av algoritmenes grep. Samtidig er det frustrerende, og litt ensomt, å føle at man står på utsiden av samfunnet og kikker inn, og ikke får med seg flere.
 
 –––
 

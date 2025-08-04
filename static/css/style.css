@@ -426,7 +426,7 @@ article ol {
 
 article ul {
     list-style-type: disc;
-    list-style-position: inside;
+    /*list-style-position: inside;*/
     margin: var(--medium_2);
     margin-right: 0;
 }

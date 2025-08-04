@@ -1,6 +1,6 @@
 ---
 title: "Hvordan lærer vi?"
-date: 2025-01-26
+date: 2025-06-26
 tekstemner: [læring]
 ingress: Hver gang vi tilegner oss kunnskap dannes det nye fysiske koblinger mellom hjernecellene våre. Hjernen har utviklet ulike systemer for å skape disse lenkene, som sørger for både forståelse og lagringen av den. Viten om disse modusene kan gjøre oss til superlærere, og samtidig hjelpe oss å unngå hindringer på veien mot innsikt.
 listeintro: Viten om hvordan hjernen tar til seg og lagrer kunnskap kan gjøre oss til superlærere.
@@ -19,7 +19,7 @@ Knowledge must grow in his mind if learning is to take place.
 Adler mener med dette at læring krever tenkning, en handling han definerer som «bruken av intellektet (hjernen) for å oppnå kunnskap og forståelse». [^2]
 
 {{<tanker>}}
-Dette er interessant med tanke på KI og hvordan det eventuelt vil påvirke læring. NHH-professor Helge Thorbjørnsen er redd for fenomenet han kaller «skyggelæring» som innebærer at vi, ved å bruke KI, lures til å tro at vi lærer siden vi ikke tenker særlig selv. I boken <a href="/bibliotek/tidsparadokser">Tidsparadokser</a> skriver han at vi blir mindre tilbøyelige til å fokusere og lære fordi teknologi lærer oss opp til å tenke mindre og raskere (s. 71).
+Dette er interessant med tanke på KI og hvordan det eventuelt vil påvirke læring. NHH-professor Helge Thorbjørnsen er redd for fenomenet han kaller «skyggelæring» som innebærer at vi, ved å bruke KI, lures til å tro at vi lærer siden vi ikke tenker særlig selv. I boken <a href="/bibliotek/tidsparadokser-om-tidens-forunderlige-pavirkning-pa-oss/">Tidsparadokser</a> skriver han at vi blir mindre tilbøyelige til å fokusere og lære fordi teknologi lærer oss opp til å tenke mindre og raskere (s. 71).
 {{</tanker>}}
 
 Han går videre til å skille mellom to typer læring: [^3]
