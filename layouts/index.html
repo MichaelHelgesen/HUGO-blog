@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ $intro := .Params.intro | markdownify }}
-    <section class="index-top">
+    <div class="index-top">
         <div class="intro sider">
             <div class="portrett">
                 <div>
@@ -13,7 +13,7 @@
             </div>
         </div>
         {{ .Content }} 
-        </section>
+        </div>
             <section class="section texts">
                 <h2>Siste fem tekster</h2>
                 {{range where .Pages "Section" "tekster"}}
