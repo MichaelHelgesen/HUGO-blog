@@ -14,7 +14,7 @@ En av mine favoritter er Alvekongen. Den grep meg umiddelbart, og siste vers er 
 
 Schubert har forøvrig komponert et fantastisk stykke basert på diktet. Jeg anbefaler deg å lese diktet et par ganger før du hører musikkstykket.
 
-{{< youtube W3NzuVKA7OLdP52V >}}
+{{< youtube m0Wwr582RGs >}}
 
 {{< poem >}}
 Kven rid der så seint i natt og vind?

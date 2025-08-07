@@ -24,6 +24,13 @@ h1, h2, h3, h4, h5 {
   letter-spacing: -0.03ch;
 }
 
+:where(h1), h1, section h1 {
+    font-size: var(--h1-size);
+    line-height: var(--h1-lineheight);
+    font-weight: var(--h1-weight);
+    margin-bottom: var(--medium_1);
+}
+
 img {
   display: block;
   max-inline-size: 100%;
@@ -140,7 +147,7 @@ p, header nav ul {
 }
 
 :root {
-    --base-color: hsl(35, 100%, 98%);
+    --base-color: hsl(35, 100%, 99%);
     --primary-color: hsl(0, 0%, 8%);
     --accent-color: hsl(360, 90%, 48%, 1);
     --accent-color-light: hsl(360, 90%, 48%, .05);
@@ -288,10 +295,17 @@ figcaption a:hover {
     background: var(--accent-color);
     color: var(--base-color);
 }
-
+/*
 .kilde-list {
-    /*list-style-type: circle;
-    margin-left: 1rem; */
+    list-style-type: circle;
+    margin-left: 1rem; 
+}
+*/
+.kilde a span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: inherit;
 }
 
 .laeringslogg-homepage li {
@@ -371,6 +385,13 @@ figcaption a:hover {
     font-size: var(--medium_1);
     font-weight: 500;
     display: block;
+}
+
+article p a span {
+    align-items: center;
+    display: inline-flex;
+    gap: 4px;
+    text-decoration: inherit;
 }
 
 article code {
@@ -858,14 +879,14 @@ html {
 .intro.sider .last-posts-list__meta {
     margin-top:  var(--medium_1);
 }
-
+/*
 .intro h1 {
     font-size: var(--h1-size);
     line-height: var(--h1-lineheight);
     font-weight: var(--h1-weight);
     margin-bottom: var(--medium_1);
 }
-
+*/
 .intro.blogg {
     margin-bottom: clamp(4rem, 10vw, 6rem);
 }

@@ -40,9 +40,9 @@
             <h1>{{ .Title }}</h1>
     <p class="last-posts-list__meta">
     {{ if .Params.dateUpdated }}
-    <span>Red: {{ .Params.dateUpdated }} | </span>
+    <span>Red: {{ .Params.dateUpdated | time.Format "2. Jan 2006"}} | </span>
     {{ end }}
-    <span>Pub: {{ .Params.dateAdded }} </span>    
+    <span>Pub: {{ .Params.dateAdded | time.Format "2. Jan 2006"}} </span>    
     <br />    
     </p>
     </div>

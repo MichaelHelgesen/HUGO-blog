@@ -102,7 +102,7 @@ I diffusmodus er nevronene lenger fra hverandre, så kula ruller lenger og spret
 
 Hjernen bytter jevnlig mellom disse modusene hele tiden, men Oakley anbefaler oss å ta mer kontroll over byttene for optimal læring [^11]. Fokusmodus er problemløseren og detaljfangeren, mens diffusmodus overrasker med uventede koblinger av nevroner som kan gi nye ideer og lede til innovasjon. 
 
-{{< youtube W3NzuVKA7OLdP52V >}}
+{{< youtube dzjsk5e7srI >}}
 
 Men for å kunne skape overraskende koblinger må man selvsagt ha noe å jobbe med. Så jo mer kunnskap vi har, jo flere spennende tanker kan vi tenke, og mer kreative kan vi bli. Og det er kanskje på bakgrunn av dette at Adler, som nevnt tidligere, mener vi må ta sikte på å tilegne oss innsikt fremfor fakta.
 
@@ -200,9 +200,9 @@ Leonard har også noen tips for hvordan vi kan frigi og ivareta energien han men
 6. **Bestem deg, deadlines, forplikt, gjennomfør**: Gjelder også planlegging. Gjør det gjerne med andre, og forplikt deg.
 7. **Hold det gående**: Ikke gi deg. Hold det gående, gjerne hver dag, på en eller annen måte.
 
-Dette, sammens med teknikkene beskrevet over burde gi et meget godt grunnlag for effektiv og god læring.
+Disse nøklene, og teknikkene for læring beskrevet tidligere, burde gi et meget godt grunnlag for effektiv og god læring.
 
-Og husk at standhaftighet er viktigere enn IQ, at alle lærer på samme måte, og at veien mot kunnskap og innsikt er tilgjengelig for alle.
+Og husk at standhaftighet er viktigere enn IQ. Alle lærer på samme måte, og veien mot kunnskap og innsikt er tilgjengelig for hver og en.
 
 
 [^1]: [How to read a book]({{< relref "/kilder/#e.adlerbook">}}) s. 12
