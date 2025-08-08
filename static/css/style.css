@@ -19,12 +19,12 @@ article ol, article ul {
 }
 
 h1, h2, h3, h4, h5 {
-  font-size: inherit;
-  font-weight: inherit;
+/*  font-size: inherit;
+  font-weight: inherit;*/
   letter-spacing: -0.03ch;
 }
 
-h1 {
+h1, section h1, article h1, aside h1, nav h1 {
     font-size: var(--h1-size);
     line-height: var(--h1-lineheight);
     font-weight: var(--h1-weight);
