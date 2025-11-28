@@ -24,6 +24,29 @@
             <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }} | </span>    
             {{ partial "tags.html" .}}
         </p>
+	{{ if .Param "serier" }} {{ $currentPage := .Page.Permalink }} {{ $name := index
+.Params.serier 0 }}
+<p>
+  <i
+    >Denne teksten inngår i serien <a href="/serier/{{$name | urlize }}"
+      >{{$name}}</a
+    >.</i
+  >
+</p>
+<p>Andre artikler i samme serie:</p>
+{{ $name := $name | urlize }} {{ $series := index .Site.Taxonomies.serier $name
+}}
+<ul class="series">
+  {{ range $series.Pages }}
+  <li>
+    {{ if ne $currentPage .Permalink }}
+    <a href="{{.Permalink}}">{{.LinkTitle}}</a>
+    {{ else }}<b>{{.LinkTitle}}</b>{{ end }}
+  </li>
+  {{end}}
+</ul>
+{{end}}
+
     {{ else }}
         <h1>{{ .Params.h1 }}</h1>
         <p class="ingress">{{ .Params.ingress }}</p>

@@ -1,6 +1,7 @@
 ---
 title: Journal
 Description: I journalen noterer jeg fra små glimt fra hverdagen som gjør inntrykk på meg eller som er av spesiell betydning.
+draft: true
 ---
 
 {{< introtekst >}}

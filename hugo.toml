@@ -14,6 +14,7 @@ name = "Michael Helgesen"
 [taxonomies]
   tekstemne = "tekstemner"
   laeringsemne = "laeringsemner"
+  serie = "serier"
 
 [permalinks]
     tekstemner = "/emneknagger/tekstemner/:slug"
@@ -32,10 +33,6 @@ name = "Michael Helgesen"
     name = 'Tekster'
     pageRef = '/tekster'
     weight = 20
-  [[menus.main]]
-    name = 'Journal'
-    pageRef = '/journal'
-    weight = 30
   [[menus.main]]
     name = 'Læringslogg'
     pageRef = '/laeringslogg'

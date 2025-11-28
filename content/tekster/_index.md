@@ -1,10 +1,9 @@
 ---
-title: "Tekster"
-type: staticpage
-Description: "Tekster om det som interesserer, inspirerer, imponerer og informerer meg."
+title: Journal
+Description: I journalen noterer jeg fra små glimt fra hverdagen som gjør inntrykk på meg eller som er av spesiell betydning.
 ---
 
 {{< introtekst >}}
-<h1>Mine tekster om mine interesser</h1>
-<p class="ingress">Jeg skriver om det som interesserer, inspirerer, imponerer og informerer meg.</p>
+<h1>Min journal over hverdagsøyeblikk</h1>
+<p class="ingress">Korte notater om små hverdagslige øyeblikk.
 {{< /introtekst >}}

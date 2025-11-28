@@ -1,0 +1,47 @@
+{{ $count := .count }}
+    <li>
+
+           <a href="{{ .page.RelPermalink }}">
+               <h2>
+            
+                {{ strings.FirstUpper .name}} <sup>{{ $count }}</sup>
+                </h2>
+            </a>
+                {{ $p := .taxonomy }}
+
+                {{ if len $p}}
+                <ul>
+                    {{range $p | first 5 }}
+                    <li><a href="{{.Permalink}}">
+                            {{ if eq .Type "laeringslogg" }}
+                            <h3>{{.Title | time.Format ":date_long"}}
+                            {{ else }}
+                            <h3>{{.Title}}
+                            {{end}}</h3>
+                        <div>
+                            <p class="last-posts-list__meta">
+                            <span style="font-weight: 600">{{ if eq .Type "laeringslogg" }}
+                                Læringslogg
+                                {{ else }}
+                                {{strings.FirstUpper .Type }} |
+                                {{end }}</span>
+                                {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
+                                <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
+                                {{ end }}
+                                <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }}</span>    
+                            </p>
+                        </div></a>
+                    </li>
+                    {{ end }}
+                </ul>
+                {{ if gt .count 5 }}
+                <ul class="taglist-index">
+                    <li>
+                <a class="button" href="{{ .page.Permalink }}">Se alle</a>
+                    </li>
+                </ul>
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </li>

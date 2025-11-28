@@ -2,6 +2,7 @@
 title: Hva er initieringsprosessen «systemd» i Linux?
 date: 2025-05-29
 tekstemner: [linux]
+serier: ["tst"]
 ingress: I Linux er «init»-systemet det første programmet som kjøres når maskinen har fullført oppstart («boot» / «after kernal»). Oppgaven til «init» er å starte alle andre tjenester og prosesser som trengs for at operativsystemet skal fungere som ønsket.
 listeintro: En beskrivelse av «init-systemet» som sørger for korrekt oppstart av operativsystemet.
 Description: Hva er «systemd» i Linux, og hvordan fungerer det?

@@ -1,0 +1,52 @@
+{{ define "main" }}
+
+
+
+                {{ $p := where site.Pages "Params.serier" "intersect" (slice .Title) }}
+{{ $url := print "emneknagger/laeringsemner/" (lower .Title) }}
+
+<div class="intro sider tag">
+                <h1>
+                    {{.Title}} <sup>{{len $p }}</sup>
+                </h1>
+                <p class="ingress">Tekster som omhandler {{.Title}}</p>
+</div>
+<div >
+                {{ if len $p}}
+                <ul class="last-posts-list">
+                    {{range $p }}
+                    <li>
+                        <span>{{strings.FirstUpper .Type}}</span>
+                        <h2>
+                        <a href="{{.Permalink}}">
+                            {{.Title}}
+                        </a>
+                        </h2>
+                        <div>
+                            <p class="last-posts-list__meta">
+                                {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
+                                <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
+                                {{ end }}
+                                <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }} | </span>    
+                                {{ partial "tags.html" .}}
+                            </p>
+                        </div>
+                        {{ if .Params.listeintro }}
+                        <p class="last-posts-list__ingress">{{.Params.listeintro}}</p>
+                        {{ end }}
+                       <a class="readmore" href="{{.Permalink}}">Les videre</a>
+                    </li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </div>
+        </div>
+</div>
+
+
+
+
+
+
+{{ end }}
+

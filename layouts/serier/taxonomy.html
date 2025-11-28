@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{ .Content }}
+<ul class="taglist">
+    {{ range $name, $taxonomy := .Site.Taxonomies.serier}} {{ $cnt := .Count }}
+        {{ with $.Site.GetPage (printf "/serier/%s" $name) }}
+            {{ partial "serie-list" (dict "page" . "name" $name "taxonomy" $taxonomy "count" $cnt )}}
+        {{ end }}
+    {{ end }}
+</ul>
+
+{{ end }}
+

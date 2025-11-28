@@ -1,7 +1,9 @@
-<ul class="last-posts-list">
-    
-    {{ $page := .page }}
 
+<ul class="last-posts-list">
+{{ $page := .page }}
+
+    
+    
     {{ range .range}}
         
         
@@ -21,5 +23,5 @@
                             <p> <a class="readmore" href="{{.Permalink}}">Les teksten</a></p>
                         {{ end }}
                     </li>
-    {{ end }}
+		    {{ end }}
 </ul>
