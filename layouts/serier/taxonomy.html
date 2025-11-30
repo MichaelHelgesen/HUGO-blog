@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ .Content }}
-<ul class="taglist">
+<ul class="blog-list">
     {{ range $name, $taxonomy := .Site.Taxonomies.serier}} {{ $cnt := .Count }}
         {{ with $.Site.GetPage (printf "/serier/%s" $name) }}
             {{ partial "serie-list" (dict "page" . "name" $name "taxonomy" $taxonomy "count" $cnt )}}

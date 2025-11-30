@@ -4,12 +4,12 @@ url: /laeringslogg
 Description: En logg med punkter over nye ting jeg lærer fra dag til dag.
 ---
 {{< introtekst >}}
-<h1>Min varierende læringslogg</h1>
-<p class="ingress">Punktlister over nye ting jeg lærer fra tid til annen innenfor det ene og det andre.</p>
+<h1>«I dag lærte jeg...»</h1>
+<p class="ingress">Punktlister over nye ting jeg lærer fra tid til annen innenfor det ene og det andre. I all hovedsak en dokumentasjon for min egen del, basert på konseptet «today I learned». </p>
 <div class="portrett-om">
 {{< imgh lazy="false" title="Ny seksjon i zettelkasten" small="true" src="laeringslogg_1.webp" alt="Min zettelkasten-boks med kategorien kreativitet fremhevet." holder="LQTIP" >}}
 </div>
-<p>Jeg forsøker å loggføre all ny kunnskap i en notatbok som jeg deretter overfører hit.</p> 
+<p>Jeg forsøker å loggføre all ny kunnskap som jeg deretter overfører hit.</p> 
 <p>
 En slik logg er et sterkt visuelt bilde på hvor mye man faktisk har lært, og en god metode for å befeste kunnskapen.</p> 
 <p>

@@ -13,25 +13,19 @@
                 {{ if len $p}}
                 <ul>
                     {{range $p | first 5 }}
-                    <li><a href="{{.Permalink}}">
+                    <li>
                             {{ if eq .Type "laeringslogg" }}
                             <h3>{{.Title | time.Format ":date_long"}}
                             {{ else }}
-                            <h3>{{.Title}}
-                            {{end}}</h3>
+                            <a href="{{.Permalink}}"><h3>{{.Title}}
+                            {{end}}</h3></a>
                         <div>
                             <p class="last-posts-list__meta">
-                            <span style="font-weight: 600">{{ if eq .Type "laeringslogg" }}
-                                Læringslogg
-                                {{ else }}
-                                {{strings.FirstUpper .Type }} |
-                                {{end }}</span>
-                                {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
-                                <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
-                                {{ end }}
-                                <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }}</span>    
+ {{ .Params.Date | time.Format "2. Jan 2006" }} | {{ partial "tags.html" .}}
+			    
                             </p>
-                        </div></a>
+                        </div>
+			    
                     </li>
                     {{ end }}
                 </ul>

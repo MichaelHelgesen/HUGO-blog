@@ -20,19 +20,17 @@
                     <ul class="last-posts-list">
                         {{range .Pages | first 5}}
                         <li>
-                            <h3><a href="{{.Permalink}}">{{.Title}}</a></h3>
+				<h3><a href="{{.Permalink}}">{{.Title}}</a></h3>
                             <div>
-                                <p class="last-posts-list__meta">
-                                    {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
-                                    <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
-                                    {{ end }}
-                                    <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }} | </span>    
-                                    {{ partial "tags.html" .}}
-                                </p>
-                            </div>
+                                                           </div>
                             {{ with .Params.listeintro }}
                                 <p class="last-posts-list__ingress">{{.}}</p>
                             {{ end }}
+ <p class="last-posts-list__meta">
+                                    
+                                    <span>{{ .Params.Date | time.Format "2. Jan 2006" }}</span> | {{ partial "tags.html" .}}
+                                </p>
+
                             <p> <a class="readmore" href="{{.Permalink}}">Les teksten</a></p>
                         </li>
                         {{ end}}
@@ -117,6 +115,11 @@
 </p>
 <h3><a href="{{print "bibliotek/" .Title | urlize}}">{{.Title}}</a></h3>
 <p><b>Min vurdering: {{.Params.score}}/10</b></p>
+ <p class="last-posts-list__meta">
+                                    
+                                    <span>{{ .Params.dateAdded | time.Format "1 jan 2006" }}</span>
+                                </p>
+
                 <ul class="taglist-index" style="margin-top: 3rem;">
                     <li>
                         <a href={{print "bibliotek/" .Title | urlize}}>Les omtalen</a>

@@ -45,10 +45,7 @@
         <a href="{{ .Path }}">{{ .Title }}</a>
             </h2>
     <p class="last-posts-list__meta">
-    {{ if and .Params.dateUpdated (ne (.Params.dateUpdated | time.Format "2. Jan 2006") (.Params.dateAdded | time.Format "2. Jan 2006")) }}
-    <span>Red: {{ .Params.dateUpdated | time.Format "2. Jan 2006" }} | </span>
-    {{ end }}
-    <span>Pub: {{ .Params.dateAdded | time.Format "2. Jan 2006"}} </span>    
+{{ .Params.dateAdded | time.Format "2. Jan 2006"}} 
     </p>
 
     <div class="bok">

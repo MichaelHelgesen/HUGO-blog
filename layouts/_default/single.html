@@ -26,17 +26,14 @@
         </p>
 	{{ if .Param "serier" }} {{ $currentPage := .Page.Permalink }} {{ $name := index
 .Params.serier 0 }}
-<p>
-  <i
-    >Denne teksten inngår i serien <a href="/serier/{{$name | urlize }}"
+<div class="serie">
+	<p> Denne teksten inngår i serien <a href="/serier/{{$name | urlize }}"
       >{{$name}}</a
-    >.</i
-  >
-</p>
-<p>Andre artikler i samme serie:</p>
+    >.</p>
+<p style="margin-bottom: 0;">Andre artikler i samme serie:</p>
 {{ $name := $name | urlize }} {{ $series := index .Site.Taxonomies.serier $name
 }}
-<ul class="series">
+<ul class="series" style="margin-top: .5rem;">
   {{ range $series.Pages }}
   <li>
     {{ if ne $currentPage .Permalink }}
@@ -45,6 +42,8 @@
   </li>
   {{end}}
 </ul>
+
+</div>
 {{end}}
 
     {{ else }}

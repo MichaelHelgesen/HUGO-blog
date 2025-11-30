@@ -8,18 +8,17 @@
         
         
                     <li>
-                        <h2><a href="{{.Permalink}}">{{.Title}}</a></h2>
+                        <h3><a href="{{.Permalink}}">{{.Title}}</a></h3>
                         <div>
-                            <p class="last-posts-list__meta">
-                                {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
-                                <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
-                                {{ end }}
-                                <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }} | </span>    
-                                {{ partial "tags.html" .}}
-                            </p>
                         </div>
                         {{ if .Params.listeintro }}
                         <p class="last-posts-list__ingress">{{.Params.listeintro}}</p>
+
+
+                            <p class="last-posts-list__meta">
+                                {{ .Params.Date | time.Format "2. Jan 2006" }} | {{ partial "tags.html" .}}
+                            </p>
+
                             <p> <a class="readmore" href="{{.Permalink}}">Les teksten</a></p>
                         {{ end }}
                     </li>

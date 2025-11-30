@@ -99,11 +99,7 @@
             <h3>{{.Title}}</h3>
             <div>
                 <p class="last-posts-list__meta">
-                <span style="font-weight:600">{{strings.FirstUpper .Type }}</span> | 
-                {{ if ne (.Date | time.Format ":date_medium" ) ( .Lastmod | time.Format ":date_medium" ) }}
-                <span>Red: {{ .Lastmod | time.Format "2. Jan 2006"}} | </span>
-                {{ end }}
-                <span>Pub: {{ .Params.Date | time.Format "2. Jan 2006" }}</span>    
+		{{ .Params.Date | time.Format "2. Jan 2006" }} | {{ partial "tags.html" .}} 
                 </p>
             </div>
             </a>
