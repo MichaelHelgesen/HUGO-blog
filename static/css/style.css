@@ -492,8 +492,8 @@ body {
 }
 
 blockquote {
-    border-left: 3px solid var(--primary-color);
-    color: var(--gray-color);
+    border-left: 3px solid var(--accent-color);
+    color: var(--main-color);
     font-size: clamp(1.15rem, 4vw, 1.55rem);
     margin: 2rem 0 2rem clamp(0vw, 2vw, 1rem);
     padding-left: min(6vw, 2rem);
