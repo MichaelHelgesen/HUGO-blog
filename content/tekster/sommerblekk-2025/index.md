@@ -2,7 +2,6 @@
 title: Sommerfarger til fyllepenner 2025
 date: 2025-06-01
 tekstemner: [fyllepenn]
-serier: ["Server"]
 listeintro: "En svensk klassiker som ligger an til å bli en favoritt."
 Description: "En svensk klassiker som ligger an til å bli en favoritt."
 ---

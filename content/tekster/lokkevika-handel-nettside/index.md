@@ -1,6 +1,6 @@
 ---
 title: Rykende ferske nettsider for Løkkevika Handel
-date: 2025-06-06
+date: 2025-06-12
 tekstemner: [nettside, webdesign, hugo, strapi]
 listeintro: "Løkkevika Handel har endelig fått en egen nettside."
 Description: "Løkkevika Handel har endelig fått en egen nettside."

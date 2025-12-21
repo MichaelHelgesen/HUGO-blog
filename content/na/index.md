@@ -8,11 +8,15 @@ Description: En side dedikert til spørsmålet «hvordan står det til?».
 draft: false
 ---
 ## Tanker
-Det er mange temaer som opptar meg for tiden, da jeg prøver å fastslå mitt eget verdensbilde. Jeg utforsker temaer som filosofi, religion, døden, kreativitet, læring og skriving, for å nevne noe, via min analoge [zettelkasten](https://en.wikipedia.org/wiki/Zettelkasten).
+Det er mange temaer som opptar meg for tiden. Jeg prøver stadig å bestemme mitt eget verdensbilde, samtidig som jeg har fått utvidede arbeidsoppgaver på jobben.
 
-Mye av inspirasjonen bak funderingen kommer fra teknologien, og dens tilsynelatende voldsomme påvirkning på humaniora og oss som mennesker. Jo mer jeg leser, erfarer, hører og tenker på det, desto mer forferdet blir jeg over at dette ikke diskuteres mer i den offentlige debatten.
+Jeg utforsker filosofi, religion, døden, kreativitet, læring og skriving, for å nevne noe, via min analoge [zettelkasten](https://en.wikipedia.org/wiki/Zettelkasten), mens arbeidsdagen går med til produktutvikling, prosjektstyring, brukervennlighet («UX») og brukergrensesnitt («UI»).
 
-Hvordan teknologi, teknologer og IT-selskaper påvirker arbeidsmarkedet, økonomien og oss som mennesker. Og kanskje spesielt barn og unge. Hvordan vi snart ikke eier noe av det vi kjøper, og blir konstant overvåket. Med KIs rasende utvikling og tilsynelatende allestedsnærvær er jeg spent på utviklingen. Jeg er redd dette er et gigantisk eksperiment som vil være vanskelig å snu eller bremse.
+Hjemme holder jeg meg unna KI. På jobben kan jeg ikke unnslippe det.
+
+At vi som samfunn tilsynelatende ukritisk kaster oss over kunstig intelligens, og med glede setter bort tenking, kreativitet og vår egen identitet skremmer meg. Jo mer jeg leser, erfarer, hører og tenker på det, desto mer forferdet blir jeg over at teknologiens påvirkning og effekt, spesielt på de unge, ikke er en langt større del av den offentlige debatten.
+
+Med KIs rasende utvikling ognallestedsnærvær er jeg spent på utviklingen. Jeg er redd dette er et gigantisk eksperiment som kan ende galt.
 
 Jeg jobber med teknologi hver dag, og er på ingen måte en teknofobisk ludditt,[^1] men jeg er for menneskeheten.
 

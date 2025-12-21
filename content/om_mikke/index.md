@@ -8,7 +8,7 @@ h1: Om meg, Mikke
 Description: Om Mikke, som deler tanker og innsikt for egen læring, og forhåpentligvis til andres inspirasjon.
 
 ---
-Hei, og velkommen til min digitale hage. Jeg er Mikke, en autodidakt[^1] frontend-utvikler, og en [nysgjerrig entusiast som har valgt å dele både opp- og nedturer]({{< relref "/tekster/jeg-er-en-evig-amator" >}}) i søken etter kunnskap. 
+Hei, og velkommen til min digitale hage. Jeg er Mikke, en autodidakt[^1] frontend-utvikler, prosjektleder, «UX»/«UI» designer, og en [nysgjerrig entusiast som har valgt å dele både opp- og nedturer]({{< relref "/tekster/jeg-er-en-evig-amator" >}}) i søken etter kunnskap. 
 
 Motivasjon bak det å kultivere min egen lille parsell på nettet fikk jeg fra Austin Kleons bok [Show your work]({{< relref "bibliotek/show-your-work-10-ways-to-share-your-creativity-and-get-discovered" >}}), og hans oppfordring om å lære åpenlyst, samt etter en vandring i [Maggie Appletons innholdsrike park](https://maggieappleton.com/garden-history?ref=ideasurg.pub).
 
