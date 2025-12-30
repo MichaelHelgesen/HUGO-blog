@@ -1,6 +1,6 @@
 ---
 title: Facit TP2 skrivemaskin restaurert
-date: 2025-06-17
+date: 2025-05-17
 tekstemner: [skrivemaskin]
 listeintro: "En svensk klassiker som ligger an til å bli en favoritt."
 Description: "En svensk klassiker som ligger an til å bli en favoritt."
