@@ -117,7 +117,7 @@
 <p><b>Min vurdering: {{.Params.score}}/10</b></p>
  <p class="last-posts-list__meta">
                                     
-                                    <span>{{ .Params.dateAdded | time.Format "1 jan 2006" }}</span>
+                                    <span>{{ .Params.dateAdded | time.Format ":date_medium" }}</span>
                                 </p>
 
                 <ul class="taglist-index" style="margin-top: 3rem;">

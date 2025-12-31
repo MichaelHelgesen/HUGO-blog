@@ -16,7 +16,7 @@ Hjemme holder jeg meg unna KI. På jobben kan jeg ikke unnslippe det.
 
 At vi som samfunn tilsynelatende ukritisk kaster oss over kunstig intelligens, og med glede setter bort tenking, kreativitet og vår egen identitet skremmer meg. Jo mer jeg leser, erfarer, hører og tenker på det, desto mer forferdet blir jeg over at teknologiens påvirkning og effekt, spesielt på de unge, ikke er en langt større del av den offentlige debatten.
 
-Med KIs rasende utvikling ognallestedsnærvær er jeg spent på utviklingen. Jeg er redd dette er et gigantisk eksperiment som kan ende galt.
+Med KIs rasende utvikling og allestedsnærvær er jeg spent på utviklingen. Jeg er redd dette er et gigantisk eksperiment som kan ende galt.
 
 Jeg jobber med teknologi hver dag, og er på ingen måte en teknofobisk ludditt,[^1] men jeg er for menneskeheten.
 
