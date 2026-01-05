@@ -25,7 +25,7 @@
                 {{- /* add 'one' one more time for the last link position */}}
                 {{- $data.Add "counter" 1 }}
                 <a itemprop="item" href="{{ .Permalink }}">
-                    <span itemprop="name">{{.Title}}</span>
+                    <span itemprop="name">{{or .Params.shortTitle .Title}}</span>
                 </a>
                 {{- /* pass the counter value into schema attribute */}}
                 <meta itemprop="position" content='{{ $data.Get "counter"}}' />

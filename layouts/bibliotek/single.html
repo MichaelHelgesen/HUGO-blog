@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $date := .Params.date }}
+{{ $date := or .Params.date .Params.datePublished }}
 {{ $tag := ""}}
 {{with .Params.tags }}
 {{ range . }}
@@ -25,16 +25,16 @@
             {{end }}
             
             {{ if eq (len $creators) 1 }}
-            {{ $firstName }} {{ $lastName }}, {{ $date }}: 
+            {{ $firstName }} {{ $lastName }}, {{ or $date }}: 
             {{ else if and (eq (len $creators) (add $index 1) (ne $index 0))}}
             {{ .firstName }} {{ .lastName}}, {{ $date }}:
             {{ else }}
-            {{ .firstName }} {{ .lastName }} og 
+	    {{ .firstName }} {{ .lastName }} <span>og</span> 
             {{ end }}
             {{ end }}
             
         {{ $score := .Params.score }}
-        {{ $path := .Title | urlize}}
+        {{ $path := (or .Params.shortTitle .Title) | urlize}}
 
             </span>
             <h1>{{ .Title }}</h1>

@@ -59,7 +59,7 @@ Isaacson mener dette er viktig å belyse, uten at han konkret nevner Enos «scen
 **Ideen om «scenialitet» fjerner altså ikke oppnåelsen til store og betydningsfulle individer, men erkjenner at kreativitet på en eller annen måte alltid er et samarbeid.**
 
 ## Gir rom for ikke-genier
-Konseptet «scenialitet» hylles også av forfatteren og kunstneren Austin Kleon. I sin bok [«Show your work»]({{< relref "show-your-work-10-ways-to-share-your-creativity-and-get-discovered/">}}) mener han dette gir rom for alle oss som ikke føler seg som kreative genier [^4].
+Konseptet «scenialitet» hylles også av forfatteren og kunstneren Austin Kleon. I sin bok [«Show your work»]({{< relref "show-your-work/">}}) mener han dette gir rom for alle oss som ikke føler seg som kreative genier [^4].
 
 I og med at gode ideer oppstår på bakgrunn av et kreativt fellesskap handler det ikke om hvor smart man er, men hva man bidrar med, som innsikt, gode samtaler, spørsmål, nysgjerrighet og interesse, samt en vilje til å lære bort.
 

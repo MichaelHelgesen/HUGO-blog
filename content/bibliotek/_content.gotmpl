@@ -13,13 +13,13 @@
 {{ range $data }}
   {{/* Add page. */}}
   {{ $content := dict "mediaType" "text/markdown" "value" .data.abstractNote "url" .data.url}}
-  {{ $params := dict "description" (print "Min omtale av boken " .data.title)  "url" .data.url "datePublished" .data.date "score" .data.volume "isbn" .data.ISBN "dateUpdated" .data.dateModified "dateAdded" .data.dateAdded "tags" .data.tags "extra" .data.extra "creators" .data.creators "date" .data.date }}
+  {{ $params := dict "description" (print "Min omtale av boken " .data.title)  "url" .data.url "datePublished" .data.date "score" .data.volume "isbn" .data.ISBN "dateUpdated" .data.dateModified "dateAdded" .data.dateAdded "tags" .data.tags "extra" .data.extra "creators" .data.creators "date" .data.date "read" .data.accessDate "shortTitle" .data.shortTitle }}
   {{ $page := dict
     "content" $content
     "kind" "page"
-    "path" (urlize .data.title)
+    "path" (urlize (or .data.shortTitle .data.title))
     "params" $params
-    "title" .data.title
+    "title" (or .data.shortTitle .data.title)
   }}
   {{ $.AddPage $page }}
 

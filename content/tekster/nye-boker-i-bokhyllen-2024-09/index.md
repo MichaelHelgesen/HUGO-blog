@@ -10,7 +10,7 @@ Jeg har utvidet bokhyllen med tre nye bøker om læring og tilegnelse av kunnska
 
 {{< imgh src="nye-boker-i-bokhyllen-2024-09.webp" title="Bøkene fjernes fra bokhyllene" alt="En stor bunke med bøker stablet oppå hverandre." >}}
 
-«[A mind for numbers]({{< relref a-mind-for-numbers-how-to-excel-at-math-and-science-even-if-you-flunked-algebra >}})» skal være en praktisk innføring i hvordan hjernen fungerer når vi lærer, og hvordan vi best kan legge til rette for effektiv og god læring. Dessuten er den et kompendium til det meget populære og anbefalte kurset [learning how to learn](https://www.coursera.org/learn/learning-how-to-learn)
+«[A mind for numbers]({{< relref a-mind-for-numbers >}})» skal være en praktisk innføring i hvordan hjernen fungerer når vi lærer, og hvordan vi best kan legge til rette for effektiv og god læring. Dessuten er den et kompendium til det meget populære og anbefalte kurset [learning how to learn](https://www.coursera.org/learn/learning-how-to-learn)
 
 «How to read a book» er anbefalt av mange som en god og grundig innføring i hvordan man leser bøker i ulike sjangre, og skal etter sigende inneholde kunnskap om markeringer, notater, kunnskapsforvaltning med mer. Det høres perfekt ut for mitt prosjekt.
 
