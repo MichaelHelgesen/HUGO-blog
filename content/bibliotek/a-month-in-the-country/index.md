@@ -16,9 +16,9 @@ externalLink: "https://www.adlibris.com/nb/bok/a-month-in-the-country-9780141182
 
 ## Oppsummert i tre setninger:
 
-A month in the coutry handler om krigsveteranen fra første verdenskrig Tom Birkin, som tenker tilbake på  en jobb han utførte i det lille tettstedet Oxgodby en sommer for mange år siden.
+A month in the country handler om krigsveteranen fra første verdenskrig, Tom Birkin, som tenker tilbake på sitt opphold i det lille tettstedet Oxgodby, en sommer for mange år siden.
 
-I en liten, enkel landsbykirke avdekker han et gammelt veggmaleri, og finner samtidig helbredelse fra krigens traumer mens han reflekterer over tid (spesielt gjennom maleriet som har en sterk symbolsk rolle som en forbindelse mellom fortid og nåtid), tap, minner og gjenoppdagelsen av skjønnhet gjennom kunsten og et vakkert landskap.
+I en enkel landsbykirke jobbet han med å avdekke et gammelt veggmaleri, og finner samtidig helbredelse fra krigens traumer mens han reflekterer over tid (spesielt gjennom maleriet som har en sterk symbolsk rolle som en forbindelse mellom fortid og nåtid), tap, minner og gjenoppdagelsen av skjønnhet gjennom kunsten og et vakkert landskap.
 
 Dette er en poetisk bok som skildrer en nostalgisk og forbigående periode med lykke.
 
@@ -26,21 +26,25 @@ Dette er en poetisk bok som skildrer en nostalgisk og forbigående periode med l
 
 Ønsker du en hjertevarm leseropplevelse som skaper ettertenksomhet, er dette boken for deg. 
 
-A month in the coutry er en kort, stillferdig og poetisk bok som beskriver mellommenneskelige møter, og skildrer vakker natur. Den får deg til å tenke tilbake på egne minner om steder og personer som har gjort inntrykk på deg, og kanskje enda viktigere: hvordan skape minner selv, med de du er glad i.
+A month in the country er en kort, stillferdig og poetisk bok som beskriver mellommenneskelige møter, og skildrer vakker natur. 
 
-Det er også en bok om valgene man tar i livet, konsekvensene og hvordan leve med dem, samt om samhold, forsoning, godt arbeid og respekt for naturen og hverandre. 
+Den får deg til å minnes steder og personer som har gjort inntrykk på deg, og kanskje enda viktigere: hvordan skape slike minner selv, med de du er glad i.
 
-Den peker også på viktigheten av å gi seg tid til å fundere og kontemplere, noe jeg mener har forsvunnet i stor grad i dagens samfunn.
+Det er også en bok om valgene man tar i livet, konsekvensene og hvordan leve med dem, samt om samhold, forsoning, arbeidslyst og respekt for naturen og hverandre. 
 
-Boken har en del britiske kulturelle referanser, og er skrevet i et utpreget britisk språk. Den kan derfor være litt utfordrende å lese, men jeg anbefaler det på det sterkeste å prøve. Så vidt meg bekjent er ikke boken oversatt til norsk. 
+Den peker også på viktigheten av å gi seg tid til å fundere og kontemplere, noe jeg mener har forsvunnet i stor grad fra dagens samfunn.
+
+J. L. Carrs bok omtales ofte som en klassiker, og inngår i manges lister over favorittbøker. Den har en del britiske kulturelle referanser, og er skrevet i et utpreget britisk språk, og kan derfor være litt utfordrende å lese, men jeg anbefaler deg på det sterkeste å prøve. Så vidt meg bekjent er ikke boken oversatt til norsk. 
 
 ## Hvordan påvirket boken meg:
 
-Jeg leste denne boken på en fjelltur, og hadde således et lignende samfunn og vakker natur rundt meg som gav en ekstra dimensjon til leseropplevelsen. 
+Jeg leste denne boken på en fjelltur, og hadde således et lignende samfunn og vakker natur rundt meg. Det gav en ekstra dimensjon til leseropplevelsen. 
 
-Til å være en så stillferdig bok, klarte jeg ikke å legge den fra meg. Og da siste side var lest, satt jeg igjen med en helt spesiell varme. Historien fikk meg til å tenke på egne gode minner, om mennesker, tid og hendelser som har vært, og det å skape nye slike minner med de jeg er glad i. 
+Til å være en så stillferdig bok, klarte jeg ikke å legge den fra meg. Og da siste side var lest, satt jeg igjen med en helt spesiell varme og lengsel. 
 
-Ekstra sterkt er det å lese om et samfunn før den digitale tidsalderen, fordi den beskriver så mye jeg er redd vi mister i dagens samfunn.
+Historien fikk meg til å tenke på egne gode minner, om mennesker, tid og hendelser som har vært, og det å skape nye slike minner med de jeg er glad i, spesielt barna. 
+
+Ekstra interessant er det å lese om et samfunn før den digitale tidsalderen, fordi den beskriver så mange verdier jeg føler vi har mistet.
 
 Det var underlig å lese en så kort bok, og likevel sitte igjen med så mye.
 
@@ -55,11 +59,11 @@ A month in the country ble også filmatisert i 1987:
 ```
 
 ```quote {author="J. L. Carr"}
-We can ask and ask but we can`t have again what once seemed ours for ever [...]
+We can ask and ask but we can't have again what once seemed ours for ever [...]
 ```
 
 ```quote {author="J. L. Carr"}
-[...] the first breath of autumn was in the air, a prodigal feeling, a feeling of wanting, taking, and keeping before it is to late.
+[...] the first breath of autumn was in the air, a prodigal feeling, a feeling of wanting, taking, and keeping before it is too late.
 ```
 
 ```quote {author="J. L. Carr"}
@@ -67,7 +71,7 @@ It is now or never; we must snatch at hapiness as it flies.
 ```
 
 ```quote {author="J. L. Carr"}
-Hell`s different things to different people and different things to the same person at different times.
+Hell's different things to different people and different things to the same person at different times.
 ```
 
 ```quote {author="J. L. Carr"}
