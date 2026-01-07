@@ -24,7 +24,7 @@ De forsøker å besvare de tre vanligste spørsmålene som gjerne oppstår når 
 - Hva er grunnen til at det ofte *ikke* fullføres?
 - Hva ligger bak motstanden som hindrer så mange fra å fullføre?
 
-Boken er skrevet som en vennlig og vis manual for hvordan å bygge rutiner, finne ditt uttrykk, skape, revidere og viktigst av alt holde ut til det kreative prosjektet er gjennomført.
+Boken er skrevet som en vennlig og vis manual for hvordan å bygge rutiner, finne ditt uttrykk, skape, revidere og viktigst av alt, holde ut til det kreative prosjektet er gjennomført.
 
 {{< imgh src="art-fear_01.webp" alt="Journalen oppslått med en fyllepenn liggende i midten." holder="LQIP" hint="image" figcaption="Art & Fear inneholdt mange spennende ideer og tanker som resulterte i fyldige notatkort." >}}
 
