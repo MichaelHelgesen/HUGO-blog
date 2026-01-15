@@ -2,14 +2,13 @@
 
 
 
-                {{ $p := where site.Pages "Params.serier" "intersect" (slice .Title) }}
-{{ $url := print "emneknagger/laeringsemner/" (lower .Title) }}
-
+                {{ $p := where site.Pages "Params.serier" "intersect" (slice (lower .Title)) }}
 <div class="intro sider tag">
+	{{slice .Title}}
                 <h1>
                     {{.Title}} <sup>{{len $p }}</sup>
                 </h1>
-                <p class="ingress">Tekster som omhandler {{.Title}}</p>
+                <p class="ingress">Tekster i serien {{.Title}}</p>
 </div>
 	<ul class="blog-list">
 		{{ range $p.GroupByDate "2006"}}	
