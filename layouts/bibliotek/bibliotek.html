@@ -10,7 +10,6 @@
 
 <ul class="last-posts-list">
     {{ range sort .Pages "Params.read" "desc"}}
-    {{.Params.publishDate }}
     {{ $title := or .Params.shortTitle .Title}}
         {{ $sourceTag := "" }}
         {{ range .Params.tags }}
@@ -51,7 +50,7 @@
         <a href="{{ .Path }}">{{ or .Params.shortTitle .Title }}</a>
             </h2>
     <p class="last-posts-list__meta">
-{{ .Params.dateAdded | time.Format "2. Jan 2006"}} 
+{{ or .Params.read .Params.dateAdded | time.Format "2. Jan 2006"}} 
     </p>
 
     <div class="bok">
