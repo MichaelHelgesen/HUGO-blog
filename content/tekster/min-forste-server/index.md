@@ -1,6 +1,7 @@
 ---
 title: Min første server
 date: 2025-06-22
+serier: [hjemmeserver]
 tekstemner: [hjemmeserver]
 listeintro: "Raspberry Pi 5 med Ubuntu har blitt min første hjemmeserver."
 Description: "Raspberry Pi 5 med Ubuntu har blitt min første hjemmeserver."
