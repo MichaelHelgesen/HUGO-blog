@@ -2,6 +2,7 @@
 title: Iain McGilchrist - The master and his emissary.
 date: 2024-10-25
 tekstemner: [filosofi, lesing]
+serier: [The master and his emissary]
 listeintro: "I det siste har jeg sett og hørt mye på filosofen og forskeren Iain McGilchrist, og han fascinerer meg enormt. Jeg gleder meg til å lese boken hans «The master and his emissary»."
 Description: "I det siste har jeg sett og hørt mye på filosofen og forskeren Iain McGilchrist, og han fascinerer meg enormt. Jeg gleder meg til å lese boken hans «The master and his emissary»."
 
