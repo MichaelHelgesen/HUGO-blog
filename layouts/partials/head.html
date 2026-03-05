@@ -7,7 +7,7 @@
  <link rel="preload" href="{{ relURL "css/style.css"}}" as="style">
     <link rel="stylesheet" href="{{ relURL "css/style.css"}}">
     <!--  {{ partial "head-imgs-css"}} -->
-    <meta name="author" content="{{ .Site.Author.name }}">
+    <meta name="author" content="{{ .Site.Params.author.name }}">
   <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
 {{ template "_internal/opengraph.html" . }}
 {{ if not .Params.images }}

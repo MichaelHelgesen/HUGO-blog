@@ -2,15 +2,10 @@
 {{ $data := dict }}
 {{ $url := "https://api.zotero.org/groups/5454933/collections/UTX4VKZV/items/top?format=json&v=3" }}
 {{ with resources.GetRemote $url }}
-  {{ with .Err }}
-    {{ errorf "Unable to get remote resource %s: %s" $url . }}
-  {{ else }}
-    {{ $data = . | transform.Unmarshal }}
-  {{ end }}
+  {{ $data = . | transform.Unmarshal }}
 {{ else }}
   {{ errorf "Unable to get remote resource %s" $url }}
-{{ end }}
-{{ range $data }}
+{{ end }}{{ range $data }}
   {{/* Add page. */}}
   {{ $content := dict "mediaType" "text/markdown" "value" .data.abstractNote "url" .data.url}}
   {{ $params := dict "description" (print "Min omtale av boken " .data.title)  "url" .data.url "datePublished" .data.date "score" .data.volume "isbn" .data.ISBN "dateUpdated" .data.dateModified "dateAdded" .data.dateAdded "tags" .data.tags "extra" .data.extra "creators" .data.creators "date" .data.date "read" .data.accessDate "shortTitle" .data.shortTitle }}
