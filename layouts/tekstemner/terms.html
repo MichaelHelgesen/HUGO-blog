@@ -1,5 +1,6 @@
 {{ define "main" }}
 {{ .Content }} 
+TEKSTEMNER/TERMS
 <ul class="taglist">
     {{ range $name, $taxonomy := .Site.Taxonomies.tekstemner }} {{ $cnt := .Count }}
     {{ with $.Site.GetPage (printf "/tekstemner/%s" $name) }}

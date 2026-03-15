@@ -4,7 +4,6 @@
 
                 {{ $p := where site.Pages "Params.serier" "intersect" (slice (lower .Title)) }}
 <div class="intro sider tag">
-	{{slice .Title}}
                 <h1>
                     {{.Title}} <sup>{{len $p }}</sup>
                 </h1>

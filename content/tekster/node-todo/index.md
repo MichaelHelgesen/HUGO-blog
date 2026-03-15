@@ -1,28 +1,28 @@
 ---
-title: Utvikling i Node.js
-date: 2026-01-02
+title: Jeg lærer Node.js
+date: 2026-03-01
 tekstemner: [node, programmering]
 serier: [node]
-listeintro: "Jeg lærer meg Node.js, og starter med en «to-do»-app"
-Description: "Jeg lærer meg Node.js"
-ingress: "Jeg lærer meg Node.js"
-draft: true
+listeintro: "Fra front-end til back-end: Jeg lærer meg Node.js ved å bygge en «to-do»-app fra bunnen."
+Description: "Bli med når jeg tar steget fra front-end til Node.js. I dette innlegget utforsker jeg fs-modulen, process.argv og filhåndtering."
+ingress: "Som en naturlig forlengelse av mitt hobbyprosjekt med hjemmeserver, har jeg startet å lære Node.js. Her er mine første erfaringer med å bygge et terminal-verktøy for oppgavehåndtering."
+draft: false
 ---
 
-Som en utvidelse av mitt hobby-prosjekt med oppsett av egen hjemmeserver, har jeg også startet å lære Node.js. Det var et naturlig valg av språk når det kommer til «back-end» programmering, siden jeg har jobbet med Javascript i mange år som «front-end»-utvikler, og i det siste med fokus på Next.js og Sanity CMS, som begge er bygget på React. 
+Som en utvidelse av mitt hobbyprosjekt med oppsett av egen hjemmeserver, har jeg også startet å lære Node.js. Det var et naturlig valg av språk når det kommer til «back-end» programmering, siden jeg har jobbet med Javascript i mange år som «front-end»-utvikler, og i det siste med fokus på Next.js og Sanity CMS, som begge er bygget på React. 
 
 Jeg vurderte om jeg skulle benytte anledningen til å lære C#, Go, PHP eller noe annet, men å solidifisere og videreutvikle Javascript-kunnskapen min har også vært et ønske, så da falt det seg ganske naturlig å velge Node.
 
 ## Hva er Node.js?
-Node.js er et kjøremiljø for Javascript. Det betyr at språket kan kjøres på servere og lokale maskiner, og ikke bare i nettleseren slik det opprinnelig var utviklet for. Det gjør det mulig å kjøre Javascript overalt. Det passer meg perfekt, siden jeg ønsker å utvikle serverprogrammer til eget behov, og ikke minst API-er og web-servere. Det kommer også med bred støtte, et aktivt utviklingsmiljø, og tusenvis av pakker via NPM («Node package manager»).
+Node.js er et kjøremiljø for Javascript. Det betyr at språket kan kjøres på servere og lokale maskiner, og ikke bare i nettleseren slik det opprinnelig var utviklet for. Det gjør det mulig å kjøre Javascript overalt. Det passer meg perfekt, da jeg ønsker å utvikle serverprogrammer til eget behov, og ikke minst API-er og webservere. Det kommer også med bred støtte, et aktivt utviklingsmiljø, og tusenvis av pakker via NPM («Node package manager»).
 
-Node.js ble utviklet av Ryan Dahl og lansert i 2009. Det er bygget på Googles V8-JavaScript-motor (den samme som driver Google Chrome), en rask og asynkron løsning som kompilerer JavaScript direkte til maskinkode.
+Node.js ble utviklet av Ryan Dahl og lansert i 2009. Det er bygget på Googles V8-JavaScript-motor (den samme som driver Google Chrome), en rask og asynkron løsning som kompilerer JavaScript til maskinkode under kjøring.
 
 ## TO-DO
 
 Mitt første prosjekt ble en tradisjonell «TO-DO»-applikasjon, som jeg ønsket å koble til en fil for å bli kjent med Nodes filsystemhåndtering, i tillegg til innkommende argumenter.
 
-Jeg startet med `process.argv`. Det er en liste («array») med alle argumentene fra kommandolinjen, i tillegg til programmet og skriptet som kjører. De to sistnevnte er alltid på plassene '[0]` og '[1]', med alle argumenter fra kommandolinjen som påfølgende.
+Jeg startet med `process.argv`. Det er en liste («array») med alle argumentene fra kommandolinjen, i tillegg til programmet og skriptet som kjører. De to sistnevnte er alltid på plassene `[0]` og `[1]`, med alle argumenter fra kommandolinjen som påfølgende.
 
 1. `/usr/bin/node` - Programmet som kjører (Node selv)
 2. `/home/mikke/repos/todo-cli/args.js` - Skriptet som kjører
@@ -57,7 +57,7 @@ Det fungerte fint. Neste steg ble å finne ut hvordan Node lagrer til fil.
 
 ## «File system»-modulen
 
-Node har en innebygd modul `fs` for håndtering av filer, med en rekke funksjoner. For å lese og skrive til en fil, benyttes `fs.readFileSync` og `fs.appendFileSync`. Førstnevnte leser innholdet i en fil, og sistnevnte legger til i en fil. Dette er synkroniserte utgaver av funksjonene. Det finnes også «async»-versjoner, men de venter jeg litt med. Synkrone operasjoner var mer enn godt nok for mitt lille eksperiment.
+Node har en innebygd modul `fs` for håndtering av filer, med en rekke funksjoner. For å lese og skrive til en fil, benyttes `fs.readFileSync` og `fs.appendFileSync`. Førstnevnte leser innholdet i en fil, og sistnevnte legger til i en fil. Dette er synkrone utgaver av funksjonene. Det finnes også «async»-versjoner, men de venter jeg litt med. Synkrone operasjoner var mer enn godt nok for mitt lille eksperiment.
 
 ### Lese en fil
 
@@ -77,7 +77,7 @@ console.log(content);
 
 Da vises det som forventet. 
 
-Jeg lærte også at denne funksjonen presenterer hele innholdet, og ikke linje for linje. Man får derfor ingen linjenummer eller iterering å forholde seg til. Alt innhold presenteres som én lang streng.
+Jeg lærte også at denne funksjonen presenterer hele innholdet, og ikke linje for linje. Man får derfor ikke linjenummer eller muligheten til å iterere over innholdet direkte. Hele filen presenteres som én lang streng.
 
 Man må i tilfelle selv splitte den til en liste, finne riktig indeks, endre linjen, sette listen sammen til en streng igjen, og deretter skrive tilbake til fil.
 
@@ -402,3 +402,8 @@ Det ble en enkel Node-applikasjon, som blant annet lærte meg:
 - Backup før destruktive operasjoner er essensielt
 - Switch vs if-else: bedre struktur og lesbarhet i større kommandohåndtering.
 - «Edge cases» må planlegges nøye og testes (tomme filer, ugyldige nummer, osv.)
+
+## Del to
+Et naturlig neste steg blir å erstatte oppgaver som ren tekst i en «markdown»-fil, til fordel for JSON-objekter i en `.json`-fil.
+
+Dette gir mange flere muligheter når det kommer til struktur og innhold i hver enkelt oppgave, samtidig som det gjør dataene mye lettere å håndtere programmatisk.
