@@ -1,16 +1,15 @@
 ---
-title: Dotfiles til Git
+title: Oversikt og kontroll med dotfiles til Git
 date: 2026-02-06
 tekstemner: [hjemmeserver]
 serier: [hjemmeserver]
-listeintro: "Slik installerte jeg Proxmox og opprettet min første virtuelle Ubuntu-maskin på Mac Pro 2013-modell"
-Description: "Slik installerer man Proxmox på en Mac Pro 2013."
-ingress: "Under planleggingen av serveroppsett konkluderte jeg med at Proxmox ville passe perfekt. Den lar meg kjøre flere Linux-distribusjoner på én maskin, for maksimal læring og testing. Men veien dit var ikke uten utfordringer."
+listeintro: "Jeg oppretter «dotfiles», og laster opp til Git for kontroll og deling av server- og Linuxoppsett."
+Description: "Lær hvordan du strukturerer konfigurasjonsfiler (dotfiles) og serveroppsett med Git og Bash-skript for en mer effektiv hverdag."
+ingress: "Etter å ha satt opp min egen server, innså jeg raskt behovet for et system som deler oppsett og dokumentasjon mellom maskinene mine. Løsningen ble et ryddig system med dotfiles og installasjonsskript."
 ---
 
 Etter at jeg installerte Proxmox og en virtuell maskin (VM) med Ubuntu, undersøkte jeg fremgangsmåten for å dele programmer, installasjoner, dokumentasjon og oppsett mellom serveren, VM-er, og flere av mine laptoper. 
 
-re er scriptet som kjøres, og resten er argumenter fra terminalen.
 Svaret var «dotfiles». Det er konfigurasjonsfiler som typisk starter med punktum (.bashrc, .vimrc, etc.), og er plassert i hjem-katalogen (`/users/USER`). Dotfiles er nemlig personlige filer som er ment å følge brukeren. 
 
 ## Git
@@ -30,7 +29,7 @@ Men hvorfor to separate «repos»?
 ## To «repositories»
 Jeg tenkte at det var en god ide å separere dem, slik at de ikke blir så omfattende. Dessuten er «dotfiles» ment å være et personlig oppsett som skal følge meg rundt på flere installasjoner, mens «homelab» kun skal brukes på serveren, og inneholder infrastruktur, oppsett, og programmer spesifikk for servermiljøet. Men jeg skal klone begge to flere steder, for oppdateringer og utvidelser. 
 
-Slik jeg forsto det, er det standard praksis å ha en «README» på root som gir oversikt over repoet, og deretter egne mapper for spesifikke program, dokumenter, skripter og så videre, også med sine respektive «README»-filer.
+Slik jeg forsto det, er det standard praksis å ha en «README» på rot-nivå som gir oversikt over repoet, og deretter egne mapper for spesifikke program, dokumenter, skripter og så videre, også med sine respektive «README»-filer.
 
 Eksempel på «dotfiles»-struktur:
 
@@ -85,7 +84,7 @@ Det utfordrende:
 - Lett å glemme
 - Kan føles som overhengende rutinearbeid
 
-Hvordan jeg går frem for å vedlikeholde dette, og hvor mye jeg skal legge i det må rett og slett gå seg til basert på erfaring. Det som bør dokumenteres er vel oppsett, konfigurasjonsvalg og feilsøking kanskje, mens det kan være greit å sløyfe hver enkelt filendring, rutine-oppdateringer og unødvendige beskrivelser. 
+Hvordan jeg går frem for å vedlikeholde dette, og hvor mye jeg skal legge i det må rett og slett gå seg til basert på erfaring. Det som bør dokumenteres er vel oppsett, konfigurasjonsvalg og feilsøking kanskje, mens det kan være greit å sløyfe hver enkelt filendring, rutineoppdateringer og unødvendige beskrivelser. 
 
 Jeg velger i alle fall å bygge stein for stein, og starter derfor helt enkelt med følgende:
 
@@ -218,7 +217,7 @@ For å aktivere ny versjon av `.bashrc` i Linux, må man skrive kommandoen `sour
 
 Jeg ønsket selvsagt også samme Bash-oppsett på Proxmox, men der var ikke Git installert, så det måtte jeg gjøre først.
 
-Det inspirerte meg til å opprette mitt første installasjons-skript i «dotfilen». Jeg laget mappen `scripts`, og la inn filen `01-base-packages.sh` og `README.md`.
+Det inspirerte meg til å opprette mitt første installasjonsskript i «dotfiles-repoet». Jeg laget mappen `scripts`, og la inn filen `01-base-packages.sh` og `README.md`.
 
 I Bash-filen la jeg inn følgende:
 
@@ -231,7 +230,7 @@ set -e  # Stopp ved feil
 
 echo "=== Installerer grunnleggende pakker ==="
 
-# Sjekk om man kjører som root/sudo
+# Sjekk om man kjører som rot/sudo
 if [ "$EUID" -ne 0 ]; then 
     echo "Dette scriptet må kjøres med sudo"
     echo "Kjør: sudo ./01-base-packages.sh"
