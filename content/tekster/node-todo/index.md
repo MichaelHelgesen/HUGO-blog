@@ -9,7 +9,7 @@ ingress: "Som en naturlig forlengelse av mitt hobbyprosjekt med hjemmeserver, ha
 draft: false
 ---
 
-Som en utvidelse av mitt hobbyprosjekt med oppsett av egen hjemmeserver, har jeg også startet å lære Node.js. Det var et naturlig valg av språk når det kommer til «back-end» programmering, siden jeg har jobbet med Javascript i mange år som «front-end»-utvikler, og i det siste med fokus på Next.js og Sanity CMS, som begge er bygget på React. 
+Node.js var et naturlig valg av språk når det kommer til «back-end» programmering, siden jeg har jobbet med Javascript i mange år som «front-end»-utvikler, og i det siste med fokus på Next.js og Sanity CMS, som begge er bygget på React. 
 
 Jeg vurderte om jeg skulle benytte anledningen til å lære C#, Go, PHP eller noe annet, men å solidifisere og videreutvikle Javascript-kunnskapen min har også vært et ønske, så da falt det seg ganske naturlig å velge Node.
 

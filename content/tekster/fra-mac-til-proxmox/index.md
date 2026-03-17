@@ -8,7 +8,6 @@ Description: "Slik installerer man Proxmox på en Mac Pro 2013."
 ingress: "Under planleggingen av serveroppsett konkluderte jeg med at Proxmox ville passe perfekt. Den lar meg kjøre flere Linux-distribusjoner på én maskin, for maksimal læring og testing. Men veien dit var ikke uten utfordringer."
 ---
 
-{{< imgh src="mac.webp" alt="Mac Pro on a table surrounded by keyboard, notes and pens." holder="LQIP" hint="photo" figcaption="En Mac Pro 2013 klar for nye oppgaver, etter en real rens." >}}
 
 I og med at jeg ønsker å bli godt kjent med Linux må jeg nødvendigvis også prøve flere av de mange distribusjonene som finnes: Ubuntu, Fedora, Arch og Mint, for å nevne noen.
 
@@ -17,6 +16,8 @@ En server som kjører Proxmox er perfekt i et slikt tilfelle. Det lar meg initia
 ## Steg 1: installasjon
 
 Først lastet jeg ned [nyeste ISO-versjon av Proxmox](https://www.proxmox.com/en/downloads), som jeg «flash-et» til en minnepenn med balenaEtcher og deretter bootet fra på serveren.
+
+{{< imgh src="proxmox1.webp" alt="Skjermen viser installasjonsprosess av Proxmox" holder="LQIP" hint="photo" figcaption="Proxmox-installeringen underveis. Bonuspoeng til alle som ser kaninen som ville være med..." >}}
 
 ### Svart skjerm
 Installasjonen startet, men det ble en kortvarig glede. Skjermen gikk i svart. Gang på gang. Jeg konkluderte med at Proxmox ikke var kompatibel med maskinen, og prøvde Debian. Det samme skjedde. Da tenkte jeg at skjermkortet (AMD FirePro D500) var årsaken, og startet søkingen etter svar.
@@ -34,6 +35,8 @@ Jeg starter derfor på nytt, og prøvde å sette meg inn i hva de ulike innstill
 - IP Address: Serverens IP-adresse. Jeg valgte `192.168.1.120`.
 - Gateway: Dette er IP-adressen til ruteren min, 192.168.1.1. Den må angis for at serveren skal kunne koble seg til internett.
 - DNS: Navnetjeneren kan settes til 192.168.1.1 som vil si at den bruker ruterens innstilling, eller man kan angi 8.8.8.8, som er Google sin.
+
+{{< imgh src="proxmox2.webp" alt="Skjermen viser nettverksinnstillinger i Proxmox" holder="LQIP" hint="photo" figcaption="Nettverksinnstillingene krevde litt ekstra gjennomgang." >}}
 
 Med disse innstillingene kom jeg meg på nett, noe jeg verifiserte med `ping`:
 

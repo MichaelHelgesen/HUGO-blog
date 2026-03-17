@@ -5,10 +5,9 @@ tekstemner: [hjemmeserver]
 serier: [hjemmeserver]
 listeintro: "Jeg oppretter «dotfiles», og laster opp til Git for kontroll og deling av server- og Linuxoppsett."
 Description: "Lær hvordan du strukturerer konfigurasjonsfiler (dotfiles) og serveroppsett med Git og Bash-skript for en mer effektiv hverdag."
-ingress: "Etter å ha satt opp min egen server, innså jeg raskt behovet for et system som deler oppsett og dokumentasjon mellom maskinene mine. Løsningen ble et ryddig system med dotfiles og installasjonsskript."
+ingress: "Etter å ha satt opp min egen server, innså jeg raskt behovet for et system som deler oppsett og dokumentasjon mellom maskinene mine."
 ---
 
-Etter at jeg installerte Proxmox og en virtuell maskin (VM) med Ubuntu, undersøkte jeg fremgangsmåten for å dele programmer, installasjoner, dokumentasjon og oppsett mellom serveren, VM-er, og flere av mine laptoper. 
 
 Svaret var «dotfiles». Det er konfigurasjonsfiler som typisk starter med punktum (.bashrc, .vimrc, etc.), og er plassert i hjem-katalogen (`/users/USER`). Dotfiles er nemlig personlige filer som er ment å følge brukeren. 
 
